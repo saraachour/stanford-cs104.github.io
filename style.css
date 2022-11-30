@@ -54,6 +54,11 @@ figure img {
   margin-right: auto;
   display: block;
 }
+
+b {
+  font-weight: 900px;
+}
+
 /* Navigation Bar */
 nav {
   padding: 0.3rem;
