@@ -461,8 +461,8 @@ pre {
 code {
   font-family: "Anonymous Pro", monospace;
   background-color: #f1f3f5;
-  border-radius: 4px;
   padding: 2px 0;
+  border-radius: 4px;
   border: 1px solid #bcbec0;
   font-size: 0.95em;
 }
@@ -715,4 +715,27 @@ ul.extra-links {
 
 .table_detail pre {
   max-width: 900px;
+}
+
+.alert {
+  border-left: 4px solid #c5c5c5;
+  font-size: 1rem;
+  margin: 1.5rem 0 0.3rem 0;
+  padding: 0.5rem 0.8rem;
+  font-style: italic;
+  background: #eee;
+  border-radius: 4px;
+  border: 1px solid #bcbec0;
+}
+
+.alert-warning {
+  border-left: 4px solid #f3e54d;
+}
+
+.terminal-line::before {
+  content: "$";
+}
+
+.powershell-line::before {
+  content: ">";
 }

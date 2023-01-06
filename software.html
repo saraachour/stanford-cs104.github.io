@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator" content="Hugo 0.67.1" />
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Anonymous+Pro"
+      rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>
+      CS 45: Software Tools Every Programmer Should Know: Software &amp; Setup
+    </title>
+  </head>
+
+  <body>
+    <!--#include virtual="navbar.html" -->
+    <main>
+      <div class="content">
+        <h1>Software &amp; Computer Setup</h1>
+
+        <div class="alert">
+          <h3>Table of Contents</h3>
+          <ol>
+            <li>
+              <a href="#shell-setup">Setting Up Your Shell Environment</a>
+            </li>
+            <li><a href="#software">Software</a></li>
+            <ol>
+              <li><a href="#lec2">Lecture 2: The Shell and Shell Tools</a></li>
+              <li>
+                <a href="#lec3"
+                  >Lecture 3: Data Manipulation and Shell Scripting</a
+                >
+              </li>
+              <li><a href="#lec4">Lecture 4: Text Editors</a></li>
+              <li><a href="#lec6">Lecture 6: Computer Networking</a></li>
+            </ol>
+          </ol>
+        </div>
+
+        <h2 id="shell-setup">Setting Up Your Shell Environment</h2>
+
+        <div class="alert alert-warning sys mac">
+          We’ve detected that you're using a Mac computer.
+          <a href="#" onclick="setWindows(event)"
+            >Click here if you’re using Windows</a
+          >
+          or <a href="#" onclick="setLinux(event)">Linux</a>
+        </div>
+
+        <div class="alert alert-warning sys windows">
+          We’ve detected that you're using a Windows computer.
+          <a href="#" onclick="setMac(event)">Click here if you’re using Mac</a>
+          or <a href="#" onclick="setLinux(event)">Linux</a>
+        </div>
+
+        <div class="alert alert-warning sys linux">
+          We’ve detected that you're using a Linux computer.
+          <a href="#" onclick="setMac(event)">Click here if you’re using Mac</a>
+          or <a href="#" onclick="setWindows(event)">Windows</a>
+        </div>
+
+        <p class="sys linux">
+          If you’re running linux, you’re already all good to go! Note that the
+          install instructions below assume you’re running some flavor of Ubuntu
+          or Debian; if you use a different distribution, replace
+          <code>apt-get install</code> with the appropriate installation command
+          for the package manager your distribution uses (e.g.
+          <code>pacman</code> or <code>yum</code>)
+        </p>
+
+        <div class="sys mac">
+          <h3>Installing Homebrew</h3>
+          <p>
+            macOS already has a working shell environment, but it’s not
+            straightforward to install some of the tools we’ll be using
+            manually. Instead, we’ll use
+            <strong>Homebrew</strong>, the “missing package manager for macOS.”
+          </p>
+          <p>
+            To install, open the Terminal app on your Mac and follow the
+            instructions at
+            <a href="https://brew.sh/" rel="noopener noreferrer" target="_blank"
+              >Homebrew’s website.</a
+            >
+            Namely, copy-paste the following into your terminal window and press
+            Return:
+          </p>
+          <code class="alert terminal-line">
+            /bin/bash -c "$(curl -fsSL
+            https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          </code>
+          <p>
+            Then follow the instructions as they show up in your terminal. You
+            may need to type your computer password at some point; note that
+            there will be no visual feedback, just hit enter once it has been
+            typed.
+          </p>
+        </div>
+
+        <div class="sys windows">
+          <h3>Installing WSL</h3>
+          <p>
+            Windows Subsystem for Linux, or WSL, allows you to run a traditional
+            Unix shell on your Windows machine. We’ll do our best to show off
+            Windows-compatible and Windows-native software as we go through, but
+            many useful and/or necessary tools used when doing software
+            developemnt are only available via a Unix shell. (This is a problem
+            Microsoft realized, and WSL is their answer to it!)
+          </p>
+          <p>
+            To install WSL, ensure you’re running a recent version of Windows 10
+            or Windows 11. Then, right-click the start menu, and click
+            <strong>Command Prompt: Administrator</strong> or
+            <strong>Windows Powershell: Administrator</strong>. Press "Yes" when
+            prompted. Finally, type in the following command:
+          </p>
+          <code class="alert powershell-line"> wsl --install</code>
+          <p>
+            Wait for it to finish. Once you’re done, you should find a new
+            application on your computer entitled <strong>Ubuntu</strong> –
+            launch this to get a Unix shell. All the install instructions below
+            will assume you’re working within a Unix shell.
+          </p>
+        </div>
+
+        <h2 id="software">Software for the class</h2>
+
+        <h3 id="lec2">Lecture 2: The Shell and Shell Tools</h3>
+        <div>
+          Follow the <a href="#shell-setup">shell setup</a> instructions and
+          you’ll be good to go.
+        </div>
+
+        <h3 id="lec3">Lecture 3: Data Manipulation and Shell Scripting</h3>
+        <p>
+          You'll want to install the <code>jq</code> program to fully follow
+          along:
+        </p>
+        <div>
+          <code class="alert terminal-line sys windows linux">
+            sudo apt-get install jq
+          </code>
+          <code class="alert terminal-line sys mac"> brew install jq </code>
+        </div>
+
+        <h3 id="lec4">Lecture 4: Text Editors</h3>
+        <p>
+          You'll want to install the <code>vim</code> program to fully follow
+          along:
+        </p>
+        <div>
+          <code class="alert terminal-line sys windows linux">
+            sudo apt-get install vim
+          </code>
+          <code class="alert terminal-line sys mac"> brew install vim </code>
+        </div>
+
+        <h3 id="lec6">Lecture 6: Computer Networking</h3>
+        <p>
+          You'll want to install <code>python3</code> and Wireshark to fully
+          follow along:
+        </p>
+        <div>
+          <code class="alert terminal-line sys linux">
+            sudo apt-get install python3 wireshark
+          </code>
+          <code class="alert terminal-line sys windows">
+            sudo apt-get install python3
+          </code>
+          <code class="alert terminal-line sys mac">
+            brew install python3
+          </code>
+        </div>
+        <p class="sys windows mac">
+          You can download Wireshark
+          <a
+            href="https://www.wireshark.org/download.html"
+            rel="noopener noreferrer"
+            target="_blank">
+            here.
+          </a>
+        </p>
+      </div>
+    </main>
+
+    <!-- Hiding instructions by OS -->
+    <script type="application/javascript">
+      let sysstyle = () => document.getElementById("sysstyle");
+      let cssFor = (system) => `
+      .sys:not(.${system}) {
+        display: none;
+      }
+      `;
+
+      function createSysstyle(system) {
+        const style = document.createElement("style");
+        style.innerHTML = cssFor(system);
+        style.id = "sysstyle";
+        return style;
+      }
+
+      function makeSetSystemFn(system) {
+        return (e) => {
+          e?.preventDefault();
+          if (sysstyle()) {
+            document.body.removeChild(sysstyle());
+          }
+          document.body.appendChild(createSysstyle(system));
+        };
+      }
+
+      const setMac = makeSetSystemFn("mac");
+      const setWindows = makeSetSystemFn("windows");
+      const setLinux = makeSetSystemFn("linux");
+
+      if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+        setMac();
+      } else if (/(Win)/i.test(navigator.platform)) {
+        setWindows();
+      } else {
+        setLinux();
+      }
+    </script>
+  </body>
+</html>
