@@ -8,7 +8,7 @@
   "proseWrap": "always",
   "htmlWhitespaceSensitivity": "css",
   "arrowParens": "always",
-  "bracketSameLine": true,
+  "bracketSameLine": false,
   "bracketSpacing": true,
   "embeddedLanguageFormatting": "auto",
   "jsxSingleQuote": false,
