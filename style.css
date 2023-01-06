@@ -38,6 +38,9 @@ h2 {
 
 h3 {
   font-size: 1.15em;
+  font-weight: 700;
+  padding-left: 0.8rem;
+  border-left: 2px solid #979797;
 }
 
 a {
@@ -458,7 +461,7 @@ pre {
   overflow-x: auto;
 }
 
-code {
+*:not(.alert) > code:not(.alert) {
   font-family: "Anonymous Pro", monospace;
   background-color: #f1f3f5;
   padding: 2px 0;
@@ -720,7 +723,7 @@ ul.extra-links {
 .alert {
   border-left: 4px solid #c5c5c5;
   font-size: 1rem;
-  margin: 1.5rem 0 0.3rem 0;
+  margin: 0.3rem 0 0.3rem 0;
   padding: 0.5rem 0.8rem;
   font-style: italic;
   background: #eee;
