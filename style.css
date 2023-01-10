@@ -226,6 +226,9 @@ nav {
 .calendar .section-day .topic {
     font-style: inherit;
 } */
+.calendar .holiday .topic {
+  font-style: italic;
+}
 
 .calendar ul {
   list-style-type: none;
