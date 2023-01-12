@@ -1,0 +1,109 @@
+AFS Class Archive Description
+
+Background
+----------
+AFS is a distributed file system based on client/server
+architecture. AFS joins together multiple server machine file
+systems. An AFS cell is grouping of client/server machines which is
+administered by a domain. Stanford's administrative domain is named
+"ir.stanford.edu".  Which at Stanford can be abbreviated to just
+"ir". Directories and files relevant to the classes you're teaching or
+have taught in the past are stored under /afs/ir/class/archive.  You
+can learn more about AFS, and how it's organized, by going to
+http://afs.stanford.edu.
+
+
+AFS Storage
+-----------
+Your AFS storage space is divided into volumes, each of which
+contains a set of related directories and file. People access these
+volumes via "mount points": special file elements that indicate which
+volumes should be associated with which directories. Volumes can be
+placed anywhere in AFS by using a mount point, and will then appear as
+a directory. For example, the files for the class EE118 taught in 2003
+exist in a volume named class.ee118.1034.  To access these files
+through AFS, that volume is mounted. Typically a mount point would
+created at /afs/ir/class/ee182. Under that directory will be the
+contents of the class.ee182.1032 volume.
+
+
+How it works
+------------
+In AFS, Stanford's class directories can be found under:
+
+    /afs/ir/class/archive/
+
+and are further subdivided, by volume, as follows:
+
+    subject/subjectnumber/subjectnumber.qtr
+
+For example, class materials for Computer Science 147b, which is
+offered during autumn quarter of 2004-2005, can be accessed by the
+following mount point:
+
+    /afs/ir/class/archive/cs/cs147b/cs147b.1052
+
+(The number 1052 is the PeopleSoft code for autumn 2004-2005.) In
+addition to the above mount point, an additional mount point for the
+currently active quarter is created under  /afs/ir/class.  In this
+case, there would be an additional mount point at
+/afs/ir/class/cs147b. These are just two mount points, two names,
+for the  same volume and the same files; the contents of the two
+directories:
+
+    /afs/ir/class/archive/cs/cs147b/cs147b.1052
+
+and
+
+    /afs/ir/class/cs147b
+
+would be absolutely identical, changes made in one location would be
+automatically reflected in the other location.
+
+
+How materials are retained year after year
+------------------------------------------
+When a new quarter begins, at your request, a class system
+administrator will create a new volume. That volume can be a clone
+of the old volume or an empty volume. Using the example above, where
+the PeopleSoft code for winter is 1054, this material would then be
+found under /afs/ir/class/archive/cs/cs147b/cs147b.1054.  The mount
+point for /afs/ir/class/cs147b is moved to point to the new volume.
+No class materials are deleted or moved.  Only the mount points are
+moved. "Archiving", then, is really just a process of moving mount
+points and is typically done quarterly. In addition to the above
+process, a nightly backup is performed on all volumes in AFS. For more
+information on AFS please see http://afs.stanford.edu.
+
+
+Copying files in AFS
+--------------------
+Below is an example of copying files from a previous quarter. Log into
+one of the Sweet Hall Unix cluster machines. (If you need help logging
+in remotely, please see http://unix-docs.stanford.edu/loggingin.html)
+
+Then type the following commands:
+
+    cd /afs/ir/class/archive/subject/subjectnumber/subjectnumber.qtr
+
+For example: /afs/ir/class/archive/cs/cs147b/cs147b.1052)
+
+    cp -r * /afs/ir/class/currentclass
+
+For example:
+
+    cp -r * /afs/ir/class/cs147b
+
+will copy EVERYTHING from your old class directory to your current
+class directory.
+
+If you just wanted to copy over the contents of your WWW directory, and
+nothing else, substitute:
+
+    cp -r * /afs/ir/class/currentclass/WWW
+
+
+Help
+----
+Please file a HelpSU request if you have any questions or problems with
+your course setup.
