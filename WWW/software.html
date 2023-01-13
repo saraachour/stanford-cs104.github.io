@@ -195,28 +195,52 @@
 
         <h3 id="lec6">Lecture 6: Computer Networking</h3>
         <p>
-          You'll want to install <code>python3</code>, <code>ngrok</code>, and Wireshark to fully
-          follow along:
+          You'll want to install <code>python3</code>, <code>ngrok</code>, and
+          Wireshark to fully follow along:
         </p>
         <div>
           <div class="alert sys linux">
             <code class="terminal-line">
               sudo apt-get install python3 wireshark
             </code>
-            <code>
-              # The following comes directly from ngrok's <a target="_blank" rel="noopener noreferrer" href="https://ngrok.com/download">website</a>, under "Linux" then "Install ngrok via Apt"
-            </code>
+            <br />
+            <br />
+            # The following comes directly from ngrok's
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://ngrok.com/download"
+              >website</a
+            >, under "Linux" then "Install ngrok via Apt"
+            <br />
             <code class="terminal-line">
-              curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+              curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee
+              /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb
+              https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee
+              /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt
+              install ngrok
             </code>
           </div>
           <div class="alert sys windows">
-            <code class="terminal-line"> sudo apt-get install python3 </code>
-            <code>
-              # The following comes directly from ngrok's <a target="_blank" rel="noopener noreferrer" href="https://ngrok.com/download">website</a>, under "Linux" then "Install ngrok via Apt"
-            </code>
             <code class="terminal-line">
-              curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+              sudo apt-get install python3
+            </code>
+            <br />
+            <br />
+            # The following comes directly from ngrok's
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://ngrok.com/download"
+              >website</a
+            >, under "Linux" then "Install ngrok via Apt"
+            <br />
+            <code class="terminal-line">
+              curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee
+              /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb
+              https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee
+              /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt
+              install ngrok
             </code>
           </div>
           <div class="alert sys mac">
