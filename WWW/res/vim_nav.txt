@@ -1,0 +1,103 @@
+This is a simple text document to get you used to navigating around in vim!
+
+You can use the arrow keys to move, but...
+More advanced users use the HJKL keys instead!
+Use H and L to move left and right, and J and K to go down and up.
+
+(1) Navigate the cursor into this box using either tactic: [ ]
+
+
+You can also navigate word by word.
+    Press w to jump to the next word.
+    Press e to jump to the end of the next word.
+    Press b to jump backwards to the start of a word.
+Or around a line.
+    Press 0 (zero) to jump to the beginning of a line.
+    Press $ to jump to the end of a line.
+Or around the file.
+    Press gg (g twice in a row) to jump to the beginning of the file.
+    Press G (capital g) to jump to the end of the file
+    Press a number and then gg (e.g. 20gg) to jump to that line.
+
+(2) Try navigating around the file using the commands above.
+
+
+Now we can try adding text.
+To add text, we need to put vim into insert mode. Press i to do that!
+
+(3) Write the letter X between the brackets: []
+
+And press ESC to leave insert mode and go back to normal mode.
+
+There are actually multiple ways to enter insert mode:
+    Press i to enter insert mode right where the cursor is now
+      (insert on the left edge of the cursor)
+    Press a to enter insert mode one character after where the cursor is
+      (insert on the right edge of the cursor)
+    Press I (capital i) to enter insert mode at the beginning of a line
+    Press A (capital a) to enter insert mode at the end of a line
+    Press o (the letter oh) to enter insert mode on a new line
+      right after this one.
+    Press O (capital oh) to enter insert mode on a new line
+      right BEFORE this one
+
+(4) Use capital-A to write your name at the end of this line: 
+
+While you're working on text in the terminal (including in vim insert mode),
+you can use ctrl+w to backspace a word at a time. Go ahead and exit insert mode
+with ESC.
+
+(5) Use captial-A to write your first name,
+    then erase it in one go with ctrl+w: 
+
+Now exit insert mode with ESC.
+
+In normal mode, vim lets you undo and redo:
+  Press u to undo, and ctrl+r to redo.
+
+You can copy-paste, too; we'll do this in visual mode!
+    Press v to enter visual mode. This lets you select text!
+    You can press V (capital-v) to enter line-visual mode.
+      This lets you select a line at a time.
+
+Select the text, and press y ("yank") to copy it.
+Then, in normal mode, press p ("paste") to paste it.
+
+You can also delete selected text in visual mode, too.
+Select the text, and press d ("delete") to delete it.
+When you delete using d, it actually "cuts" the text to the clipboard–
+  you can press p ("paste") in normal mode to re-paste it.
+
+You can also copy and cut in normal mode: in normal mode,
+    press yy to yank the current line, or
+    press dd to delete the current line, or
+    press x to delete just the character in front of the cursor.
+    (you can also press y, d, and then some movement
+      (see the movement above!) to yank or cut just that information)
+
+(6) Use visual yank to copy and paste the following two lines at once:
+  Hello
+  World!
+
+(7) Use visual delete to delete the following two lines at once:
+  👀👀👀👀
+  👀👀👀👀
+
+
+Lastly, we can search in vim. In normal mode, press / and then type.
+  (You can also press ? to search backwards).
+
+
+Finally, let's open a new local file and edit it.
+In normal mode, press : (colon) to enter command mode.
+Here are a couple useful commands:
+  q          – this will quit if the file is saved.
+  q!         – this will quit even if there's unsaved progress
+  w          – this will write (save) the file.
+  wq         - this will save-then-quit
+  o filename – this will open a new file with the given filename
+
+(8)
+  Use :o myfile.txt to open a new vim buffer for myfile.txt
+  Then write your name or anything else you want,
+  Then use :wq to save and quit. (Then try using cat to view it!)
