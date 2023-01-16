@@ -111,7 +111,7 @@ nav {
 }
 
 .instructor-name {
-  font-weight: bold;
+  font-weight: heavy;
   margin-top: 3px;
 }
 
@@ -121,7 +121,7 @@ nav {
 
 .office-hours {
   margin-top:5px;
-  font-weight: bold;
+  font-weight: heavy;
 }
 
 /* Calendar Widget */
