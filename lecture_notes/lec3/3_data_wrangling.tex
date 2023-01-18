@@ -1,0 +1,338 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[parfill]{parskip}
+\usepackage{textcomp} 
+
+\newtcbox{\inlinecode}{on line, boxrule=0pt, boxsep=0pt, top=2pt, left=2pt, bottom=2pt, right=2pt, colback=gray!15, colframe=white, fontupper={\ttfamily \footnotesize}}
+
+\newtcbox{\inlinecodetitle}{on line, boxrule=0pt, boxsep=0pt, top=2pt, left=2pt, bottom=2pt, right=2pt, colback=gray!15, colframe=white, fontupper={\ttfamily}}
+
+\definecolor{shadecolor}{gray}{0.9}
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mBlue}{rgb}{0,0,1}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{mRed}{rgb}{1,0,0}
+\definecolor{backgroundColour}{gray}{0.9}
+
+\lstdefinestyle{Python}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{blue}\bfseries,
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mBlue},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=python, 
+    morekeywords={ISP}
+}
+
+\lstdefinestyle{Plain}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    numberstyle=\tiny\color{mGray},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=python, 
+    morekeywords={ISP}
+}
+
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+    
+\urlstyle{same}
+
+\title{CS45, Lecture 3: Shell Scripting and Data Wrangling }
+\author{Akshay Srivatsan, Ayelet Drazen, Jonathan Kula }
+\date{Winter 2023}
+
+\begin{document}
+
+
+
+\maketitle
+
+\tableofcontents
+
+\section{Lecture Overview}
+In Lecture 3, we learned how to use shell commands and pipelines to manipulate and analyze data. We also learned how to write regular expressions and how to incorporate these into tools such as \inlinecode{sed}. Finally, we learned how to run complex shell commands such as \inlinecode{grep}, \inlinecode{sort}, \inlinecode{uniq}, and \inlinecode{xargs.}
+
+\section{What is Shell Scripting?}
+We've already seen how to execute simple commands in the shell and pipe multiple commands together. Sometimes, we want to run many commands together and make use of control flow expressions such as conditionals and loops. This is where shell scripting comes in. 
+\par
+A \textbf{shell script} is a text file that contains a sequence of commands for a Unix-based operating system. It is called a script because it combines a sequence of commands-that would otherwise have to be typed into a keyboard one at a time-into a single script.
+\par
+Most shells have their own scripting language, each with variables, control flow, and its own syntax. (You may have heard of bash scripting as a popular scripting language. Bash scripting is a type of shell scripting.) What makes shell scripting different from other scripting languages is that it is optimized for performing shell-related tasks. Creating command pipelines, saving results into files, and reading from standard input are primitives in shell scripting, making it easier to use compared to other scripting languages. (For example, if you want to run the \inlinecode{cd} command in Python, you would need to import the \inlinecode{os} library and then call \inlinecode{chdir} from that library.)
+
+\section{Bash Scripting}
+\textbf{Bash scripting} refers to writing a script for a bash shell (Bourne Again SHell). You can check what shell you are using by running \inlinecode{ps -p \$\$}.
+If you are on Linux, your default shell should be a bash shell. If you are on macOS or Windows, you may need to switch to a bash shell. On macOS run \inlinecode{exec bash} to launch a bash shell. On Windows, run \inlinecode{bash} to launch a bash shell. 
+\par 
+Now that we have a bash shell, we can write our very first bash script, called \inlinecode{hello.sh}. Shell scripts normally end with the \inlinecode{.sh} ending to indicate that they are scripts. To run a script, you will type the following at your command line:
+\inlinecode{sh hello.sh}
+\par 
+This script will make use of the \inlinecode{echo} command that we learned about in Lecture 2.
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+echo "Hello world!"
+\end{lstlisting}
+The first line in our script (\inlinecode{\#!/usr/env/ bash}) is called a shebang, or sharp exclamation. It the combination of the pound symbol (\#) and an exclamation mark (!). The shebang is used to specify the interpreter that the given script will be run with. In our case, we indicate that we want our script to be run with a bash interpreter (i.e. a bash shell). If you want to run your script with a zsh shell, you would change your shebang to reflect as such.
+\par
+\section{Bash Scripting: Variables and Strings}
+\subsection{Variables}
+Now that we have a basic script, let's talk about the mechanics of bash scripting. When writing a bash script, you can assign variables using the syntax \inlinecode{x=foo}. You can then access this variable using the syntax \inlinecode{\$x}. One thing to be careful of is that when you assign a variable in a bash script, you should not add extra spaces. If you write \inlinecode{x = foo} then the line will be interpreted as running a program called \inlinecode{x} with the arguments \inlinecode{=} and \inlinecode{foo}. In general, shell scripts interpret the space character as an argument splitter.
+\par 
+\subsection{Strings}
+We can also define strings in a bash script. If we want to define a string literal, we will use single quotation marks: \inlinecode{'\$x'}. If we want to define a string that allows substitution, we will use double quotes: \inlinecode{"\$x"}. The double quotes will allow for substitution of variables:
+\begin{lstlisting}[style=Python]
+x=foo
+echo '$x'
+# prints $x
+echo "$x"
+# prints foo
+\end{lstlisting}
+\section{Bash Scripting: Control Flow Directives}
+Like other programming languages, bash scripts also have control flow directives such as \inlinecode{if}, \inlinecode{for}, \inlinecode{while}, and \inlinecode{case}. 
+\subsection{If Statements}
+The syntax for writing an if statement in bash is as follows: 
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+if [ CONDITION ]
+then
+	# do something
+fi
+
+\end{lstlisting}
+The condition we are interested in is denoted by \inlinecode{CONDITION}.
+\par 
+Let's take a look at an example of a bash script with an if statement:
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+num=101
+if [ $num -gt 100 ]
+then
+	echo "That's a big number!"
+fi
+
+\end{lstlisting}
+In this script, we begin by assigning a variable \inlinecode{num} to be equal to 101 on line 3. We then check whether \inlinecode{num} is greater than 100. Notice that we use the syntax \inlinecode{\$num} to access the value of \inlinecode{num}. We use the comparison operator \inlinecode{-gt} to compare \inlinecode{num} to \inlinecode{100}. In bash, comparisons for integers and strings are done differently. \inlinecode{-gt} is an integer comparison operator while \inlinecode{>} is a string comparison operator (that compares ASCII values). The use of the square brackets is actually a synonym for the \inlinecode{test} command, which tests the validity of a command or statement.
+\par
+
+We can also write an if-statement with multiple conditions. In this example, we will check if \inlinecode{num} is both greater than \inlinecode{100} and less than \inlinecode{1000}.
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+num=101
+if [ $num -gt 100 ] && [ $num -lt 1000 ]
+then
+	echo "That's a big (but not a too big) number!"
+fi
+
+\end{lstlisting}
+
+Again, in this script we assign \inlinecode{num} to be 101. We first check if \inlinecode{num} is greater than \inlinecode{100}. We than add a second condition using the \inlinecode{\&\&} syntax. Our second condition checks if \inlinecode{num} is less than 1000. 
+\par
+
+\subsection{While Loops}
+We can also add while loops to our bash scripts. The syntax for adding a while loop to a bash script is the following: 
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+while [ CONDITION ]
+do
+	# do something
+done
+
+\end{lstlisting}
+Again, the condition of interest is denoted as \inlinecode{CONDITION}.
+\par 
+Here is an example of a script that initializes \inlinecode{num} to \inlinecode{0} and continues looping until \inlinecode{num} reaches a value of \inlinecode{99}. 
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+num=0
+while [ $num -lt 100 ]
+do
+	echo $num
+	num=$((num+1))
+done
+
+\end{lstlisting}
+Notice how we access the variable \inlinecode{num} with the \inlinecode{\$} syntax: \inlinecode{\$num}. We use the \inlinecode{-lt} flag to compare \inlinecode{num} to \inlinecode{100}. When then print the value of \inlinecode{num} using the \inlinecode{echo} command. To increment the value of \inlinecode{num}, we use the double parentheses \inlinecode{(( .. ))} for arithmetic evaluation. Inside of the double parentheses, we can increment the value of \inlinecode{num} by 1. 
+
+\subsection{For Loops}
+To declare a for loop in bash, we can declare either an index-based for loop or a range-based for-loop. To declare an index based for-loop, we will use the following syntax:
+
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+for VARIABLE in 1 2 3 .. N
+do
+	# do something
+done
+
+\end{lstlisting}
+
+Perhaps, we are interested in implementing the above \inlinecode{while} loop as \inlinecode{for} loop: 
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+num=0
+for i in {0..99}
+do
+	echo $num
+	num=$((num+1))
+done
+
+\end{lstlisting}
+Notice that we define our iterator \inlinecode{i} and we set the bounds of the for-loop to be 0 and 99. 
+\subsection{Exercise 1}
+Let's put our scripting expertise to use and write a bash script. You should write a script called \inlinecode{num\_loop.sh} that loops through every number \inlinecode{1} through \inlinecode{20} and prints each number to standard output. The script should also conditionally print \inlinecode{I'm big!} for every number larger than \inlinecode{10}. 
+
+\section{Bash Scripting: Arguments and Functions}
+\subsection{Arguments}
+Our \inlinecode{big\_num.sh} script isn't very interesting as it will always print the same thing: "That's a big number!" Let's take a look at how we might use command line arguments to make this script a little more interesting.
+\par
+In bash, the variables \inlinecode{\$1} - \inlinecode{\$9} refers to the arguments to a script.
+The variable \inlinecode{\$0} refers to the name of the script. For example, consider the following:
+\\
+\inlinecode{adrazen@thinking-computer CS45 \% sh my\_script.sh ayelet}
+\\
+In this case, the name of the script (\inlinecode{my\_script.sh}) is defined by the variable \inlinecode{\$0}. The first argument to the script (\inlinecode{ayelet}) is defined by the variable \inlinecode{\$1}. In the case of our \inlinecode{big\_number.sh} script, we can change the value of \inlinecode{num} to be dependent on the first argument that is passed in when the script is invoked. In other words, \inlinecode{num} will simply be the value of \inlinecode{\$1}. 
+\\
+\\Let's assume that we invoke the script as follows: 
+\\
+\inlinecode{adrazen@ayelet-computer CS45 \% sh big\_num.sh 102}
+\\ 
+\\
+In our script, we can replace the line \inlinecode{num=101} to be \inlinecode{num=\$1}:
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+num=$1
+if [ $num -gt 100 ]
+then
+	echo "That's a big number!"
+fi
+\end{lstlisting}
+By changing line 3, we now set the value of \inlinecode{num} to be the first argument from the command line when invoking the script. This means the use could pass a different value every time they invoke the script.
+\par
+\subsection{Functions}
+We can also define functions in bash. Let's define a function for making a new directory and then entering that directory. (This is a pretty commaon thing that users want to do and there is actually a command called \inlinecode{mcd} in UNIX to allow users to do that.) We can use the commands \inlinecode{mkdir} and \inlinecode{cd} to achieve this. When running \inlinecode{mkdir}, we want to make sure that we also create any necessary intermediate directories. Therefore, we will want to make sure we pass the \inlinecode{-p} flag when calling \inlinecode{mkdir}, which creates all the intermediate directories on the path to the final directory that do not already exist.
+\\
+\\ When defining a function in bash, you may wonder how to pass arguments to the function. Let's take a look at our function so far and how you might think of passing arguments:  
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+make_and_enter(directory_name) {
+	mkdir -p directory_name
+	cd directory_name
+}
+\end{lstlisting}
+Unfortunately, this won't work in bash. In bash, we will refer to arguments that are passed into a function based on their position. For instance, we might use the value of the very first argument and refer to it using \inlinecode{\$1}.
+
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+make_and_enter() {
+	mkdir -p "$1"
+	cd "$1"
+}
+\end{lstlisting}
+When we want to invoke our function, we will use the following line:
+\\  \inlinecode{make\_and\_enter new\_folder}
+\\
+\\ In this case, we are calling our function (i.e.\inlinecode{make\_and\_enter}) with the argument \inlinecode{new\_folder}. Our script will look as follows: 
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+make_and_enter() {
+	mkdir -p "$1"
+	cd "$1"
+}
+
+make_and_enter new_folder
+\end{lstlisting}
+
+Now consider that we want the name of the new folder to be passed from the command line whenever the script is invoked. In that case, we would invoke the script as follows: 
+\inlinecode{adrazen@ayelet-computer CS45 \% sh mcd.sh my\_folder}
+In order for the argument \inlinecode{new\_folder} to be used inside of our function, we need to make sure that we pass it into the function. In this case, we need to pass the argument from the command line invocation to the function call, and then from the function call to the function body. Our final script would look as follows: 
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+make_and_enter() {
+	mkdir -p "$1"
+	cd "$1"
+}
+
+make_and_enter "\$1"
+\end{lstlisting}
+
+\subsection{Exercise}
+Let's try another exercise to solidify our function-writing and argument-passing skills. In this exercise, you should write a shell script called \inlinecode{my\_folder.sh} that takes in two arguments: your name (e.g. \inlinecode{ayelet}) and your name with the \inlinecode{.txt} ending (e.g. \inlinecode{ayelet.txt}).  The script should call a function that creates a folder by the name of the first argument (e.g. \inlinecode{ayelet}) and then create a file inside by the name of the second argument (e.g. \inlinecode{ayelet.txt}).
+For my name, my function would create a folder named \inlinecode{ayelet} and a file named \inlinecode{ayelet.txt} inside of \inlinecode{ayelet}.
+
+\subsection{Exit Codes}
+The notion of exit codes allows for verifying the success or failure of a previous command. An \textbf{exit code} or \textbf{return value} is the way scripts or commands can communicate with each other about how execution went. A return value of 0 means that everything went OK. A return value other than 0 means that an error occurred. \inlinecode{\$?} provides the return value from the previous command. (For students who are familiar with C/C++, you may notice that the \inlinecode{main()} function always returns an \inlinecode{int} and that this \inlinecode{int} is often 0. The \inlinecode{int} returned by \inlinecode{main()} is the exit code for the program.)
+\\
+\\
+Below is an example of a script that randomly generates either 0 or 1 and runs a either the \inlinecode{true} or the \inlinecode{false} command based on this random value. The script then checks the return value of the previous command. As you can tell, this script is a bit contrived but it demonstrates how you might use the return value of the previous command as an input to the next command.
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+result=$(($RANDOM % 2))
+if [ $result -eq 0 ]
+then
+	true
+	echo "$?"
+else
+	false
+	echo "$?"
+fi
+
+\end{lstlisting}
+\subsection{Command Substitution}
+\textbf{Command substitution} is another useful feature of bash scripting. You might want to run a command and then use its output as a variable to some other piece of code. 
+\par 
+Here is an example of a script that uses command substitution: 
+\begin{lstlisting}[style=Python]
+#!/usr/bin/env bash
+
+for element in $(ls ~/Desktop)
+	do
+		echo "Desktop contains file named $element"
+	done
+
+\end{lstlisting}
+\end{document}
+
