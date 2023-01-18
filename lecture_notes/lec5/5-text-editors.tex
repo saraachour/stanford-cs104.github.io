@@ -1,0 +1,207 @@
+\usepackage{shared/cs45}
+
+\title{CS 45, Lecture 5}
+\subtitle{Text Editors}
+\date{Winter 2023}
+\author{Akshay Srivatsan, Ayelet Drazen, Jonathan Kula}
+
+\begin{document}
+
+\maketitle
+
+\frame{\titlepage}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[hidesubsections]
+\end{frame}
+
+\section{Text Editing: An Overview}
+\subsection{Rich Text}
+
+When we think about editing a document, we usually think of doing that in 
+a {\em rich text editor}, something like Word or Google Docs.
+
+Rich text is for {\em humans communicating with humans}-- its elements
+are structured around elements of prose, such as words, paragraphs,
+headings, etc., and its features are centered around making consuming
+written text easier for humans-- things like varying fonts, emphasizing
+text with bold, italic, or underline, the ability to insert pictures
+or other multimedia, and so on and so forth.
+
+However, while this information is helpful and sometimes really necessary
+in human-to-human communication, it's unnecessary and gets in the way when
+we're desiring to communicate with a computer (or give it instructions).
+This is why we use {\em plain text} for computers!
+
+\subsection{Plain Text Editors}
+
+Lots of different kinds of programs have been developed to edit plain text--
+in fact, it's really one of the core affordances a computer offers. Some
+plain text editors, like Windows' Notepad or macOS' TextEdit are extremely
+basic, and fulfill the mantle of a plain text editor with no frills.
+However, knowing how we frequently use plain text to communicate, configure,
+and program computers, many more plain text editors integrate additional
+tools to make these tasks easier.
+
+Computer programs in general tend to fall into one of three categories:
+\begin{enumerate}
+  \item {\em GUI (Graphical User Interface) programs}. These are programs that
+          display a graphical interface in some way, and are the kinds of applications
+          you're almost certainly most familiar with.
+  \item {\em TUI (Text User Interface) programs}. These are programs that display
+          a sort of imitation of a graphical interface using text within a terminal.
+          These are distinct from CLI programs in that the application stays open
+          and allows for continued operation, taking over the terminal and designed
+          for interaction directly with the user via the keyboard and sometimes mouse.
+  \item {\em CLI (Command Line Interface) programs}. These are programs that are usable
+          only from the command line, by invoking the program with a set of flags
+          and arguments, and potentially information from standard input.
+\end{enumerate}
+
+As a caveat, TUI applications especially are often fairly inaccessible
+to screen readers; since they just display information-- including UI--
+as a bunch of text that isn't distinguished or hierarchical in any way.
+
+\subsection{Learning a new editor}
+
+No matter what kind of editor you choose to jump into learning, there's going
+to be a learning curve. Our recommendation is to {\em choose one GUI editor
+and one TUI editor}, then stick with them for a while. We'd estimate that you'll
+reach the same speed as you'd use any other editor after about 10-20 hours of use,
+and often will be much faster than others after about 20 hours of use.
+
+Don't be afraid to look some stuff up, too-- often, there's a faster way to go
+about doing things that's just a google search away!
+
+Since we expect that you all are pretty familiar with GUI editors (such as 
+PyCharm), we'll jump into doing a short demo with {\tt vim}.
+
+\subsection{Why {\tt vim}? Or a TUI editor at all?}
+
+The biggest reason is for {\em remote editing}. Computers whose purpose is to
+serve content or provide resources-- i.e.\ servers-- often do not have GUIs
+installed at all, as they are a significant resource use overhead that has no
+good purpose when CLI and TUI applications exist that don't require all that
+overhead. Thus, it's a good idea to get used to some editor you can use via
+only a terminal.
+
+\section{Vim}
+
+\subsection{A Quick History}
+
+{\tt vim} was inspired by and spun off of an editor called {\tt vi}, and stands
+for VI iMitation (or VI iMproved, depending on who you ask). {\tt vi} was one
+of the first TUI editors, based on the line-editor {\tt ed} (and also the {\tt vi}sual
+mode of a CLI tool called {\tt ex}), which required you to edit line by line using
+certain commands.
+
+{\tt vi}, and {\tt vim}, continue to use that idea of {\em commands and modes}!
+
+\subsection{A Modal Editor}
+
+{\em {\tt vim} uses different ``modes'' to control editing.}
+
+\begin{enumerate}
+  \item You always start in {\em normal mode}, used for navigating around the file
+  \item You press {\tt i} to enter {\em insert mode}, to write new text
+  \item You press {\tt R} to enter {\em replace mode}, to overwrite text
+  \item You press {\tt v} to enter {\em visual mode}, for copying or deleting lines or blocks of text at a time
+  \item You press {\tt :} to enter {\em command mode}, which allows you to do all sorts of things (like save, quit, find-replace, etc.).
+\end{enumerate}
+
+\subsection{Learning to Navigate {\tt vim}}
+
+\begin{example}[codeblock]
+  We did a demo in class. You can access the demo using the commands below:
+  \begin{minted}{bash}
+  curl -Lo vim_nav.txt https://cs45.stanford.edu/res/lec5/vim_nav.txt
+  vim vim_nav.txt
+  \end{minted}
+\end{example}
+
+(Curious what these commands do? We introduced a handy-dandy website called
+\href{https://explainshell.com/explain?cmd=curl+-Lo+vim_nav.txt+https%3A%2F%2Fcs45.stanford.edu%2Fres%2Flec5%2Fvim_nav.txt#}{explainshell.com}
+that can break down commands for you using text from the {\tt man} pages. In the
+case of the commands above, the first one ({\tt curl}) downloads a file, and the second
+instructs vim to open the file that was downloaded.)
+
+You should open the file in {\tt vim} and try navigating through it; we did
+this exercise for 15 or so minutes live in class.
+
+\subsection{Windows \& Buffers}
+
+We're all used to the idea that each window is responsible for one file. If you want
+to open a new file in another window, you can do that.
+
+{\tt vim} plays with this idea a little bit. {\em Buffers} refer to open files,
+and are an abstract concept. A single buffer may be open in one {\em or more} windows!
+
+Meanwhile, {\em windows} are ``views'' into a buffer. This means you could have
+{\em multiple windows open to the SAME buffer!}-- if you do this, that means your changes
+to the buffer in one window would instantly reflect in the other. This is useful if e.g.\ 
+you want to scroll to multiple different parts of a file at once.
+
+{\tt :q} always closes the current window. You can also ``split'' a window using the
+{\tt :sp} (``split'') command, or vertically with the {\tt :vsp} command.
+
+\subsection{Configuring {\tt vim}}
+
+You can customize your installation of {\tt vim} by writing a {\tt .vimrc} file in
+your home directory (i.e.\ {\tt ~/.vimrc}).
+
+{\tt .vimrc} files contain a list of commands that run when you start {\tt vim}.
+For example, mine makes the mouse work, adds line numbers, and makes backspace and
+the arrow keys work in a manner I'd expect from an editor.
+
+You can also add 3rd-party plugins to {\tt vim}, either manually or using a
+plugin manager like {\tt vundle}.
+
+\subsection{Demoing {\tt .vimrc}}
+
+\begin{example}[codeblock]
+  We did a demo in class. You can access the demo using the commands below:
+  \begin{minted}{bash}
+  vim https://cs45.stanford.edu/res/lec5/.vimrc
+  \end{minted}
+\end{example}
+
+(The above command will open a temporary copy of the file at that URL, without
+saving it permanently.)
+
+The above {\tt .vimrc} is a slightly simpler version of the one I use, commented
+so you can see what each part does. It is based on a {\tt .vimrc} file that
+was distributed as part of CS107 back when they used vim.
+
+\section{Visual Studio Code}
+
+{\em Visual Studio Code} is our IDE of choice, as it stands right now!
+
+\subsection{What's an IDE?}
+
+An IDE, or {\em Integrated Developer Environment}, is an application for software
+development and software code editing that bundles together {\em lots of functionality
+for developer productivity into one place}.
+
+In particular, this usually means bundling code editing tools together with
+syntax highlighting and smart autocomplete, as well as error checking, build tools,
+testing tools, the ability to run code, and some other tools that scan and index
+your code automatically to help you understand and navigate it quickly, all in one tool.
+
+\subsection{Why VSCode?}
+
+We like VSCode for a couple reasons; besides the fact that it is totally free,
+it also has {\em plug-and-play language support} (you can make it richly support
+new languages by just installing a plugin to it)– and there are a {\em lot} of
+available language plugins that are very good for VSCode.
+
+Another key reason is that VSCode offers strong support for {\em remote editing},
+which means that you can access and edit resources {\em on a server}, without
+needing a GUI shell to be installed on the server at all.
+
+\subsection{VSCode Demo}
+
+We did a demo in class, demonstrating some of the features of an IDE, the
+ability to install plugins for language support, and showing off remote editing.
+
+\end{document}

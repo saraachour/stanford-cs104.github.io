@@ -4,6 +4,6 @@ ensure_path('TEXINPUTS', './shared');
 $pdflatex = 'xelatex --synctex=1 --interaction=nonstopmode --shell-escape %O %S';
 $out_dir = 'build';
 
-@default_files = ('*.beamer.tex', '*.article.tex');
+@default_files = ('*.beamer.tex', '*.notes.tex');
 
 $clean_ext = 'nav snm vrb';
