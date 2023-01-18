@@ -1,0 +1,89 @@
+\usepackage{shared/cs45}
+
+\title{CS 45, Lecture X}
+\subtitle{Lecture Title}
+\date{Winter 2023}
+\author{Akshay Srivatsan, Ayelet Drazen, Jonathan Kula}
+
+\begin{document}
+
+\maketitle
+
+\frame{\titlepage}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[hidesubsections]
+\end{frame}
+
+\section{Demo Section}
+
+\begin{frame}{Example}{Header}
+  \begin{itemize}
+    \item
+      Example 1
+      \pause
+    \item
+      Example 2
+      \pause
+    \item
+      Example 3
+  \end{itemize}
+\end{frame}
+
+\subsection{Demo Subsection}
+
+Lecture notes outside a slide.
+
+\begin{frame}{Demos}
+  \begin{description}
+    \item[Key]
+      Value
+    \item[Key]
+      Value
+  \end{description}
+  \mode<article> {
+    Lecture notes within a slide.
+  }
+\end{frame}
+
+\begin{frame}{Blocks}
+  \begin{definition}[definition]
+    A definition block.
+  \end{definition}
+  \begin{example}[example]
+    An example block.
+  \end{example}
+  \begin{alertblock}{alert}
+    An alert block.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]{Code Blocks}
+  \begin{example}[codeblock]
+    A code block:
+    \begin{minted}{c}
+    #include<stdio.h>
+
+    int main(int argc, char **argv) {
+      printf("Hello, World!\n");
+      return 0;
+    }
+    \end{minted}
+  \end{example}
+\end{frame}
+
+\mode<article>{
+  \newpage
+  \bibliographystyle{plain}
+  \bibliography{shared/cs45}
+}
+
+\mode<presentation>{
+  \begin{frame}{References}
+    \bibliographystyle{plain}
+    \bibliography{shared/cs45}
+  \end{frame}
+}
+
+\end{document}
