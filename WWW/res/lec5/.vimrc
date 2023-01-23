@@ -52,6 +52,9 @@ set backspace=indent,eol,start
 " Shows partial commands as they're entered
 set showcmd
 
+" Enables hidden buffers
+set hidden
+
 " ==== Key Remaps ==== "
 " Press enter when you're done searching to remove highlights
 nnoremap <CR> :nohlsearch<CR><CR>
