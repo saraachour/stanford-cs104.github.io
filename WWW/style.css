@@ -335,6 +335,7 @@ a.styled-url {
   margin-right: 0.2rem;
   font-weight: normal;
   text-decoration: none;
+  display: inline-block;
 }
 
 a.styled-url:hover {
