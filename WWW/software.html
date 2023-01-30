@@ -199,54 +199,45 @@
 
         <h3 id="lec7">Lecture 7: Computer Networking</h3>
         <p>
-          You'll want to install <code>python3</code>, <code>ngrok</code>, and
-          Wireshark to fully follow along:
+          You'll want to install <code>python3</code>, <code>node</code>, <code>localtunnel</code>, and
+          optionally Wireshark to fully follow along:
         </p>
+
+        <div class="sys windows linux">
+          <div class="alert">
+            <code class="terminal-line"> sudo apt-get install curl </code>
+          </div>
+          <div class="alert">
+            <code class="terminal-line raw">
+              curl -o-
+              https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh |
+              bash
+            </code>
+          </div>
+          <div>...then restart your terminal, and run...</div>
+          <div class="alert">
+            <code class="terminal-line"> nvm install node </code>
+          </div>
+        </div>
+        <div class="alert sys mac">
+          <code class="terminal-line"> brew install node</code>
+        </div>
+
+        <div class="alert">
+          <code class="terminal-line"> npm install -g localtunnel </code>
+        </div>
+
         <div>
           <div class="alert sys linux">
             <code class="terminal-line">
               sudo apt-get install python3 wireshark
             </code>
-            <br />
-            <br />
-            # The following comes directly from ngrok's
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://ngrok.com/download"
-              >website</a
-            >, under "Linux" then "Install ngrok via Apt"
-            <br />
-            <code class="terminal-line">
-              curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee
-              /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb
-              https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee
-              /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt
-              install ngrok
-            </code>
           </div>
           <div class="alert sys windows">
             <code class="terminal-line"> sudo apt-get install python3 </code>
-            <br />
-            <br />
-            # The following comes directly from ngrok's
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://ngrok.com/download"
-              >website</a
-            >, under "Linux" then "Install ngrok via Apt"
-            <br />
-            <code class="terminal-line">
-              curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee
-              /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb
-              https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee
-              /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt
-              install ngrok
-            </code>
           </div>
           <div class="alert sys mac">
-            <code class="terminal-line"> brew install python3 ngrok </code>
+            <code class="terminal-line"> brew install python3 </code>
           </div>
         </div>
         <p class="sys windows mac">
@@ -317,30 +308,11 @@
 
         <h3 id="lec16">Lecture 16: Cloud &amp; Serverless Computing</h3>
         <p>
-          You’ll need to install <code>npm</code>, and sign up for an account
+          You’ll need to sign up for an account
           with Vercel and Oracle Cloud.
         </p>
-        <div class="sys windows linux">
-          <div class="alert">
-            <code class="terminal-line"> sudo apt-get install curl </code>
-          </div>
-          <div class="alert">
-            <code class="terminal-line raw">
-              curl -o-
-              https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh |
-              bash
-            </code>
-          </div>
-          <div>...then restart your terminal, and run...</div>
-          <div class="alert">
-            <code class="terminal-line"> nvm install node </code>
-          </div>
-        </div>
-        <div class="alert sys mac">
-          <code class="terminal-line"> brew install node</code>
-        </div>
         <p>
-          And finally, sign up or log in to your
+          Sign up or log in to your
           <a
             href="https://vercel.com"
             rel="noopener noreferrer"
