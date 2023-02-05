@@ -202,8 +202,11 @@
         <h3 id="lec7">Lecture 7: Computer Networking</h3>
         <p>
           You'll want to install <code>python3</code>, <code>node</code>,
-          <code>localtunnel</code>, <code>dig</code> and optionally Wireshark to
-          fully follow along:
+          <code>ngrok</code>, <code>dig</code> and optionally Wireshark to
+          fully follow along. You'll also need to sign up for an 
+          <a href="https://ngrok.com/" target="_blank" rel="noreferrer noopener">
+            <code>ngrok</code> account.
+          </a>
         </p>
 
         <div class="sys linux">
@@ -237,9 +240,16 @@
           <code class="terminal-line"> brew install node</code>
         </div>
 
-        <div class="alert">
-          <code class="terminal-line"> npm install -g localtunnel </code>
+        <div class="alert sys mac">
+          <code class="terminal-line">  brew install ngrok/ngrok/ngrok </code>
         </div>
+        <div class="sys windows linux">
+          For <code>ngrok:</code>
+          <div class="alert sys windows linux">
+            <code class="terminal-line">  curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok </code>
+          </div>
+        </div>
+
 
         <div>
           <div class="alert sys linux">
