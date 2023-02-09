@@ -22,22 +22,22 @@
 
 <div class="alert alert-warning sys mac">
 	We’ve detected that you're using a Mac computer.
-	<a href="#" on:click={() => (system = 'windows')}> Click here if you’re using Windows </a>
-	or <a href="#" on:click={() => (system = 'linux')}>Linux.</a>
+	<a href="#top" on:click={() => (system = 'windows')}> Click here if you’re using Windows </a>
+	or <a href="#top" on:click={() => (system = 'linux')}>Linux.</a>
 	The instructions on this page will be tailored to the detected system.
 </div>
 
 <div class="alert alert-warning sys windows">
 	We’ve detected that you're using a Windows computer.
-	<a href="#" on:click={() => (system = 'mac')}>Click here if you’re using Mac</a>
-	or <a href="#" on:click={() => (system = 'linux')}>Linux.</a>
+	<a href="#top" on:click={() => (system = 'mac')}>Click here if you’re using Mac</a>
+	or <a href="#top" on:click={() => (system = 'linux')}>Linux.</a>
 	The instructions on this page will be tailored to the detected system.
 </div>
 
 <div class="alert alert-warning sys linux">
 	We’ve detected that you're using a Linux computer.
-	<a href="#" on:click={() => (system = 'mac')}>Click here if you’re using Mac</a>
-	or <a href="#" on:click={() => (system = 'windows')}>Windows.</a>
+	<a href="#top" on:click={() => (system = 'mac')}>Click here if you’re using Mac</a>
+	or <a href="#top" on:click={() => (system = 'windows')}>Windows.</a>
 	The instructions on this page will be tailored to the detected system.
 </div>
 

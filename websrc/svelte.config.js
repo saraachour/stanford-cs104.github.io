@@ -13,7 +13,7 @@ const config = {
 			base: '/class/cs45'
 		},
 		alias: {
-			$data: './src/class_data.yaml'
+			$: './src'
 		}
 	}
 };

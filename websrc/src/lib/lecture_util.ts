@@ -1,6 +1,6 @@
 import { base } from '$app/paths';
 import { marked } from 'marked';
-import class_data from '$data';
+import class_data from '$/class_data.yaml';
 import moment from 'moment';
 
 export function titleCase(s: string): string {

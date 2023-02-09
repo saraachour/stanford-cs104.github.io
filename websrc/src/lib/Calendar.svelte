@@ -9,7 +9,7 @@
 	import Topic from './Calendar/Day/Topic.svelte';
 	import Week from './Calendar/Week.svelte';
 
-	import class_data from '$data';
+	import class_data from '$/class_data.yaml';
 	import { fixupLink, getBoxColor, getClassDataByWeek, getLectureMoment } from './lecture_util';
 
 	const weekdays = class_data.class_days.length;

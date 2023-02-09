@@ -1,5 +1,5 @@
 <script lang="ts">
-	import class_data from '$data';
+	import class_data from '$/class_data.yaml';
 	import { fixupLink, getLectureMoment, markdown, titleCase } from '$lib/lecture_util';
 	import { marked } from 'marked';
 </script>
