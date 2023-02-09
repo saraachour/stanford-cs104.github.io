@@ -59,3 +59,52 @@ figure img {
 	margin-right: auto;
 	display: block;
 }
+
+pre {
+  border-radius: 4px;
+  border: 1px solid #bcbec0;
+  background: #f1f3f5;
+  font-family: "Anonymous Pro", monospace;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-x: auto;
+}
+
+*:not(.alert) > code:not(.alert) {
+  font-family: "Anonymous Pro", monospace;
+  background-color: #f1f3f5;
+  padding: 2px 0;
+  border-radius: 4px;
+  border: 1px solid #bcbec0;
+  font-size: 0.95em;
+}
+
+pre code {
+  border-radius: 0px;
+  background: none;
+  border: none;
+}
+
+.alert {
+  border-left: 4px solid #c5c5c5;
+  font-size: 1rem;
+  margin: 0.3rem 0 0.3rem 0;
+  padding: 0.5rem 0.8rem;
+  font-style: italic;
+  background: #eee;
+  border-radius: 4px;
+  border: 1px solid #bcbec0;
+}
+
+.alert-warning {
+  border-left: 4px solid #f3e54d;
+}
+
+.terminal-line::before {
+  content: "$ ";
+}
+
+.powershell-line::before {
+  content: "> ";
+}
