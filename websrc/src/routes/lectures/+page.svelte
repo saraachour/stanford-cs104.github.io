@@ -4,6 +4,10 @@
 	import { marked } from 'marked';
 </script>
 
+<svelte:head>
+	<title>CS 45: Lectures</title>
+</svelte:head>
+
 <h2>Lectures</h2>
 
 {#each class_data.lectures as lecture, i}

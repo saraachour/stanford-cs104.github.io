@@ -1,4 +1,6 @@
 <script lang="ts">
+	import class_data from '$/class_data.yaml';
+	import { fixupLink } from '$/lib/lecture_util';
 	import { base } from '$app/paths';
 	import Calendar from '$lib/Calendar.svelte';
 
@@ -42,52 +44,15 @@
 </p>
 
 <h2>Course Staff</h2>
-<div>
+{#each class_data.instructors as instructor}
 	<Instructor
-		src="{base}/img/akshay.jpg"
-		name="Akshay Srivatsan"
-		role="Instructor"
-		email="akshay01@stanford.edu"
-    officeHours={[{
-      when: "Wednesdays 6:30–7:30",
-      where: "on Zoom",
-      url: "https://stanford.zoom.us/j/99233539818?pwd=ZzloNFdSR01lRkRiVGsrV244aVVmQT09"
-    }, {
-      when: "Thursdays 2–3 PM",
-      where: "at Gates 4A Lounge"
-    }]}
+		src={fixupLink(instructor.image)}
+		name={instructor.name}
+		role={instructor.role}
+		email={instructor.email}
+    officeHours={instructor.officeHours}
 	/>
-
-	<Instructor
-		src="{base}/img/ayelet.jpg"
-		name="Ayelet Drazen"
-		role="Instructor"
-		email="adrazen@stanford.edu"
-    officeHours={[{
-      when: "Mondays 3:15–4:15 PM",
-      where: "in Huang Basement",
-    }, {
-      when: "Sundays 8–9 PM",
-      where: "on Zoom",
-      url: "https://stanford.zoom.us/j/2035566567?pwd=VXpjbENSY296Z1c0RDlmbytSSHMvZz09"
-    }]}
-	/>
-
-	<Instructor
-		src="{base}/img/jonathan.jpg"
-		name="Jonathan Kula"
-		role="Instructor"
-		email="jdkula@stanford.edu"
-    officeHours={[{
-      when: "Mondays 6–7 PM",
-      where: "on Zoom",
-      url: "https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09"
-    }, {
-      when: "Wednesdays 11:30am–12:30pm",
-      where: "in Huang Basement"
-    }]}
-	/>
-</div>
+{/each}
 
 <h2>Calendar</h2>
 

@@ -41,38 +41,6 @@
 	The instructions on this page will be tailored to the detected system.
 </div>
 
-<!--
-        <div class="alert">
-          <h3>Table of Contents</h3>
-          <ol>
-            <li>
-              <a href="#shell-setup">Setting Up Your Shell Environment</a>
-            </li>
-            <li><a href="#software">Software</a></li>
-            <ol>
-              <li><a href="#lec2">Lecture 2: The Shell and Shell Tools</a></li>
-              <li>
-                <a href="#lec3">
-                  Lecture 3: Data Manipulation and Shell Scripting
-                </a>
-              </li>
-              <li><a href="#lec5">Lecture 5: Text Editors</a></li>
-              <li><a href="#lec7">Lecture 7: Computer Networking</a></li>
-              <li><a href="#lec8">Lecture 8: Version Control</a></li>
-              <li>
-                <a href="#lec15">
-                  Lecture 15: Virtual Machines &amp; Containers
-                </a>
-              </li>
-              <li>
-                <a href="#lec16">
-                  Lecture 16: Cloud &amp; Serverless Computing
-                </a>
-              </li>
-            </ol>
-          </ol>
-        </div>
-	-->
 
 <h2 id="shell-setup">Setting Up Your Shell Environment</h2>
 

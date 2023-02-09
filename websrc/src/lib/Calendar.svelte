@@ -17,11 +17,13 @@
 
 <CalendarBase>
 	{#each getClassDataByWeek() as lectures, i}
-		<Week number={i + 1}>
+		<Week number={i + 1} future={getLectureMoment(i * weekdays).isAfter(moment())}>
 			{#each lectures as lecture, j}
 				<Day
 					date={getLectureMoment(i * weekdays + j).format('ddd, MMM D')}
 					holiday={!!lecture.holiday}
+					even={j % 2 == 0}
+					future={getLectureMoment(i * weekdays + j).isAfter(moment())}
 				>
 					<Topic>{lecture.topic}</Topic>
 					{#if lecture.materials}

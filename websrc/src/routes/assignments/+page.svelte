@@ -1,9 +1,13 @@
 <script lang="ts">
 	import class_data from '$/class_data.yaml';
-	import { fixupLink, getLectureMoment, markdown, titleCase } from '$lib/lecture_util';
+	import { fixupLink, markdown, titleCase } from '$lib/lecture_util';
 	import { marked } from 'marked';
 	import moment from 'moment';
 </script>
+
+<svelte:head>
+	<title>CS 45: Assignments</title>
+</svelte:head>
 
 <h2>Assignments</h2>
 

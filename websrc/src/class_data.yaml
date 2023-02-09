@@ -3,6 +3,39 @@ class_days:
   - Monday
   - Wednesday
 
+instructors:
+  - name: Akshay Srivatsan
+    role: Instructor
+    email: akshay01@stanford.edu
+    image: /img/akshay.jpg
+    officeHours:
+      - when: "Wednesdays 6:30–7:30"
+        where: "on Zoom"
+        url: "https://stanford.zoom.us/j/99233539818?pwd=ZzloNFdSR01lRkRiVGsrV244aVVmQT09"
+      - when: "Thursdays 2–3 PM"
+        where: "at Gates 4A Lounge"
+  - name: Ayelet Drazen
+    role: Instructor
+    email: adrazen@stanford.edu
+    image: /img/ayelet.jpg
+    officeHours:
+      - when: "Mondays 3:15–4:15 PM"
+        where: "in Huang Basement"
+      - when: "Sundays 8–9 PM"
+        where: "on Zoom"
+        url: "https://stanford.zoom.us/j/2035566567?pwd=VXpjbENSY296Z1c0RDlmbytSSHMvZz09"
+  - name: Jonathan Kula
+    role: Instructor
+    email: jdkula@stanford.edu
+    image: /img/jonathan.jpg
+    officeHours:
+      - when: "Mondays 6–7 PM"
+        where: "on Zoom"
+        url: "https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09"
+      - when: "Wednesdays 11:30 AM–12:30 PM"
+        where: "in Huang Basement"
+    
+
 assignments:
   - name: 'Assignment 0: Getting Set Up!'
     points: 1

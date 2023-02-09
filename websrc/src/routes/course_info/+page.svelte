@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>CS 45: Course Info</title>
+</svelte:head>
+
 <h1>Course Info</h1>
 <h2>Lectures</h2>
 We will publish lecture notes as well as slides for each lecture for anyone who misses or cannot attend

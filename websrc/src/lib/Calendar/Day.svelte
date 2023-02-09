@@ -4,19 +4,28 @@
 	export let date: string;
 	export let header: boolean = false;
 	export let holiday: boolean = false;
+	export let future: boolean = false;
+	export let even: boolean = false;
+	
+	const odd = !even;
 </script>
 
-<div class:day={!header} class:holiday class:header>
+<div class:day={!header} class:holiday class:header class:even class:odd class:future>
 	<Date>{date}</Date>
 	<slot />
 </div>
 
 <style>
-	.day:nth-child(odd) {
-		background-color: #e2e5e9;
-	}
-	.day:nth-child(even) {
+	.day.even {
 		background-color: #fafcff;
+	}
+	.day.odd {
+		background-color: #f3f5f8;
+	}
+	.future.future {
+		background-color: #fff;
+		font-style: italic;
+		color: #888;
 	}
 	.day, .header {
 		padding: 0.3em 10px;

@@ -41,7 +41,7 @@ export function getWeek(lectureNumber: number) {
 export function getLectureMoment(lectureNumber: number) {
 	const startDate = moment(class_data.start_date, 'YYYY/MM/DD', true).isoWeekday(
 		class_data.class_days[0]
-	);
+	).hour(0).minute(0).second(0);
 	const weekIdx = getWeek(lectureNumber);
 	const weekday = class_data.class_days[lectureNumber % class_data.class_days.length];
 
