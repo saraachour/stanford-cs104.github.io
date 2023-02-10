@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Block from '$lib/Block.svelte';
+	import Block from '$lib/Callout.svelte';
 	import Code from '$lib/Code.svelte';
 	import OnlyShowOn, { system } from '$lib/OnlyShowOn.svelte';
 </script>

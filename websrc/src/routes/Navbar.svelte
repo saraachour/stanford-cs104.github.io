@@ -1,3 +1,4 @@
+<!-- NavBar shown at the top of all pages -->
 <script>
 	import { base } from '$app/paths';
 	import NavbarBase from '../lib/Navbar/NavbarBase.svelte';

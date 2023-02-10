@@ -1,3 +1,5 @@
+<!-- Creates a block that is only shown on a particular system -->
+
 <script lang="ts" context="module">
 	import { browser } from '$app/environment';
 	import { writable } from 'svelte/store';

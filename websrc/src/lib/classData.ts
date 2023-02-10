@@ -1,3 +1,7 @@
+/**
+ * Exports typed class data and utilities to help use it when
+ * rendering other pages
+ */
 import { base } from '$app/paths';
 import { marked } from 'marked';
 import class_data_raw from '../class_data.yaml';
@@ -7,6 +11,7 @@ import moment from 'moment';
 export const class_data = class_data_raw as ClassData
 export const lectures_by_week = getLectureDataByWeek();
 
+/** Sorts lecture data into a list-of-lists, sorting lectures into weeks. */
 function getLectureDataByWeek() {
 	const weekdays = class_data.class_days.length;
 	const arr = [];

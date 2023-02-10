@@ -1,3 +1,5 @@
+<!-- Slots into the "Materials" column -->
+
 <div>
 	<slot />
 </div>

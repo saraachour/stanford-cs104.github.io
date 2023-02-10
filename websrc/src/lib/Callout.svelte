@@ -1,3 +1,5 @@
+<!-- Creates a callout block, with an optional yellow warning strip -->
+
 <script lang="ts">
 	export let warning: boolean = false;
 </script>

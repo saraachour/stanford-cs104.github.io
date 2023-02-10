@@ -11,6 +11,7 @@
 
 <h2>Assignments</h2>
 
+<!-- Generates assignment details from the yaml -->
 {#each class_data.assignments as assignment}
 	<UnitDetails>
 		<svelte:fragment slot="title">

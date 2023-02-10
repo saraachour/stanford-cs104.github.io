@@ -1,3 +1,4 @@
+<!-- Represents one week in the calendar (and creates a header as appropriate) -->
 <script lang="ts">
 	import Day from './Day.svelte';
 	import Assignments from './Day/Assignments.svelte';

@@ -1,3 +1,4 @@
+<!-- Root layout used for all pages -->
 <script>
 	import '../style.css';
   import 'highlight.js/styles/a11y-light.css';
@@ -5,7 +6,6 @@
 </script>
 
 <Navbar />
-
 <main>
 	<slot />
 </main>

@@ -1,3 +1,5 @@
+<!-- Creates a syntax-highlighted line of code -->
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 

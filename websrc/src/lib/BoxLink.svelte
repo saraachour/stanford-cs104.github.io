@@ -1,3 +1,5 @@
+<!-- Creates an external link stylized inside a box (used for materials) -->
+
 <script lang="ts">
 	export let color: string = 'black';
 	export let href: string;

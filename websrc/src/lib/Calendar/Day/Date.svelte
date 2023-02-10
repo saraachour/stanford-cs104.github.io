@@ -1,3 +1,5 @@
+<!-- Slots into the "Date" column -->
+
 <div>
 	<slot />
 </div>

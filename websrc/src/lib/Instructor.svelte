@@ -1,9 +1,8 @@
+<!-- Generates a tile introducing an instructor + their office hours -->
+
 <script lang="ts">
-	interface OfficeHour {
-		when: string;
-		where: string;
-		url?: string;
-	}
+	import type { OfficeHour } from "./classData";
+
 
 	export let name: string;
 	export let role: string = 'Instructor';

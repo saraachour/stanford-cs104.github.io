@@ -1,3 +1,5 @@
+<!-- Generates a calendar from the lecture data in the yaml -->
+
 <script lang="ts">
 	import moment from 'moment';
 	import BoxLink from './BoxLink.svelte';

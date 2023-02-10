@@ -10,6 +10,7 @@
 
 <h2>Lectures</h2>
 
+<!-- Generates lecture details from the yaml -->
 {#each class_data.lectures as lecture, i}
 	{#if !lecture.holiday}
 		<UnitDetails>

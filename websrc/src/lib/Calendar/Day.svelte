@@ -1,3 +1,4 @@
+<!-- This is one "row" of the calendar -->
 <script lang="ts">
 	import Date from './Day/Date.svelte';
 
@@ -7,7 +8,7 @@
 	export let future: boolean = false;
 	export let even: boolean = false;
 	
-	const odd = !even;
+	$: odd = !even;
 </script>
 
 <div class:day={!header} class:holiday class:header class:even class:odd class:future>

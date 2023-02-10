@@ -1,3 +1,5 @@
+<!-- Slots into the "Assignments" column -->
+
 <div>
 	<slot />
 </div>

@@ -1,3 +1,5 @@
+<!-- Creates a block that gives more information about a specific class unit (e.g. assignment or lecture) -->
+
 <section class="unit">
 	<div class="title-line">
 		<h3><slot name="title" /></h3>
