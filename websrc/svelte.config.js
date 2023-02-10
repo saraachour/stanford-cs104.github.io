@@ -17,9 +17,6 @@ const config = {
 		paths: {
 			base: '/class/cs45'
 		},
-		alias: {
-			$: './src'
-		},
 		version: {
 			name: snapshot
 		}

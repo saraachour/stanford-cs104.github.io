@@ -1,22 +1,25 @@
 <script lang="ts">
 	import moment from 'moment';
-	import { base } from '$app/paths';
 	import BoxLink from './BoxLink.svelte';
-	import CalendarBase from './Calendar/CalendarBase.svelte';
 	import Day from './Calendar/Day.svelte';
 	import Assignments from './Calendar/Day/Assignments.svelte';
 	import Materials from './Calendar/Day/Materials.svelte';
 	import Topic from './Calendar/Day/Topic.svelte';
 	import Week from './Calendar/Week.svelte';
 
-	import class_data from '$/class_data.yaml';
-	import { fixupLink, getBoxColor, getClassDataByWeek, getLectureMoment } from './lecture_util';
+	import {
+		class_data,
+		fixupLink,
+		getBoxColor,
+		getLectureMoment,
+		lectures_by_week
+	} from './classData';
 
 	const weekdays = class_data.class_days.length;
 </script>
 
-<CalendarBase>
-	{#each getClassDataByWeek() as lectures, i}
+<div class="calendar">
+	{#each lectures_by_week as lectures, i}
 		<Week number={i + 1} future={getLectureMoment(i * weekdays).isAfter(moment())}>
 			{#each lectures as lecture, j}
 				<Day
@@ -42,4 +45,11 @@
 			{/each}
 		</Week>
 	{/each}
-</CalendarBase>
+</div>
+
+<style>
+	.calendar {
+		font-size: 0.9em;
+		margin-bottom: 3em;
+	}
+</style>

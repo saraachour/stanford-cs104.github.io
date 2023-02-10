@@ -1,17 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
-	let system: 'mac' | 'windows' | 'linux' | null = null;
-
-	onMount(() => {
-		if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-			system = 'mac';
-		} else if (/(Win)/i.test(navigator.platform)) {
-			system = 'windows';
-		} else {
-			system = 'linux';
-		}
-	});
+	import Block from '$lib/Block.svelte';
+	import Code from '$lib/Code.svelte';
+	import OnlyShowOn, { system } from '$lib/OnlyShowOn.svelte';
 </script>
 
 <svelte:head>
@@ -20,40 +10,57 @@
 
 <h1>Software &amp; Computer Setup</h1>
 
-<div class="alert alert-warning sys mac">
-	We’ve detected that you're using a Mac computer.
-	<a href="#top" on:click={() => (system = 'windows')}> Click here if you’re using Windows </a>
-	or <a href="#top" on:click={() => (system = 'linux')}>Linux.</a>
-	The instructions on this page will be tailored to the detected system.
-</div>
+<OnlyShowOn mac>
+	<Block warning>
+		We’ve detected that you're using a Mac computer.
+		<a href="#top" on:click={() => ($system = 'windows')}> Click here if you’re using Windows </a>
+		or <a href="#top" on:click={() => ($system = 'linux')}>Linux.</a>
+		The instructions on this page will be tailored to the detected system.
+	</Block>
+</OnlyShowOn>
 
-<div class="alert alert-warning sys windows">
-	We’ve detected that you're using a Windows computer.
-	<a href="#top" on:click={() => (system = 'mac')}>Click here if you’re using Mac</a>
-	or <a href="#top" on:click={() => (system = 'linux')}>Linux.</a>
-	The instructions on this page will be tailored to the detected system.
-</div>
+<OnlyShowOn windows>
+	<Block warning>
+		We’ve detected that you're using a Windows computer.
+		<a href="#top" on:click={() => ($system = 'mac')}>Click here if you’re using Mac</a>
+		or <a href="#top" on:click={() => ($system = 'linux')}>Linux.</a>
+		The instructions on this page will be tailored to the detected system.
+	</Block>
+</OnlyShowOn>
 
-<div class="alert alert-warning sys linux">
-	We’ve detected that you're using a Linux computer.
-	<a href="#top" on:click={() => (system = 'mac')}>Click here if you’re using Mac</a>
-	or <a href="#top" on:click={() => (system = 'windows')}>Windows.</a>
-	The instructions on this page will be tailored to the detected system.
-</div>
+<OnlyShowOn linux>
+	<Block warning>
+		We’ve detected that you're using a Linux computer.
+		<a href="#top" on:click={() => ($system = 'mac')}>Click here if you’re using Mac</a>
+		or <a href="#top" on:click={() => ($system = 'windows')}>Windows.</a>
+		The instructions on this page will be tailored to the detected system.
+	</Block>
+</OnlyShowOn>
 
+<OnlyShowOn unknown>
+	<Block warning>
+		The instructions on this page are tailored to your system, but we couldn't detect it.
+
+		<a href="#top" on:click={() => ($system = 'mac')}>Click here if you’re using Mac</a>, or
+		<a href="#top" on:click={() => ($system = 'windows')}>here if you're using Windows</a>, or
+		<a href="#top" on:click={() => ($system = 'windows')}>here if you're using Linux</a>.
+	</Block>
+</OnlyShowOn>
 
 <h2 id="shell-setup">Setting Up Your Shell Environment</h2>
 
-<p class="sys linux">
-	If you’re running linux, you’re already all good to go! Note that the install instructions below
-	assume you’re running some flavor of Ubuntu or Debian; if you use a different distribution,
-	replace
-	<code>apt-get install</code> with the appropriate installation command for the package manager
-	your distribution uses (e.g.
-	<code>pacman</code> or <code>yum</code>)
-</p>
+<OnlyShowOn linux>
+	<p>
+		If you’re running linux, you’re already all good to go! Note that the install instructions below
+		assume you’re running some flavor of Ubuntu or Debian; if you use a different distribution,
+		replace
+		<code>apt-get install</code> with the appropriate installation command for the package manager
+		your distribution uses (e.g.
+		<code>pacman</code> or <code>yum</code>)
+	</p>
+</OnlyShowOn>
 
-<div class="sys mac">
+<OnlyShowOn mac>
 	<h3>Installing Homebrew</h3>
 	<p>
 		macOS already has a working shell environment, but it’s not straightforward to install some of
@@ -66,12 +73,12 @@
 		<a href="https://brew.sh/" rel="noopener noreferrer" target="_blank"> Homebrew’s website. </a>
 		Namely, copy-paste the following into your terminal window and press Return:
 	</p>
-	<div class="alert">
-		<code class="terminal-line">
+	<Block>
+		<Code prefix="$" language="shell">
 			/bin/bash -c "$(curl -fsSL
 			https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-		</code>
-	</div>
+		</Code>
+	</Block>
 	<p>
 		Then follow the instructions as they show up in your terminal. You may need to type your
 		computer password at some point; note that there will be no visual feedback, just hit enter once
@@ -86,9 +93,9 @@
 		<code>brew</code> and making sure it gives you help text and information (and does not say “command
 		not found”).
 	</p>
-</div>
+</OnlyShowOn>
 
-<div class="sys windows">
+<OnlyShowOn windows>
 	<h3>Installing WSL</h3>
 	<p>
 		Windows Subsystem for Linux, or WSL, allows you to run a traditional Unix shell on your Windows
@@ -104,15 +111,15 @@
 		<strong>Windows Powershell: Administrator</strong>. Press "Yes" when prompted. Finally, type in
 		the following command:
 	</p>
-	<div class="alert">
-		<code class="powershell-line"> wsl --install -d Ubuntu</code>
-	</div>
+	<Block>
+		<Code prefix=">">wsl --install -d Ubuntu</Code>
+	</Block>
 	<p>
 		Wait for it to finish. Once you’re done, you should find a new application on your computer
 		entitled <strong>Ubuntu</strong> – launch this to get a Unix shell. All the install instructions
 		below will assume you’re working within a Unix shell.
 	</p>
-</div>
+</OnlyShowOn>
 
 <h2 id="software">Software for the class</h2>
 
@@ -125,27 +132,35 @@
 <p>
 	You'll want to install the <code>vim</code> program to fully follow along:
 </p>
-<div>
-	<div class="alert sys windows linux">
-		<code class="terminal-line"> sudo apt-get install vim </code>
-	</div>
-	<div class="alert sys mac">
-		<code class="terminal-line"> brew install vim </code>
-	</div>
-</div>
+
+<OnlyShowOn windows linux>
+	<Block>
+		<Code language="shell" prefix="$">sudo apt-get install vim</Code>
+	</Block>
+</OnlyShowOn>
+
+<OnlyShowOn mac>
+	<Block>
+		<Code language="shell" prefix="$">brew install vim</Code>
+	</Block>
+</OnlyShowOn>
 
 <h3 id="lec6">Lecture 6: Command-Line Environment</h3>
 <p>
 	You'll want to install the <code>tmux</code> program to fully follow along:
 </p>
-<div>
-	<div class="alert sys windows linux">
-		<code class="terminal-line"> sudo apt-get install tmux </code>
-	</div>
-	<div class="alert sys mac">
-		<code class="terminal-line"> brew install tmux </code>
-	</div>
-</div>
+
+<OnlyShowOn windows linux>
+	<Block>
+		<Code language="shell" prefix="$">sudo apt-get install tmux</Code>
+	</Block>
+</OnlyShowOn>
+
+<OnlyShowOn mac>
+	<Block>
+		<Code language="shell" prefix="$">brew install tmux</Code>
+	</Block>
+</OnlyShowOn>
 
 <h3 id="lec7">Lecture 7: Computer Networking</h3>
 <p>
@@ -157,88 +172,91 @@
 	</a>
 </p>
 
-<div class="sys linux">
+<OnlyShowOn linux>
 	On Linux, you may also need to install traceroute and dig:
-	<div class="alert">
-		<code class="terminal-line"> sudo apt-get install inetutils-traceroute dnsutils </code>
-	</div>
-</div>
-
-<div class="sys windows linux">
-	<div class="alert">
-		<code class="terminal-line"> sudo apt-get install curl dnsutils </code>
-	</div>
-	<div class="alert">
-		<code class="terminal-line raw">
-			curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-		</code>
-	</div>
+	<Block>
+		<Code language="shell" prefix="$">sudo apt-get install inetutils-traceroute dnsutils</Code>
+		<Code language="shell" prefix="$">sudo apt-get install curl dnsutils</Code>
+		<Code language="shell" prefix="$"
+			>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash</Code
+		>
+	</Block>
 	<div>...then restart your terminal, and run...</div>
-	<div class="alert">
-		<code class="terminal-line"> nvm install node </code>
-	</div>
-</div>
-<div class="alert sys mac">
-	<code class="terminal-line"> brew install node</code>
-</div>
+	<Block>
+		<Code language="shell" prefix="$">nvm install node</Code>
 
-<div class="alert sys mac">
-	<code class="terminal-line"> brew install ngrok/ngrok/ngrok </code>
-</div>
-<div class="sys windows linux">
-	For <code>ngrok:</code>
-	<div class="alert sys windows linux">
-		<code class="terminal-line">
+		<Code language="shell" prefix="$">
 			curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee
 			/etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com
 			buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt
 			install ngrok
-		</code>
-	</div>
-</div>
+		</Code>
+		<Code language="shell" prefix="$">sudo apt-get install python3 wireshark</Code>
+	</Block>
+</OnlyShowOn>
 
-<div>
-	<div class="alert sys linux">
-		<code class="terminal-line"> sudo apt-get install python3 wireshark </code>
-	</div>
-	<div class="alert sys windows">
-		<code class="terminal-line"> sudo apt-get install python3 </code>
-	</div>
-	<div class="alert sys mac">
-		<code class="terminal-line"> brew install python3 </code>
-	</div>
-</div>
-<p class="sys windows mac">
-	You can download Wireshark
-	<a href="https://www.wireshark.org/download.html" rel="noopener noreferrer" target="_blank">
-		here.
-	</a>
-</p>
+<OnlyShowOn windows>
+	<Block>
+		<Code language="shell" prefix="$">sudo apt-get install curl dnsutils</Code>
+		<Code language="shell" prefix="$"
+			>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash</Code
+		>
+	</Block>
+	<div>...then restart your terminal, and run...</div>
+	<Block>
+		<Code language="shell" prefix="$">nvm install node</Code>
+
+		<Code language="shell" prefix="$">
+			curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee
+			/etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com
+			buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt
+			install ngrok
+		</Code>
+		<Code language="shell" prefix="$">sudo apt-get install python3</Code>
+	</Block>
+</OnlyShowOn>
+
+<OnlyShowOn mac>
+	<Block>
+		<Code language="shell" prefix="$">brew install node</Code>
+		<Code language="shell" prefix="$">brew install ngrok/ngrok/ngrok</Code>
+		<Code language="shell" prefix="$">brew install python3</Code>
+	</Block>
+</OnlyShowOn>
+
+<OnlyShowOn windows mac>
+	<p>
+		You can download Wireshark
+		<a href="https://www.wireshark.org/download.html" rel="noopener noreferrer" target="_blank">
+			here.
+		</a>
+	</p>
+</OnlyShowOn>
 
 <h3 id="lec8">Lectures 8 and 9: Version Control</h3>
 <p>
 	You'll want to install the <code>git</code> and
 	<code>gh</code> programs to fully follow along:
 </p>
-<div>
-	<div class="alert sys windows linux">
-		<code class="terminal-line"> sudo apt-get install git </code>
-	</div>
-	<div class="sys mac">
-		On macOS, <code>git</code> is already installed if you followed the instructions above.
-	</div>
-</div>
-<div>
-	<div class="sys windows linux">
-		To install <code>gh</code>, follow the steps from
-		<a href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
-			>the official installation instructions</a
-		>.
-	</div>
-	<div class="sys mac">
-		<code class="terminal-line"> brew install gh </code>
-	</div>
-</div>
+
+<OnlyShowOn windows linux>
+	<Block>
+		<Code prefix="$" language="shell">sudo apt-get install git</Code>
+	</Block>
+
+	To install <code>gh</code>, follow the steps from
+	<a href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
+		>the official installation instructions</a
+	>.
+</OnlyShowOn>
+
+<OnlyShowOn mac>
+	On macOS, <code>git</code> is already installed if you followed the instructions above.
+	<Block>
+		<Code prefix="$" language="shell">brew install gh</Code>
+	</Block>
+</OnlyShowOn>
+
 <p>
 	You'll also want to sign up for a GitHub account at
 	<a href="https://github.com/signup">github.com/signup</a>, if you don't already have one.
@@ -246,26 +264,32 @@
 
 <h3 id="lec15">Lecture 15: Virtual Machines &amp; Containers</h3>
 <p>You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop.</p>
-<p class="sys mac">
-	Download UTM from
-	<a href="https://mac.getutm.app/" rel="noopener noreferrer"> here.</a>
-</p>
-<p class="sys windows">
-	Download Virtualbox from
-	<a href="https://www.virtualbox.org/wiki/Downloads" rel="noopener noreferrer" target="_blank">
-		here.
-	</a>
-</p>
-<p class="sys linux">
-	Download Virtualbox from
-	<a
-		href="https://www.virtualbox.org/wiki/Linux_Downloads"
-		rel="noopener noreferrer"
-		target="_blank"
-	>
-		here.
-	</a>
-</p>
+<OnlyShowOn mac>
+	<p>
+		Download UTM from
+		<a href="https://mac.getutm.app/" rel="noopener noreferrer"> here.</a>
+	</p>
+</OnlyShowOn>
+<OnlyShowOn windows>
+	<p>
+		Download Virtualbox from
+		<a href="https://www.virtualbox.org/wiki/Downloads" rel="noopener noreferrer" target="_blank">
+			here.
+		</a>
+	</p>
+</OnlyShowOn>
+<OnlyShowOn linux>
+	<p>
+		Download Virtualbox from
+		<a
+			href="https://www.virtualbox.org/wiki/Linux_Downloads"
+			rel="noopener noreferrer"
+			target="_blank"
+		>
+			here.
+		</a>
+	</p>
+</OnlyShowOn>
 <p>
 	And finally, download and install Docker Desktop from
 	<a href="https://docs.docker.com/get-docker/" rel="noopener noreferrer" target="_blank">
@@ -285,23 +309,3 @@
 	(Note that you will need to provide a payment method to Oracle Cloud in order to complete sign-up.
 	You will not be charged. Let us know if this presents you with any issue!)
 </p>
-
-{#if system === 'mac'}
-	<style>
-		.sys:not(.mac) {
-			display: none;
-		}
-	</style>
-{:else if system === 'windows'}
-	<style>
-		.sys:not(.windows) {
-			display: none;
-		}
-	</style>
-{:else if system === 'linux'}
-	<style>
-		.sys:not(.linux) {
-			display: none;
-		}
-	</style>
-{/if}

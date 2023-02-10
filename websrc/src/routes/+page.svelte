@@ -1,8 +1,7 @@
 <script lang="ts">
-	import class_data from '$/class_data.yaml';
-	import { fixupLink } from '$/lib/lecture_util';
 	import { base } from '$app/paths';
 	import Calendar from '$lib/Calendar.svelte';
+	import { class_data, fixupLink } from '$lib/classData';
 
 	import Instructor from '$lib/Instructor.svelte';
 </script>

@@ -1,6 +1,7 @@
 <script>
 	import '../style.css';
-	import Navbar from '$lib/Navbar.svelte';
+  import 'highlight.js/styles/a11y-light.css';
+	import Navbar from './Navbar.svelte';
 </script>
 
 <Navbar />
