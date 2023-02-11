@@ -185,6 +185,7 @@ lectures:
     materials:
       slides: '/lectures/9-version-control.pdf'
       notes: '/lectures/9-version-control.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=03988866-1b52-4a6d-9cdd-afa40029948b'
       assignment 4: '/assignments/Assignment_4.pdf'
 
   # Week 6
