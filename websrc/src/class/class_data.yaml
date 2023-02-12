@@ -1,0 +1,209 @@
+start_date: 2023/01/09
+class_days:
+  - Monday
+  - Wednesday
+
+instructors:
+  - name: Akshay Srivatsan
+    role: Instructor
+    email: akshay01@stanford.edu
+    image: /img/akshay.jpg
+    officeHours:
+      - when: 'Wednesdays 6:30–7:30'
+        where: 'on Zoom'
+        url: 'https://stanford.zoom.us/j/99233539818?pwd=ZzloNFdSR01lRkRiVGsrV244aVVmQT09'
+      - when: 'Thursdays 2–3 PM'
+        where: 'at Gates 4A Lounge'
+  - name: Ayelet Drazen
+    role: Instructor
+    email: adrazen@stanford.edu
+    image: /img/ayelet.jpg
+    officeHours:
+      - when: 'Mondays 3:15–4:15 PM'
+        where: 'in Huang Basement'
+      - when: 'Sundays 8–9 PM'
+        where: 'on Zoom'
+        url: 'https://stanford.zoom.us/j/2035566567?pwd=VXpjbENSY296Z1c0RDlmbytSSHMvZz09'
+  - name: Jonathan Kula
+    role: Instructor
+    email: jdkula@stanford.edu
+    image: /img/jonathan.jpg
+    officeHours:
+      - when: 'Mondays 6–7 PM'
+        where: 'on Zoom'
+        url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
+      - when: 'Wednesdays 11:30 AM–12:30 PM'
+        where: 'in Huang Basement'
+
+assignments:
+  - name: 'Assignment 0: Getting Set Up!'
+    points: 1
+    due: 2023/01/18
+    materials:
+      'Gradescope / Handout': https://www.gradescope.com/courses/468962/assignments/2547319
+    details: |-
+      Your task for this assignment is to follow the “Setting up your Shell Environment”
+      instructions from [the software setup page](/software). Then, run the
+      `uname -a` command and submit it to Gradescope under Assignment Zero!
+  - name: 'Assignment 1: Shell We?'
+    points: 3
+    due: 2023/01/23
+    materials:
+      handout: '/assignments/Assignment_1.pdf'
+      gradescope: https://www.gradescope.com/courses/468962/assignments/2559758
+    details: |-
+      This assignment consists of two different components:
+        
+      1. You'll familiarize yourself with RegEx by conpleting a few exercises
+      2. You'll combine your RegEx and shell expertise to wrangle some words
+  - name: 'Assignment 2: Bourne to Be Wild'
+    points: 3
+    due: 2023/01/30
+    materials:
+      handout: '/assignments/Assignment_2.pdf'
+      gradescope: https://www.gradescope.com/courses/468962/assignments/2597778
+    details: |-
+      This assignment consists of two different components:
+        
+      1. You’ll write a simple shell script that does some data analysis
+      2. You’ll get some practice using `vim`
+
+      There's an extra (optional) section at the bottom of the assignment that
+      will walk you through a couple more uses of grep and sed. We highly
+      recommend following along in your own terminal!
+
+      We expect this assignment to take 1-3 hours depending on your proficiency
+      level with the tools. If you find yourself unproductively stuck or
+      unproductively struggling (spinning in circles), ask on Ed
+      and/or go to office hours!
+  - name: 'Assignment 3: Off The Beaten `$PATH`'
+    points: 3
+    due: 2023/02/06
+    materials:
+      handout: '/assignments/Assignment_3.pdf'
+      gradescope: https://www.gradescope.com/courses/468962/assignments/2624738
+    details: |-
+      This assignment consists of three different components:
+
+      1. You will modify your $PATH variable, shell prompt, and add aliases
+      2. You’ll get some practice using the networking tools we learned about in Lecture 7
+      3. You’ll run a small server that our grading machine will connect to
+
+      We expect this assignment to take 1-3 hours depending on your proficiency
+      level with the tools. If you find yourself unproductively stuck or
+      unproductively struggling (spinning in circles), ask on Ed and/or go
+      to office hours!
+  - name: "Assignment 4: It's `git`-ting HOT in here!"
+    points: 3
+    due: 2023/02/15
+    materials:
+      handout: '/assignments/Assignment_4.pdf'
+      gradescope: https://www.gradescope.com/courses/468962/assignments/2659772
+    details: |-
+      This assignment consists of three different components:
+
+      1. You will complete a `git` tutorial
+      2. You'll get practice using `git` from the command line
+      3. You'll get some practice using GitHub
+
+      We expect this assignment to take 1-3 hours depending on your proficiency
+      level with the tools. If you find yourself unproductively stuck or
+      unproductively struggling (spinning in circles), ask on Ed and/or go
+      to office hours!
+
+lectures:
+  # Week 1
+  - topic: 'Lecture 1: Course Overview'
+    materials:
+      slides: '/lectures/1-introduction.pdf'
+      lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=33e01243-1e53-4ca5-a52e-af9600b6fdde
+      assignment 0: https://www.gradescope.com/courses/468962/assignments/2547319
+    details: |-
+      Here is a link to the MIT version of the course: [The Missing Semester
+      of your CS Education](https://missing.csail.mit.edu/). CS45 is an extended version
+      of the MIT course, and will delve into the topics in more detail.
+  - topic: 'Lecture 2: The Shell and Shell Tools'
+    materials:
+      slides: '/lectures/2-shell-tools.pdf'
+      notes: '/lectures/2-shell-tools.notes.pdf'
+      lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=33e01243-1e53-4ca5-a52e-af9600b6fdde
+    details: |-
+      Here are some resources to learn more about various shell tools:
+
+      * [cheat.sh](https://cheat.sh/)
+      * [devhints.io/bash](https://devhints.io/bash)
+      * Your system manual (`man` pages)
+
+  # Week 2
+  - topic: 'No Lecture: Martin Luther King Day'
+    holiday: yes
+    materials:
+      assignment 1: '/assignments/Assignment_1.pdf'
+  - topic: 'Lecture 3: Data Manipulation'
+    materials:
+      slides: '/lectures/3-data-wrangling.pdf'
+      notes: '/lectures/3-data-wrangling.notes.pdf'
+      lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=33e01243-1e53-4ca5-a52e-af9600b6fdde
+    assignments: Assignment 0 Due
+
+  # Week 3
+  - topic: 'Lecture 4: Shell Scripting'
+    materials:
+      slides: '/lectures/4-shell-scripting.pdf'
+      notes: '/lectures/4-shell-scripting.notes.pdf'
+      lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6b38e726-8412-4d7f-86cf-af970036c613
+      assignment 2: '/assignments/Assignment_2.pdf'
+    assignments: Assignment 1 Due
+  - topic: 'Lecture 5: Text Editors'
+    materials:
+      slides: '/lectures/5-text-editors.pdf'
+      notes: '/lectures/5-text-editors.notes.pdf'
+      lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b0ff0f78-7f74-4387-bdc2-af96009e1630
+
+  # Week 4
+  - topic: 'Lecture 6: Command Line Environment'
+    materials:
+      slides: '/lectures/6-command-line-environment.pdf'
+      notes: '/lectures/6-command-line-environment.notes.pdf'
+      lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=083ae2c5-c7bd-4c40-9f45-af9d00838fd0
+      assignment 3: '/assignments/Assignment_3.pdf'
+    assignments: Assignment 2 Due
+  - topic: 'Lecture 7: Computer Networking'
+    materials:
+      slides: '/lectures/7-intro-to-computer-networking.pdf'
+      lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd6ac3e7-70cd-4e3c-8609-af9d00839004
+
+  # Week 5
+  - topic: 'Lecture 8: Version Control'
+    materials:
+      slides: '/lectures/8-version-control.pdf'
+      notes: '/lectures/8-version-control.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=42abe82a-cad0-4b0d-a199-afa200714705'
+    assignments: Assignment 3 Due
+  - topic: 'Lecture 9: Version Control II'
+    materials:
+      slides: '/lectures/9-version-control.pdf'
+      notes: '/lectures/9-version-control.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=03988866-1b52-4a6d-9cdd-afa40029948b'
+      assignment 4: '/assignments/Assignment_4.pdf'
+
+  # Week 6
+  - topic: 'Lecture 10: Build Systems / DevOps'
+  - topic: 'Lecture 11: Debugging and Profiling'
+
+  # Week 7
+  - topic: "No Lecture: President's Day"
+    holiday: yes
+  - topic: 'Lecture 12: Image Manipulation and Recent Linux Tools'
+
+  # Week 8
+  - topic: 'Lecture 13: Security'
+  - topic: 'Lecture 14: Cryptography'
+
+  # Week 9
+  - topic: 'Lecture 15: Virtual Machines & Containers'
+  - topic: 'Lecture 16: Cloud & Serverless'
+
+  # Week 10
+  - topic: 'Lecture 17: Student-Chosen Topics'
+  - topic: 'Lecture 18: Conclusion'
