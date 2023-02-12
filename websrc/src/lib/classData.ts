@@ -4,7 +4,7 @@
  */
 import { base } from '$app/paths';
 import { marked } from 'marked';
-import class_data_raw from '../class_data.yaml';
+import class_data_raw from '../class/class_data.yaml';
 import moment from 'moment';
 
 // === Data ===
