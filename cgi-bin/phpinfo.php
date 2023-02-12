@@ -1,5 +1,0 @@
-#!/usr/bin/php
-
-<?
-phpinfo();
-?>
