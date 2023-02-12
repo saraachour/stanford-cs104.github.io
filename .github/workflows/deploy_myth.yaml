@@ -17,8 +17,17 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: cd build && tar -czvf ../deploy.tar.gz . && cd ..
-    - uses: actions/upload-artifact@v3
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
       with:
         name: deploy.tar.gz
         path: deploy.tar.gz
         retention-days: 1
+    - env:
+        AUTH_CODE: ${{ secrets.AUTH_CODE }}
+      run: |-
+        curl -LX POST -d '${{ github.token }}' \
+          -H "Content-Type: text/plain" \
+          -H "X-Auth-Code: $AUTH_CODE" \
+          -H "X-Finish: true" \
+          https://cs45.stanford.edu/cgi-bin/deploy.sh;
