@@ -23,13 +23,16 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: '/class/cs45'
+			base: process.env.BASE_PATH ?? '/class/cs45'
 		},
 		version: {
 			name: snapshot
 		},
 		files: {
 			assets: './src/static'
+		},
+		prerender: {
+			entries: ["*", "/assignments/assign4"]
 		}
 	}
 };
