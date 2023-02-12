@@ -27,7 +27,7 @@ AUTH_TOKEN="$(cat)"
 
 DOWNLOAD_URL="$(curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $AUTH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/stanford-cs45/stanford-cs45.github.io/actions/artifacts | $JQ -r '.artifacts | sort_by(.created_at) | .[-1] | .archive_download_url')"
 curl -Lo "$DEPLOY_ROOT/deploy.zip" -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $AUTH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" $DOWNLOAD_URL
-unzip "$DEPLOY_ROOT/deploy.zip"
+unzip "$DEPLOY_ROOT/deploy.zip" -d "$DEPLOY_ROOT"
 
 
 mkdir -p "$DEPLOY_ROOT/deploy_untar"
