@@ -1,4 +1,4 @@
-name: Automatically deploy workflow to git
+name: Automatically deploy workflow to myth
 on:
   push:
 

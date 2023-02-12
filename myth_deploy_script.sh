@@ -24,22 +24,28 @@ if [[ -z "$CONTENT_LENGTH" ]]; then
 fi
 
 AUTH_TOKEN="$(cat)"
-DOWNLOAD_URL="$(curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $AUTH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/stanford-cs45/stanford-cs45.github.io/actions/artifacts | $JQ -r '.artifacts | sort_by(.created_at) | .[] | select(.name == "deploy.tar.gz")' | $JQ -s '.[-1]')"
-curl -Lo "$DEPLOY_ROOT/deploy.zip" -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $AUTH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" $DOWNLOAD_URL
-unzip "$DEPLOY_ROOT/deploy.zip" -d "$DEPLOY_ROOT"
+DOWNLOAD_URL="$(curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $AUTH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/stanford-cs45/stanford-cs45.github.io/actions/artifacts | $JQ -r '.artifacts | sort_by(.created_at) | .[] | select(.name == "deploy.tar.gz")' | $JQ -rs '.[-1] | .archive_download_url')"
+curl -Lo "$DEPLOY_ROOT/deploy.zip" -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $AUTH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28" "$DOWNLOAD_URL" 2>&1
+unzip "$DEPLOY_ROOT/deploy.zip" -d "$DEPLOY_ROOT" 2>&1
 
 
 mkdir -p "$DEPLOY_ROOT/deploy_untar"
-tar -zxvf "$DEPLOY_ROOT/deploy.tar.gz" -C "$DEPLOY_ROOT/deploy_untar" >"$DEPLOY_ROOT/tar.out" 2>"$DEPLOY_ROOT/tar.err" && \
-  rsync -a --delete "$DEPLOY_ROOT/deploy_untar/" "$OUTPUT/" >"$DEPLOY_ROOT/rsync.out" 2>"$DEPLOY_ROOT/rsync.err";
+tar -zxvf "$DEPLOY_ROOT/deploy.tar.gz" -C "$DEPLOY_ROOT/deploy_untar" 2>&1 && \
+  rsync -a --delete "$DEPLOY_ROOT/deploy_untar/" "$OUTPUT/" 2>&1;
 
 if [[ $? -ne 0 ]]; then
   printf "Failed\r\n";
   exit 1;
 fi
 
-rm -rf "$DEPLOY_ROOT/deploy_untar" "$DEPLOY_ROOT/deploy.tar.gz" "$DEPLOY_ROOT/deploy.zip" "$DEPLOY_ROOT/*.out" "$DEPLOY_ROOT/*.err";
+rm -rf "$DEPLOY_ROOT/deploy_untar" "$DEPLOY_ROOT/deploy.tar.gz" "$DEPLOY_ROOT/deploy.zip";
 
 
 printf "Deployed\r\n";
 exit 0
+
+
+#### TO SET UP
+# Make sure to add write permissions to the CGI script for WWW
+# fs setacl $OUTPUT -acl class-cs45-1234.cgi rlidwk
+# Make sure these permissions are set for subdirectories as well.
