@@ -182,7 +182,7 @@ the course, we want to collect as much feedback as possible to improve the
 course in the future. You can complete the survey [here](https://forms.gle/uugsgu51sMgCnhiT8).
 Once you complete the survey, you will receive a completion code which you should
 place in a text file named `survey.txt`. The survey is anonymous so submitting
-the completion code is the only way to verify that you completed the survey.
+the completion code is the only way we can verify that you completed the survey.
 Please do not share this code with anyone, as that would constitute a breach of
 the honor code.
 
