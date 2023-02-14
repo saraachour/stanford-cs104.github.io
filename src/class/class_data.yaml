@@ -191,7 +191,7 @@ lectures:
   - topic: 'Lecture 10: Build Systems & DevOps'
     materials:
       slides: '/lectures/10-build-systems-devops.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=39ee6ad7-3ffa-4cb9-a213-afa900997049'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=90bfe60a-54a5-4272-af5b-afa9009b76c8'
   - topic: 'Lecture 11: Debugging and Profiling'
     assignments: Assignment 4 Due
 
