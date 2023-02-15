@@ -36,7 +36,7 @@ jobs:
           curl -LX POST -d 'Hello' \
             -H "Content-Type: text/plain" \
             -H "X-Auth-Code: $AUTH_CODE" \
-            -H "X-URL: $URL"
+            -H "X-URL: $URL" \
             -H "X-Finish: true" \
             https://cs45.stanford.edu/cgi-bin/deploy.sh;
 
