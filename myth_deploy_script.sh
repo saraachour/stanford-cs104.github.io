@@ -26,11 +26,12 @@ fi
 # Read all stdin and echo back
 cat
 
-curl -Lvo "$DEPLOY_ROOT/deploy.zip" "$HTTP_X_URL" 2>&1
+echo "Downloading from $HTTP_X_URL ..."
+curl -Lo "$DEPLOY_ROOT/deploy.zip" "$HTTP_X_URL" 2>&1
 
 mkdir -p "$DEPLOY_ROOT/deploy_unzip"
 unzip "$DEPLOY_ROOT/deploy.zip" -d "$DEPLOY_ROOT/deploy_unzip" 2>&1 && \
-  rsync -a --delete "$DEPLOY_ROOT/deploy_unzip/" "$OUTPUT/" 2>&1;
+  rsync -avc --delete "$DEPLOY_ROOT/deploy_unzip/" "$OUTPUT/" 2>&1;
 
 if [[ $? -ne 0 ]]; then
   printf "Failed\r\n";
