@@ -194,8 +194,7 @@ lectures:
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=90bfe60a-54a5-4272-af5b-afa9009b76c8'
   - topic: 'Lecture 11: Debugging and Profiling'
     materials:
-      slides: '/lectures/10-build-systems-devops.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=90bfe60a-54a5-4272-af5b-afa9009b76c8'
+      slides: '/lectures/11-debugging-profiling.pdf'
     assignments: Assignment 4 Due
 
   # Week 7
