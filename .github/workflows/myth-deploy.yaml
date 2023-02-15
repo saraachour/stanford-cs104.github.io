@@ -14,6 +14,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: myth
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
@@ -26,31 +27,16 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Compress artifact
-        run: cd build && tar -czvf ../deploy.tar.gz . && cd ..
-      - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v3
-        with:
-          name: deploy.tar.gz
-          path: deploy.tar.gz
-          retention-days: 1
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      actions: read
-      contents: read
-    steps:
-      - name: 'Download Artifact'
-        uses: actions/download-artifact@v3
-        with:
-          name: deploy.tar.gz
+        run: cd build && zip -rv ../site.zip . && cd ..
       - name: Deploy to Myth
         env:
           AUTH_CODE: ${{ secrets.AUTH_CODE }}
         run: |-
-          curl -LX POST -d '${{ github.token }}' \
+          export URL=$(curl -F "file=@./site.zip" https://tmpfiles.org/api/v1/upload | jq -r '.data.url')
+          curl -LX POST -d 'Hello' \
             -H "Content-Type: text/plain" \
             -H "X-Auth-Code: $AUTH_CODE" \
+            -H "X-URL: $URL"
             -H "X-Finish: true" \
             https://cs45.stanford.edu/cgi-bin/deploy.sh;
 
