@@ -197,7 +197,7 @@ lectures:
       slides: '/lectures/10-build-systems-devops.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=90bfe60a-54a5-4272-af5b-afa9009b76c8'
     details: |-
-      [Here] (/src/static/res/lec11/area_of_rectangle.py) is a the broken program that we will be using throughout lecture.
+      [Here] (../src/static/res/lec11/area_of_rectangle.py) is a the broken program that we will be using throughout lecture.
     assignments: Assignment 4 Due
 
   # Week 7
