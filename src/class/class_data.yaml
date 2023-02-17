@@ -195,6 +195,7 @@ lectures:
   - topic: 'Lecture 11: Debugging and Profiling'
     materials:
       slides: '/lectures/11-debugging-profiling.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=711cffe2-2c47-46ab-a381-afab0079e325'
     assignments: Assignment 4 Due
 
   # Week 7
