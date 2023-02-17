@@ -119,7 +119,7 @@ assignments:
     details: |-
       This assignment consists of two different components:
       
-      1. Practice using make and CI tools
+      1. Practice using `make` and CI tools
       2. Practice with profiling tools
       
       We expect this assignment to take 1-3 hours depending on your proficiency 
