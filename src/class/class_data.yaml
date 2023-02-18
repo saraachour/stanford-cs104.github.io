@@ -20,7 +20,7 @@ instructors:
     image: /img/ayelet.jpg
     officeHours:
       - when: 'Mondays 3:15–4:15 PM'
-        where: 'in Huang Basement'
+        where: 'in Huang'
       - when: 'Sundays 8–9 PM'
         where: 'on Zoom'
         url: 'https://stanford.zoom.us/j/2035566567?pwd=VXpjbENSY296Z1c0RDlmbytSSHMvZz09'
@@ -33,7 +33,7 @@ instructors:
         where: 'on Zoom'
         url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
       - when: 'Wednesdays 11:30 AM–12:30 PM'
-        where: 'in Huang Basement'
+        where: 'in Huang'
 
 assignments:
   - name: 'Assignment 0: Getting Set Up!'
