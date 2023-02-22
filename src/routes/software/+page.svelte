@@ -262,6 +262,14 @@
 	<a href="https://github.com/signup">github.com/signup</a>, if you don't already have one.
 </p>
 
+<h3 id="lec12">Lecture 12: Recent Unix Tools</h3>
+<p>
+	We'll be covering an assortment of tools, including <code>rg</code>, <code>fd</code>,
+	<code>exa</code>, <code>fish</code>, <code>magick</code>,
+	<code>pandoc</code>, and <code>ffmpeg</code>. The slides and lecture notes have links to the
+	installation instructions for each piece of software.
+</p>
+
 <h3 id="lec15">Lecture 15: Virtual Machines &amp; Containers</h3>
 <p>You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop.</p>
 <OnlyShowOn mac>

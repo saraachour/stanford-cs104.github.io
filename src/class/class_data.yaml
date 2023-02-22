@@ -119,14 +119,13 @@ assignments:
       gradescope: https://www.gradescope.com/courses/468962/assignments/2673545
     details: |-
       This assignment consists of two different components:
-      
+
       1. Practice using `make` and CI tools
       2. Practice with profiling tools
-      
+
       We expect this assignment to take 1-3 hours depending on your proficiency 
       level with the tools. If you find yourself unproductively stuck or 
       unproductively struggling, ask on Ed and/or go to office hours!
-
 
 lectures:
   # Week 1
@@ -219,7 +218,10 @@ lectures:
   # Week 7
   - topic: "No Lecture: President's Day"
     holiday: yes
-  - topic: 'Lecture 12: Image Manipulation and Recent Linux Tools'
+  - topic: 'Lecture 12: Recent Unix Tools'
+    materials:
+      slides: '/lectures/12-recent-tools.pdf'
+      notes: '/lectures/12-recent-tools.notes.pdf'
 
   # Week 8
   - topic: 'Lecture 13: Security'
