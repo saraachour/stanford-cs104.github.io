@@ -33,7 +33,8 @@ instructors:
         where: 'on Zoom'
         url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
       - when: 'Wednesdays 11:30 AM–12:30 PM'
-        where: 'in Huang'
+        where: 'on Zoom'
+        url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
 
 assignments:
   - name: 'Assignment 0: Getting Set Up!'
