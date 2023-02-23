@@ -125,6 +125,20 @@ assignments:
       We expect this assignment to take 1-3 hours depending on your proficiency 
       level with the tools. If you find yourself unproductively stuck or 
       unproductively struggling, ask on Ed and/or go to office hours!
+  - name: "Assignment 6: It's like Magick"
+    points: 3
+    due: 2023/02/22
+    materials:
+      handout: '/assignments/Assignment_6.pdf'
+      gradescope: https://www.gradescope.com/courses/468962/assignments/2693377
+    details: |-
+      This assignment consists of one component:
+
+      1. Practice using Pandoc and ImageMagick to convert documents and images
+
+      We expect this assignment to take 0-1 hours depending on your proficiency
+      level with the tools. If you find yourself unproductively stuck or
+      unproductively struggling, ask on Ed and/or go to office hours!
 
 lectures:
   # Week 1
@@ -221,6 +235,7 @@ lectures:
     materials:
       slides: '/lectures/12-recent-tools.pdf'
       notes: '/lectures/12-recent-tools.notes.pdf'
+      assignment 6: '/assignments/Assignment_6.pdf'
 
   # Week 8
   - topic: 'Lecture 13: Security'
