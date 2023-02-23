@@ -265,10 +265,22 @@
 <h3 id="lec12">Lecture 12: Recent Unix Tools</h3>
 <p>
 	We'll be covering an assortment of tools, including <code>rg</code>, <code>fd</code>,
-	<code>exa</code>, <code>fish</code>, <code>magick</code>,
+	<code>exa</code>, <code>fish</code>, <code>magick</code> (or <code>convert</code>),
 	<code>pandoc</code>, and <code>ffmpeg</code>. The slides and lecture notes have links to the
-	installation instructions for each piece of software.
+	installation instructions for each piece of software. The ones you need for Assignment 6 are
+	Pandoc (<code>pandoc</code>) and ImageMagick (<code>convert</code>).
 </p>
+<OnlyShowOn mac>
+	<Block>
+		<Code language="shell" prefix="$">brew install pandoc</Code>
+		<Code language="shell" prefix="$">brew install imagemagick</Code>
+	</Block>
+</OnlyShowOn>
+<OnlyShowOn windows linux>
+	<Block>
+		<Code language="shell" prefix="$">sudo apt-get install pandoc imagemagick</Code>
+	</Block>
+</OnlyShowOn>
 
 <h3 id="lec15">Lecture 15: Virtual Machines &amp; Containers</h3>
 <p>You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop.</p>
