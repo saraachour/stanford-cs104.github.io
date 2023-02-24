@@ -2,6 +2,7 @@ import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import github from 'remark-gfm';
 import remarkHeadingId from 'remark-heading-id';
 import externalLinks from 'rehype-external-links';
+import { remarkPlugins, rehypePlugins } from './src/lib/markdown.js';
 
 const config = defineConfig({
   extensions: ['.svelte.md', '.md', '.svx'],
@@ -9,22 +10,12 @@ const config = defineConfig({
   smartypants: {
     dashes: 'oldschool'
   },
+  layout: {
+    assignment: './src/lib/layouts/Assignment.svelte'
+  },
 
-  remarkPlugins: [github, remarkHeadingId],
-  rehypePlugins: [
-    [
-      externalLinks,
-      {
-        target: (el) => {
-          if (!el.properties.href) return '_self';
-          if (el.properties.href.startsWith('/') && !el.properties.href.startsWith('//'))
-            return '_self';
-          return '_blank';
-        },
-        rel: ['noreferrer', 'noopener', 'nofollow']
-      }
-    ]
-  ]
+  remarkPlugins,
+  rehypePlugins
 });
 
 export default config;

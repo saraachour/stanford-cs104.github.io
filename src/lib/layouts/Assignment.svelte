@@ -1,19 +1,27 @@
-<script lang="ts">
-  import { class_data, markdown, titleCase } from '$lib/classData';
+<script>
+  import { class_data, titleCase } from '$lib/classData';
+  import { markdown } from '$lib/markdown';
   import moment from 'moment';
 
-  export let number: number;
+  /** @type {number} */
+  export let assign;
 
-  $: assignment = class_data.assignments[number];
+  $: assignment = class_data.assignments[assign];
 
-  $: name = markdown(assignment.name, /* inline = */ true);
+  $: name = markdown(assignment.name, 'html');
+  $: title = markdown(assignment.name, 'plain');
   $: due_date = moment(assignment.due, 'YYYY/MM/DD');
+  $: due_time = moment(class_data.assignment_due_time, "HH:mm")
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
 
 <section class="assignment-header">
   <h1>{@html name}</h1>
   <div style="text-align: right; flex-grow: 1; font-style: italic; color: #888;">
-    Due {due_date.format('MMMM Do, YYYY')}
+    Due {due_date.format('MMMM Do, YYYY')} at {due_time.format("hh:mma")}
     {#if assignment.materials}
       <span class="separator" />
       {#each Object.keys(assignment.materials) as material (material)}
@@ -52,6 +60,9 @@
   }
   .assignment-header h1 {
     font-size: 2rem;
+    margin: 0;
+  }
+  .assignment-header h1 > :global(p) {
     margin: 0;
   }
   .separator::after {

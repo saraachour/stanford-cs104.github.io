@@ -3,7 +3,6 @@
  * rendering other pages
  */
 import { base } from '$app/paths';
-import { marked } from 'marked';
 import class_data_raw from '../class/class_data.yaml';
 import moment from 'moment';
 
@@ -27,27 +26,6 @@ function getLectureDataByWeek() {
 /** Title cases a given string */
 export function titleCase(s: string): string {
   return s.replace(/(?:^| )\w/g, (substring) => substring.toUpperCase());
-}
-
-/**
- * Renders Markdown, fixing links to be relative to
- * the site base and making external links open in a new tab
- */
-export function markdown(data: string, inline = false): string {
-  const renderer = new marked.Renderer();
-  const linkRenderer = renderer.link;
-  renderer.link = (href: string, title: string, text: string) => {
-    if (href.startsWith('/') && !href.startsWith('//')) {
-      href = `${base}${href}`;
-    }
-    const localLink = !/^https?:\/\//g.exec(href);
-    const html = linkRenderer.call(renderer, href, title, text);
-
-    return localLink
-      ? html
-      : html.replace(/^<a /, `<a target="_blank" rel="noreferrer noopener nofollow" `);
-  };
-  return marked[inline ? 'parseInline' : 'parse'](data, { renderer });
 }
 
 // Gets the week of a given lexture number.
@@ -102,6 +80,7 @@ export type Weekday =
 export interface ClassData {
   start_date: string;
   class_days: Weekday[];
+  assignment_due_time: string;
   instructors: Instructor[];
   assignments: Assignment[];
   lectures: Lecture[];
