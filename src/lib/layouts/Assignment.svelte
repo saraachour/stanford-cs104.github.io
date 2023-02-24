@@ -27,7 +27,7 @@
       <span class="separator" />
       <MaterialsList
         materials={assignment.materials}
-        filter={(name) => name != 'handlout'}
+        filter={(name) => name != 'handout'}
         spacing="4px"
       />
     {/if}
