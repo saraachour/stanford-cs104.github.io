@@ -2,6 +2,7 @@ start_date: 2023/01/09
 class_days:
   - Monday
   - Wednesday
+assignment_due_time: 23:59
 
 instructors:
   - name: Akshay Srivatsan
@@ -45,11 +46,11 @@ assignments:
       Your task for this assignment is to follow the “Setting up your Shell Environment”
       instructions from [the software setup page](/software). Then, run the
       `uname -a` command and submit it to Gradescope under Assignment Zero!
-  - name: 'Assignment 1: Shell We?'
+  - name: 'Assignment 1: _Shell_ We?'
     points: 3
     due: 2023/01/23
     materials:
-      handout: '/assignments/Assignment_1.pdf'
+      handout: '/assignments/assign1'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2559758
     details: |-
       This assignment consists of two different components:
@@ -60,7 +61,7 @@ assignments:
     points: 3
     due: 2023/01/30
     materials:
-      handout: '/assignments/Assignment_2.pdf'
+      handout: '/assignments/assign2'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2597778
     details: |-
       This assignment consists of two different components:
@@ -80,7 +81,7 @@ assignments:
     points: 3
     due: 2023/02/06
     materials:
-      handout: '/assignments/Assignment_3.pdf'
+      handout: '/assignments/assign3'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2624738
     details: |-
       This assignment consists of three different components:
@@ -97,7 +98,7 @@ assignments:
     points: 3
     due: 2023/02/15
     materials:
-      handout: '/assignments/Assignment_4.pdf'
+      handout: '/assignments/assign4'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2659772
     details: |-
       This assignment consists of three different components:
@@ -114,7 +115,7 @@ assignments:
     points: 3
     due: 2023/02/22
     materials:
-      handout: '/assignments/Assignment_5.pdf'
+      handout: '/assignments/assign5'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2673545
     details: |-
       This assignment consists of two different components:
@@ -129,7 +130,7 @@ assignments:
     points: 3
     due: 2023/02/22
     materials:
-      handout: '/assignments/Assignment_6.pdf'
+      handout: '/assignments/assign6'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2693377
     details: |-
       This assignment consists of one component:
@@ -167,7 +168,7 @@ lectures:
   - topic: 'No Lecture: Martin Luther King Day'
     holiday: yes
     materials:
-      assignment 1: '/assignments/Assignment_1.pdf'
+      assignment 1: '/assignments/assign1'
   - topic: 'Lecture 3: Data Manipulation'
     materials:
       slides: '/lectures/3-data-wrangling.pdf'
@@ -181,7 +182,7 @@ lectures:
       slides: '/lectures/4-shell-scripting.pdf'
       notes: '/lectures/4-shell-scripting.notes.pdf'
       lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6b38e726-8412-4d7f-86cf-af970036c613
-      assignment 2: '/assignments/Assignment_2.pdf'
+      assignment 2: '/assignments/assign2'
     assignments: Assignment 1 Due
   - topic: 'Lecture 5: Text Editors'
     materials:
@@ -195,7 +196,7 @@ lectures:
       slides: '/lectures/6-command-line-environment.pdf'
       notes: '/lectures/6-command-line-environment.notes.pdf'
       lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=083ae2c5-c7bd-4c40-9f45-af9d00838fd0
-      assignment 3: '/assignments/Assignment_3.pdf'
+      assignment 3: '/assignments/assign3'
     assignments: Assignment 2 Due
   - topic: 'Lecture 7: Computer Networking'
     materials:
@@ -214,7 +215,7 @@ lectures:
       slides: '/lectures/9-version-control.pdf'
       notes: '/lectures/9-version-control.notes.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=03988866-1b52-4a6d-9cdd-afa40029948b'
-      assignment 4: '/assignments/Assignment_4.pdf'
+      assignment 4: '/assignments/assign4'
 
   # Week 6
   - topic: 'Lecture 10: Build Systems & DevOps'
@@ -225,7 +226,7 @@ lectures:
     materials:
       slides: '/lectures/11-debugging-profiling.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=711cffe2-2c47-46ab-a381-afab0079e325'
-      assignment 5: '/assignments/Assignment_5.pdf'
+      assignment 5: '/assignments/assign5'
     assignments: Assignment 4 Due
 
   # Week 7
@@ -236,7 +237,7 @@ lectures:
       slides: '/lectures/12-recent-tools.pdf'
       notes: '/lectures/12-recent-tools.notes.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6aa7cd87-cc87-4e95-b88e-afb2007335fb'
-      assignment 6: '/assignments/Assignment_6.pdf'
+      assignment 6: '/assignments/assign6'
 
   # Week 8
   - topic: 'Lecture 13: Security'

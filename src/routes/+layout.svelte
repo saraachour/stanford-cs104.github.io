@@ -1,7 +1,11 @@
 <!-- Root layout used for all pages -->
 <script>
 	import '../style.css';
-  import 'highlight.js/styles/a11y-light.css';
+	import 'prismjs/themes/prism-tomorrow.min.css';
+	import 'prismjs';
+	import 'prismjs/components/prism-shell-session'
+	import 'prismjs/components/prism-bash'
+	import 'prismjs/components/prism-powershell'
 	import Navbar from './Navbar.svelte';
 </script>
 

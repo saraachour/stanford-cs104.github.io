@@ -1,15 +1,18 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
-import github from 'remark-gfm';
+import { remarkPlugins, rehypePlugins } from './src/lib/markdown.js';
 
 const config = defineConfig({
-	extensions: ['.svelte.md', '.md', '.svx'],
+  extensions: ['.svelte.md', '.md', '.svx'],
 
-	smartypants: {
-		dashes: 'oldschool'
-	},
+  smartypants: {
+    dashes: 'oldschool'
+  },
+  layout: {
+    assignment: './src/lib/layouts/Assignment.svelte'
+  },
 
-	remarkPlugins: [github],
-	rehypePlugins: []
+  remarkPlugins,
+  rehypePlugins
 });
 
 export default config;
