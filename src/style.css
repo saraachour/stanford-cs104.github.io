@@ -78,7 +78,7 @@ code {
 
 *:not(.alert, pre) > code:not(.alert) {
   background-color: #f1f3f5;
-  padding: 2px 0;
+  padding: 2px;
   border-radius: 4px;
   border: 1px solid #bcbec0;
   font-size: 0.95em;
