@@ -1,6 +1,7 @@
 <script lang="ts">
   import { class_data, fixupLink, getTarget, titleCase } from '$lib/classData';
   import { markdown } from '$lib/markdown';
+  import MaterialsList from '$lib/MaterialsList.svelte';
   import UnitDetails from '$lib/UnitDetails.svelte';
   import moment from 'moment';
 </script>
@@ -23,15 +24,7 @@
     </svelte:fragment>
     <svelte:fragment slot="links">
       {#if assignment.materials}
-        {#each Object.keys(assignment.materials) as name}
-          <li>
-            [<a
-              target={getTarget(assignment.materials[name])}
-              rel="noreferrer noopener"
-              href={fixupLink(assignment.materials[name])}>{titleCase(name)}</a
-            >]
-          </li>
-        {/each}
+        <MaterialsList materials={assignment.materials} />
       {/if}
     </svelte:fragment>
 

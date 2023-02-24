@@ -1,6 +1,7 @@
 <script>
   import { class_data, fixupLink, getTarget, titleCase } from '$lib/classData';
   import { markdown } from '$lib/markdown';
+  import MaterialsList from '$lib/MaterialsList.svelte';
   import moment from 'moment';
 
   /** @type {number} */
@@ -24,15 +25,11 @@
     Due {due_date.format('MMMM Do, YYYY')} at {due_time.format('hh:mma')}
     {#if assignment.materials}
       <span class="separator" />
-      {#each Object.keys(assignment.materials) as material (material)}
-        {#if material != 'handout'}
-          [<a
-            href={fixupLink(assignment.materials[material])}
-            target={getTarget(assignment.materials[material])}
-            rel="noreferrer noopener nofollower">{titleCase(material)}</a
-          >]&nbsp;&nbsp
-        {/if}
-      {/each}
+      <MaterialsList
+        materials={assignment.materials}
+        filter={(name) => name != 'handlout'}
+        spacing="4px"
+      />
     {/if}
   </div>
 </section>
