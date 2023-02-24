@@ -7,34 +7,31 @@ import { execSync } from 'child_process';
 // This snapshots all the website source files with sha256sum, then calculates the sha256 hash of that,
 //  to create a stable version name for the website.
 const snapshot = execSync(
-	`bash -c 'find src static svelte.config.js package.json package-lock.json tsconfig.json vite.config.ts -type f -exec sha256sum "{}" + | grep -o "^[a-z0-9]* " | sort | sha256sum | grep -o "^[a-z0-9]* "' `
+  `bash -c 'find src static svelte.config.js package.json package-lock.json tsconfig.json vite.config.ts -type f -exec sha256sum "{}" + | grep -o "^[a-z0-9]* " | sort | sha256sum | grep -o "^[a-z0-9]* "' `
 )
-	.toString()
-	.trim();
+  .toString()
+  .trim();
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', ...mdsvexConfig.extensions],
+  extensions: ['.svelte', ...mdsvexConfig.extensions],
 
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
+  // Consult https://kit.svelte.dev/docs/integrations#preprocessors
+  // for more information about preprocessors
+  preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
 
-	kit: {
-		adapter: adapter(),
-		paths: {
-			base: process.env.BASE_PATH ?? '/class/cs45'
-		},
-		version: {
-			name: snapshot
-		},
-		files: {
-			assets: './src/static'
-		},
-		prerender: {
-			entries: ["*", "/assignments/assign4"]
-		}
-	}
+  kit: {
+    adapter: adapter(),
+    paths: {
+      base: process.env.BASE_PATH ?? '/class/cs45'
+    },
+    version: {
+      name: snapshot
+    },
+    files: {
+      assets: './src/static'
+    }
+  }
 };
 
 export default config;
