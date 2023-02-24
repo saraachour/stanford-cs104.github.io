@@ -49,7 +49,7 @@ assignments:
     points: 3
     due: 2023/01/23
     materials:
-      handout: '/assignments/Assignment_1.pdf'
+      handout: '/assignments/assign1'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2559758
     details: |-
       This assignment consists of two different components:
@@ -60,7 +60,7 @@ assignments:
     points: 3
     due: 2023/01/30
     materials:
-      handout: '/assignments/Assignment_2.pdf'
+      handout: '/assignments/assign2'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2597778
     details: |-
       This assignment consists of two different components:
@@ -80,7 +80,7 @@ assignments:
     points: 3
     due: 2023/02/06
     materials:
-      handout: '/assignments/Assignment_3.pdf'
+      handout: '/assignments/assign3'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2624738
     details: |-
       This assignment consists of three different components:
@@ -97,7 +97,7 @@ assignments:
     points: 3
     due: 2023/02/15
     materials:
-      handout: '/assignments/Assignment_4.pdf'
+      handout: '/assignments/assign4'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2659772
     details: |-
       This assignment consists of three different components:
@@ -167,7 +167,7 @@ lectures:
   - topic: 'No Lecture: Martin Luther King Day'
     holiday: yes
     materials:
-      assignment 1: '/assignments/Assignment_1.pdf'
+      assignment 1: '/assignments/assign1'
   - topic: 'Lecture 3: Data Manipulation'
     materials:
       slides: '/lectures/3-data-wrangling.pdf'
@@ -181,7 +181,7 @@ lectures:
       slides: '/lectures/4-shell-scripting.pdf'
       notes: '/lectures/4-shell-scripting.notes.pdf'
       lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6b38e726-8412-4d7f-86cf-af970036c613
-      assignment 2: '/assignments/Assignment_2.pdf'
+      assignment 2: '/assignments/assign2'
     assignments: Assignment 1 Due
   - topic: 'Lecture 5: Text Editors'
     materials:
@@ -195,7 +195,7 @@ lectures:
       slides: '/lectures/6-command-line-environment.pdf'
       notes: '/lectures/6-command-line-environment.notes.pdf'
       lecture video: https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=083ae2c5-c7bd-4c40-9f45-af9d00838fd0
-      assignment 3: '/assignments/Assignment_3.pdf'
+      assignment 3: '/assignments/assign3'
     assignments: Assignment 2 Due
   - topic: 'Lecture 7: Computer Networking'
     materials:
@@ -214,7 +214,7 @@ lectures:
       slides: '/lectures/9-version-control.pdf'
       notes: '/lectures/9-version-control.notes.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=03988866-1b52-4a6d-9cdd-afa40029948b'
-      assignment 4: '/assignments/Assignment_4.pdf'
+      assignment 4: '/assignments/assign4'
 
   # Week 6
   - topic: 'Lecture 10: Build Systems & DevOps'

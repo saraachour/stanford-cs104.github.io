@@ -1,7 +1,10 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+  import Assignment from '$lib/layouts/Assignment.svelte';
+  import type { PageData } from './$types';
 
-	export let data: PageData;
+  export let data: PageData;
 </script>
 
-<svelte:component this={data.assignment.default} />
+<Assignment assignmentNumber={data.assignmentNumber}>
+  <svelte:component this={data.assignment.default} />
+</Assignment>
