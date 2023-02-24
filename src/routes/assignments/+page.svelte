@@ -40,7 +40,7 @@
 
     <svelte:fragment slot="details">
       {#if assignment.details}
-        {@html markdown(assignment.details)}
+        {@html markdown(assignment.details, 'html', fixupLink)}
       {/if}
     </svelte:fragment>
   </UnitDetails>

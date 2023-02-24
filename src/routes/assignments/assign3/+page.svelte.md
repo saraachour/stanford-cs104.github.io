@@ -4,6 +4,7 @@ assign: 3
 ---
 
 <script>
+  import { base } from '$app/paths';
   import Callout from '$lib/Callout.svelte';
   import colors from './colors.png';
 </script>
@@ -172,7 +173,7 @@ For this part of the assignment, you should submit your configuration file (e.g.
 
 In this part of the assignment, you'll be exploring some of the networking tools we learned about in
 Lecture 7 to get some information about your computer's networking environment. Make sure to install
-[the software for Lecture 7](https://web.stanford.edu/class/cs45/software.html#lec7)! Note that for
+[the software for Lecture 7]({base}/software#lec7)! Note that for
 the commands below, if your computer uses Windows, you should use the Windows commands (even if
 you're inside WSL!)
 
@@ -240,7 +241,7 @@ sure you're using the right one!_
 In Lecture 7: Introduction to Computer Networking, we learned all about how information travels from
 one computer to another. In this part of the assignment, you'll get some practice running your own
 development server over the network. Make sure to install
-[the software for Lecture 7](https://web.stanford.edu/class/cs45/software.html#lec7)!
+[the software for Lecture 7]({base}/software#lec7)!
 
 <Callout critical>
 
@@ -270,7 +271,7 @@ above instructs the shell to **immediately place your server into the background
 to suspend it first. Neat!
 
 Finally, let's publish it on ngrok. Make sure to
-[install it first](https://web.stanford.edu/class/cs45/software.html#lec7) and follow the
+[install it first]({base}/software#lec7) and follow the
 instructions to set up your account!
 
 ```shell

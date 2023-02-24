@@ -38,7 +38,7 @@
 
       <svelte:fragment slot="details">
         {#if lecture.details}
-          {@html markdown(lecture.details)}
+          {@html markdown(lecture.details, 'html', fixupLink)}
         {/if}
       </svelte:fragment>
     </UnitDetails>

@@ -12,8 +12,9 @@ import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkFootnotes from 'remark-footnotes';
+import rehypeRewrite from 'rehype-rewrite';
 
-export const externalLinksConfig = {
+const externalLinksConfig = {
   target: (/** @type {{ properties: { href?: string; }; }} */ el) => {
     if (!el.properties.href) return '_self';
     if (el.properties.href.startsWith('/') && !el.properties.href.startsWith('//')) return '_self';
@@ -40,8 +41,9 @@ export const rehypePlugins = [
  * the site base and making external links open in a new tab
  * @param {string} data
  * @param {'html' | 'plain'} format
+ * @param {null | ((link: string) => string)} link_rewrite
  */
-export function markdown(data, format = 'html') {
+export function markdown(data, format = 'html', link_rewrite = null) {
   if (format === 'plain') {
     return unified()
       .use(remarkParse)
@@ -57,6 +59,19 @@ export function markdown(data, format = 'html') {
     .use(remarkPlugins)
     .use(remarkRehype)
     .use(rehypePlugins)
+    .use(rehypeRewrite, {
+      rewrite: (node) => {
+        if (
+          node.type === 'element' &&
+          node.tagName === 'a' &&
+          node.properties &&
+          node.properties.href &&
+          link_rewrite
+        ) {
+          node.properties.href = link_rewrite(node.properties.href);
+        }
+      }
+    })
     .use(rehypeStringify)
     .processSync(data);
 }

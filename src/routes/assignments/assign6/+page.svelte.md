@@ -4,6 +4,7 @@ assign: 6
 ---
 
 <script>
+  import { base } from '$app/paths'
   import Callout from '$lib/Callout.svelte';
 </script>
 
@@ -25,7 +26,7 @@ you find yourself unproductively stuck or unproductively struggling, ask on Ed a
 hours!
 
 Remember to install ImageMagick and Pandoc using the instructions from the
-[software page](https://web.stanford.edu/class/cs45/software).
+[software page]({base}/software).
 
 ## Part I: Practice with Pandoc and ImageMagick (3 points)
 
