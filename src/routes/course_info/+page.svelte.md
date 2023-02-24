@@ -1,7 +1,6 @@
-<svelte:head>
-
-<title>CS 45: Course Info</title>
-</svelte:head>
+---
+title: 'CS 45: Course Info'
+---
 
 # Course Info
 

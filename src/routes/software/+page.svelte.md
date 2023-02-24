@@ -1,12 +1,11 @@
+---
+title: "CS 45: Software Installation"
+---
+
 <script lang="ts">
   import Callout from '$lib/Callout.svelte';
   import OnlyShowOn, { system } from '$lib/OnlyShowOn.svelte';
 </script>
-
-<svelte:head>
-
-<title>CS 45: Software Installation</title>
-</svelte:head>
 
 # Software & Computer Setup
 

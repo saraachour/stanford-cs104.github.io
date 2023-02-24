@@ -1,5 +1,5 @@
 <script>
-  import { class_data, titleCase } from '$lib/classData';
+  import { class_data, getTarget, titleCase } from '$lib/classData';
   import { markdown } from '$lib/markdown';
   import moment from 'moment';
 
@@ -11,24 +11,24 @@
   $: name = markdown(assignment.name, 'html');
   $: title = markdown(assignment.name, 'plain');
   $: due_date = moment(assignment.due, 'YYYY/MM/DD');
-  $: due_time = moment(class_data.assignment_due_time, "HH:mm")
+  $: due_time = moment(class_data.assignment_due_time, 'HH:mm');
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+  <title>CS 45: {title}</title>
 </svelte:head>
 
 <section class="assignment-header">
   <h1>{@html name}</h1>
-  <div style="text-align: right; flex-grow: 1; font-style: italic; color: #888;">
-    Due {due_date.format('MMMM Do, YYYY')} at {due_time.format("hh:mma")}
+  <div class="assignment-details">
+    Due {due_date.format('MMMM Do, YYYY')} at {due_time.format('hh:mma')}
     {#if assignment.materials}
       <span class="separator" />
       {#each Object.keys(assignment.materials) as material (material)}
         {#if material != 'handout'}
           [<a
             href={assignment.materials[material]}
-            target="_blank"
+            target={getTarget(assignment.materials[material])}
             rel="noreferrer noopener nofollower">{titleCase(material)}</a
           >]&nbsp;&nbsp
         {/if}
@@ -44,6 +44,13 @@
 <style>
   .markdown-content :global(h1:first-of-type) {
     display: none;
+  }
+
+  .assignment-details {
+    text-align: right;
+    flex-grow: 1;
+    font-style: italic;
+    color: #888;
   }
 
   .assignment-header {

@@ -8,7 +8,8 @@ const config = defineConfig({
     dashes: 'oldschool'
   },
   layout: {
-    assignment: './src/lib/layouts/Assignment.svelte'
+    assignment: './src/lib/layouts/Assignment.svelte',
+    _: './src/lib/layouts/DefaultMd.svelte'
   },
 
   remarkPlugins,

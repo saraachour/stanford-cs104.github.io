@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { class_data, fixupLink, titleCase } from '$lib/classData';
+  import { class_data, fixupLink, getTarget, titleCase } from '$lib/classData';
   import { markdown } from '$lib/markdown';
   import UnitDetails from '$lib/UnitDetails.svelte';
   import moment from 'moment';
@@ -26,10 +26,7 @@
         {#each Object.keys(assignment.materials) as name}
           <li>
             [<a
-              target={assignment.materials[name].startsWith('http') ||
-              assignment.materials[name].startsWith('//')
-                ? '_target'
-                : '_self'}
+              target={getTarget(assignment.materials[name])}
               rel="noreferrer noopener"
               href={fixupLink(assignment.materials[name])}>{titleCase(name)}</a
             >]

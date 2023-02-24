@@ -68,6 +68,11 @@ export function fixupLink(baseLink: string) {
   return baseLink;
 }
 
+/** Determines if the url is absolute and returns whether or not to open in a new window (yes for external) */
+export function getTarget(url: string) {
+  return url.startsWith('http') || url.startsWith('//') ? '_target' : '_self';
+}
+
 // === Types ===
 export type Weekday =
   | 'Sunday'

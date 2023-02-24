@@ -15,7 +15,7 @@ import remarkFootnotes from 'remark-footnotes';
 import rehypeRewrite from 'rehype-rewrite';
 
 const externalLinksConfig = {
-  target: (/** @type {{ properties: { href?: string; }; }} */ el) => {
+  target: (/** @type {any} */ el) => {
     if (!el.properties.href) return '_self';
     if (el.properties.href.startsWith('/') && !el.properties.href.startsWith('//')) return '_self';
     return '_blank';
@@ -41,9 +41,9 @@ export const rehypePlugins = [
  * the site base and making external links open in a new tab
  * @param {string} data
  * @param {'html' | 'plain'} format
- * @param {null | ((link: string) => string)} link_rewrite
+ * @param {null | ((link: string) => string)} linkRewriteFn  Function to transform all links to new links.
  */
-export function markdown(data, format = 'html', link_rewrite = null) {
+export function markdown(data, format = 'html', linkRewriteFn = null) {
   if (format === 'plain') {
     return unified()
       .use(remarkParse)
@@ -54,24 +54,29 @@ export function markdown(data, format = 'html', link_rewrite = null) {
       .processSync(data);
   }
 
-  return unified()
-    .use(remarkParse)
-    .use(remarkPlugins)
-    .use(remarkRehype)
-    .use(rehypePlugins)
-    .use(rehypeRewrite, {
-      rewrite: (node) => {
-        if (
-          node.type === 'element' &&
-          node.tagName === 'a' &&
-          node.properties &&
-          node.properties.href &&
-          link_rewrite
-        ) {
-          node.properties.href = link_rewrite(node.properties.href);
+  return (
+    unified()
+      .use(remarkParse)
+      .use(remarkPlugins)
+      .use(remarkRehype)
+      .use(rehypePlugins)
+
+      // This is necessary if we're parsing markdown with absolute-path links
+      //  but we're located in a subdirectory (e.g. /class/cs45/)
+      .use(rehypeRewrite, {
+        rewrite: (node) => {
+          if (
+            node.type === 'element' &&
+            node.tagName === 'a' &&
+            node.properties &&
+            node.properties.href &&
+            linkRewriteFn
+          ) {
+            node.properties.href = linkRewriteFn(node.properties.href);
+          }
         }
-      }
-    })
-    .use(rehypeStringify)
-    .processSync(data);
+      })
+      .use(rehypeStringify)
+      .processSync(data)
+  );
 }
