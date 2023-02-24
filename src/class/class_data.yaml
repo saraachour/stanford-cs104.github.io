@@ -51,6 +51,7 @@ assignments:
     due: 2023/01/23
     materials:
       handout: '/assignments/assign1'
+      PDF: '/assignments/Assignment_1.pdf'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2559758
     details: |-
       This assignment consists of two different components:
@@ -62,6 +63,7 @@ assignments:
     due: 2023/01/30
     materials:
       handout: '/assignments/assign2'
+      PDF: '/assignments/Assignment_2.pdf'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2597778
     details: |-
       This assignment consists of two different components:
@@ -82,6 +84,7 @@ assignments:
     due: 2023/02/06
     materials:
       handout: '/assignments/assign3'
+      PDF: '/assignments/Assignment_3.pdf'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2624738
     details: |-
       This assignment consists of three different components:
@@ -99,6 +102,7 @@ assignments:
     due: 2023/02/15
     materials:
       handout: '/assignments/assign4'
+      PDF: '/assignments/Assignment_4.pdf'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2659772
     details: |-
       This assignment consists of three different components:
@@ -116,6 +120,7 @@ assignments:
     due: 2023/02/22
     materials:
       handout: '/assignments/assign5'
+      PDF: '/assignments/Assignment_5.pdf'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2673545
     details: |-
       This assignment consists of two different components:
@@ -131,6 +136,7 @@ assignments:
     due: 2023/03/01
     materials:
       handout: '/assignments/assign6'
+      PDF: '/assignments/Assignment_6.pdf'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2693377
     details: |-
       This assignment consists of one component:

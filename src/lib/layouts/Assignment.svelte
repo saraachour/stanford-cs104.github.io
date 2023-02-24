@@ -1,5 +1,5 @@
 <script>
-  import { class_data, getTarget, titleCase } from '$lib/classData';
+  import { class_data, fixupLink, getTarget, titleCase } from '$lib/classData';
   import { markdown } from '$lib/markdown';
   import moment from 'moment';
 
@@ -27,7 +27,7 @@
       {#each Object.keys(assignment.materials) as material (material)}
         {#if material != 'handout'}
           [<a
-            href={assignment.materials[material]}
+            href={fixupLink(assignment.materials[material])}
             target={getTarget(assignment.materials[material])}
             rel="noreferrer noopener nofollower">{titleCase(material)}</a
           >]&nbsp;&nbsp
