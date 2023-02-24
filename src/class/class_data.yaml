@@ -128,7 +128,7 @@ assignments:
       unproductively struggling, ask on Ed and/or go to office hours!
   - name: "Assignment 6: It's like Magick"
     points: 3
-    due: 2023/02/22
+    due: 2023/03/01
     materials:
       handout: '/assignments/assign6'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2693377
@@ -238,10 +238,12 @@ lectures:
       notes: '/lectures/12-recent-tools.notes.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6aa7cd87-cc87-4e95-b88e-afb2007335fb'
       assignment 6: '/assignments/assign6'
+    assignments: Assignment 5 Due
 
   # Week 8
   - topic: 'Lecture 13: Security'
   - topic: 'Lecture 14: Cryptography'
+    assignments: Assignment 6 Due
 
   # Week 9
   - topic: 'Lecture 15: Virtual Machines & Containers'
