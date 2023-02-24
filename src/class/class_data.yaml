@@ -2,6 +2,7 @@ start_date: 2023/01/09
 class_days:
   - Monday
   - Wednesday
+assignment_due_time: 23:59
 
 instructors:
   - name: Akshay Srivatsan
@@ -45,7 +46,7 @@ assignments:
       Your task for this assignment is to follow the “Setting up your Shell Environment”
       instructions from [the software setup page](/software). Then, run the
       `uname -a` command and submit it to Gradescope under Assignment Zero!
-  - name: 'Assignment 1: Shell We?'
+  - name: 'Assignment 1: _Shell_ We?'
     points: 3
     due: 2023/01/23
     materials:
@@ -114,7 +115,7 @@ assignments:
     points: 3
     due: 2023/02/22
     materials:
-      handout: '/assignments/Assignment_5.pdf'
+      handout: '/assignments/assign5'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2673545
     details: |-
       This assignment consists of two different components:
@@ -129,7 +130,7 @@ assignments:
     points: 3
     due: 2023/02/22
     materials:
-      handout: '/assignments/Assignment_6.pdf'
+      handout: '/assignments/assign6'
       gradescope: https://www.gradescope.com/courses/468962/assignments/2693377
     details: |-
       This assignment consists of one component:
@@ -225,7 +226,7 @@ lectures:
     materials:
       slides: '/lectures/11-debugging-profiling.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=711cffe2-2c47-46ab-a381-afab0079e325'
-      assignment 5: '/assignments/Assignment_5.pdf'
+      assignment 5: '/assignments/assign5'
     assignments: Assignment 4 Due
 
   # Week 7
@@ -236,7 +237,7 @@ lectures:
       slides: '/lectures/12-recent-tools.pdf'
       notes: '/lectures/12-recent-tools.notes.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6aa7cd87-cc87-4e95-b88e-afb2007335fb'
-      assignment 6: '/assignments/Assignment_6.pdf'
+      assignment 6: '/assignments/assign6'
 
   # Week 8
   - topic: 'Lecture 13: Security'

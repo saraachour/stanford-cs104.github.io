@@ -1,22 +1,18 @@
 ---
 layout: assignment
-due: 2023/02/15
-assign: 4
+assign: 3
 ---
 
 <script>
-  import gitImg from './img/a4_git_tutorial.png';
-  import examplePr from './img/a4_example_pr.png';
-  import Block from '$lib/Callout.svelte';
+  import Callout from '$lib/Callout.svelte';
+  import colors from './colors.png';
 </script>
-
-# Assignment #3 – Off The Beaten `$PATH`
 
 This assignment consists of three different components:
 
-1.  **You will modify your `$PATH` variable, shell prompt, and add aliases**
-2.  **You'll get some practice using the networking tools we learned about in Lecture 7**
-3.  **You'll run a small server that our grading machine will connect to**
+1. **You will modify your `$PATH` variable, shell prompt, and add aliases**
+2. **You'll get some practice using the networking tools we learned about in Lecture 7**
+3. **You'll run a small server that our grading machine will connect to**
 
 We expect this assignment to take 1-3 hours depending on your proficiency level with the tools. If
 you find yourself unproductively stuck or unproductively struggling, ask on Ed and/or go to office
@@ -25,16 +21,16 @@ hours!
 ## Part I: Customizing Your Environment Variables (1 point)
 
 In Lecture 4: Shell Scripting, we saw how to write a shell script and make it executable from
-anywhere on the computer. Imagine you have a shell script called hello.sh that simply prints Hello.
-You create the script inside of a folder called CS45 on your Desktop. (The folder would thus have a
-path of `~/Desktop/CS45`.) Given the script is located inside of the CS45 folder, you can only run
-it from within that folder. Let's change that!
+anywhere on the computer. Imagine you have a shell script called `hello.sh` that simply prints
+`Hello`. You create the script inside of a folder called `CS45` on your Desktop. (The folder would
+thus have a path of `~/Desktop/CS45`.) Given the script is located inside of the `CS45` folder, you
+can only run it from within that folder. Let's change that!
 
-To make hello.sh script executable from anywhere on your machine, you will want to move it somewhere
-that is recognized by your `$PATH` environment variable. Whenever you type a command in the shell
-prompt (i.e. the command grep), your computer searches every folder inside of your `$PATH`
-environment variable to see if any of those folders have an executable by the name of the command
-you typed in (i.e. an executable by the name grep). For example, here is a sample `$PATH`
+To make `hello.sh` script executable from anywhere on your machine, you will want to move it
+somewhere that is recognized by your `$PATH` environment variable. Whenever you type a command in
+the shell prompt (e.g. the command `grep`), your computer searches every folder inside of your
+`$PATH` environment variable to see if any of those folders have an executable by the name of the
+command you typed in (e.g. an executable by the name `grep`). For example, here is a sample `$PATH`
 environment variable:
 
 ```plain
@@ -55,14 +51,14 @@ files (executable files) for programs that you might want to run. This new `bin`
 us to store any of the local binary files that should be accessible anywhere on the computer for the
 current user.
 
-**_Step 1: Creating A Bin Folder_**
+### Step 1: Creating A Bin Folder
 
 First, you will want to navigate to your home directory using `cd ~`. Once you are in your home
 directory, you will want to make a new folder called "bin" using `mkdir bin`. Next, you will want to
 enter this new directory using `cd`. We will need the absolute path of this directory for Step 3. To
 get the absolute path of your newly-created bin folder, you should run `pwd` inside `~/bin`.
 
-**_Step 2: Finding Your Shell_**
+### Step 2: Finding Your Shell
 
 Your next task is to find out what shell you are running. You can normally do this by running
 `ps -p $$`. Your output may look something like the following:
@@ -73,15 +69,13 @@ PID TTY TIME CMD
 25466 ttys001 0:00.32 -zsh
 ```
 
-**_Step 3: Adding the Path_**
+### Step 3: Adding the Path
 
 Now that you have your local bin folder (`~/bin`) and your shell, you will need to update (or make!)
 the config file specific to your shell:
 
 - If you are using a zsh shell, your config file will be `.zshrc`
-
 - If you are using a bash shell, your config file will `.bashrc`
-
 - If you are using a tcsh shell, your config file will be `.tcshrc`
 
 To check if you already have an existing config file, you should navigate back to your home
@@ -113,10 +107,9 @@ In addition to modifying your path variable, there are other useful configuratio
 guide you through. Let's work on implementing the following two configurations:
 
 - Adding colors to your ls command
-
 - Customizing your shell prompt
 
-**_Adding Colors to ls_**
+### Adding Colors to ls
 
 To add colors for `ls`, you will want to add an alias for `ls` that changes the standard `ls`
 command to an `ls` command with colors. The way to do this will depend on which shell you are using.
@@ -135,7 +128,7 @@ If you are using Linux or Windows (WSL), you should add the following line to yo
 alias ls="ls --color=auto"
 ```
 
-**_Customizing Your Shell Prompt_**
+### Customizing Your Shell Prompt
 
 Now we will customize our shell prompt by adding colors to it and modifying what contents it has.
 Though we will leave it up to you as to what customization you would like to include, we have also
@@ -145,7 +138,7 @@ If you are using a zsh shell, you should use zsh guidelines for customizing your
 [Here](https://zsh-prompt-generator.site/) is a tool to build a zsh prompt. You can also use the
 chart below to choose zsh colors.
 
-![](media/image1.png)
+![A chart showing the numbers for each of the 256 colors that zsh supports]({colors})
 
 If you'd like to use our CS45-themed shell prompt, you should add the following line to your .zshrc
 file:
@@ -169,8 +162,8 @@ machines.) While you won't be able to have it automatically enter your password 
 security reasons, `ssh` requires a human to type in the password), it'll at least reduce the tedium
 of typing `ssh $SUNET@myth.stanford.edu` over and over again.
 
-**\*Note:** If you are using another shell and we didn't include specific instructions here, reach
-out to us! We are happy to help.\*
+_**Note:** If you are using another shell and we didn't include specific instructions here, reach
+out to us! We are happy to help._
 
 For this part of the assignment, you should submit your configuration file (e.g. `.bashrc`,
 `.zshrc`, etc).
@@ -183,7 +176,7 @@ Lecture 7 to get some information about your computer's networking environment. 
 the commands below, if your computer uses Windows, you should use the Windows commands (even if
 you're inside WSL!)
 
-(1) _Network Interfaces & IP Addresses_
+### (1) _Network Interfaces & IP Addresses_
 
 To start, let's take a look at what network interfaces your computer has. On Windows, you can run
 the command `ipconfig.exe`, on macOS you can use `ifconfig`, and on linux you can use `ip addr`.
@@ -197,7 +190,7 @@ your wireless connection into a file called `wifi_interface.txt`_
 _1.3 Look inside the output of `interfaces.txt`. Find and write your local IP address inside a file
 called `local_ip.txt`._
 
-(2) _Routes_
+### (2) _Routes_
 
 Let's take a look at the routing table your computer is using. On Windows, you can run the command
 `route.exe print -4`, on macOS you can use `netstat -nrf inet`, and on linux you can use
@@ -209,12 +202,12 @@ _2.2 Look inside the output in `routes.txt`. Find the default route (this is the
 router that's connecting you to the rest of the internet!) and put its IP address in
 `default_route.txt`._
 
-(3) Traceroute
+### (3) Traceroute
 
 Let's see what path it takes to get to a server hosted in another country (in this case, we'll be
 connecting to a website that gives information about a town in Japan)! On Windows, you can use the
 command `tracert.exe www.town.okutama.tokyo.jp`, on Linux you can use
-`traceroute -I --resolve-hostnames www.town.okutama.tokyo.jp`,[^1] and on macOS you can use
+`traceroute -I --resolve-hostnames www.town.okutama.tokyo.jp`\*, and on macOS you can use
 `traceroute -I www.town.okutama.tokyo.jp`. Note that these commands may take a while to complete. If
 you have trouble with these commands, please let us know on Ed as soon as possible!
 
@@ -238,6 +231,10 @@ _3.3 Which hop number do you think was the last hop inside Stanford's campus? Pu
 _3.4 Which hop do you think is the first server you see that's located in Japan (if any)? Place your
 answer and justification in `jump.txt`_
 
+_\* Note: on Linux, we give instructions for the `inetutils-traceroute` package , which is the
+version listed on the software page. There's a few different programs named `traceroute`, so make
+sure you're using the right one!_
+
 ## Part III: Running a Small Server (1 point)
 
 In Lecture 7: Introduction to Computer Networking, we learned all about how information travels from
@@ -245,13 +242,13 @@ one computer to another. In this part of the assignment, you'll get some practic
 development server over the network. Make sure to install
 [the software for Lecture 7](https://web.stanford.edu/class/cs45/software.html#lec7)!
 
-<Block critical>
+<Callout critical>
 
 Note that this part of the assignment will expose parts of your computer to the internet. Please
 ensure that you follow the commands below in a **new, empty directory** to avoid exposing unwanted
 or private information.
 
-</Block>
+</Callout>
 
 In a **new directory**, create a new file called sunet.txt that contains your SUNet ID (the part
 before your email!):
@@ -321,7 +318,3 @@ Once you have created a zip file, you can upload it to Gradescope. Make sure you
 and available at the URL specified in the server_url.txt file while the autograder is running.
 
 _All files must have the same name as specified above._
-
-[^1]:
-    This is for the inetutils-traceroute package , which is the version listed on the software page.
-    There's a few different programs named traceroute, so make sure you're using the right one!

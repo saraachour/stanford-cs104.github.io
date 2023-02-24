@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Block from '$lib/Callout.svelte';
+  import Callout from '$lib/Callout.svelte';
   import OnlyShowOn, { system } from '$lib/OnlyShowOn.svelte';
 </script>
 
@@ -11,39 +11,39 @@
 # Software & Computer Setup
 
 <OnlyShowOn mac>
-  <Block warning>
+  <Callout warning>
     We’ve detected that you're using a Mac computer.
     <a href="#top" on:click={() => ($system = 'windows')}> Click here if you’re using Windows </a>
     or <a href="#top" on:click={() => ($system = 'linux')}>Linux.</a>
     The instructions on this page will be tailored to the detected system.
-  </Block>
+  </Callout>
 </OnlyShowOn>
 
 <OnlyShowOn windows>
-  <Block warning>
+  <Callout warning>
     We’ve detected that you're using a Windows computer.
     <a href="#top" on:click={() => ($system = 'mac')}>Click here if you’re using Mac</a>
     or <a href="#top" on:click={() => ($system = 'linux')}>Linux.</a>
     The instructions on this page will be tailored to the detected system.
-  </Block>
+  </Callout>
 </OnlyShowOn>
 
 <OnlyShowOn linux>
-  <Block warning>
+  <Callout warning>
     We’ve detected that you're using a Linux computer.
     <a href="#top" on:click={() => ($system = 'mac')}>Click here if you’re using Mac</a>
     or <a href="#top" on:click={() => ($system = 'windows')}>Windows.</a>
     The instructions on this page will be tailored to the detected system.
-  </Block>
+  </Callout>
 </OnlyShowOn>
 
 <OnlyShowOn unknown>
-  <Block warning>
+  <Callout warning>
     The instructions on this page are tailored to your system, but we couldn't detect it.
     <a href="#top" on:click={() => ($system = 'mac')}>Click here if you’re using Mac</a>, or
     <a href="#top" on:click={() => ($system = 'windows')}>here if you're using Windows</a>, or
     <a href="#top" on:click={() => ($system = 'windows')}>here if you're using Linux</a>.
-  </Block>
+  </Callout>
 </OnlyShowOn>
 
 ## Setting Up Your Shell Environment {#shell-setup}
