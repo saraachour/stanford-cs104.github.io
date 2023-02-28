@@ -115,7 +115,7 @@ assignments:
       level with the tools. If you find yourself unproductively stuck or
       unproductively struggling (spinning in circles), ask on Ed and/or go
       to office hours!
-  - name: "Assignment 5: It all make's sense!"
+  - name: "Assignment 5: It all `make`s sense!"
     points: 3
     due: 2023/02/22
     materials:
