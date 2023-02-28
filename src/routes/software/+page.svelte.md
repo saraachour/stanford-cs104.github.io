@@ -242,7 +242,7 @@ You'll also want to sign up for a GitHub account at [github.com/signup](https://
 
 We'll be covering an assortment of tools, including `rg`, `fd`, `exa`, `fish`, `magick`, `pandoc`,
 and `ffmpeg`. The slides and lecture notes have links to the installation instructions for each
-piece of software. The ones you need for Assignment 7 are Pandoc (`pandoc`) and ImageMagick
+piece of software. The ones you need for Assignment 6 are Pandoc (`pandoc`) and ImageMagick
 (`convert`).
 
 <OnlyShowOn mac>
