@@ -40,7 +40,7 @@ help 😄)
 
 ## Course Staff
 
-<div>
+<div style="display: flex; flex-wrap: wrap;">
 	{#each class_data.instructors as instructor}
 		<Instructor
 			src={fixupLink(instructor.image)}
