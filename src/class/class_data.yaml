@@ -252,6 +252,7 @@ lectures:
       slides: '/lectures/13-security.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=89c67a2e-b6bf-49b2-b1e4-afb7006679da'
   - topic: 'Lecture 14: Cryptography'
+    materials:
       final project: '/assignments/Final_Project.pdf'
     assignments: Assignment 6 Due
 
