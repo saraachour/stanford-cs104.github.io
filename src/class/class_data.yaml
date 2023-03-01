@@ -146,6 +146,19 @@ assignments:
       We expect this assignment to take 0-1 hours depending on your proficiency
       level with the tools. If you find yourself unproductively stuck or
       unproductively struggling, ask on Ed and/or go to office hours!
+  - name: "Final Project"
+    points: 5
+    due: 2023/03/20
+    materials:
+      PDF: '/assignments/Final_Project.pdf'
+    details: |-
+      For your final project, we want you to explore a tool or concept from the 
+      course (or a tool that we didn't discuss in the course but that you are 
+      interested in!) in further detail. Your role is to do a deep dive into this 
+      tool/concept, and summarize what you've learned in order to help others learn 
+      about how and when to use it. We want you to become an expert in one of these 
+      tools and teach the rest of us about it :)
+
 
 lectures:
   # Week 1
