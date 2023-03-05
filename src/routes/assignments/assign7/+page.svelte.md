@@ -23,6 +23,15 @@ We expect this assignment to take 1-3 hours depending on your proficiency level
 with the tools. If you find yourself unproductively stuck or unproductively 
 struggling, ask on Ed and/or go to office hours!
 
+<Callout critical>
+
+***Warning***: This assignment teaches you a technique for email spoofing that 
+could be used to compromise another's security. You should not use this technique 
+outside of this assignment. Neither CS45 course staff nor Stanford will take 
+liability for any legal repercussions resulting from using this technique 
+outside the context and parameters of this assignment.
+
+</Callout>
 
 ## Part I: Spoof an Email (1.5 points)
 
@@ -61,6 +70,13 @@ MAIL FROM: <SUNET>@stanford.edu ↵
 ```
 If all goes well, you will see `250 2.1.0 Sender ok`. 
 
+If you are running into an issue where the sender address is not being accepted 
+(i.e. you are getting an error), make sure you don't have extra characters 
+anywhere. You can also try encapsulating the address with `<` and `>` as in: 
+```
+MAIL FROM: <adrazen@stanford.edu>
+```
+
 3. Now, you will want to specify who the email is to (which in this case, is 
 yourself). To do so, you will want to type in `RCPT TO:`, a space, your email 
 address, and then hit the Enter key. This should look as follows:
@@ -68,6 +84,13 @@ address, and then hit the Enter key. This should look as follows:
 RCPT TO: <SUNET>@stanford.edu ↵
 ```
 If all goes well, you will see `250 2.1.0 Recipient ok`.
+
+If you are running into an issue where the recipient address is not being accepted 
+(i.e. you are getting an error), make sure you don't have extra characters 
+anywhere. You can also try encapsulating the address with `<` and `>` as in: 
+```
+RCPT TO: <adrazen@stanford.edu>
+```
 
 4. Now it's time to construct the message itself. Type `DATA` and then hit the 
 Enter key. 
