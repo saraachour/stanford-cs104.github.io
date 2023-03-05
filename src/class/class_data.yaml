@@ -284,9 +284,9 @@ lectures:
   - topic: 'Lecture 14: Cryptography'
     materials:
       slides: '/lectures/14-cryptography.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1381e9c5-19e2-4c36-b8c1-afb9013b4e27'
       final project: '/assignments/Final_Project.pdf'
       assignment 7: '/assignments/Assignment_7.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1381e9c5-19e2-4c36-b8c1-afb9013b4e27'
     assignments: Assignment 6 Due
 
   # Week 9
