@@ -265,6 +265,10 @@ sudo apt-get install pandoc imagemagick
 ### Lecture 15: Virtual Machines & Containers
 
 You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop.
+You'll also need to grab a copy of an Ubuntu Server disk image, which you
+can download from [here](https://ubuntu.com/download/server). **If you're on an
+M1 Mac, please make sure to download the "Ubuntu Server for ARM" verison from
+[here](https://ubuntu.com/download/server/arm)**.
 
 <OnlyShowOn mac>
 
@@ -283,6 +287,7 @@ Download Virtualbox from [here](https://www.virtualbox.org/wiki/Downloads).
 Download Virtualbox from [here](https://www.virtualbox.org/wiki/Linux_Downloads).
 
 </OnlyShowOn>
+
 And finally, download and install Docker Desktop from [here](https://docs.docker.com/get-docker/).
 
 ### Lecture 16: Cloud & Serverless Computing
