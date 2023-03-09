@@ -158,8 +158,19 @@ mail server. Open the "More Actions" menu (three dots) and then select
 
 Now you'll want to send us a spoofed email from `cs45-admin@stanford.edu`. You'll 
 want to repeat the steps in Exercise 2 and send the email to 
-`cs45-win2223-staff@mailman.stanford.edu`. Make sure to include your SUNet somewhere 
-in the message body as this is how you will get credit for this part of the assignment. 
+`cs45-win2223-staff@mailman.stanford.edu`. 
+
+In order to confirm that your email gets successfully delivered, we recommend 
+BCCing yourself on the email. In order to do that, you will want to add an 
+additional recipient using `RCPT TO:`. In other words, you should repeat Step 3 
+from above twice. The first time, you should add the recipient as 
+`cs45-win2223-staff@mailman.stanford.edu` and the second time you should add 
+the recipient as your own email address. You can set the `To:` header to just 
+be `cs45-win2223-staff@mailman.stanford.edu`. 
+
+
+Make sure to include your SUNet somewhere in the message body as this is how 
+you will get credit for this part of the assignment. 
 
 
 ## Part II: Generate SSH Key to Sign A File (1.5 points)
