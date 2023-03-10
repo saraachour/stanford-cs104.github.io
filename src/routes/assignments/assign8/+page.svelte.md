@@ -35,6 +35,9 @@ several Dockerfile constructs – `FROM`, `COPY`, `RUN`, `ENV`, `WORKDIR`, `VOLU
 well as the process of building and publishing Docker images. This is pretty much everything you
 need in order to build docker images in practice.
 
+Launch Docker Desktop before proceeding; on Windows, you should have access to Docker through WSL.
+If you get any firewall prompts, allow it.
+
 ### Step 0: Sign Up for DockerHub
 
 DockerHub is the canonical registry where all images are stored and where Docker looks for images
@@ -156,6 +159,14 @@ You can run the following command to publish it on DockerHub:
 docker login
 # then, to push the image:
 docker push USERNAME/messageboard:latest  # replace USERNAME with your DockerHub username.
+```
+
+If you're on an M1 mac, use the following command to build and push an image that works for all
+major architectures:
+
+```shell
+# replace USERNAME with your DockerHub username
+docker buildx build --platform linux/amd64,linux/arm64 -t USERNAME/messageboard:latest . --push
 ```
 
 **For this part, create a file called `image_tag.txt` and put your `USERNAME/messageboard:latest`
