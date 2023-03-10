@@ -162,6 +162,22 @@ assignments:
       We expect this assignment to take 1-3 hours depending on your proficiency
       level with the tools. If you find yourself unproductively stuck or
       unproductively struggling, ask on Ed and/or go to office hours!
+  # - name: 'Assignment 8: On Cloud Nine'
+  #   points: 3
+  #   due: 2023/03/15
+  #   materials:
+  #     handout: '/assignments/assign8'
+  #     PDF: '/assignments/Assignment_8.pdf'
+  #     gradescope: https://www.gradescope.com/courses/468962/assignments/2713274
+  #   details: |-
+  #     This assignment consists of two interconnected components:
+
+  #     1. Create and publish a Docker image on DockerHub
+  #     2. Launch a free tier instance on AWS and run a server on it (the same server you built in part 1!)
+
+  #     We expect this assignment to take 1-3 hours depending on your proficiency level with the tools. If
+  #     you find yourself unproductively stuck or unproductively struggling, ask on Ed and/or go to office
+  #     hours!
 
   - name: 'Final Project'
     points: 5
@@ -285,7 +301,7 @@ lectures:
       slides: '/lectures/14-cryptography.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1381e9c5-19e2-4c36-b8c1-afb9013b4e27'
       final project: '/assignments/Final_Project.pdf'
-      assignment 7: '/assignments/Assignment_7.pdf'
+      assignment 7: '/assignments/assign7'
     assignments: Assignment 6 Due
 
   # Week 9
