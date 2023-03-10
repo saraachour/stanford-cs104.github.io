@@ -290,8 +290,16 @@ lectures:
 
   # Week 9
   - topic: 'Lecture 15: Virtual Machines & Containers'
+    materials:
+      slides: '/lectures/15-vms-containers.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6a7fe9f7-a6fc-40ac-bbd2-afbf01504bb0'
   - topic: 'Lecture 16: Cloud & Serverless'
+    materials:
+      slides: '/lectures/16-cloud.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c5bc2829-5bde-44b4-a09f-afc1004deb85'
+    assignments: Assignment 7 Due
 
   # Week 10
   - topic: 'Lecture 17: Student-Chosen Topics'
   - topic: 'Lecture 18: Conclusion'
+    assignments: Assignment 8 Due
