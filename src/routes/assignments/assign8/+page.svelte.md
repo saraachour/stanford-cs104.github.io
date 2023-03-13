@@ -165,6 +165,9 @@ If you're on an M1 mac, use the following command to build and push an image tha
 major architectures:
 
 ```shell
+# Run once to set up
+docker buildx create --use
+
 # replace USERNAME with your DockerHub username
 docker buildx build --platform linux/amd64,linux/arm64 -t USERNAME/messageboard:latest . --push
 ```
@@ -295,7 +298,7 @@ get full marks on this part, but it’s a useful exercise!**
 
 <Callout critical>
 
-While your server needs to remain up while grading, **please remember to your AWS instance**–
+While your server needs to remain up while grading, **please remember to terminate your AWS instance**–
 otherwise you may end up being charged at some point in the future.
 
 </Callout>
