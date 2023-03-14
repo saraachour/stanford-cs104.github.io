@@ -114,7 +114,7 @@ refer to the image in later `docker` commands.
 You can test your image out like so:
 
 ```shell
-docker run -d -e PASSWORD=yourpassword -v $(pwd)/data:/data -p 8080:3000 USERNAME/messageboard:latest
+docker run -d -e PASSWORD=yourpassword -v "$(pwd)/data:/data" -p 8080:3000 USERNAME/messageboard:latest
 ```
 
 Let's break this down:
@@ -254,7 +254,7 @@ Let’s run your message board from before! We can use nearly the same command a
 step 3.5) to run it:
 
 ```shell
-sudo docker run -d -e PASSWORD=yourpassword -v $(pwd)/data:/data -p 80:3000 USERNAME/messageboard:latest
+sudo docker run -d -e PASSWORD=yourpassword -v "$(pwd)/data:/data" -p 80:3000 USERNAME/messageboard:latest
 ```
 
 We’ve changed two things: first, now we use `sudo` since we need superuser access to do things with
@@ -275,7 +275,7 @@ the same commands from Part II, Step 3.5, just make sure to use sudo now). Then,
 (note we’re back to using port 8080 again).
 
 ```shell
-sudo docker run -d -e PASSWORD=yourpassword -v $(pwd)/data:/data -p 8080:3000 USERNAME/messageboard:latest
+sudo docker run -d -e PASSWORD=yourpassword -v "$(pwd)/data:/data" -p 8080:3000 USERNAME/messageboard:latest
 ```
 
 Then, let’s run `caddy` in another docker container(!!), being sure to replace `YOUR_DNS_NAME` with
