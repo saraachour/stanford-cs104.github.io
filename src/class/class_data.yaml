@@ -10,7 +10,7 @@ instructors:
     email: akshay01@stanford.edu
     image: /img/akshay.jpg
     officeHours:
-      - when: 'Wednesday 3/8 3-4 PM'
+      - when: 'Wednesdays 6:30–7:30'
         where: 'on Zoom'
         url: 'https://stanford.zoom.us/j/99233539818?pwd=ZzloNFdSR01lRkRiVGsrV244aVVmQT09'
       - when: 'Thursdays 2–3 PM'
@@ -115,7 +115,7 @@ assignments:
       level with the tools. If you find yourself unproductively stuck or
       unproductively struggling (spinning in circles), ask on Ed and/or go
       to office hours!
-  - name: 'Assignment 5: It all `make`s sense!'
+  - name: "Assignment 5: It all `make`s sense!"
     points: 3
     due: 2023/02/22
     materials:
@@ -146,7 +146,7 @@ assignments:
       We expect this assignment to take 0-1 hours depending on your proficiency
       level with the tools. If you find yourself unproductively stuck or
       unproductively struggling, ask on Ed and/or go to office hours!
-  - name: 'Assignment 7: The (Public) Key to My Heart'
+  - name: "Assignment 7: The (Public) Key to My Heart"
     points: 3
     due: 2023/03/08
     materials:
@@ -179,7 +179,7 @@ assignments:
       you find yourself unproductively stuck or unproductively struggling, ask on Ed and/or go to office
       hours!
 
-  - name: 'Final Project'
+  - name: "Final Project"
     points: 5
     due: 2023/03/20
     materials:
@@ -191,6 +191,7 @@ assignments:
       tool/concept, and summarize what you've learned in order to help others learn 
       about how and when to use it. We want you to become an expert in one of these 
       tools and teach the rest of us about it :)
+
 
 lectures:
   # Week 1
