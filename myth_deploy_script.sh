@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-BASE="/afs/.ir/class/archive/cs/cs45/cs45.1236"
 BASE="$(dirname $(pwd))"
 
 JQ="$BASE/jq"
@@ -52,3 +51,4 @@ exit 0
 # Make sure to add write permissions to the CGI script for WWW
 # fs setacl $OUTPUT -acl class-cs45-1236.cgi rlidwk
 # Make sure these permissions are set for subdirectories as well.
+# Additionally, make sure $AUTHCODE_LOCATION is readable.
