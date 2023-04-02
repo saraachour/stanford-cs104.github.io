@@ -10,7 +10,7 @@ title: 'CS 45'
   import Instructor from '$lib/Instructor.svelte';
 </script>
 
-# CS 45: Software Tools Every Programmer Should Know
+# CS 45: Software Tools Every Programmer Should Know (Spring '23)
 
 ## Course Description
 
@@ -39,6 +39,10 @@ chromebook or a very old computer, or don’t have access to a personal computer
 help 😄)
 
 ## Course Staff
+
+Unless you're emailing about OH or something else instructor-specific, please
+use the staff mailing list: <a
+href="mailto:cs45-spr2223-staff@lists.stanford.edu">cs45-spr2223-staff@lists.stanford.edu</a>.
 
 <div style="display: flex; flex-wrap: wrap;">
 	{#each class_data.instructors as instructor}
