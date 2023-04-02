@@ -35,6 +35,7 @@ assignments:
     points: 1
     due: 2023/04/12
     materials:
+      handout: '/assignments/assign0'
     details:
   # - name: 'Assignment 1: _Shell_ We?'
   #   points: 3

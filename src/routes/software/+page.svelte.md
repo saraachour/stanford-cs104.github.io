@@ -109,193 +109,196 @@ working within a Unix shell.
 
 </OnlyShowOn>
 
-## Software for the class
+## Software for the Class
 
 ### Lecture 2: The Shell and Shell Tools
 
 Follow the <a href="#shell-setup">shell setup</a> instructions and you’ll be good to go.
 
-### Lecture 5: Text Editors
+We'll add more here as we go through the quarter; be sure to check back before
+each lecture!
 
-You'll want to install the `vim` program to fully follow along:
+<!-- ### Lecture 5: Text Editors -->
 
-<OnlyShowOn windows linux>
+<!-- You'll want to install the `vim` program to fully follow along: -->
 
-```shell
-sudo apt-get install vim
-```
+<!-- <OnlyShowOn windows linux> -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- sudo apt-get install vim -->
+<!-- ``` -->
 
-<OnlyShowOn mac>
+<!-- </OnlyShowOn> -->
 
-```shell
-brew install vim
-```
+<!-- <OnlyShowOn mac> -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- brew install vim -->
+<!-- ``` -->
 
-### Lecture 6: Command-Line Environment
+<!-- </OnlyShowOn> -->
 
-You'll want to install the `tmux` program to fully follow along:
+<!-- ### Lecture 6: Command-Line Environment -->
 
-<OnlyShowOn windows linux>
+<!-- You'll want to install the `tmux` program to fully follow along: -->
 
-```shell
-sudo apt-get install tmux
-```
+<!-- <OnlyShowOn windows linux> -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- sudo apt-get install tmux -->
+<!-- ``` -->
 
-<OnlyShowOn mac>
+<!-- </OnlyShowOn> -->
 
-```shell
-brew install tmux
-```
+<!-- <OnlyShowOn mac> -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- brew install tmux -->
+<!-- ``` -->
 
-### Lecture 7: Computer Networking {#lec7}
+<!-- </OnlyShowOn> -->
 
-You'll want to install `python3`, `node`, `ngrok`, `dig` and optionally Wireshark to fully follow
-along. You'll also need to sign up for an [`ngrok` account](https://ngrok.com).
+<!-- ### Lecture 7: Computer Networking {#lec7} -->
 
-<OnlyShowOn linux>
-On Linux, you may also need to install `traceroute` and `dig`:
+<!-- You'll want to install `python3`, `node`, `ngrok`, `dig` and optionally Wireshark to fully follow -->
+<!-- along. You'll also need to sign up for an [`ngrok` account](https://ngrok.com). -->
 
-```shell
-sudo apt-get install inetutils-traceroute dnsutils python3 wireshark curl dnsutils
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-```
+<!-- <OnlyShowOn linux> -->
+<!-- On Linux, you may also need to install `traceroute` and `dig`: -->
 
-...then restart your terminal, and run...
+<!-- ```shell -->
+<!-- sudo apt-get install inetutils-traceroute dnsutils python3 wireshark curl dnsutils -->
+<!-- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash -->
+<!-- ``` -->
 
-```shell
-nvm install node
+<!-- ...then restart your terminal, and run... -->
 
-curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
-```
+<!-- ```shell -->
+<!-- nvm install node -->
 
-</OnlyShowOn>
+<!-- curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok -->
+<!-- ``` -->
 
-<OnlyShowOn windows>
+<!-- </OnlyShowOn> -->
 
-```shell
-sudo apt-get install curl dnsutils
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-```
+<!-- <OnlyShowOn windows> -->
 
-...then restart your terminal, and run...
+<!-- ```shell -->
+<!-- sudo apt-get install curl dnsutils -->
+<!-- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash -->
+<!-- ``` -->
 
-```shell
-nvm install node
+<!-- ...then restart your terminal, and run... -->
 
-curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
-```
+<!-- ```shell -->
+<!-- nvm install node -->
 
-</OnlyShowOn>
+<!-- curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok -->
+<!-- ``` -->
 
-<OnlyShowOn mac>
+<!-- </OnlyShowOn> -->
 
-```shell
-brew install node
-brew install ngrok/ngrok/ngrok
-brew install python3
-```
+<!-- <OnlyShowOn mac> -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- brew install node -->
+<!-- brew install ngrok/ngrok/ngrok -->
+<!-- brew install python3 -->
+<!-- ``` -->
 
-<OnlyShowOn windows mac>
+<!-- </OnlyShowOn> -->
 
-You can download Wireshark [here](https://www.wireshark.org/download.html).
+<!-- <OnlyShowOn windows mac> -->
 
-</OnlyShowOn>
+<!-- You can download Wireshark [here](https://www.wireshark.org/download.html). -->
 
-### Lectures 8 and 9: Version Control
+<!-- </OnlyShowOn> -->
 
-You'll want to install the `git` and `gh` programs to fully follow along:
+<!-- ### Lectures 8 and 9: Version Control -->
 
-<OnlyShowOn windows linux>
+<!-- You'll want to install the `git` and `gh` programs to fully follow along: -->
 
-```shell
-sudo apt-get install git
-```
+<!-- <OnlyShowOn windows linux> -->
 
-To install `gh`, follow the steps from
-[the official installation instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+<!-- ```shell -->
+<!-- sudo apt-get install git -->
+<!-- ``` -->
 
-</OnlyShowOn>
+<!-- To install `gh`, follow the steps from -->
+<!-- [the official installation instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) -->
 
-<OnlyShowOn mac>
+<!-- </OnlyShowOn> -->
 
-On macOS, `git` is already installed if you followed the instructions above.
+<!-- <OnlyShowOn mac> -->
 
-```shell
-brew install gh
-```
+<!-- On macOS, `git` is already installed if you followed the instructions above. -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- brew install gh -->
+<!-- ``` -->
 
-You'll also want to sign up for a GitHub account at [github.com/signup](https://github.com/signup)
+<!-- </OnlyShowOn> -->
 
-### Lecture 12: Recent Unix Tools
+<!-- You'll also want to sign up for a GitHub account at [github.com/signup](https://github.com/signup) -->
 
-We'll be covering an assortment of tools, including `rg`, `fd`, `exa`, `fish`, `magick`, `pandoc`,
-and `ffmpeg`. The slides and lecture notes have links to the installation instructions for each
-piece of software. The ones you need for Assignment 6 are Pandoc (`pandoc`) and ImageMagick
-(`convert`).
+<!-- ### Lecture 12: Recent Unix Tools -->
 
-<OnlyShowOn mac>
+<!-- We'll be covering an assortment of tools, including `rg`, `fd`, `exa`, `fish`, `magick`, `pandoc`, -->
+<!-- and `ffmpeg`. The slides and lecture notes have links to the installation instructions for each -->
+<!-- piece of software. The ones you need for Assignment 6 are Pandoc (`pandoc`) and ImageMagick -->
+<!-- (`convert`). -->
 
-```shell
-brew install pandoc
-brew install imagemagick
-```
+<!-- <OnlyShowOn mac> -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- brew install pandoc -->
+<!-- brew install imagemagick -->
+<!-- ``` -->
 
-<OnlyShowOn windows linux>
+<!-- </OnlyShowOn> -->
 
-```shell
-sudo apt-get install pandoc imagemagick
-```
+<!-- <OnlyShowOn windows linux> -->
 
-</OnlyShowOn>
+<!-- ```shell -->
+<!-- sudo apt-get install pandoc imagemagick -->
+<!-- ``` -->
 
-### Lecture 15: Virtual Machines & Containers
+<!-- </OnlyShowOn> -->
 
-You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop.
-You'll also need to grab a copy of an Ubuntu Server disk image, which you
-can download from [here](https://ubuntu.com/download/server). **If you're on an
-M1 Mac, please make sure to download the "Ubuntu Server for ARM" verison from
-[here](https://ubuntu.com/download/server/arm)**.
+<!-- ### Lecture 15: Virtual Machines & Containers -->
 
-<OnlyShowOn mac>
+<!-- You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop. -->
+<!-- You'll also need to grab a copy of an Ubuntu Server disk image, which you -->
+<!-- can download from [here](https://ubuntu.com/download/server). **If you're on an -->
+<!-- M1 Mac, please make sure to download the "Ubuntu Server for ARM" verison from -->
+<!-- [here](https://ubuntu.com/download/server/arm)**. -->
 
-Download UTM from [here](https://mac.getutm.app/).
+<!-- <OnlyShowOn mac> -->
 
-</OnlyShowOn>
+<!-- Download UTM from [here](https://mac.getutm.app/). -->
 
-<OnlyShowOn windows>
+<!-- </OnlyShowOn> -->
 
-Download Virtualbox from [here](https://www.virtualbox.org/wiki/Downloads).
+<!-- <OnlyShowOn windows> -->
 
-</OnlyShowOn>
+<!-- Download Virtualbox from [here](https://www.virtualbox.org/wiki/Downloads). -->
 
-<OnlyShowOn linux>
+<!-- </OnlyShowOn> -->
 
-Download Virtualbox from [here](https://www.virtualbox.org/wiki/Linux_Downloads).
+<!-- <OnlyShowOn linux> -->
 
-</OnlyShowOn>
+<!-- Download Virtualbox from [here](https://www.virtualbox.org/wiki/Linux_Downloads). -->
 
-And finally, download and install Docker Desktop from [here](https://docs.docker.com/get-docker/).
+<!-- </OnlyShowOn> -->
 
-### Lecture 16: Cloud & Serverless Computing
+<!-- And finally, download and install Docker Desktop from [here](https://docs.docker.com/get-docker/). -->
 
-You’ll need to sign up for an account with Vercel and Oracle Cloud.
+<!-- ### Lecture 16: Cloud & Serverless Computing -->
 
-Sign up or log in to your [Vercel account](https://vercel.com), and sign up or log in to your
-[Oracle Cloud account](https://www.oracle.com/cloud/sign-in.html).
+<!-- You’ll need to sign up for an account with Vercel and Oracle Cloud. -->
 
-(Note that you will need to provide a payment method to Oracle Cloud in order to complete sign-up.
-You will not be charged. Let us know if this presents you with any issue!)
+<!-- Sign up or log in to your [Vercel account](https://vercel.com), and sign up or log in to your -->
+<!-- [Oracle Cloud account](https://www.oracle.com/cloud/sign-in.html). -->
+
+<!-- (Note that you will need to provide a payment method to Oracle Cloud in order to complete sign-up. -->
+<!-- You will not be charged. Let us know if this presents you with any issue!) -->
