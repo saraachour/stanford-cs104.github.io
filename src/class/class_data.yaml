@@ -102,23 +102,23 @@ lectures:
   # Week 3
   - topic: 'Lecture 5: Shell Scripting'
     materials:
-    assignments: Assignment 1 Due
   - topic: 'Lecture 6: Text Editors'
     materials:
+    assignments: Assignment 1 Due
 
   # Week 4
   - topic: 'Lecture 7: Command Line Environment'
     materials:
-    assignments: Assignment 2 Due
   - topic: 'Lecture 8: Computer Networking'
     materials:
+    assignments: Assignment 2 Due
 
   # Week 5
   - topic: 'Lecture 9: Version Control'
     materials:
-    assignments: Assignment 3 Due
   - topic: 'Lecture 10: Version Control II'
     materials:
+    assignments: Assignment 3 Due
 
   # Week 6
   - topic: 'Lecture 11: Build Systems & DevOps'
