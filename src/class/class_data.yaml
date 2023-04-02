@@ -37,52 +37,51 @@ assignments:
     materials:
       handout: '/assignments/assign0'
     details:
-  # - name: 'Assignment 1: _Shell_ We?'
-  #   points: 3
-  #   due: 2023/01/23
-  #   materials:
-  #   details:
-  # - name: 'Assignment 2: Bourne to Be Wild'
-  #   points: 3
-  #   due: 2023/01/30
-  #   materials:
-  #   details:
-  # - name: 'Assignment 3: Off The Beaten `$PATH`'
-  #   points: 3
-  #   due: 2023/02/06
-  #   materials:
-  #   details:
-  # - name: "Assignment 4: It's `git`-ting HOT in here!"
-  #   points: 3
-  #   due: 2023/02/15
-  #   materials:
-  #   details:
-  # - name: 'Assignment 5: It all `make`s sense!'
-  #   points: 3
-  #   due: 2023/02/22
-  #   materials:
-  #   details:
-  # - name: "Assignment 6: It's like Magick"
-  #   points: 3
-  #   due: 2023/03/01
-  #   materials:
-  #   details:
-  # - name: 'Assignment 7: The (Public) Key to My Heart'
-  #   points: 3
-  #   due: 2023/03/08
-  #   materials:
-  #   details:
-  # - name: 'Assignment 8: On Cloud Nine'
-  #   points: 3
-  #   due: 2023/03/15
-  #   materials:
-  #   details:
-
-  # - name: 'Final Project'
-  #   points: 5
-  #   due: 2023/03/20
-  #   materials:
-  #   details:
+  - name: 'Assignment 1: _Shell_ We?'
+    points: 3
+    due: 2023/04/19
+    materials:
+    details:
+  - name: 'Assignment 2: Bourne to Be Wild'
+    points: 3
+    due: 2023/04/26
+    materials:
+    details:
+  - name: 'Assignment 3: Off The Beaten `$PATH`'
+    points: 3
+    due: 2023/05/03
+    materials:
+    details:
+  - name: "Assignment 4: It's `git`-ting HOT in here!"
+    points: 3
+    due: 2023/05/10
+    materials:
+    details:
+  - name: 'Assignment 5: It all `make`s sense!'
+    points: 3
+    due: 2023/05/17
+    materials:
+    details:
+  - name: "Assignment 6: It's like Magick"
+    points: 3
+    due: 2023/05/24
+    materials:
+    details:
+  - name: 'Assignment 7: The (Public) Key to My Heart'
+    points: 3
+    due: 2023/05/31
+    materials:
+    details:
+  - name: 'Assignment 8: On Cloud Nine'
+    points: 3
+    due: 2023/06/07
+    materials:
+    details:
+  - name: 'Final Project'
+    points: 5
+    due: 2023/06/09
+    materials:
+    details:
 
 lectures:
   # Week 1
