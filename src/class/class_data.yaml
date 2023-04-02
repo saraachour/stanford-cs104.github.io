@@ -128,22 +128,22 @@ lectures:
     assignments: Assignment 4 Due
 
   # Week 7
-  - topic: 'Lecture 12: TBD'
-    holiday: yes
-  - topic: 'Lecture 13: Recent Unix Tools'
+  - topic: 'Lecture 12: Recent Unix Tools'
+    materials:
+  - topic: 'Lecture 14: Security'
     materials:
     assignments: Assignment 5 Due
 
   # Week 8
-  - topic: 'Lecture 14: Security'
-    materials:
   - topic: 'Lecture 15: Cryptography'
+    materials:
+  - topic: 'Lecture 16: Virtual Machines & Containers'
     materials:
     assignments: Assignment 6 Due
 
   # Week 9
-  - topic: 'Lecture 16: Virtual Machines & Containers'
-    materials:
+  - topic: 'No Lecture: Memorial Day'
+    holiday: yes
   - topic: 'Lecture 17: Cloud & Serverless'
     materials:
     assignments: Assignment 7 Due
