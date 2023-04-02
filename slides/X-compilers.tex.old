@@ -1,0 +1,676 @@
+\usepackage{shared/cs45}
+\usepackage{tikz}
+\usetikzlibrary{graphs}
+\tikzset{>=latex}
+\usepackage{multicol}
+
+\title{CS 45, Lecture 9}
+\subtitle{Compilers}
+\date{Winter 2023}
+\author{Akshay Srivatsan, Ayelet Drazen, Jonathan Kula}
+
+\newcommand{\var}[1]{\texttt{\$#1}}
+\newcommand{\cmd}[1]{\mintinline{shell}{#1}}
+\newcommand{\py}[1]{\mintinline{python}{#1}}
+\newcommand{\kr}{K\&R C}
+\newcommand{\clang}[1]{\mintinline{C}{#1}}
+
+\begin{document}
+
+\maketitle
+
+\frame{\titlepage}
+
+\begin{frame}{Learning Goals}
+  In this lecture, we will see:
+  \begin{itemize}
+    \item How UNIX and C were designed together
+    \item How C compilers work
+    \item How package managers work
+    \item How Python has taken over UNIX scripting
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents[hidesubsections]
+\end{frame}
+
+\section{The C Language}
+
+\begin{frame}{C}
+  \begin{itemize}
+    \item C is a general-purpose programming language from the 1970s.\pause
+    \item C is used everywhere, and inspired:
+    \begin{itemize}
+      \item Every major operating system
+      \item Every mainstream programming language
+    \end{itemize}
+    \pause
+    \item Even if you never write C, you use it every day
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Before C}
+  \begin{itemize}
+    \item Nowadays, C is considered a quirky, old (sometimes scary) language.
+      \pause
+    \item The languages before C were \textit{even worse}.
+      \pause
+  \end{itemize}
+
+  This is the \enquote{hello, world!} program in B (the language before C):
+
+  \begin{minted}{text}
+main( ) {
+    extern a, b, c;
+    putchar(a); putchar(b); putchar(c); putchar('!*n');
+}
+ 
+a 'hell';
+b 'o, w';
+c 'orld';
+  \end{minted}
+
+  \mode<article> {
+    In B, strings were limited to four characters. If you wanted to say
+    something longer than four letters, you had to declare multiple variables.
+    How anyone ever programmed anything useful in this language is a mystery to
+    me.  Amazingly, the first versions of UNIX were written in B; however, they
+    quickly realized they needed a better language.
+  }
+\end{frame}
+
+\begin{frame}[fragile]{Early C}
+  \begin{itemize}
+    \item C was designed in the 1970s by Dennis Ritchie, one of the authors of UNIX.\pause
+    \item It was officially published in the 1978 book \textit{The C
+      Programming Language} by Brian Kernighan and Dennis Ritchie, commonly
+      called \enquote{\kr}.\pause
+  \end{itemize}
+  Here's the \enquote{hello, world} program in \kr:
+  \begin{minted}{C}
+main( ) {
+        printf("hello, world");
+}
+  \end{minted}
+  \mode<article> {
+    Much better, right?
+  }
+  \pause
+
+  The C programming language was used to implement most of UNIX's kernel and
+  userspace.
+\end{frame}
+
+\begin{frame}[fragile]{Problems with \kr}
+  \vspace{-0.5em}
+  Early C had some issues:
+  \begin{itemize}
+    \item The compiler just translated C into assembly language.  This assembly
+      then needed to be \enquote{assembled} into machine language.
+      \pause
+    \item If you didn't tell the compiler what data type a variable was, it
+      just assumed it was an integer. \pause
+    \item It had no memory protection or error detection, so even minor bugs
+      would cause your program to crash.\pause
+    \item Some OS-specific functions, like \clang{printf}, had to come from
+      \textit{somewhere}.  This meant the machine code had to be
+      \enquote{linked} to a C \enquote{standard library} which came with the
+      OS.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Modern C}
+  \begin{itemize}
+    \item Now we have \textit{modern} versions of C, like C99, C11, and C23!
+      \pause
+    \item These versions fix\textellipsis{} none of the problems I mentioned.
+      \pause
+    \item The C way of doing things is now just considered the
+      \enquote{correct} way of doing things, so we're stuck with it.
+      \pause
+  \end{itemize}
+
+  Here's the \enquote{hello, world} program, rewritten in modern C:
+  \begin{minted}{C}
+#include <stdio.h>
+int main(int argc, char **argv) {
+  printf("hello, world\n");
+}
+  \end{minted}
+\end{frame}
+
+\section{Compilation}
+
+\begin{frame}{How source code becomes machine code}
+  The modern C-style process of compilation can be broken into three steps:
+  \begin{enumerate}
+    \item A \textsc{compiler} turns C code into assembly code.
+    \item An \textsc{assembler} turns assembly code into machine code.
+    \item A \textsc{linker} turns many different pieces of machine code and
+      weaves them into a single program.
+  \end{enumerate}
+  \pause
+
+  Modern C compilers let you do all of these steps with a single command, but
+  they still do each step separately behind the scenes.
+\end{frame}
+
+I'm talking specifically about C compilers here, but other compiled languages
+do more or less the same thing.  They generally do a better job of hiding the
+steps though, so you may never notice; C compilers do a terrible job of hiding
+the steps, so you'll get mysterious \enquote{linker errors} that don't make any
+sense if you don't know what's going on under the hood.
+
+\begin{frame}[fragile]{Compiler Input}
+  A \textsc{compiler} reads source code, like this:
+  \begin{minted}{C}
+#include <stdio.h>
+int main(int argc, char **argv) {
+  printf("hello, world\n");
+}
+  \end{minted}
+  This is meant to be human-readable and portable.  The same code would work on
+  Linux on an Intel CPU or macOS on an ARM CPU.
+
+  We can compile this by running \cmd{cc -S hello.c -o hello.s} to get an
+  assembly file called \enquote{hello.s}.
+\end{frame}
+
+On Macs, \cmd{cc} (short for C Compiler) is a symbolic link to the LLVM C
+Compiler, \cmd{clang}; on Linux, it points at the GNU C Compiler, \cmd{gcc}.
+These are the default C compilers on these respective OSes, but you can use
+\cmd{clang} on Linux if you want to (using \cmd{gcc} on macOS is difficult; by
+default \cmd{gcc} on macOS is a symbolic link to \cmd{clang}).
+
+\begin{frame}[fragile]{Compiler Output}
+  A \textsc{compiler} writes assembly code, like this:
+  \begin{multicols}{2}
+    \begin{minted}[fontsize=\tiny]{asm}
+        .file   "hello.c"
+        .text
+        .section        .rodata
+.LC0:
+        .string "hello, world"
+        .text
+        .globl  main
+        .type   main, @function
+main:
+.LFB0:
+        .cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+    \end{minted}
+    \vfill
+    \begin{minted}[fontsize=\tiny]{asm}
+        subq    $16, %rsp
+        movl    %edi, -4(%rbp)
+        movq    %rsi, -16(%rbp)
+        leaq    .LC0(%rip), %rax
+        movq    %rax, %rdi
+        call    puts@PLT
+        movl    $0, %eax
+        leave
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc
+.LFE0:
+        .size   main, .-main
+        .ident  "GCC: (GNU) 12.2.1 20230111"
+        .section        .note.GNU-stack,"",@progbits
+    \end{minted}
+  \end{multicols}
+  This is technically still considered human-readable!
+\end{frame}
+
+\begin{frame}[fragile]{Assembler Input}
+  An \textsc{assembler} reads assembly code, like this:
+  \begin{multicols}{2}
+    \begin{minted}[fontsize=\tiny]{asm}
+        .file   "hello.c"
+        .text
+        .section        .rodata
+.LC0:
+        .string "hello, world"
+        .text
+        .globl  main
+        .type   main, @function
+main:
+.LFB0:
+        .cfi_startproc
+        pushq   %rbp
+        .cfi_def_cfa_offset 16
+        .cfi_offset 6, -16
+        movq    %rsp, %rbp
+        .cfi_def_cfa_register 6
+    \end{minted}
+    \vfill
+    \begin{minted}[fontsize=\tiny]{asm}
+        subq    $16, %rsp
+        movl    %edi, -4(%rbp)
+        movq    %rsi, -16(%rbp)
+        leaq    .LC0(%rip), %rax
+        movq    %rax, %rdi
+        call    puts@PLT
+        movl    $0, %eax
+        leave
+        .cfi_def_cfa 7, 8
+        ret
+        .cfi_endproc
+.LFE0:
+        .size   main, .-main
+        .ident  "GCC: (GNU) 12.2.1 20230111"
+        .section        .note.GNU-stack,"",@progbits
+    \end{minted}
+  \end{multicols}
+  We can assemble this by running \cmd{as -c hello.s -o hello.o} to get an
+  object file called \enquote{hello.o}.
+\end{frame}
+
+\begin{frame}[fragile]{Assembler Output}
+  An \textsc{assembler} writes machine code, which is not human-readable, but the disassembly looks like this:
+  \begin{minted}[fontsize=\tiny]{text}
+Disassembly of section .text:
+
+0000000000000000 <main>:
+ 0:     55                      push   %rbp
+ 1:     48 89 e5                mov    %rsp,%rbp
+ 4:     48 83 ec 10             sub    $0x10,%rsp
+ 8:     89 7d fc                mov    %edi,-0x4(%rbp)
+ b:     48 89 75 f0             mov    %rsi,-0x10(%rbp)
+ f:     48 8d 05 00 00 00 00    lea    0x0(%rip),%rax        # 16 <main+0x16>
+16:     48 89 c7                mov    %rax,%rdi
+19:     e8 00 00 00 00          call   1e <main+0x1e>
+1e:     b8 00 00 00 00          mov    $0x0,%eax
+23:     c9                      leave
+24:     c3                      ret
+  \end{minted}
+  The call to \clang{printf} is missing because the assembler doesn't know where it is!  This incomplete machine code is called an \textsc{object file}.
+\end{frame}
+
+\begin{frame}[fragile]{Linker Input}
+  An \textsc{linker} reads incomplete machine code in object files:
+  \begin{minted}[fontsize=\tiny]{text}
+Disassembly of section .text:
+
+0000000000000000 <main>:
+ 0:     55                      push   %rbp
+ 1:     48 89 e5                mov    %rsp,%rbp
+ 4:     48 83 ec 10             sub    $0x10,%rsp
+ 8:     89 7d fc                mov    %edi,-0x4(%rbp)
+ b:     48 89 75 f0             mov    %rsi,-0x10(%rbp)
+ f:     48 8d 05 00 00 00 00    lea    0x0(%rip),%rax        # 16 <main+0x16>
+16:     48 89 c7                mov    %rax,%rdi
+19:     e8 00 00 00 00          call   1e <main+0x1e>
+1e:     b8 00 00 00 00          mov    $0x0,%eax
+23:     c9                      leave
+24:     c3                      ret
+  \end{minted}
+  We can theoretically link this using \cmd{ld} to get an executable, but the
+  exact command is complicated and system-dependent.  Instead, we'll ask
+  \cmd{cc} to do it!
+
+  \cmd{cc hello.o -o hello}
+\end{frame}
+
+\begin{frame}[fragile]{Linker Output}
+  A \textsc{linker} writes complete machine code as an executable binary; once again, let's look at the disassembly:
+  \begin{minted}[fontsize=\tiny]{text}
+0000000000001139 <main>:
+    1139:       55                      push   %rbp
+    113a:       48 89 e5                mov    %rsp,%rbp
+    113d:       48 83 ec 10             sub    $0x10,%rsp
+    1141:       89 7d fc                mov    %edi,-0x4(%rbp)
+    1144:       48 89 75 f0             mov    %rsi,-0x10(%rbp)
+    1148:       48 8d 05 b5 0e 00 00    lea    0xeb5(%rip),%rax        # 2004 <_IO_stdin_used+0x4>
+    114f:       48 89 c7                mov    %rax,%rdi
+    1152:       e8 d9 fe ff ff          call   1030 <puts@plt>
+    1157:       b8 00 00 00 00          mov    $0x0,%eax
+    115c:       c9                      leave
+    115d:       c3                      ret
+  \end{minted}
+  Now the call to \clang{printf} is fixed (actually it became a call to
+  \clang{puts} because the compiler is trying to be clever).  This is because
+  the program is now \enquote{linked} to the system C library, \textit{libc},
+  which has a definition of \clang{printf}/\clang{puts}.
+\end{frame}
+
+\begin{frame}{Compiler vs. Linker}
+  Every source file is compiled \textbf{independently} until the final linking
+  stage.
+  \pause
+
+  This leads to a problem\textemdash{}how does the compiler know which
+  functions you're going to link against?
+  \pause
+
+  What if your C function calls \clang{my_nonexistent_function()}, but you
+  never define it?  Or, what if you call it with the wrong arguments?
+  \pause
+
+  The C compiler needs a way to know, \textit{before linking}, which functions
+  will be valid to call at link-time.  This is solved by a gross hack called
+  \textsc{header files}.
+\end{frame}
+
+\begin{frame}[fragile]{Header Files}
+  In the hello world program, there was a line that said:
+  \begin{minted}{c}
+  #include <stdio.h>
+  \end{minted}
+  This includes a \textsc{header file} called \cmd{stdio.h}.  This file
+  contains a \textit{declaration} (but not a \textit{definition}) of the
+  function \cmd{printf}.\pause
+
+  \begin{minted}{c}
+  // Declaration
+  int increment(int x);
+
+  // Definition
+  int increment(int x) {
+    return x + 1;
+  }
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Including Headers}
+  When you \textsc{include} a header file, the C pre-processor
+  \textit{copies-and-pastes} the content of the header into the source file at
+  the location of the include statement.
+
+  The pre-processor runs automatically as part of the compiler.\pause
+
+  \alert{This is a terrible way to solve this problem!}\pause
+
+  \begin{itemize}
+    \item Every public function needs to be listed twice, once in the header
+      file and once in the C source file.\pause
+
+    \item If you declare a function that you never define, you'll get
+      mysterious errors from the linker about being unable to find a
+      symbol.\pause
+
+    \item If the declaration and definition don't match, you won't get an
+      error, but your program will have a bug in it.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Package Managers}
+  \begin{itemize}
+    \item We get basic functions like \clang{printf} and file I/O from
+      \textit{libc}, which comes with the OS.
+    \item How do we get more complicated functions? (besides writing them
+      ourselves)\pause
+    \item C is so tightly integrated into the OS that we install C libraries
+      the same way we install programs: a package manager.\pause
+    \item On Linux, this comes with the OS: \cmd{apt}, \cmd{dnf}, \cmd{rpm},
+      \cmd{pacman}, etc.\pause
+      \begin{itemize}
+        \item If you've ever heard of a Linux \enquote{distribution}, like
+          Ubuntu, Debian, or Fedora, that basically means what packages are
+          available through the package manager.\pause
+      \end{itemize}
+    \item On macOS, this is something we have to install, like \cmd{brew}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Shared Object Files}
+  \vspace{-0.5em}
+  \begin{itemize}
+    \item We can compile C into a \textsc{shared object}, which is a library
+      any program can use.\pause
+    \item On Linux, these files end with \cmd{.so}; on macOS, they sometimes
+      end with \cmd{.dylib} instead.  The Windows equivalent ends with
+      \cmd{.dll}.
+    \item \cmd{cc -shared test.c -o test.so} creates a shared object file
+      containing all the functions from \cmd{test.c}.\pause
+    \item These \enquote{shared objects} are linked at runtime by a
+      \textsc{dynamic linker}, which is part of the OS.\pause
+    \begin{itemize}
+      \item These \cmd{so} files are usually in \cmd{/usr/lib/} \item The
+        environment variable \var{LD\_LIBRARY\_PATH} can add more locations.
+    \end{itemize}\pause
+    \item The \cmd{ldd} command tells you which shared libraries a program
+      requires to run; if they're not installed, the program will give an error
+      and exit.
+  \end{itemize}
+\end{frame}
+
+Normally, your package manager will automatically install shared libraries if
+you try to install a program that requires them.  If all goes well, you never
+have to worry about shared libraries at all; unfortunately, sometimes people
+configure things wrong, and you get mysterious errors about shared object files
+being missing.  If you ever see one of those, now you know what it means: you
+need to install the relevant library.
+
+On most systems, \textit{libc} itself is provided as a shared library.  This
+means a program can update \textit{libc} without messing with all the programs
+that depend on it.
+
+One downside of C package managers is that they install packages
+\textsc{globally}.  Once you install a library, every program can use that
+library.  That may not seem so bad, but what happens when you want to run two
+programs that depend on different, incompatible, versions of the same library?
+You can only have one version installed globally.  There are a lot of hacks to
+make situations like this work, but at the end of the day the idea of
+installing libraries globally just isn't a great idea.
+
+\begin{frame}{So why does anyone use C?}
+  C code is buggy, hacky, and hard to understand.  So why is it so
+  popular?\pause
+  \begin{itemize}
+    \item It's fast: C translates really well into assembly, so C programs are
+      orders of magnitude faster than programs written in some other
+      languages.\pause
+    \item It's omnipresent: everyone else uses C for everything, so the only
+      way to interact with their code is using C.\pause
+    \item It's required: UNIX is \textit{defined} in terms of C.  A UNIX-based
+      OS \textbf{must} have a C compiler.  All the interfaces to ask the OS for
+      anything are designed for C programs.\pause
+  \end{itemize}
+  Other languages either need to inherit all the problems of C, or design a
+  complicated wrapper to hide it.  There's no way to write a UNIX program and
+  completely ignore C.\pause{} Except\textellipsis
+\end{frame}
+
+\section{Python}
+\begin{frame}{Python}
+  \begin{itemize}
+    \item Python is a \enquote{new}\footnote{The 90s is \enquote{new} as far as
+      UNIX goes.} programming language which has taken over a lot of the
+      traditional roles of C within UNIX.\pause
+    \item Python is a \textsc{scripting language} like \cmd{bash}; typically a
+      programmer writes short scripts which combine tools written by someone
+      else.\pause
+    \item Python is \textsc{interpreted}; there's no compilation step needed,
+      but you can't run a \cmd{.py} file on a computer that doesn't have
+      \cmd{python} installed.\pause
+    \item Python is \textbf{compatible with C}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Python Hello World}
+  Python looks a lot more friendly than C:
+  \begin{minted}{python}
+#!/usr/bin/env python3
+print("Hello, World!")
+  \end{minted}
+  \begin{itemize}
+    \item Note the shebang line, like a shell script, but calling \cmd{python3}
+      instead of \cmd{bash}.\pause
+    \item There are two incompatible versions of Python; \cmd{python} is
+      usually Python 2, but \cmd{python3} is Python 3.  \textbf{Use
+      \cmd{python3} for anything new you write.}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Creating a new Python Project}
+  \begin{itemize}
+    \item If you're writing a little standalone script, you can just create a
+      Python file like you'd create a shell script.  Remember the shebang
+      line!\pause
+    \item If you're writing a more complicated program, you probably want to
+      create a new project.\pause
+    \item As far as Python knows, a project is just a directory, so we can
+      create a new Python project with \cmd{mkdir}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dependencies}
+  \begin{itemize}
+    \item Much like C programs, we sometimes want our Python program to depend
+      on code someone else wrote.\pause
+    \item We can install programs with the Python package manager, \cmd{pip}
+      (or more accurately, \cmd{pip3}).\pause
+    \item However, we generally don't want to copy the C approach of installing
+      libraries globally, since then we could only have one version of a
+      library installed for all our Python scripts.\pause
+    \item Instead, we create a \textsc{virtual environment} and install our
+      required dependencies in there.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Virtual Environments}
+  \begin{itemize}
+    \item A \textsc{virtual environment} is like a little bubble isolated from
+      other Python programs on your computer.\pause
+    \item Anything you install within a virtual environment will stay inside
+      it.\pause
+    \item We can create a virtual environment named \enquote{myenv} in the
+      current directory by running the command \cmd{python -m venv
+      myenv}.\pause
+    \item We can \textsc{activate} the virtual environment by running the
+      command \cmd{source ./myenv/bin/activate}.\pause
+      \mode<article> {
+        You should see your prompt change to indicate that you're within the
+        environment.
+      }
+    \item We could deactivate the environment by running \cmd{deactivate}.
+  \end{itemize}
+  \pause
+  Let's practice this!  First, create a directory named \cmd{python-test}; then
+  create and activate an environment named \cmd{myenv} inside it!
+\end{frame}
+
+\begin{frame}[fragile]{Requirements}
+  Let's install some packages inside your new virtual environment.\pause
+  \begin{itemize}
+    \item First, make sure the environment is activated.\pause
+    \item Now, let's install the \cmd{numpy} package, which lets us do vector
+      math: \cmd{pip3 install numpy}.\pause
+    \item We can now launch a Python Read-Eval-Print-Loop (REPL) by running
+      \cmd{python3}.  This lets us type Python commands and have them
+      immediately executed, just like the shell!\pause
+    \item Inside the REPL, run \py{import numpy} to import the \cmd{numpy}
+      library we just installed.\pause
+    \item Try running \cmd{numpy.array([1, 2, 3]) + numpy.array([4, 5, 6])}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Python Scripting}
+  Let's write a Python script.
+
+  In fact, let's translate a shell script we wrote in Lecture 4\textemdash{}\cmd{my_folder.sh}\textemdash{}into Python!
+
+  First, use \cmd{pip3} to install a library called \cmd{sh}.\pause
+
+  Next, create a new file called \cmd{my_folder.py} and open it in your
+  favorite editor.
+
+\end{frame}
+\begin{frame}[fragile]{Python Scripting: Example}
+  \begin{minted}{shell}
+akshay@akshays-thinkpad ~ % my_folder.py akshay akshay.txt
+  \end{minted}
+  \vspace{-2em}
+  \begin{minted}{python}
+  #!/usr/bin/env python3
+  import sh
+  import sys
+
+  def make_my_folder(folder_name, file_name):
+    sh.mkdir(folder_name)
+    sh.cd(folder_name)
+    sh.touch(file_name)
+
+  make_my_folder(sys.argv[1], sys.argv[2])
+  \end{minted}
+\end{frame}
+
+Be careful about whitespace (spaces and tabs)!  Python, unlike C, is extremely
+sensitive about whitespace.  Try using the \cmd{:retab} command in \cmd{vim} to
+fix the whitespace in the file.
+
+The \cmd{sys} library here lets us access system details, like the command-line
+arguments to our function.  The \cmd{sh} library is really cool: it lets us run
+shell commands \alert{as if they were Python functions}.  With the \cmd{sh}
+library, you could turn basically any shell script into a Python script.  You
+can actually do this without the \cmd{sh} library, but it's a lot cleaner this
+way.  Python isn't as nice for pipelines as \cmd{bash}, but you can still get them to work.
+
+\begin{frame}{Packaging a Virtual Environment}
+  The virtual environment you created is customized to your computer, so what
+  do we do if we want to send a Python project to someone else?\pause
+
+  \begin{enumerate}
+    \item Create a \cmd{requirements.txt} file by running \cmd{pip3 freeze > requirements.txt}. \pause
+    \item Send your Python files (\cmd{*.py}) and \cmd{requirements.txt} to
+      someone else. \pause
+    \item Have the other person create a virtual environment and run \cmd{pip3
+      install -r requirements.txt} inside it to install all the
+      requirements.\pause
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]{What's so great about Python?}
+  \begin{center}
+  \includegraphics[width=0.35\textwidth]{images/python.png}
+  \end{center}
+  Source: \href{https://xkcd.com/353/}{xkcd 353}
+
+\end{frame}
+
+\begin{frame}{What's so great about Python? (for real)}
+  Python is fundamentally based on C, but hides it under really good
+  abstractions.\pause
+  
+  If you really need to use C from inside Python, you can!  But most of the
+  time you never need to.\pause
+
+  Python scripts can \alert{link against C shared object files}.  The entire C
+  software ecosystem is usable from inside Python.
+\end{frame}
+
+At the end of the day, Python doesn't have to \textit{replace} C, it just has
+to hide its problems well enough that no one minds them anymore.  And, lucky
+for us, it does exactly that!
+
+\begin{frame}[fragile]{Python-C Foreign Function Interface}
+  Say we have a C file \cmd{add.c}:
+  \begin{minted}{C}
+  int add(int a, int b) { return a + b; }
+  \end{minted}
+  \pause We can compile it into \cmd{add.so}:
+  \begin{minted}{shell}
+  cc -shared add.c -o add.so
+  \end{minted}
+  \pause We can use it from Python:
+  \begin{minted}{python}
+  import ctypes
+  lib = ctypes.CDLL("./add.so")
+  print(lib.add(1, 2))
+  \end{minted}
+\end{frame}
+
+Compared to how hard it is to do this in other languages, this is amazing!  The
+only other mainstream language which makes importing C libraries so easy is
+C++, and it has to inherit all the problems of C to do so.  The fact that
+turning a C library into a Python library is so easy means Python programmers
+can use any C libraries they want, without worrying about whether someone has
+translated it into Python yet.
+
+\end{document}
