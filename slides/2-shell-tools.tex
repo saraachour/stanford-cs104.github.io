@@ -2,7 +2,7 @@
 
 \title{CS 45, Lecture 2}
 \subtitle{Shell Tools}
-\date{Winter 2023}
+\date{Spring 2023}
 \author{Akshay Srivatsan, Ayelet Drazen, Jonathan Kula}
 
 \begin{document}
@@ -47,9 +47,8 @@ Now, we said UNIX is an \textsc{operating system}, but what exactly does that me
 
 \subsection{What is an Operating System?}
 
-An operating system, at its core, is an abstraction over the raw hardware of a
-computer. A computer contains many different parts, each of which has a
-different purpose:
+An operating system, at its core, is an abstraction layer.  A computer contains
+many different parts, each of which has a different purpose:
 
 \begin{frame}{Anatomy of a Computer}
   \pause
@@ -73,6 +72,16 @@ different purpose:
     \href{https://carta.stanford.edu}{Carta}.  However, they both use the same
     operating system kernel (i.e., Linux), and I can therefore run the same
     programs on both.
+
+    One recent example you might be familiar with---while older Macs used CPUs
+    made by Intel, newer Macs use CPUs made by Apple.  These CPUs are
+    incompatible with each other; essentially, they speak different machine
+    languages, and can each only understand programs written in their native
+    language. However, since they both have the same operating system (macOS),
+    programs written for an Intel Mac can run on an ARM Mac; macOS
+    automatically translates programs written in the Intel language to the ARM
+    language, hiding the low-level details from both the programs and their
+    programmers.
   }
   \begin{definition}[kernel]
     An \textsc{Operating System Kernel} is a program that abstracts over
@@ -83,9 +92,22 @@ different purpose:
 
 You might notice that \textsc{serial ports} show up quite a lot on this list.
 At the time UNIX was designed, serial ports were ubiquitous---any time you
-wanted to connect two devices together, you'd use a serial port.  Even today,
-you can still see the legacy of serial ports hiding in the design of most
-operating systems.
+wanted to connect two devices together, you'd use a serial port.  Serial ports
+at the time were like USB ports today---you'd use them for everything.  Even
+today, you can still see the legacy of serial ports hiding in the design of
+most operating systems.
+
+As an aside, computers didn't have screens at one point, not long before UNIX.
+Instead, they were connected (via a serial port) to a \textit{typewriter}.
+When a computer \enquote{printed} output, it literally printed it out onto a
+piece of paper. Over time, these were replaced with \enquote{video terminals};
+these things had a video screen instead of a piece of paper, usually tall
+enough to show 25 lines of text.  While computer scientists still called it
+\enquote{printing}, any output sent by the computer was instead displayed on
+the screen.  Eventually, we progressed to graphical displays like the one
+you're reading this on.  Instead of a dedicated video terminal, you can now
+open a \enquote{terminal emulator} (usually just called a \enquote{terminal}),
+which is a window that pretends to be a video terminal.
 
 \begin{frame}{Userspace}
   \begin{itemize}
@@ -110,6 +132,18 @@ Almost everything we'd call an ``program'' (or an ``app'') is a userspace
 program.  While we can install programs/apps after-the-fact, every operating
 system must come with some set of them installed; otherwise, the operating
 system wouldn't be able to do anything.
+
+An operating system's userspace almost always contains the following:
+\begin{itemize}
+  \item A text editor.
+  \item A clock.
+  \item A calendar.
+  \item A calculator.
+  \item An email program.
+  \item A web browser.
+  \item A file browser.
+  \item An \enquote{app store} (package manager).
+\end{itemize}
 
 \begin{frame}{Running Programs}
   \begin{itemize}
@@ -139,8 +173,11 @@ system wouldn't be able to do anything.
 
 Modern operating systems have many different kinds of shells, depending on what
 they're used for.  Some are graphical, some are text-based.  While graphical
-ones are far more common for end-users, text-based ones are far more common for
-developers.
+ones are far more common in general nowadays, text-based ones are far more
+common for developers.  Given that you're taking this class, you probably
+already know how to use graphical ones (you're using one right now to read
+this), and you probably want to know how to use a text-based one (which is the
+rest of this lecture!).
 
 \begin{frame}{Types of Shell}
   \only<4>{\vspace{-0.5em}}
@@ -193,6 +230,61 @@ developers.
   }
 \end{frame}
 
+Since we're talking about operating systems anyway, let's take a moment to look
+at the (abridged) history of the common operating systems in the world today:
+
+\begin{frame}{Modern Operating Systems}
+  \begin{center}
+    \tikz \graph [layered layout, components go right top aligned, nodes=draw, edges=rounded corners] {
+      UNIX[red];
+      macOS[blue];
+      iOS[blue];
+      FreeBSD[blue];
+      Darwin[blue];
+      POSIX[blue,dotted];
+      Linux[blue];
+      Debian[blue];
+      Ubuntu[blue];
+      Android[blue];
+      NT[blue];
+      Windows;
+      Windows 10+[blue];
+
+      Mach -> NeXTSTEP;
+
+      MULTICS -> UNIX -> BSD -> {
+        FreeBSD,
+        NeXTSTEP -> Darwin -> {
+          macOS, iOS
+        };
+      };
+      Macintosh ->[dotted] Darwin;
+
+      UNIX ->[dotted] MINIX ->[dotted] Linux -> {Debian -> Ubuntu, Android};
+      Linux -> Windows 10+;
+
+      UNIX ->[dotted] POSIX;
+      POSIX ->[dotted,blue] Darwin;
+      POSIX ->[dotted,blue] FreeBSD;
+      POSIX ->[dotted,blue] Linux;
+      POSIX ->[dotted,blue] NT;
+
+      "CP/M" -> "MS-DOS" -> NT -> Windows -> Windows 10+;
+    };
+  \end{center}
+\end{frame}
+
+There's a lot going on here, but the main takeaway is that \alert{every}
+widely-used modern operating system is, in some way, descended from UNIX.  The
+Apple OSes, macOS and iOS, are true descendants of UNIX, via the Berkeley
+Software Distribution (BSD).  The Linux-based operating systems, including
+Android, are mostly-compatible clones of UNIX; they are compatible with the
+Portable Operating System Interface (POSIX), which was directly based on UNIX.
+Even recent versions of Windows, despite having a completely separate history
+from UNIX, have adopted POSIX via the Windows Subsystem of Linux (WSL), making
+them (technically) UNIX-compatible.  Again, UNIX was super influential---the
+entire modern world of computing is based on it.
+
 \subsection{The UNIX Philosophy}
 
 The UNIX philosophy is a way of thinking about what a program should do.
@@ -222,7 +314,7 @@ The UNIX philosophy is a way of thinking about what a program should do.
   }
 \end{frame}
 
-That's written very confusingly, but it's all just a really wordy way of saying:
+That's written very confusingly, but it's all just a really wordy way of saying this:
 
 \begin{frame}[c]{Simplified}
   \begin{block}{The UNIX Philosophy}
@@ -703,9 +795,9 @@ Enough on I/O (as input/output is often called); let's get back to files.
       simplest.
   \end{itemize}
   \pause
-  \alert<2>{The \textsc{touch file} command is called, intuitively,
-  \texttt{touch}.}  While we don't care about \enquote{touching} files as such,
-  it has the handy side effect of creating files.\mode<article>{%
+  \alert<2>{The \textsc{touch file} command is called, \texttt{touch}.}  While
+  we don't care about \enquote{touching} files as such, it has the handy side
+  effect of creating files.\mode<article>{%
     \footnote{
       \enquote{Touching} a file means changing its last-modified timestamp to
       the current time; essentially like opening a file, saving it, and closing
@@ -873,11 +965,13 @@ files.\footnote{
     \textsc{Standard input} (\texttt{/dev/stdin}) is the file from which a
     program reads its input.  
   \end{definition}
-  \begin{definition}<2->[standard output]
+  \pause
+  \begin{definition}[standard output]
     \textsc{Standard output} (\texttt{/dev/stdout}) is the file to which a
     program writes its output.
   \end{definition}
-  \begin{definition}<3->[standard error]
+  \pause
+  \begin{definition}[standard error]
     \textsc{Standard error} (\texttt{/dev/stderr}) is the file to which a
     program writes its error messages.
   \end{definition}
@@ -954,7 +1048,7 @@ USERNAME=akshay
   }
 \end{frame}
 
-\begin{frame}[fragile]{Pipes}
+\begin{frame}[fragile]{Connecting Programs}
   \begin{itemize}
     \item
       Let's see how many environment variables we have!
@@ -963,39 +1057,43 @@ USERNAME=akshay
       \alert<2>{The \textsc{word count} command is called \texttt{wc}.}
       \pause
     \item
-      It has a flag \texttt{--lines} (or \texttt{-l}) which counts lines in its
-      input instead of words.
+      It has a flag \texttt{--lines} (or \texttt{-l} on Macs) which counts
+      lines in its input instead of words.
       \pause
   \end{itemize}
   \mode<article>{
-    Now, there's two ways we could get the output of \texttt{env} into \texttt{wc}.
+    Now, we want to get the output of \texttt{env} into \texttt{wc}.  There's
+    two ways we could do this:
   }
-  \begin{example}<only@4>[count environment variables with a temporary file]
+  \begin{example}[count environment variables with a temporary file]
     We can write the output into a temporary file, and give it as input to
     \texttt{wc}:
   \begin{minted}{text}
 $ env > /tmp/env.txt
-$ wc --lines < /tmp/env.txt
+$ wc -l < /tmp/env.txt
 78
   \end{minted}
   \end{example}
-  \mode<article>{
-    This is kind of annoying though\ldots we need to do two separate commands,
-    and we need to create a temporary file somewhere.
+\end{frame}
 
-    As an aside, it's conventional to put temporary files in \texttt{/tmp}.
-    Most systems will keep \texttt{/tmp} entirely in RAM, so any files there
-    will automatically get deleted when you reboot.
+This is kind of annoying though\ldots we need to do two separate commands, and
+we need to create a temporary file somewhere.
 
-    However, we can actually do this in a one-liner, without needing any
-    temporary files at all.
-  }
-  \pause
-  \begin{example}<only@5>[count environment variables with a pipe]
+As an aside, it's conventional to put temporary files in \texttt{/tmp}. Most
+systems will keep \texttt{/tmp} entirely in RAM, so any files there will
+automatically get deleted when you reboot.
+
+However, we can actually do this in a one-liner, without needing any temporary
+files at all.
+
+\begin{frame}[fragile]{Pipes}
+  We want to send the output of \texttt{env} into \texttt{wc -l}:
+
+  \begin{example}[count environment variables with a pipe]
     We can connect the output of \texttt{env} and the input of \texttt{wc} with
     a \textsc{pipe}:
   \begin{minted}{text}
-$ env | wc --lines
+$ env | wc -l
 78
   \end{minted}
   \end{example}
@@ -1062,7 +1160,13 @@ $ cat /dev/random | hexdump | head --lines 1
   \begin{itemize}
     \item
       The shell is far more complicated than we can possibly cover in an
-      80-minute lecture.
+      80-minute lecture (or even a quarter-long class, honestly).
+      \pause
+    \item
+      Today's lecture was just the starting point---try things out and explore!
+      Just like anything other skill, it's super important to practice using
+      the shell on your own.  It'll feel slow and clunky at first, but you'll
+      get the hang of it soon!
       \pause
     \item
       Most commands have lots of flags and options.
@@ -1116,13 +1220,9 @@ pressing \texttt{q}.
       Manipulation and Shell Scripting}.
       \pause
     \item
-      There's no class on Monday, January 16th (Martin Luther King Jr. Day);
-      we'll pick back up on \alert<2>{Wednesday, January 18th}.
-      \pause
-    \item
-      We'll post Assignment 1 soon, but it'll only be due on Monday, January
-      23rd (twelve days from now).  It'll cover Lectures 2 (this one) and 3
-      (next week).
+      We'll post Assignment 1 soon, but it'll only be due on Wednesday, January
+      19th (fourteen days from now).  It'll cover Lectures 2, 3, and 4 (this
+      week and next week)
   \end{itemize}
 \end{frame}
 
@@ -1153,7 +1253,7 @@ pressing \texttt{q}.
 \end{frame}
 
 Normally, most OS-critical files on your computer are protected using
-\textsc{file permissions}, which we'll learn about in Lecture 5.  However,
+\textsc{file permissions}, which we'll learn about in a week or two.  However,
 there's a special command (which we saw briefly on Monday) which can override
 file permissions and do potentially catastrophic things.
 

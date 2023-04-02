@@ -1,7 +1,12 @@
 \RequirePackage[outputdir=build]{minted}
 \RequirePackage{xcolor}
 \RequirePackage[english]{babel}
-\RequirePackage{hyperref}
+\mode<article> {
+  \RequirePackage[colorlinks]{hyperref}
+}
+\hypersetup {
+  urlcolor=blue
+}
 \RequirePackage[autostyle]{csquotes}
 \RequirePackage{parskip}
 \RequirePackage{graphicx}
@@ -15,6 +20,12 @@
   \newcommand*{\footcite}[1]{\footnote{\bibentry{#1}}}
   \nobibliography*
 }
+
+\RequirePackage{tikz}
+\usetikzlibrary{graphs}
+\usetikzlibrary{graphdrawing}
+\usegdlibrary{layered}
+\tikzset{>=latex}
 
 \usetheme{fortyfive}
 
