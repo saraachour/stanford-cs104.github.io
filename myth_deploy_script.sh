@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-JQ="/afs/.ir/class/cs45/jq"
-AUTHCODE_LOCATION="/afs/.ir/class/cs45/deploy/deploy_code"
-DEPLOY_ROOT="/afs/.ir/class/cs45/deploy"
-OUTPUT="/afs/.ir/class/cs45/WWW"
+BASE="/afs/.ir/class/archive/cs/cs45/cs45.1236"
+BASE="$(dirname $(pwd))"
+
+JQ="$BASE/jq"
+AUTHCODE_LOCATION="$BASE/deploy/deploy_code"
+DEPLOY_ROOT="$BASE/deploy"
+OUTPUT="$BASE/WWW"
 
 printf "Content-Type: text/plain\r\n";
 printf "\r\n";
@@ -47,5 +50,5 @@ exit 0
 
 #### TO SET UP
 # Make sure to add write permissions to the CGI script for WWW
-# fs setacl $OUTPUT -acl class-cs45-1234.cgi rlidwk
+# fs setacl $OUTPUT -acl class-cs45-1236.cgi rlidwk
 # Make sure these permissions are set for subdirectories as well.
