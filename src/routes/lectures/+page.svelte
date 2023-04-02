@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getLectureMoment, fixupLink, titleCase, getTarget, class_data } from '$lib/classData';
+  import { getLectureMoment, fixupLink, class_data } from '$lib/classData';
   import { markdown } from '$lib/markdown';
   import MaterialsList from '$lib/MaterialsList.svelte';
   import UnitDetails from '$lib/UnitDetails.svelte';

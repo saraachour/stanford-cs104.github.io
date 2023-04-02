@@ -1,5 +1,5 @@
 <script>
-  import { class_data, fixupLink, getTarget, titleCase } from '$lib/classData';
+  import { class_data } from '$lib/classData';
   import { markdown } from '$lib/markdown';
   import MaterialsList from '$lib/MaterialsList.svelte';
   import moment from 'moment';

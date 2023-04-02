@@ -36,7 +36,9 @@ assignments:
     due: 2023/04/12
     materials:
       handout: '/assignments/assign0'
-    details:
+      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2790820'
+    details: |-
+      This short assignment is meant to get a basic Unix-compatible shell environment set up on your computer.  We'll do this together in class during the first lecture.
   - name: 'Assignment 1: _Shell_ We?'
     points: 3
     due: 2023/04/19
@@ -87,6 +89,7 @@ lectures:
   # Week 1
   - topic: 'Lecture 1: Course Overview'
     materials:
+      Assignment 0: '/assignments/assign0'
     details:
   - topic: 'Lecture 2: The Shell and Shell Tools'
     materials:

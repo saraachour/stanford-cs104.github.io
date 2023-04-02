@@ -20,14 +20,15 @@ unproductively stuck, ask on Ed and/or go to office hours!
 ## Software Installation
 
 <script>
-  import {base} from '../../../constants';
+  import { class_data, fixupLink } from '$lib/classData';
+  let assign = class_data.assignments[0];
 </script>
 
 Follow the instructions labelled "Setting Up Your Shell Environment" (the first
-section) on our [Software Installation page]({base}/software) to set up
-your computer with the software we'll be using this quarter.  The instructions
-vary by OS; make sure you're following the instructions for Windows, macOS, or
-Linux, depending on what you have installed.
+section) on our [Software Installation page]({fixupLink('/software')}) to set
+up your computer with the software we'll be using this quarter.  The
+instructions vary by OS; make sure you're following the instructions for
+Windows, macOS, or Linux, depending on what you have installed.
 
 If you're unable to follow the instructions (e.g., you have a Chromebook or a
 very old computer, or you don't have access to a personal computer), let us
@@ -55,4 +56,5 @@ before the respective lecture.
 
 ## Submitting Your Assignment
 
-Submit your answer for Part 2 ("Testing Your Setup") on Gradescope.
+Submit your answer for "Testing Your Setup" on
+[Gradescope]({assign.materials.gradescope}).

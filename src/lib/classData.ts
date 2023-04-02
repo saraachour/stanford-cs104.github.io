@@ -62,6 +62,7 @@ export function getBoxColor(type: string) {
 
 // Fixes up absolute links with the base if necessary.
 export function fixupLink(baseLink: string) {
+  console.log(baseLink);
   if (baseLink.startsWith('/') && !baseLink.startsWith('//')) {
     return `${base}${baseLink}`;
   }

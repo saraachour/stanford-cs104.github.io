@@ -10,9 +10,9 @@ title: 'CS 45'
   import Instructor from '$lib/Instructor.svelte';
 </script>
 
-# CS 45: Software Tools Every Programmer Should Know (Spring '23)
+# CS 45: Software Tools Every Programmer Should Know
 
-## Course Description
+## Course Description 
 
 Classes teach you all about advanced topics within CS, from operating systems
 to machine learning, but there’s one critical subject that’s rarely covered,

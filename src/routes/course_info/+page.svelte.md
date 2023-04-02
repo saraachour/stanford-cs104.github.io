@@ -3,7 +3,7 @@ title: 'CS 45: Course Info'
 ---
 
 <script>
-        import { base, edstem, gradescope, canvas } from '../../constants';
+        import { base, edstem, gradescope, canvas } from '$lib/constants';
 </script>
 
 # Course Info
