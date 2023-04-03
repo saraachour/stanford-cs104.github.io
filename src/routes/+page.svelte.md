@@ -67,7 +67,8 @@ staff mailing list or make a post on Ed.
 Big thanks to the MIT CSAIL's
 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) taught by
 [Anish Athalye](https://www.anishathalye.com/), [Jon Gjengset](https://thesquareplanet.com/), and
-[Jose Ortiz](https://josejg.com/)– The Missing Semester was the original inspiration for CS 45.
+[Jose Javier Gonzalez Ortiz](https://josejg.com/)– The Missing Semester was the original inspiration
+for CS 45.
 
 Additionally, this website is based on versions of CS110 and CS111's website created by
 [John Ousterhout](https://web.stanford.edu/~ouster/cgi-bin/home.php) and
