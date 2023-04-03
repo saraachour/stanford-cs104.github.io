@@ -89,7 +89,8 @@ lectures:
   # Week 1
   - topic: 'Lecture 1: Course Overview'
     materials:
-      Assignment 0: '/assignments/assign0'
+      slides: '/lectures/1-introduction.pdf'
+      assignment 0: '/assignments/assign0'
     details:
   - topic: 'Lecture 2: The Shell and Shell Tools'
     materials:
