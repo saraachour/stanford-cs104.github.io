@@ -31,6 +31,7 @@ cat
 echo "Downloading from $HTTP_X_URL ..."
 curl -Lo "$DEPLOY_ROOT/deploy.zip" "$HTTP_X_URL" 2>&1
 
+rm -rf "$DEPLOY_ROOT/deploy_unzip"
 mkdir -p "$DEPLOY_ROOT/deploy_unzip"
 unzip "$DEPLOY_ROOT/deploy.zip" -d "$DEPLOY_ROOT/deploy_unzip" 2>&1 && \
   rsync -avc --delete "$DEPLOY_ROOT/deploy_unzip/" "$OUTPUT/" 2>&1;
