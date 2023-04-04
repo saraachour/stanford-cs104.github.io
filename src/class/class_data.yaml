@@ -92,51 +92,90 @@ lectures:
       slides: '/lectures/1-introduction.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9d9ca2f2-b5b4-4e3d-a31a-afda00707ffb'
       assignment 0: '/assignments/assign0'
-    details:
+    details: |-
+      We covered basic class logistics (also available on the [course info page](/course_info)), and did [Assignment 0](/assignments/assign0) to get everyone set up.
   - topic: 'Lecture 2: The Shell and Shell Tools'
-
+    details: |-
+      We will define what "the shell" is, go over the history/background of the UNIX operating system and the shell as we know it today, then proceed to learn how to use basic shell commands.
   # Week 2
   - topic: 'Lecture 3: Data Manipulation'
+    details: |-
+      We will learn how to efficiently process large datasets (or any other text-based data) from the shell using tools like regular expressions.
   - topic: 'Lecture 4: Shell Scripting'
+    details: |-
+      We will learn how to write our own "scripts"—mini-programs that combine shell commands.
     assignments: Assignment 0 Due
 
   # Week 3
   - topic: 'Lecture 5: Text Editors'
+    details: |-
+      We will compare and contrast different programs commonly used to edit code; namely, the terminal editor vim and the graphical IDE (integrated development environment) Visual Studio Code.
   - topic: 'Lecture 6: Command Line Environment'
+    details: |-
+      We will delve in more detail into the environment command-line programs run within, including:
+        * how we configure programs
+        * how programs find data (the filesystem)
+        * how we protect our files
     assignments: Assignment 1 Due
 
   # Week 4
   - topic: 'Lecture 7: Compilers and Package Management'
+    details: |-
+      We will see two related concepts:
+        * how source code (in C and Python) is turned into a program
+        * how we can install programs shared by other people
   - topic: 'Lecture 8: Computer Networking'
+    details: |-
+      We will learn how computers talk to one another across the internet.
     assignments: Assignment 2 Due
 
   # Week 5
   - topic: 'Lecture 9: Version Control I'
+    details: |-
+      We will learn how to keep track of, switch between, and merge different versions of our code using the popular version control system `git`.
   - topic: 'Lecture 10: Version Control II'
+    details: |-
+      We will learn how to collaborate with others using `git` and GitHub.
     assignments: Assignment 3 Due
 
   # Week 6
   - topic: 'Lecture 11: Build Systems & DevOps'
+    details: |-
+      We will learn how to set up a system that can automatically compile, test, and deploy our code.
   - topic: 'Lecture 12: Debugging and Profiling'
+    details: |-
+      We will cover common debugging strategies and various static analysis tools that can be used to make programming easier.
     assignments: Assignment 4 Due
 
   # Week 7
   - topic: 'Lecture 13: Security'
+    details: |-
+      We will introduce the concept of computer security, including different types of attacks you might see in the real world (and strategies to protect yourself from them).
   - topic: 'Lecture 14: Cryptography'
+    details: |-
+      We will see real-world tools used to verify people's identity and keep data secure even in untrustworthy settings (like the internet).
     assignments: Assignment 5 Due
 
   # Week 8
   - topic: 'Lecture 15: Virtual Machines & Containers'
+    details: |-
+      We will set up and run virtual computers on your real computers, both for security and for ease of software development and deployment.
   - topic: 'Lecture 16: Cloud & Serverless'
+    details: |-
+      We will set up a connection to a computer running on a "cloud" service, such as Amazon AWS, Google GCP, or Microsoft Azure, and run our own code on it.  We will also set up a simpler service using a "serverless" platform, which is a convenient way of deploying code without much work.
     assignments: Assignment 6 Due
 
   # Week 9
   - topic: 'No Lecture: Memorial Day'
     holiday: yes
   - topic: 'Lecture 17: Media Processing'
+    details: |-
+      We will look at how different types of media (images, audio, and video) are represented by computers, including the tradeoffs of different formats and tools to convert between them.
     assignments: Assignment 7 Due
 
   # Week 10
   - topic: 'Lecture 18: Student-Chosen Topics'
+    details: |-
+      Whatever topics you find interesting!  Let us know what you want us to cover.
   - topic: 'Lecture 19: Conclusion'
     assignments: Assignment 8 Due
