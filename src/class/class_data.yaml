@@ -90,6 +90,7 @@ lectures:
   - topic: 'Lecture 1: Course Overview'
     materials:
       slides: '/lectures/1-introduction.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9d9ca2f2-b5b4-4e3d-a31a-afda00707ffb'
       assignment 0: '/assignments/assign0'
     details:
   - topic: 'Lecture 2: The Shell and Shell Tools'
