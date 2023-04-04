@@ -94,63 +94,46 @@ lectures:
       assignment 0: '/assignments/assign0'
     details:
   - topic: 'Lecture 2: The Shell and Shell Tools'
-    materials:
-    details:
 
   # Week 2
-  - topic: 'Lecture 3: TBD'
-    materials:
-  - topic: 'Lecture 4: Data Manipulation'
-    materials:
+  - topic: 'Lecture 3: Data Manipulation'
+  - topic: 'Lecture 4: Shell Scripting'
     assignments: Assignment 0 Due
 
   # Week 3
-  - topic: 'Lecture 5: Shell Scripting'
-    materials:
-  - topic: 'Lecture 6: Text Editors'
-    materials:
+  - topic: 'Lecture 5: Text Editors'
+  - topic: 'Lecture 6: Command Line Environment'
     assignments: Assignment 1 Due
 
   # Week 4
-  - topic: 'Lecture 7: Command Line Environment'
-    materials:
+  - topic: 'Lecture 7: Compilers and Package Management'
   - topic: 'Lecture 8: Computer Networking'
-    materials:
     assignments: Assignment 2 Due
 
   # Week 5
-  - topic: 'Lecture 9: Version Control'
-    materials:
+  - topic: 'Lecture 9: Version Control I'
   - topic: 'Lecture 10: Version Control II'
-    materials:
     assignments: Assignment 3 Due
 
   # Week 6
   - topic: 'Lecture 11: Build Systems & DevOps'
-    materials:
   - topic: 'Lecture 12: Debugging and Profiling'
-    materials:
     assignments: Assignment 4 Due
 
   # Week 7
-  - topic: 'Lecture 12: Recent Unix Tools'
-    materials:
-  - topic: 'Lecture 14: Security'
-    materials:
+  - topic: 'Lecture 13: Security'
+  - topic: 'Lecture 14: Cryptography'
     assignments: Assignment 5 Due
 
   # Week 8
-  - topic: 'Lecture 15: Cryptography'
-    materials:
-  - topic: 'Lecture 16: Virtual Machines & Containers'
-    materials:
+  - topic: 'Lecture 15: Virtual Machines & Containers'
+  - topic: 'Lecture 16: Cloud & Serverless'
     assignments: Assignment 6 Due
 
   # Week 9
   - topic: 'No Lecture: Memorial Day'
     holiday: yes
-  - topic: 'Lecture 17: Cloud & Serverless'
-    materials:
+  - topic: 'Lecture 17: Media Processing'
     assignments: Assignment 7 Due
 
   # Week 10
