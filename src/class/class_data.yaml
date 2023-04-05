@@ -95,8 +95,17 @@ lectures:
     details: |-
       We covered basic class logistics (also available on the [course info page](/course_info)), and did [Assignment 0](/assignments/assign0) to get everyone set up.
   - topic: 'Lecture 2: The Shell and Shell Tools'
+    materials:
+      slides: '/lectures/2-shell-tools.pdf'
+      notes: '/lectures/2-shell-tools.notes.pdf'
     details: |-
       We will define what "the shell" is, go over the history/background of the UNIX operating system and the shell as we know it today, then proceed to learn how to use basic shell commands.
+
+      Useful Resources:
+        * `man` pages (the system manual)
+        * [cheat.sh](https://cheat.sh)
+        * [devhints.io/bash](https://devhints.io/bash)
+
   # Week 2
   - topic: 'Lecture 3: Data Manipulation'
     details: |-
