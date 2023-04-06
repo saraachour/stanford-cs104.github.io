@@ -98,13 +98,16 @@ lectures:
     materials:
       slides: '/lectures/2-shell-tools.pdf'
       notes: '/lectures/2-shell-tools.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8bdcb40f-3f50-472c-ac69-afdc00252948'
     details: |-
-      We will define what "the shell" is, go over the history/background of the UNIX operating system and the shell as we know it today, then proceed to learn how to use basic shell commands.
+      We defined what "the shell" is, went over the history/background of the UNIX operating system and the shell as we know it today, and covered how to use basic shell commands.
 
       Useful Resources:
         * `man` pages (the system manual)
         * [cheat.sh](https://cheat.sh)
         * [devhints.io/bash](https://devhints.io/bash)
+
+      I used a non-standard command `bat` in my lecture demo; the software installation page contains installation instructions if you want to try it out.
 
   # Week 2
   - topic: 'Lecture 3: Data Manipulation'

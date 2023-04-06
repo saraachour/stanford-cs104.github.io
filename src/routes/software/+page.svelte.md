@@ -67,7 +67,7 @@ macOS.”
 If you already have Homebrew installed, you don’t need to install it again.
 
 To install, open the Terminal app on your Mac and follow the instructions at
-[Homebrew’s website.](https://brew.sh). Namely, copy-paste the following into your terminal window
+[Homebrew’s website](https://brew.sh). Namely, copy-paste the following into your terminal window
 and press Return:
 
 ```shell
@@ -114,6 +114,20 @@ working within a Unix shell.
 ### Lecture 2: The Shell and Shell Tools
 
 Follow the <a href="#shell-setup">shell setup</a> instructions and you’ll be good to go.
+
+I demoed a non-standard command called `bat` during the lecture.  This can optionally be installed using:
+<OnlyShowOn windows linux>
+
+```bash
+apt install bat
+```
+</OnlyShowOn>
+<OnlyShowOn mac>
+
+```zsh
+brew install bat
+```
+</OnlyShowOn>
 
 We'll add more here as we go through the quarter; be sure to check back before
 each lecture!
