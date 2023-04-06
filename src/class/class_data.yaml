@@ -18,9 +18,12 @@ instructors:
     email: adrazen@stanford.edu
     image: /img/ayelet.jpg
     officeHours:
-      - when: 'TBD'
-        where: 'at TBD'
+      - when: Mondays, 3-4pm
+        where: in Huang Basement
         # url: 'TBD'
+      - when: Sundays, 8-9pm
+        where: on Zoom
+        url: https://stanford.zoom.us/j/2035566567?pwd=VXpjbENSY296Z1c0RDlmbytSSHMvZz09
   - name: Jonathan Kula
     role: Instructor
     email: jdkula@stanford.edu
