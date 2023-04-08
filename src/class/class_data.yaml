@@ -29,9 +29,11 @@ instructors:
     email: jdkula@stanford.edu
     image: /img/jonathan.jpg
     officeHours:
-      - when: 'TBD'
-        where: 'at TBD'
-        # url: 'TBD'
+      - when: 'After class on Wednesday'
+        where: '300-300'
+      - when: 'Tuesdays, 5-6pm'
+        where: 'on Zoom'
+        url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
 
 assignments:
   - name: 'Assignment 0: Getting Set Up!'
