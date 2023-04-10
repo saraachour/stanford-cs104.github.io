@@ -116,6 +116,9 @@ lectures:
 
   # Week 2
   - topic: 'Lecture 3: Data Manipulation'
+    materials:
+      slides: '/lectures/3-data-wrangling.pdf'
+      notes: '/lectures/3-data-wrangling.notes.pdf'
     details: |-
       We will learn how to efficiently process large datasets (or any other text-based data) from the shell using tools like regular expressions.
   - topic: 'Lecture 4: Shell Scripting'
