@@ -10,9 +10,9 @@ instructors:
     email: akshay01@stanford.edu
     image: /img/akshay.jpg
     officeHours:
-      - when: 'TBD'
-        where: 'at TBD'
-        # url: 'TBD'
+      - when: 'Thursdays, 10-12am'
+        where: 'at Gates 4B Lounge and Zoom'
+        url: 'https://stanford.zoom.us/j/99823963312?pwd=ZC96NlZodEg5NldTT0JIcCtCZElWdz09'
   - name: Ayelet Drazen
     role: Instructor
     email: adrazen@stanford.edu
