@@ -124,7 +124,6 @@ lectures:
     materials:
       slides: '/lectures/3-data-wrangling.pdf'
       notes: '/lectures/3-data-wrangling.notes.pdf'
-      assignment 1: '/assignments/assign1'
     details: |-
       We will learn how to efficiently process large datasets (or any other text-based data) from the shell using tools like regular expressions.
 
@@ -133,6 +132,7 @@ lectures:
     materials:
       slides: '/lectures/4-shell-scripting.pdf'
       notes: '/lectures/4-shell-scripting.notes.pdf'
+      assignment 1: '/assignments/assign1'
     details: |-
       We will learn how to write our own "scripts"—mini-programs that combine shell commands.
     assignments: Assignment 0 Due
