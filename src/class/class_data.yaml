@@ -48,7 +48,11 @@ assignments:
     points: 3
     due: 2023/04/19
     materials:
-    details:
+      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2816069'
+    details: |-
+      This assignment consists of two different components:
+        1. You’ll familiarize yourself with RegEx by completing a few exercises
+        2. You’ll combine your RegEx and shell expertise to wrangle some words
   - name: 'Assignment 2: Bourne to Be Wild'
     points: 3
     due: 2023/04/26

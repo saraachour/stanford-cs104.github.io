@@ -25,21 +25,23 @@ commands.
 
 ### Learning Goals
 
-We think it’s important that the assignments that we give exercise the tools
-we’re learning in class– by completing this assignment, you’ll have grown one
-assignment’s worth of proficiency with each of these tools and systems (yay!!).
-Here’s what you can expect to take away from this assignment:
+We think it’s important that our assignments exercise the tools and concepts
+we’re learning in class.  In general, lectures will provide a conceptual
+framework for understanding these systems, while assignments will give examples
+of the tools used in practice. Here’s what you can expect to take away from
+this assignment:
 
-- You’ll have grown significantly more experience using the shell: in
-  particular,
-  - you’ll get lots of practice not only with the utilities we’ve talked about,
-    but also with chaining them together and pushing their output around.
-- You’ll have grown in your ability to discover information about the various
-  tools and utilities available to you. This is super important, because that’s
-  one of several ways you’ll be self-teaching yourself these tools “in real
-  life.”
-- You’ll be pretty familiar with parsing real data using RegEx and the various
-  shell tools.
+- You'll get practice with designing regular expressions to match interesting
+  patterns in text.
+- You'll get practice using shell tools and controlling their behaviors with
+  flags and arguments.
+- You'll gain a significant amount of experience in using the shell, including:
+    - calling different programs to perform specific tasks
+    - chaining programs together with pipelines
+- You'll grow your ability to discover information about tools and utilities.
+  This is really important, because in the "real world" (a job or another
+  class), this will be one of the major ways you self-teach yourself whatever
+  tools are relevant to the task at hand.
 
 ## Part I: Write Simple Regular Expressions (1.5 points)
 
@@ -54,7 +56,8 @@ Windows) or the `xdg-open` command (on Linux). The answer for each lesson
 (including lesson 1½) should go on a new line inside of `regex.txt`. _Note that
 there are many possible correct answers to each exercise!_
 
-_Important: Make sure you name your file `regex.txt` and not something else._
+_Important: Make sure you name your file `regex.txt` and not something else.
+Make sure that your file is exactly 11 lines long, one line per lesson._
 
 ## Part II: Write Data Wrangling Pipelines (1.5 points)
 
@@ -62,7 +65,9 @@ For this part of the assignment, you will get some practice with `sed` and
 `grep` by writing commands to parse data inside a dictionary file we provide,
 which is a newline-delimited list of English words. Each exercise in this part
 can be solved multiple different ways (as is often the case with data
-wrangling!).
+wrangling!).  In particular, many can be solved with either `sed` or `grep`,
+since there's a lot of overlap in what they do; for this assignment, feel free
+to use either tool.
 
 To begin, use the command below to download a dictionary file. (Different
 machines have different dictionaries installed, so we want to make sure
@@ -74,6 +79,10 @@ curl -Lo dictionary.txt https://cs45.stanford.edu/res/assign1/dictionary.txt
 
 You can run `cat dictionary.txt` to see what the dictionary of words looks
 like.
+
+As a reminder, the regex debugger at [regex101](https://regex101.com/) is
+really helpful!  We'd recommend making use of it while you develop your
+regexes, to make sure it's doing what you think it is.
 
 ### Subpart 1: Three O's
 
@@ -108,6 +117,9 @@ steps:
 
 To submit your answers, create a file named `words_commands.txt` and place the
 _commands you used to generate your answers_ for each subpart on a new line.
+_This file should be exactly three lines long._  Each line should contain a
+single command pipeline that, if typed in at the shell, would output the
+requested data.
 
 ## Feedback Survey (0.5 points)
 
@@ -115,7 +127,7 @@ Once you have completed the assignment, you can earn an additional 0.5 points
 by completing our anonymous feedback survey. Given this is the first offering
 of the course, we want to collect as much feedback as possible to improve the
 course in the future. You can complete the survey
-[here](https://forms.gle/s8WNZUuzsMvcbDno6).
+[here](https://forms.gle/Mu93wikkdwcJmUCj9).
 
 Once you complete the survey, you will receive a completion code which you
 should place in a text file named `survey.txt`. The survey is anonymous so
@@ -125,9 +137,23 @@ breach of the honor code._
 
 ## Submitting Your Assignment
 
-Once you have finished this assignment, you will need to upload your files to
-[Gradescope](https://www.gradescope.com/courses/468962). Make sure to upload
-both files to the Assignment 1 submission page. You should also upload
-survey.txt if you completed the survey.
+<script>
+  import { class_data, fixupLink } from '$lib/classData';
+  let assign = class_data.assignments[1];
+</script>
 
-_All files must have the same name as specified above._
+Once you have finished this assignment, you will need to upload your files to
+[Gradescope]({assign.materials.gradescope}). Make sure to upload
+both files to the Assignment 1 submission page. You should also upload
+`survey.txt` if you completed the survey.
+
+Here are the files we're expecting:
+* `regex.txt`: eleven lines, each of which contains a regular expression
+* `words_commands.txt`: three lines, each of which contains a valid command
+  pipeline
+* (optional) `survey.txt`: one line, which is the survey code
+
+Gradescope will autograde your submission and let you know if your solutions
+worked.  You may resubmit as many times as you'd like before the deadline.
+
+_All files must have the same names as specified above._
