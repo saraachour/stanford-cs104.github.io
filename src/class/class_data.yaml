@@ -29,7 +29,7 @@ instructors:
     email: jdkula@stanford.edu
     image: /img/jonathan.jpg
     officeHours:
-      - when: 'After class on Wednesday'
+      - when: '30 min before and after class on Wednesday'
         where: '300-300'
       - when: 'Tuesdays, 5-6pm'
         where: 'on Zoom'
