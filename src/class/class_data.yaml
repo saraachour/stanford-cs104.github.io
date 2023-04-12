@@ -48,6 +48,7 @@ assignments:
     points: 3
     due: 2023/04/19
     materials:
+      handout: '/assignments/assign1'
       gradescope: 'https://www.gradescope.com/courses/527944/assignments/2816069'
     details: |-
       This assignment consists of two different components:
