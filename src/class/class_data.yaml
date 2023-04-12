@@ -129,6 +129,9 @@ lectures:
 
       There's a great regular expression debugger at [regex101](https:/regex101.com).
   - topic: 'Lecture 4: Shell Scripting'
+    materials:
+      slides: '/lectures/4-shell-scripting.pdf'
+      notes: '/lectures/4-shell-scripting.notes.pdf'
     details: |-
       We will learn how to write our own "scripts"—mini-programs that combine shell commands.
     assignments: Assignment 0 Due
