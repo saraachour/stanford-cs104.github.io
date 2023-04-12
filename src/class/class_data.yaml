@@ -124,6 +124,7 @@ lectures:
     materials:
       slides: '/lectures/3-data-wrangling.pdf'
       notes: '/lectures/3-data-wrangling.notes.pdf'
+      assignment 1: '/assignments/assign1'
     details: |-
       We will learn how to efficiently process large datasets (or any other text-based data) from the shell using tools like regular expressions.
 
