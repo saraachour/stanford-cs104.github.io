@@ -125,6 +125,8 @@ lectures:
       notes: '/lectures/3-data-wrangling.notes.pdf'
     details: |-
       We will learn how to efficiently process large datasets (or any other text-based data) from the shell using tools like regular expressions.
+
+      There's a great regular expression debugger at [regex101](https:/regex101.com).
   - topic: 'Lecture 4: Shell Scripting'
     details: |-
       We will learn how to write our own "scripts"—mini-programs that combine shell commands.
