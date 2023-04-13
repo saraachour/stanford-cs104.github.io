@@ -11,7 +11,7 @@ instructors:
     image: /img/akshay.jpg
     officeHours:
       - when: 'Thursdays, 10am-12pm'
-        where: 'at Gates 4B Lounge and Zoom'
+        where: 'at/around Gates 478 and on Zoom'
         url: 'https://stanford.zoom.us/j/99823963312?pwd=ZC96NlZodEg5NldTT0JIcCtCZElWdz09'
   - name: Ayelet Drazen
     role: Instructor
