@@ -124,6 +124,7 @@ lectures:
     materials:
       slides: '/lectures/3-data-wrangling.pdf'
       notes: '/lectures/3-data-wrangling.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e1d128c5-2942-4b01-bfc0-afe3013b4f82'
     details: |-
       We will learn how to efficiently process large datasets (or any other text-based data) from the shell using tools like regular expressions.
 
@@ -132,6 +133,7 @@ lectures:
     materials:
       slides: '/lectures/4-shell-scripting.pdf'
       notes: '/lectures/4-shell-scripting.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c175c09c-496e-40b4-a2f8-afe400017d07'
       assignment 1: '/assignments/assign1'
     details: |-
       We will learn how to write our own "scripts"—mini-programs that combine shell commands.
