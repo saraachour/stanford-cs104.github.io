@@ -75,11 +75,11 @@ following:
 2. Delete any files inside `analysis`, if there are any. Once again, make sure your script works
    whether or not there are files inside the subdirectory.
 
-3. For each of the following research groups, create a file in `analysis` with the information of
-   every professor who researches that topic. Make sure the information is in the same format as the
-   original file. (In other words, if you find a faculty member who researches a topic, you should
-   include the _entire_ line with all of that faculty member's information in the research group
-   specific file). Make sure each file has the following specified name, and is within the `analysis`
+3. For each of the following research groups, create a file in the `analysis` directory with the 
+   information of every professor who researches that topic. Make sure the information is in the same 
+   format as the original file. (In other words, if you find a faculty member who researches a topic, 
+   you should include the _entire_ line with all of that faculty member's information in the research 
+   group specific file). Make sure each file has the following specified name, and is within the `analysis`
    subdirectory.
 
    1. "Artificial Intelligence" =\> `ai.csv`
@@ -94,7 +94,9 @@ following:
 
 One hint here is that it actually does not matter that the data is in CSV format, and we strongly
 recommend that you do not parse the data into separate columns. Instead, we recommend treating
-each line of data as a single unit and searching for the research group of interest on that line.
+each line of data as a single unit and searching for the research group of interest on that line. 
+(Hint: think about what command we've learned about and used to search for matching text within a 
+line of text in a file.)
 
 </Callout>
 
