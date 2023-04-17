@@ -83,11 +83,24 @@ You can also copy and cut in normal mode: in normal mode,
   👀👀👀👀
   👀👀👀👀
 
+(8) We can use substituion to find/replace in the file. You can even use RegEx!
 
-Lastly, we can search in vim. In normal mode, press / and then type.
-  (You can also press ? to search backwards).
+In one command, replace the following "the (adjective) ones" with "many (adjective) twos"
+
+the wonderful ones
+the fantastic ones
+the unique ones
+the brilliant ones
+the beautiful ones
+the wholistic ones
+the whimsical ones
 
 
+(9) Lastly, we can search in vim. In normal mode, press / and then type.
+     (You can also press ? to search backwards).
+
+
+(10)
 Finally, let's open a new local file and edit it.
 In normal mode, press : (colon) to enter command mode.
 Here are a couple useful commands:
@@ -97,7 +110,7 @@ Here are a couple useful commands:
   wq         - this will save-then-quit
   o filename – this will open a new file with the given filename
 
-(8)
+(11)
   Use :o myfile.txt to open a new vim buffer for myfile.txt
   Then write your name or anything else you want,
   Then use :wq to save and quit. (Then try using cat to view it!)
