@@ -206,7 +206,7 @@ If you decide to resubmit this portion of the assignment, you will need to re-ru
 Once you have completed the assignment, you can earn an additional 0.5 points by completing our
 anonymous feedback survey. Given this is the first offering of the course, we want to collect as
 much feedback as possible to improve the course in the future. You can complete the survey
-[here](https://forms.gle/ZCYZSJWEprtpwuHA8).
+[here](https://forms.gle/1Vy45NGYcN9fK35s8).
 
 Once you complete the survey, you will receive a
 completion code which you should place in a text file named `survey.txt`. The survey is anonymous so
@@ -216,7 +216,7 @@ not share this code with anyone, as that would constitute a breach of the honor 
 ## Submitting Your Assignment
 
 Once you have finished this assignment, you will need to upload your files to
-[Gradescope](https://www.gradescope.com/courses/468962). Make sure to upload all files to the
+[Gradescope](https://www.gradescope.com/courses/527944). Make sure to upload all files to the
 Assignment 2 submission page. You should also upload survey.txt if you completed the survey.
 
 The only files you need to submit to Gradescope is `analyze.sh` (and `survey.txt` if you completed the
