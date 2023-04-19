@@ -149,6 +149,9 @@ lectures:
     details: |-
       We will compare and contrast different programs commonly used to edit code; namely, the terminal editor vim and the graphical IDE (integrated development environment) Visual Studio Code.
   - topic: 'Lecture 6: Command Line Environment'
+    materials:
+      slides: '/lectures/6-command-line-environment.pdf'
+      notes: '/lectures/6-command-line-environment.notes.pdf'
     details: |-
       We will delve in more detail into the environment command-line programs run within, including:
         * how we configure programs
