@@ -95,11 +95,11 @@ this.
 Next, find the number of words in `dictionary.txt` that have **exactly** three
 `o`'s _and_ where all `o`'s are separated by at least one non-`o` character. In
 other words, you should match a word such as `microbiology` (as all three `o`'s
-have at least one non-`o` character) but you should not match a word such as
-`zootrophy` (as there are two adjacent `o`'s that are not separated by a
-non-`o` character). This exercise is a little tricky as you need to consider
-that some words begin with an uppercase `O` and regexes are case sensitive by
-default.
+have at least one non-`o` character separating them) but you should not match a
+word such as `zootrophy` (as there are two adjacent `o`'s that are not
+separated by a non-`o` character). This exercise is a little tricky as you need
+to consider that some words begin with an uppercase `O` and regexes are case
+sensitive by default.
 
 ### Subpart 3: Common Suffixes
 
