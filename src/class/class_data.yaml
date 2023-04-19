@@ -141,6 +141,10 @@ lectures:
 
   # Week 3
   - topic: 'Lecture 5: Text Editors'
+    materials:
+      slides: '/lectures/5-text-editors.pdf'
+      notes: '/lectures/5-text-editors.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bc6f1c14-a930-431e-ba0f-afe90087c2d4'
     details: |-
       We will compare and contrast different programs commonly used to edit code; namely, the terminal editor vim and the graphical IDE (integrated development environment) Visual Studio Code.
   - topic: 'Lecture 6: Command Line Environment'
