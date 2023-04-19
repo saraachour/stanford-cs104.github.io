@@ -49,7 +49,7 @@ Alex Aiken, Professor, Computer Systems + Programming Systems and Verification
 As you can see, the different columns are separated by commas. This is what's called a
 "comma-separated values" file, or a CSV file for short. The last column contains the professor's
 research groups, each separated by a "+" (plus sign). For the purposes of this assignment, you can
-treat this as an ordinary text file.
+treat this as an ordinary text file. 
 
 Your task is to write a shell script that analyzes this file. As a reminder, a shell script is a
 text file containing shell commands, which might look like this:
@@ -95,14 +95,14 @@ following:
 One hint here is that it actually does not matter that the data is in CSV format, and we strongly
 recommend that you do not parse the data into separate columns. Instead, we recommend treating
 each line of data as a single unit and searching for the research group of interest on that line. 
-(Hint: think about what command we've learned about and used to search for matching text within a 
-line of text in a file.)
+(Hint: think about how you might use `grep` to search for a given string of text within each line
+assuming that you treat the line as a single unit.)
 
 </Callout>
 
 4. Create a file named `big_groups.txt` in the `analysis` directory with the names of every research
-   group with more than 10 members. You might want to edit the function you defined in step 3 to
-   make this easier. Make sure to output the name of the _group_ (e.g., "Artificial Intelligence"),
+   group with more than 10 members. Think about how you might use the files you created in Step 3 in 
+   order to make this easier. Make sure to output the name of the _group_ (e.g., "Artificial Intelligence"),
    not the name of the _file_.
 
 5. Create a file `analysis/systems-ai-join.csv` with the information of every professor who
@@ -128,9 +128,9 @@ correct names.
 ## Part II: Try vim out! (1 point)
 
 For this part of the assignment, you'll try `vim` out by editing a file on a remote computer (ooo!)
--- this is the same one that we checked out some logs from during the Data Wrangling lecture. You'll
-be fixing up a Python file with a few errors---but don't worry if you're rusty with Python, the
-comments will instruct you what to do and what to write.
+-- the computer you will be editing on is the same one that we checked out some logs from during 
+the Data Wrangling lecture. You'll be fixing up a Python file with a few errors---but don't worry 
+if you're rusty with Python, the comments will instruct you what to do and what to write.
 
 ### Configuring vim
 
