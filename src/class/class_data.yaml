@@ -152,7 +152,9 @@ lectures:
       We will delve in more detail into the environment command-line programs run within, including:
         * how we configure programs
         * how programs find data (the filesystem)
-        * how we protect our files
+        * how we can run multiple programs at the same time
+
+      We will also cover a terminal multiplexer called `tmux`; be sure to install it using [the instructions on the software page](/software)
     assignments: Assignment 1 Due
 
   # Week 4

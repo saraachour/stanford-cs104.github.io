@@ -132,45 +132,45 @@ brew install bat
 We'll add more here as we go through the quarter; be sure to check back before
 each lecture!
 
-<!-- ### Lecture 5: Text Editors -->
+### Lecture 5: Text Editors
 
-<!-- You'll want to install the `vim` program to fully follow along: -->
+You'll want to install the `vim` program to fully follow along:
 
-<!-- <OnlyShowOn windows linux> -->
+<OnlyShowOn windows linux>
 
-<!-- ```shell -->
-<!-- sudo apt-get install vim -->
-<!-- ``` -->
+```shell
+sudo apt-get install vim
+```
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- <OnlyShowOn mac> -->
+<OnlyShowOn mac>
 
-<!-- ```shell -->
-<!-- brew install vim -->
-<!-- ``` -->
+```shell
+brew install vim
+```
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- ### Lecture 6: Command-Line Environment -->
+### Lecture 6: Command-Line Environment
 
-<!-- You'll want to install the `tmux` program to fully follow along: -->
+You'll want to install the `tmux` program to fully follow along:
 
-<!-- <OnlyShowOn windows linux> -->
+<OnlyShowOn windows linux>
 
-<!-- ```shell -->
-<!-- sudo apt-get install tmux -->
-<!-- ``` -->
+```shell
+sudo apt-get install tmux
+```
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- <OnlyShowOn mac> -->
+<OnlyShowOn mac>
 
-<!-- ```shell -->
-<!-- brew install tmux -->
-<!-- ``` -->
+```shell
+brew install tmux
+```
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
 <!-- ### Lecture 7: Computer Networking {#lec7} -->
 
