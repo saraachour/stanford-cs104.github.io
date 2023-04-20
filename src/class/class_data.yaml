@@ -158,6 +158,7 @@ lectures:
       slides: '/lectures/6-command-line-environment.pdf'
       notes: '/lectures/6-command-line-environment.notes.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9d3e6e6a-0f78-453c-b190-afea00193bfb'
+      assignment 2: '/assignments/assign2'
     details: |-
       We will delve in more detail into the environment command-line programs run within, including:
         * how we configure programs
