@@ -59,7 +59,12 @@ assignments:
     points: 3
     due: 2023/04/26
     materials:
-    details:
+      handout: '/assignments/assign2'
+      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2836843'
+    details: |-
+      This assignment consists of two different components:
+        1. You'll write a simple shell script that does some data analysis
+        2. You’ll get some practice using vim
   - name: 'Assignment 3: Off The Beaten `$PATH`'
     points: 3
     due: 2023/05/03
