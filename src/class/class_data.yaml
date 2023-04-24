@@ -170,6 +170,9 @@ lectures:
 
   # Week 4
   - topic: 'Lecture 7: Compilers and Package Management'
+    materials:
+      slides: '/lectures/7-compilers.pdf'
+      notes: '/lectures/7-compilers.notes.pdf'
     details: |-
       We will see two related concepts:
         * how source code (in C and Python) is turned into a program
