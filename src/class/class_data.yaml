@@ -180,6 +180,8 @@ lectures:
   - topic: 'Lecture 8: Computer Networking'
     details: |-
       We will learn how computers talk to one another across the internet.
+    materials:
+      slides: '/lectures/8-networking.pdf'
     assignments: Assignment 2 Due
 
   # Week 5

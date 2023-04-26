@@ -172,61 +172,61 @@ brew install tmux
 
 </OnlyShowOn>
 
-<!-- ### Lecture 7: Computer Networking {#lec7} -->
+### Lecture 8: Computer Networking {#lec8}
 
-<!-- You'll want to install `python3`, `node`, `ngrok`, `dig` and optionally Wireshark to fully follow -->
-<!-- along. You'll also need to sign up for an [`ngrok` account](https://ngrok.com). -->
+You'll want to install `python3`, `node`, `ngrok`, `dig` and optionally Wireshark to fully follow
+along. You'll also need to sign up for an [`ngrok` account](https://ngrok.com).
 
-<!-- <OnlyShowOn linux> -->
-<!-- On Linux, you may also need to install `traceroute` and `dig`: -->
+<OnlyShowOn linux>
+On Linux, you may also need to install `traceroute` and `dig`:
 
-<!-- ```shell -->
-<!-- sudo apt-get install inetutils-traceroute dnsutils python3 wireshark curl dnsutils -->
-<!-- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash -->
-<!-- ``` -->
+```shell
+sudo apt-get install inetutils-traceroute dnsutils python3 wireshark curl dnsutils
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
 
-<!-- ...then restart your terminal, and run... -->
+...then restart your terminal, and run...
 
-<!-- ```shell -->
-<!-- nvm install node -->
+```shell
+nvm install node
 
-<!-- curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok -->
-<!-- ``` -->
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+```
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- <OnlyShowOn windows> -->
+<OnlyShowOn windows>
 
-<!-- ```shell -->
-<!-- sudo apt-get install curl dnsutils -->
-<!-- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash -->
-<!-- ``` -->
+```shell
+sudo apt-get install curl dnsutils
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
 
-<!-- ...then restart your terminal, and run... -->
+...then restart your terminal, and run...
 
-<!-- ```shell -->
-<!-- nvm install node -->
+```shell
+nvm install node
 
-<!-- curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok -->
-<!-- ``` -->
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+```
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- <OnlyShowOn mac> -->
+<OnlyShowOn mac>
 
-<!-- ```shell -->
-<!-- brew install node -->
-<!-- brew install ngrok/ngrok/ngrok -->
-<!-- brew install python3 -->
-<!-- ``` -->
+```shell
+brew install node
+brew install ngrok/ngrok/ngrok
+brew install python3
+```
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- <OnlyShowOn windows mac> -->
+<OnlyShowOn windows mac>
 
-<!-- You can download Wireshark [here](https://www.wireshark.org/download.html). -->
+You can download Wireshark [here](https://www.wireshark.org/download.html).
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
 <!-- ### Lectures 8 and 9: Version Control -->
 
