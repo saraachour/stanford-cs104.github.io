@@ -68,14 +68,14 @@ assignments:
     points: 3
     due: 2023/05/03
     materials:
-      # handout: '/assignments/assign3'
+      handout: '/assignments/assign3'
       gradescope: 'https://www.gradescope.com/courses/527944/assignments/2854819'
-    # details: |-
-    #   This assignment consists of three different components:
+    details: |-
+      This assignment consists of three different components:
 
-    #     1. You will modify your `$PATH` variable, shell prompt, and add aliases
-    #     2. You'll get some practice using the networking tools we learned about in Lecture 8
-    #     3. You'll run a small server that our grading machine will connect to
+        1. You will modify your `$PATH` variable, shell prompt, and add aliases
+        2. You'll get some practice using the networking tools we learned about in Lecture 8
+        3. You'll run a small server that our grading machine will connect to
   - name: "Assignment 4: It's `git`-ting HOT in here!"
     points: 3
     due: 2023/05/10
@@ -188,6 +188,7 @@ lectures:
       We will learn how computers talk to one another across the internet.
     materials:
       slides: '/lectures/8-networking.pdf'
+      assignment 3: '/assignments/assign3'
     assignments: Assignment 2 Due
 
   # Week 5

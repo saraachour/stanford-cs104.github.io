@@ -200,7 +200,7 @@ inside WSL!)
 
 To start, let's take a look at what network interfaces your computer has. On
 Windows, you can run the command `ipconfig.exe`, on macOS you can use
-`ifconfig`, and on linux you can use `ip addr`. This will list all the network
+`ifconfig`, and on Linux you can use `ip addr`. This will list all the network
 devices your computer has available!
 
 For example, running this command on a Mac may output a network interface that looks as follows: 
@@ -217,8 +217,8 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 The `en` designation indicates that this is an Ethernet (now Wi-Fi) interface.
 On Linux, you may see that a Ethernet/Wi-Fi interface is designated using
 `wlan`. Windows doesn't have a standardized set of short names for Wi-Fi
-interfaces. Instead, you should look for an interface that has the words Wi-Fi
-in it.  
+interfaces. Instead, you should look for an interface that has the words
+"Wi-Fi" in it.  
 
 _1.1 Using the command above, redirect its output into a file called
 interfaces.txt._
@@ -234,7 +234,7 @@ address inside a file called `local_ip.txt`._
 
 Let's take a look at the routing table your computer is using. On Windows, you
 can run the command `route.exe print -4`, on macOS you can use `netstat -nrf
-inet`, and on linux you can use `ip -4 route`
+inet`, and on Linux you can use `ip -4 route`
 
 _2.1 Using the command above, redirect its output into a file called
 `routes.txt`_
@@ -355,12 +355,15 @@ code with anyone, as that would constitute a breach of the honor code._
 Once you have finished this assignment, you will need to upload your files to
 [Gradescope]({assign.materials.gradescope}). Make sure to upload all files to
 the Assignment 3 submission page. You should also upload survey.txt if you
-completed the survey.
+completed the survey.  For this assignment, **be sure to use the `zip` command
+below** to bundle all the files together; picking individual files through the
+Gradescope UI has been unreliable in the past.
 
 You can submit all necessary files by running the following command, replacing
-`<CONFIG_FILE>` with the configuration file for your shell.
+`<CONFIG_FILE>` with the configuration file for your shell (e.g., `.bashrc` or
+`.zshrc`).
 
-# Run this command in your assignment directory:
+**Run this command in your assignment directory:**
 
 ```shell
 zip -jv assign3_submission.zip ./server_url.txt ./survey.txt ./interfaces.txt ./wifi_interface.txt ./local_ip.txt ./routes.txt ./default_route.txt ./traceroute.txt ./hops.txt ./last_stanford_hop.txt ./jump.txt ~/<CONFIG_FILE>
