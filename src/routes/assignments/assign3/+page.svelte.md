@@ -228,7 +228,7 @@ command `tracert.exe www.town.okutama.tokyo.jp`, on Linux you can use
 you have trouble with these commands, please let us know on Ed as soon as possible!
 
 On some Linux machines, the `--resolve-hostnames` flag won't work and therefore you can't effectively
-run `traceroute`. In that case, you can use our `traceroute` output which you can find here. 
+examine the `traceroute` output. In that case, you can use our `traceroute` output which you can find here. 
 
 _3.1 Using the commands above, pass them to a special program called `tee` which lets you redirect
 output to a file **and see it on your terminal at the same time!** The output of your command should
