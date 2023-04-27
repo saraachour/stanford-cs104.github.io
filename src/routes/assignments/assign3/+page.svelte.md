@@ -183,7 +183,7 @@ To start, let's take a look at what network interfaces your computer has. On Win
 the command `ipconfig.exe`, on macOS you can use `ifconfig`, and on linux you can use `ip addr`.
 This will list all the network devices your computer has available!
 
-For example, one network interface may look as follows: 
+For example, running this command on a Mac may output a network interface that looks as follows: 
 ```shell
 en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	options=400<CHANNEL_IO>
@@ -194,7 +194,9 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	media: autoselect
 	status: active
 ```
-The `en1` designation indicates that this is an Ethernet interface. 
+The `en` designation indicates that this is an Ethernet (now Wi-Fi) interface. On Linux, you may see that a 
+Ethernet/Wi-Fi interface is designated using `wlan`. Windows doesn't have a standardized set of short names 
+for Wi-Fi interfaces. Instead, you should look for an interface that has the words Wi-Fi in it.  
 
 _1.1 Using the command above, redirect its output into a file called interfaces.txt._
 
