@@ -179,6 +179,7 @@ lectures:
     materials:
       slides: '/lectures/7-compilers.pdf'
       notes: '/lectures/7-compilers.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d2a0af32-23e7-4505-b8c3-aff1004c1d2e'
     details: |-
       We will see two related concepts:
         * how source code (in C and Python) is turned into a program
