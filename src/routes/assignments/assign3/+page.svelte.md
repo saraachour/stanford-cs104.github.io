@@ -139,7 +139,7 @@ alias ls='ls -G'
 ```
 
 If you are using Linux or Windows (WSL), you should add the following line to
-your `.bashrc` or `.zshrc` file:
+your `.bashrc` or `.zshrc` file instead:
 
 ```shell
 alias ls="ls --color=auto"
@@ -207,7 +207,7 @@ For example, running this command on a Mac may output a network interface that l
 ```shell
 en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	options=400<CHANNEL_IO>
-	ether 3c:06:30:03:06:4f 
+	ether 00:31:4e:01:f5:bc 
 	inet6 fe80::3d:a0f4:5974:d420%en0 prefixlen 64 secured scopeid 0xc 
 	inet 10.36.40.71 netmask 0xfffff000 broadcast 10.36.47.255
 	nd6 options=201<PERFORMNUD,DAD>
@@ -257,7 +257,7 @@ on Ed as soon as possible!
 On some Linux machines, the `--resolve-hostnames` flag won't work and therefore
 you can't effectively examine the `traceroute` output. In that case, or if you
 run into other issues that make the traceroute output unusable, you can use
-[our `traceroute` output]({fixupLink('/res/assign3/traceroute.txt')}). 
+[our `traceroute` output]({fixupLink('/res/assign3/traceroute.txt')}).
 
 _3.1 Using the commands above, pass them to a special program called `tee`
 which lets you redirect output to a file **and see it on your terminal at the
