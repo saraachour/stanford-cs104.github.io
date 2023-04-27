@@ -249,14 +249,15 @@ Let's see what path it takes to get to a server hosted in another country (in
 this case, we'll be connecting to a website that gives information about a town
 in Japan)! On Windows, you can use the command `tracert.exe
 www.town.okutama.tokyo.jp`, on Linux you can use `traceroute -I
---resolve-hostnames www.town.okutama.tokyo.jp`\*, and on macOS you can use
+--resolve-hostnames www.town.okutama.tokyo.jp`, and on macOS you can use
 `traceroute -I www.town.okutama.tokyo.jp`. Note that these commands may take a
 while to complete. If you have trouble with these commands, please let us know
 on Ed as soon as possible!
 
 On some Linux machines, the `--resolve-hostnames` flag won't work and therefore
-you can't effectively examine the `traceroute` output. In that case, you can
-use our `traceroute` output which you can find here. 
+you can't effectively examine the `traceroute` output. In that case, or if you
+run into other issues that make the traceroute output unusable, you can use
+[our `traceroute` output]({fixupLink('/res/assign3/traceroute.txt')}). 
 
 _3.1 Using the commands above, pass them to a special program called `tee`
 which lets you redirect output to a file **and see it on your terminal at the
@@ -278,10 +279,6 @@ Put the number in `last_stanford_hop.txt`_
 
 _3.4 Which hop do you think is the first server you see that's located in Japan
 (if any)? Place your answer and justification in `jump.txt`_
-
-_\* Note: on Linux, we give instructions for the `inetutils-traceroute` package
-, which is the version listed on the software page. There's a few different
-programs named `traceroute`, so make sure you're using the right one!_
 
 ## Part III: Running a Small Server (1 point)
 
