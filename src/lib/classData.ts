@@ -70,7 +70,7 @@ export function fixupLink(baseLink: string) {
 
 /** Determines if the url is absolute and returns whether or not to open in a new window (yes for external) */
 export function getTarget(url: string) {
-  return url.startsWith('http') || url.startsWith('//') ? '_target' : '_self';
+  return url.startsWith('http') || url.startsWith('//') ? '_blank' : '_self';
 }
 
 // === Types ===
