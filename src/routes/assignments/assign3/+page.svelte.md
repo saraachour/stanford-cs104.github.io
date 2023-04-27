@@ -185,11 +185,14 @@ This will list all the network devices your computer has available!
 
 For example, one network interface may look as follows: 
 ```shell
-en1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
-	options=460<TSO4,TSO6,CHANNEL_IO>
-	ether 36:f5:da:be:9c:40 
-	media: autoselect <full-duplex>
-	status: inactive
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether 3c:06:30:03:06:4f 
+	inet6 fe80::3d:a0f4:5974:d420%en0 prefixlen 64 secured scopeid 0xc 
+	inet 10.36.40.71 netmask 0xfffff000 broadcast 10.36.47.255
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
 ```
 The `en1` designation indicates that this is an Ethernet interface. 
 
