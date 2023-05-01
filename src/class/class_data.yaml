@@ -196,6 +196,9 @@ lectures:
   - topic: 'Lecture 9: Version Control I'
     details: |-
       We will learn how to keep track of, switch between, and merge different versions of our code using the popular version control system `git`.
+    materials:
+      slides: '/lectures/9-version-control.pdf'
+      notes: '/lectures/9-version-control.notes.pdf'
   - topic: 'Lecture 10: Version Control II'
     details: |-
       We will learn how to collaborate with others using `git` and GitHub.
