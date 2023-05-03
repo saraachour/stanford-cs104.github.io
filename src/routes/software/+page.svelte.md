@@ -228,32 +228,35 @@ You can download Wireshark [here](https://www.wireshark.org/download.html).
 
 </OnlyShowOn>
 
-<!-- ### Lectures 8 and 9: Version Control -->
+### Lectures 9 and 10: Version Control
 
-<!-- You'll want to install the `git` and `gh` programs to fully follow along: -->
+You'll want to install the `git` and `gh` programs to fully follow along:
 
-<!-- <OnlyShowOn windows linux> -->
+<OnlyShowOn windows linux>
 
-<!-- ```shell -->
-<!-- sudo apt-get install git -->
-<!-- ``` -->
+Many distributions ship with `git` already, but if it's not installed you can
+install it via a package manager:
 
-<!-- To install `gh`, follow the steps from -->
-<!-- [the official installation instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) -->
+```shell
+sudo apt-get install git
+```
 
-<!-- </OnlyShowOn> -->
+To install `gh`, follow the steps from
+[the official installation instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
 
-<!-- <OnlyShowOn mac> -->
+</OnlyShowOn>
 
-<!-- On macOS, `git` is already installed if you followed the instructions above. -->
+<OnlyShowOn mac>
 
-<!-- ```shell -->
-<!-- brew install gh -->
-<!-- ``` -->
+On macOS, `git` is already installed as part of the Assignment 0 installation.
 
-<!-- </OnlyShowOn> -->
+```shell
+brew install gh
+```
 
-<!-- You'll also want to sign up for a GitHub account at [github.com/signup](https://github.com/signup) -->
+</OnlyShowOn>
+
+You'll also want to sign up for a GitHub account at [github.com/signup](https://github.com/signup)
 
 <!-- ### Lecture 12: Recent Unix Tools -->
 
