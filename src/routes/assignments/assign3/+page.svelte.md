@@ -329,7 +329,7 @@ ngrok http 8080
 
 Open up a new terminal window to create a file called `server_url.txt` and
 copy/paste the URL that ngrok gives you into the file – it should end in
-`.ngrok.io`. Then, submit it to Gradescope (keeping your computer open, `ngrok`
+`.ngrok.io` or `ngrok-free.app`. Then, submit it to Gradescope (keeping your computer open, `ngrok`
 running, and the Python HTTP server running)--our autograder will connect to
 your server and verify that your `sunet.txt` file matches your SUNet in
 Gradescope.
