@@ -199,6 +199,7 @@ lectures:
     materials:
       slides: '/lectures/9-version-control.pdf'
       notes: '/lectures/9-version-control.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=579b269d-0f0d-410a-a504-aff60182b250'
   - topic: 'Lecture 10: Version Control II'
     details: |-
       We will learn how to collaborate with others using `git` and GitHub.
