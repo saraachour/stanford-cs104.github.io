@@ -137,6 +137,7 @@ Coding (karel)
 Drawing (jdkula)
 Languages (akshay01 karel)
 ```
+^Note that "Languages" was re-ordered to the bottom. The file is sorted by number-of-people.
 
 Finally, you’ll be **submitting a pull request to the shared repository**. You can do this from the
 GitHub Website by going to your forked repository and clicking the “Contribute” then “Open Pull
