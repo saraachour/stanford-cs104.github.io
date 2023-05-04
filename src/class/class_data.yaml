@@ -80,7 +80,14 @@ assignments:
     points: 3
     due: 2023/05/10
     materials:
-    details:
+      handout: '/assignments/assign4'
+      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2873836'
+    details: |-
+      This assignment consists of three different components:
+
+        1. Do a Git tutorial
+        2. Practice using Git from the command line
+        3. Practice using GitHub
   - name: 'Assignment 5: It all `make`s sense!'
     points: 3
     due: 2023/05/17

@@ -6,6 +6,8 @@ assign: 4
 <script>
   import gitImg from './checkboxes_sample.png';
   import examplePr from './pr.png';
+  import { class_data, fixupLink } from '$lib/classData';
+  let assign = class_data.assignments[4];
 </script>
 
 ### Table of Contents
@@ -29,6 +31,9 @@ hours!
 In this part of the assignment, you will complete a tutorial to help you master `git`. The tutorial
 can be found [here](https://learngitbranching.js.org/). You should complete the entire Introduction
 Sequence and Ramping Up sections\*. Once you are done, submit a screenshot of your progress card.
+
+_\*When submitting your screenshot, don't worry if the Autograder messes up– we'll go through
+everything manually and double check ;)_
 
 _\*Note! You can do more if you want to, it's good practice! But we're only requiring the first two
 sections._
@@ -58,8 +63,8 @@ Then, let's create our file– let's call it `rock_paper_scissors.py`. Here's wh
       reveal their selection to the other player at once; the winner is chosen based on what the
       selections are. Rock beats scissors (by crushing them); scissors beats paper (by cutting it);
       and paper beats rock (by covering it). If both players select the same one, it is a tie.
-   3. It should allow the player to enter in their selection (you can use the `input` method). You can
-      assume the user will type in `rock`, `paper`, or `scissors` (all lower-case).
+   3. It should allow the player to enter in their selection (you can use the `input` method). You
+      can assume the user will type in `rock`, `paper`, or `scissors` (all lower-case).
    4. It should print out the computer’s selection, which should be random (hint: you can use
       `import random` then do `random.choice(list)` to select a random element from a given list)
    5. It should declare a winner, or a tie.
@@ -86,7 +91,7 @@ commit!) into it.
 
 For this part of the assignment, you will get practice with using GitHub in order to collaborate
 with other students in the class. We will be using
-[this repository](https://github.com/stanford-cs45/win23-assign4) in order to collaborate together.
+[this repository](https://github.com/stanford-cs45/spr23-assign4) in order to collaborate together.
 
 ### Student Hobbies
 
@@ -96,13 +101,13 @@ You can do this part from the GitHub online or desktop interface, then by clonin
 locally.
 
 If you are working locally: You will want to **fork**
-[this repository](https://github.com/stanford-cs45/win23-assign4), then **clone** it on your
+[this repository](https://github.com/stanford-cs45/spr23-assign4), then **clone** it on your
 computer so you can make edits. Before you start making edits, you will want to pull any new changes
 from the remote repository on Github. Remember to create a GitHub account if you don't already have
 one, and log in on the shell with the `gh auth login` command.
 
 You can fork the repository and clone it to your computer all in one go from the github CLI tool;
-simply do `gh repo fork stanford-cs45/win23-assign4 --clone=true`
+simply do `gh repo fork stanford-cs45/spr23-assign4 --clone=true`
 
 Once you have navigated to the repository, you should add a hobby to the list of hobbies found in
 `student_hobbies.txt` and include your SUNet in parentheses. You should also find a hobby that you
@@ -168,18 +173,36 @@ rock-paper-scissors game and commit it as an additional file.
 Once you have completed the assignment, you can earn an additional 0.5 points by completing our
 anonymous feedback survey. Given this is the first offering of the course, we want to collect as
 much feedback as possible to improve the course in the future. You can complete the survey
-[here](https://forms.gle/uugsgu51sMgCnhiT8).
+[here](https://forms.gle/pV4XmtidtKre2bEt7).
 
-Once you complete the survey, you will receive a
-completion code which you should place in a text file named `survey.txt`. The survey is anonymous so
-submitting the completion code is the only way we can verify that you completed the survey. Please
-do not share this code with anyone, as that would constitute a breach of the honor code.
+Once you complete the survey, you will receive a completion code which you should place in a text
+file named `survey.txt`. The survey is anonymous so submitting the completion code is the only way
+we can verify that you completed the survey. Please do not share this code with anyone, as that
+would constitute a breach of the honor code.
 
 ## Submitting Your Assignment
 
-Once you have finished this assignment, you will need to upload your files to Gradescope. Make sure
-to upload all files to the Assignment 4 submission page. You should also upload survey.txt if you
+Once you have finished this assignment, you will need to upload your files to
+[Gradescope]({assign.materials.gradescope}) **AS A ZIP FILE** using the command below. Make sure to
+upload all files to the Assignment 4 submission page. You should also upload survey.txt if you
 completed the survey.
+
+**Run this command in your assignment directory to submit it:**
+
+```shell
+zip -v assign4_submission.zip .
+```
+
+Your Assignment 4 directory should have the following structure:
+```tree
+.
+├── missing_fact.txt
+├── screenshot.png
+├── survey.txt
+└── rock-paper-scissors/
+    ├── .git/
+    └── rock_paper_scissors.py
+```
 
 Here is what you need to submit for each part:
 
@@ -187,6 +210,5 @@ Here is what you need to submit for each part:
   screenshot doesn't matter, as long as it has a `.png` or `.jpg` extension.
 - Part II: Your entire directory containing the Rock Paper Scissors game.
 - Part III: On GitHub, make sure you've created a pull request with the appropriate changes to the
-  main repository. On GradeScope, submit a `missing_fact.txt` file that contains the missing fact
-  (in your rock-paper-scissors repo).
+  main repository. On GradeScope, submit a `missing_fact.txt` file that contains the missing fact.
 - Survey: `survey.txt`
