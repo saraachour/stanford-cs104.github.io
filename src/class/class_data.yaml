@@ -212,6 +212,7 @@ lectures:
     materials:
       slides: '/lectures/10-version-control.pdf'
       notes: '/lectures/10-version-control.notes.pdf'
+      assignment 4: '/assignments/assign4'
     details: |-
       We will learn how to collaborate with others using `git` and GitHub.
     assignments: Assignment 3 Due
