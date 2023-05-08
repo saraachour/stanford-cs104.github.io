@@ -213,6 +213,7 @@ lectures:
       slides: '/lectures/10-version-control.pdf'
       notes: '/lectures/10-version-control.notes.pdf'
       assignment 4: '/assignments/assign4'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ef8803a6-3073-47a8-9679-affc01263458'
     details: |-
       We will learn how to collaborate with others using `git` and GitHub.
     assignments: Assignment 3 Due
