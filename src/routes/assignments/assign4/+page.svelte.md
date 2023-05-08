@@ -184,14 +184,14 @@ would constitute a breach of the honor code.
 ## Submitting Your Assignment
 
 Once you have finished this assignment, you will need to upload your files to
-[Gradescope]({assign.materials.gradescope}) **AS A ZIP FILE** using the command below. Make sure to
+[Gradescope]({assign.materials.gradescope}) **AS A TAR.GZ FILE** using the command below. Make sure to
 upload all files to the Assignment 4 submission page. You should also upload survey.txt if you
 completed the survey.
 
 **Run this command in your assignment directory to submit it:**
 
 ```shell
-zip -rv assign4_submission.zip .
+tar -cvzf ./assignment4.tar.gz .
 ```
 
 Your Assignment 4 directory should have the following structure:
