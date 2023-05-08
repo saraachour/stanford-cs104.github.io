@@ -219,6 +219,8 @@ lectures:
 
   # Week 6
   - topic: 'Lecture 11: Build Systems & DevOps'
+    materials:
+      slides: '/lectures/11-ci-cd.pdf'
     details: |-
       We will learn how to set up a system that can automatically compile, test, and deploy our code.
   - topic: 'Lecture 12: Debugging and Profiling'
