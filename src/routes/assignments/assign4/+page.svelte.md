@@ -191,7 +191,7 @@ completed the survey.
 **Run this command in your assignment directory to submit it:**
 
 ```shell
-zip -v assign4_submission.zip .
+zip -rv assign4_submission.zip .
 ```
 
 Your Assignment 4 directory should have the following structure:
