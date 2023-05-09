@@ -196,8 +196,8 @@ lectures:
       We will learn how computers talk to one another across the internet.
     materials:
       slides: '/lectures/8-networking.pdf'
-      assignment 3: '/assignments/assign3'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ef14a39d-590d-42df-9726-aff5018578bb'
+      assignment 3: '/assignments/assign3'
     assignments: Assignment 2 Due
 
   # Week 5
@@ -212,8 +212,8 @@ lectures:
     materials:
       slides: '/lectures/10-version-control.pdf'
       notes: '/lectures/10-version-control.notes.pdf'
-      assignment 4: '/assignments/assign4'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ef8803a6-3073-47a8-9679-affc01263458'
+      assignment 4: '/assignments/assign4'
     details: |-
       We will learn how to collaborate with others using `git` and GitHub.
     assignments: Assignment 3 Due
