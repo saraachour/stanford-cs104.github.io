@@ -49,7 +49,8 @@ The six files in the program are:
 You can fork then clone these files from [this](https://github.com/stanford-cs45/win23-a5)
 repository on GitHub. You should make your own **fork** (just like you did in Assignment 4) and then
 work within that forked repository. For this part of the assignment, you’ll be working entirely
-within the `calculator` directory.
+within the `calculator` directory. **Please make sure to enable Workflows on your forked repository
+before continuing: instructions are at the bottom of this section.**
 
 Your task is to (1) write a `Makefile` that will compile these files and allow us to run our program
 in an executable called `calculator`, then (2) write some tests that will automatically be run by
@@ -66,12 +67,12 @@ program to run.
 Remember that, when you run `make` without specifying a "target", it runs the first rule in the
 Makefile by default.
 
-Then, add **CI Tests** in the `tests` directory. Our CI file (which you can view at
-`.github/workflows` in the repository if you want!) will automatically run every executable file in
-the `calculator/tests` directory– we’ve provided one example file for you. Add some tests (and/or
-test files, aka “test suites”) to your files, so that when you push to your GitHub repository, you
-get a green checkmark ✅. You’ll have to enable our workflows to run on your forked repository – go
-to “Actions” –
+Then, add **CI Tests** in the `tests/your_tests.py` file. Don't worry if you're rusty on Python, we
+have some premade examples for you in the `tests/example_tests.py` file! Our CI file (which you can
+view at `.github/workflows` in the repository if you want!) will automatically run your tests.
+Please add two new tests to this file, so that when you push to your GitHub repository, you get a
+green checkmark ✅. You’ll have to enable our workflows to run on your forked repository – go to
+“Actions” –
 
 ![A screenshot of the GitHub Toolbar]({toolbar})
 
@@ -81,24 +82,6 @@ And then enable them by pressing the green "I understand and enable" button:
 
 Put your Github username in a file called `github.txt`. We will use this to check that your CI tests
 are working.
-
-<Callout info>
-
-ℹ️ Aside: Our GitHub workflow file happens in three steps (“jobs”).
-
-1. (“build”) First, it builds your Calculator app using the Makefile you write.
-2. (“test_setup”) Second, it lists out all the executable files in your tests directory, and puts it
-   in a format that GitHub Actions understands (JSON format).
-3. (“test”) Finally, it takes in the list from step (2) and creates a new test job that runs each of
-   those files!
-
-The CI fails (❌) if any step of any job fails. Take a look at the format of the file! It’s written
-in YAML, a structured data file that’s fairly fast and easy to read and write. It lists a name of
-the workflow; when it runs (on push, on pull request, and when manually invoked); what permissions
-we get access to while running CI (the contents of the repository, but read-only); and what jobs
-constitute the CI run.
-
-</Callout>
 
 ## Part II: Profiling Code (1 point)
 
