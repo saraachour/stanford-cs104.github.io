@@ -226,6 +226,9 @@ lectures:
     details: |-
       We will learn how to set up a system that can automatically compile, test, and deploy our code.
   - topic: 'Lecture 12: Debugging and Profiling'
+    materials:
+      slides: '/lectures/12-debugging-profiling.pdf'
+      lecture video: ''
     details: |-
       We will cover common debugging strategies and various static analysis tools that can be used to make programming easier.
     assignments: Assignment 4 Due
