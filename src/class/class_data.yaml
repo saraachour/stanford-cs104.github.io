@@ -228,7 +228,7 @@ lectures:
   - topic: 'Lecture 12: Debugging and Profiling'
     materials:
       slides: '/lectures/12-debugging-profiling.pdf'
-      lecture video: ''
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=baf14927-eb28-4c81-ac4a-b000004bacbe'
     details: |-
       We will cover common debugging strategies and various static analysis tools that can be used to make programming easier.
     assignments: Assignment 4 Due
