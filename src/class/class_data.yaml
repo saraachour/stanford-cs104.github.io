@@ -92,7 +92,13 @@ assignments:
     points: 3
     due: 2023/05/17
     materials:
-    details:
+      handout: '/assignments/assign5'
+      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2891087'
+    details: |-
+      This assignment consists of two different components:
+
+      1. Practice using `make` and CI tools
+      2. Practice with profiling tools
   - name: "Assignment 6: It's like Magick"
     points: 3
     due: 2023/05/24
@@ -229,6 +235,7 @@ lectures:
     materials:
       slides: '/lectures/12-debugging-profiling.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=baf14927-eb28-4c81-ac4a-b000004bacbe'
+      assignment 5: '/assignments/assign5'
     details: |-
       We will cover common debugging strategies and various static analysis tools that can be used to make programming easier.
     assignments: Assignment 4 Due
