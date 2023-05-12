@@ -170,7 +170,7 @@ if len(array) <= 1:
 
 Once you have completed the assignment, you can earn an additional 0.5 points by completing our
 anonymous feedback survey. Given this is the first offering of the course, we want to collect as
-much feedback as possible to improve the course in the future. You can complete the survey here.
+much feedback as possible to improve the course in the future. [You can complete the survey here](https://forms.gle/nH5F2FeYS9MFXr8N6).
 
 Once you complete the survey, you will receive a completion code which you should place in a text
 file named `survey.txt`. The survey is anonymous so submitting the completion code is the only way
