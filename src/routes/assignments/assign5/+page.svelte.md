@@ -46,7 +46,7 @@ The six files in the program are:
 - `operations.h`: which defines the prototypes for the `add`, `subtract`, `multiply` and `divide`
   functions
 
-You can fork then clone these files from [this](https://github.com/stanford-cs45/win23-a5)
+You can fork then clone these files from [this](https://github.com/stanford-cs45/spr23-a5)
 repository on GitHub. You should make your own **fork** (just like you did in Assignment 4) and then
 work within that forked repository. For this part of the assignment, you’ll be working entirely
 within the `calculator` directory. **Please make sure to enable Workflows on your forked repository
