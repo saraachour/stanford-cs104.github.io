@@ -7,6 +7,9 @@ assign: 6
   import { base } from '$app/paths'
   import Callout from '$lib/Callout.svelte';
   import outlookImg from './screenshot_outlook.png'; 
+
+  import { class_data, fixupLink } from '$lib/classData';
+  let assign = class_data.assignments[6];
 </script>
 
 ### Table of Contents
@@ -274,7 +277,7 @@ your file.
 Once you have completed the assignment, you can earn an additional 0.5 points by completing our
 anonymous feedback survey. Given this is the first offering of the course, we want to collect as
 much feedback as possible to improve the course in the future. You can complete the survey
-[here](https://forms.gle/mT3PY8PVGsS2GXqg9).
+[here](https://forms.gle/M3W4KihdxWZ61TWm7).
 
 Once you complete the survey, you will receive a completion code which you should place in a text
 file named `survey.txt`. The survey is anonymous so submitting the completion code is the only way
@@ -283,10 +286,12 @@ constitute a breach of the honor code._
 
 ## Submitting Your Assignment
 
-Once you have finished this assignment, you will need to upload your files to Gradescope in addition
-to sending the spoofed email in Part 1. Make sure to upload all files to the Assignment 6 submission
-page. You should also upload `survey.txt` if you completed the survey. The autograder for this
-assignment will grade Part II and your survey code.
+Once you have finished this assignment, you will need to upload your files to
+Gradescope in addition to sending the spoofed email in Part 1. Make sure to
+upload all files to the [Assignment 6 submission
+page]({assign.materials.gradescope}). You should also upload `survey.txt` if
+you completed the survey. The autograder for this assignment will grade Part II
+and your survey code.
 
 ```shell
 zip -jv assign6_submission.zip ./survey.txt ./file.txt ./file.txt.sig ./allowed_signer
