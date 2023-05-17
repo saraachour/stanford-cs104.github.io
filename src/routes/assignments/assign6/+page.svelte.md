@@ -141,37 +141,42 @@ If all goes well, you should see a confirmation message:
 
 ### Exercise 2: Send a Spoofed Email to Yourself
 
-To send a spoofed email to yourself, you will want to repeat the process from Exercise 1.
+To send a spoofed email to yourself, you will want to repeat the process from
+Exercise 1.
 
 However, this time you should change the `MAIL FROM:` address in step 2 to be
-`cs45-admin@stanford.edu`. (This is a fake email address that we are allowing you to use as part of
-this assignment.) You will also want to change the `From:` header in Step 4 to be
-`cs45-admin@stanford.edu`.
+`cs45-admin@stanford.edu`. (This is a fake email address that we are allowing
+you to use as part of this assignment.) You will also want to change the
+`From:` header in Step 4 to be `cs45-admin@stanford.edu`.
 
-What happens if you change one and not the other? Try changing just the `MAIL FROM:` address in step
-2 and not the `From:` header in Step 4. Now try changing just the `From:` header in Step 4 and not
-the `MAIL FROM:` address in step 2. Can you see a difference?
+What happens if you change one and not the other? Try changing just the `MAIL
+FROM:` address in step 2 and not the `From:` header in Step 4. Now try changing
+just the `From:` header in Step 4 and not the `MAIL FROM:` address in step 2.
+Can you see a difference?
 
-To explore what the difference is, try opening the spoofed emails in the Outlook mail server. Open
-the "More Actions" menu (three dots) and then select "View > View Message Details". Can you see
-anything suspicious about the email here?
+To explore what the difference is, try opening the spoofed emails in the
+Outlook mail server. Open the "More Actions" menu (three dots) and then select
+"View > View Message Details". Can you see anything suspicious about the email
+here?
 
 ![Screenshot of viewing more details in Outlook]({outlookImg})
 
 ### Exercise 3: Send a Spoofed Email to Us
 
-Now you'll want to send us a spoofed email from `cs45-admin@stanford.edu`. You'll want to repeat the
-steps in Exercise 2 and send the email to `cs45-win2223-staff@mailman.stanford.edu`.
+Now you'll want to send us a spoofed email from `cs45-admin@stanford.edu`.
+You'll want to repeat the steps in Exercise 2 and send the email to
+`cs45-spr2223-staff@mailman.stanford.edu`.
 
-In order to confirm that your email gets successfully delivered, we recommend BCCing yourself on the
-email. In order to do that, you will want to add an additional recipient using `RCPT TO:`. In other
-words, you should repeat Step 3 from above twice. The first time, you should add the recipient as
-`cs45-win2223-staff@mailman.stanford.edu` and the second time you should add the recipient as your
-own email address. You can set the `To:` header to just be
-`cs45-win2223-staff@mailman.stanford.edu`.
+In order to confirm that your email gets successfully delivered, we recommend
+CCing yourself on the email. In order to do that, you will want to add an
+additional recipient using `RCPT TO:`. In other words, you should repeat Step 3
+from above twice. The first time, you should add the recipient as
+`cs45-spr2223-staff@mailman.stanford.edu` and the second time you should add
+the recipient as your own email address. You can set the `To:` header to just
+be `cs45-spr2223-staff@mailman.stanford.edu`.
 
-Make sure to include your SUNet somewhere in the message body as this is how you will get credit for
-this part of the assignment.
+Make sure to include your SUNet somewhere in the message body as this is how
+you will get credit for this part of the assignment.
 
 ## Part II: Generate SSH Key to Sign A File (1.5 points)
 
