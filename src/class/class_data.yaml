@@ -99,12 +99,12 @@ assignments:
 
       1. Practice using `make` and CI tools
       2. Practice with profiling tools
-  - name: "Assignment 6: It's like Magick"
+  - name: 'Assignment 6: The (Public) Key to My Heart'
     points: 3
     due: 2023/05/24
     materials:
     details:
-  - name: 'Assignment 7: The (Public) Key to My Heart'
+  - name: "Assignment 7: It's like Magick"
     points: 3
     due: 2023/05/31
     materials:
