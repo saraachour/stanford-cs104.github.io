@@ -105,7 +105,11 @@ assignments:
     materials:
       handout: '/assignments/assign6'
       gradescope: 'https://www.gradescope.com/courses/527944/assignments/2900947'
-    details:
+    details: |-
+      This assignment consists of two different components:
+
+      1. Spoof an email
+      2. Set up SSH keys to sign a message
   - name: "Assignment 7: It's like Magick"
     points: 3
     due: 2023/05/31
