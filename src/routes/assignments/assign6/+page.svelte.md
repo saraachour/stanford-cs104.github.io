@@ -38,9 +38,20 @@ this technique outside the context and parameters of this assignment.
 
 ## Part I: Spoof an Email (1.5 points)
 
-For this part of the assignment, you will get to spoof an email. Please note that we are showing you
-this technique as part of an assignment, with the purpose of teaching you about security techniques.
-Read the disclaimer above before starting this part of the assignment.
+For this part of the assignment, you will get to spoof an email. 
+
+The way email spoofing works is that we are leveraging the absence of authentication that should be 
+present to ensure that the sender of the email is authorized to send an email on behalf of that 
+sender. You might expect that you would first have to authenticate into an account (i.e. log in and 
+provide a password), before being able to send an email from that account. 
+
+Instead, we find that most email is sent using SMTP (Simple Mail Transfer Protocol), which is an insecure
+protocol that doesn't actually check that the sender is authorized to send from that address.
+
+
+Please note that we are showing you this technique as part of an assignment, with the purpose of 
+teaching you about security techniques. Read the disclaimer above before starting this part of the 
+assignment.
 
 Thank you to Keith Winstein for inspiration for this part of the assignment.
 
