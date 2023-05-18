@@ -62,7 +62,7 @@ Thank you to Keith Winstein for inspiration for this part of the assignment.
 
 ```shell
 export SUNET=<SUNet>
-ssh s-cs45-assign6-$SUNET@192.9.152.85
+ssh s-cs45-assign6-$SUNET@138.2.228.214
 ```
 
 Once you are logged in, you will automatically be directed to run the Simple Mail Transfer Protocol
