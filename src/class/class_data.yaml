@@ -252,9 +252,15 @@ lectures:
   - topic: 'Lecture 13: Security'
     details: |-
       We will introduce the concept of computer security, including different types of attacks you might see in the real world (and strategies to protect yourself from them).
+    materials:
+      slides: '/lectures/13-security.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f1e4808a-7930-4ac5-84d1-b0060015f975'
   - topic: 'Lecture 14: Cryptography'
     details: |-
       We will see real-world tools used to verify people's identity and keep data secure even in untrustworthy settings (like the internet).
+    materials:
+      slides: '/lectures/14-cryptography.pdf'
+      lecture video: ''
     assignments: Assignment 5 Due
 
   # Week 8
