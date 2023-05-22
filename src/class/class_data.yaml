@@ -125,7 +125,8 @@ assignments:
     due: 2023/06/09
     materials:
       handout: '/assignments/final-project.pdf'
-      gradescope: 'https://www.gradescope.com/courses/527944'
+      gradescope (slides): 'https://www.gradescope.com/courses/527944/assignments/2908634'
+      gradescope (written guide): 'https://www.gradescope.com/courses/527944/assignments/2908640'
     details:
       For your final project, we want you to explore a tool or concept from the 
       course (or a tool that we didn't discuss in the course but that you are 
