@@ -267,6 +267,8 @@ lectures:
   - topic: 'Lecture 15: Virtual Machines & Containers'
     details: |-
       We will set up and run virtual computers on your real computers, both for security and for ease of software development and deployment.
+    materials:
+      slides: '/lectures/15-vms-containers.pdf'
   - topic: 'Lecture 16: Cloud & Serverless'
     details: |-
       We will set up a connection to a computer running on a "cloud" service, such as Amazon AWS, Google GCP, or Microsoft Azure, and run our own code on it.  We will also set up a simpler service using a "serverless" platform, which is a convenient way of deploying code without much work.
