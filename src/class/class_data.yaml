@@ -124,9 +124,13 @@ assignments:
     points: 5
     due: 2023/06/09
     materials:
-      handout: 'https://docs.google.com/document/d/14RtuedvH-GZmCmSlWzYI8aHss2vMOXMuxF5qu6ziFHk/edit?usp=sharing'
-      gradescope: ''
+      handout: '/assignments/final-project.pdf'
+      gradescope: 'https://www.gradescope.com/courses/527944'
     details:
+      For your final project, we want you to explore a tool or concept from the 
+      course (or a tool that we didn't discuss in the course but that you are 
+      interested in!) in further detail. You will submit both slides and a 
+      written guide for the tool or concept you choose. 
 
 lectures:
   # Week 1
