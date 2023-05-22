@@ -282,40 +282,40 @@ You'll also want to sign up for a GitHub account at [github.com/signup](https://
 
 <!-- </OnlyShowOn> -->
 
-<!-- ### Lecture 15: Virtual Machines & Containers -->
+### Lecture 15: Virtual Machines & Containers
 
-<!-- You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop. -->
-<!-- You'll also need to grab a copy of an Ubuntu Server disk image, which you -->
-<!-- can download from [here](https://ubuntu.com/download/server). **If you're on an -->
-<!-- M1 Mac, please make sure to download the "Ubuntu Server for ARM" verison from -->
-<!-- [here](https://ubuntu.com/download/server/arm)**. -->
+You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop.
+You'll also need to grab a copy of an Ubuntu Server disk image, which you
+can download from [here](https://ubuntu.com/download/server). **If you're on an
+M1 Mac, please make sure to download the "Ubuntu Server for ARM" verison from
+[here](https://ubuntu.com/download/server/arm)**.
 
-<!-- <OnlyShowOn mac> -->
+<OnlyShowOn mac>
 
-<!-- Download UTM from [here](https://mac.getutm.app/). -->
+Download UTM from [here](https://mac.getutm.app/).
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- <OnlyShowOn windows> -->
+<OnlyShowOn windows>
 
-<!-- Download Virtualbox from [here](https://www.virtualbox.org/wiki/Downloads). -->
+Download Virtualbox from [here](https://www.virtualbox.org/wiki/Downloads).
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- <OnlyShowOn linux> -->
+<OnlyShowOn linux>
 
-<!-- Download Virtualbox from [here](https://www.virtualbox.org/wiki/Linux_Downloads). -->
+Download Virtualbox from [here](https://www.virtualbox.org/wiki/Linux_Downloads).
 
-<!-- </OnlyShowOn> -->
+</OnlyShowOn>
 
-<!-- And finally, download and install Docker Desktop from [here](https://docs.docker.com/get-docker/). -->
+And finally, download and install Docker Desktop from [here](https://docs.docker.com/get-docker/).
 
-<!-- ### Lecture 16: Cloud & Serverless Computing -->
+### Lecture 16: Cloud & Serverless Computing
 
-<!-- You’ll need to sign up for an account with Vercel and Oracle Cloud. -->
+You’ll need to sign up for an account with Vercel and AWS.
 
-<!-- Sign up or log in to your [Vercel account](https://vercel.com), and sign up or log in to your -->
-<!-- [Oracle Cloud account](https://www.oracle.com/cloud/sign-in.html). -->
+Sign up or log in to your [Vercel account](https://vercel.com), and sign up or log in to your
+[AWS account](https://aws.amazon.com/).
 
-<!-- (Note that you will need to provide a payment method to Oracle Cloud in order to complete sign-up. -->
-<!-- You will not be charged. Let us know if this presents you with any issue!) -->
+(Note that you will need to provide a payment method to AWS in order to complete sign-up.
+You will not be charged. Let us know if this presents you with any issue!)
