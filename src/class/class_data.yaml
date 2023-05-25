@@ -110,12 +110,18 @@ assignments:
 
       1. Spoof an email
       2. Set up SSH keys to sign a message
-  - name: "Assignment 7: It's like Magick"
+  - name: 'Assignment 7: On Cloud Nine'
     points: 3
-    due: 2023/05/31
     materials:
-    details:
-  - name: 'Assignment 8: On Cloud Nine'
+      handout: '/assignments/assign7'
+      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2906434'
+    due: 2023/05/31
+    details: |-
+      This assignment consists of two interconnected components:
+
+      1. Create and publish a Docker image on DockerHub
+      2. Launch a free tier instance on AWS and run a server on it (the same server you built in part 1!)
+  - name: "Assignment 8: It's like Magick"
     points: 3
     due: 2023/06/07
     materials:
@@ -128,10 +134,9 @@ assignments:
       gradescope - slides: 'https://www.gradescope.com/courses/527944/assignments/2908634'
       gradescope - written guide: 'https://www.gradescope.com/courses/527944/assignments/2908640'
     details:
-      For your final project, we want you to explore a tool or concept from the 
-      course (or a tool that we didn't discuss in the course but that you are 
-      interested in!) in further detail. You will submit both slides and a 
-      written guide for the tool or concept you choose. 
+      For your final project, we want you to explore a tool or concept from the course (or a tool
+      that we didn't discuss in the course but that you are interested in!) in further detail. You
+      will submit both slides and a written guide for the tool or concept you choose.
 
 lectures:
   # Week 1
@@ -277,6 +282,7 @@ lectures:
   - topic: 'Lecture 16: Cloud & Serverless'
     materials:
       slides: '/lectures/16-cloud-serverless.pdf'
+      assignment 7: '/assignments/assign7'
     details: |-
       We will set up a connection to a computer running on a "cloud" service, such as Amazon AWS, Google GCP, or Microsoft Azure, and run our own code on it.  We will also set up a simpler service using a "serverless" platform, which is a convenient way of deploying code without much work.
     assignments: Assignment 6 Due
