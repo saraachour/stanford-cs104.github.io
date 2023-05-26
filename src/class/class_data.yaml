@@ -279,9 +279,11 @@ lectures:
       We will set up and run virtual computers on your real computers, both for security and for ease of software development and deployment.
     materials:
       slides: '/lectures/15-vms-containers.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d56ce569-39be-4f2e-8d7f-b00e004a3888'
   - topic: 'Lecture 16: Cloud & Serverless'
     materials:
       slides: '/lectures/16-cloud-serverless.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7689a25e-f0aa-47a3-9568-b00e0054e80a'
       assignment 7: '/assignments/assign7'
     details: |-
       We will set up a connection to a computer running on a "cloud" service, such as Amazon AWS, Google GCP, or Microsoft Azure, and run our own code on it.  We will also set up a simpler service using a "serverless" platform, which is a convenient way of deploying code without much work.
