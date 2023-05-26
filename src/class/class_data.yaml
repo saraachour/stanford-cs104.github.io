@@ -271,7 +271,7 @@ lectures:
     materials:
       slides: '/lectures/14-cryptography.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9b7a2a49-dc7e-4724-867f-b009012aafd5'
-    assignments: Assignment 5 Duea
+    assignments: Assignment 5 Due
 
   # Week 8
   - topic: 'Lecture 15: Virtual Machines & Containers'
