@@ -1,6 +1,6 @@
 ---
 layout: assignment
-assign: 8
+assign: 7
 ---
 
 <script>
