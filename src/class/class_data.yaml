@@ -29,8 +29,9 @@ instructors:
     email: jdkula@stanford.edu
     image: /img/jonathan.jpg
     officeHours:
-      - when: 'Wednesdays 3:30 to class time'
-        where: '260-001'
+      - when: 'Wednesday 11am to 12pm (just for week 9)'
+        where: 'on Zoom'
+        url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
       - when: 'Tuesdays, 5-6pm'
         where: 'on Zoom'
         url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
