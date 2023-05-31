@@ -258,30 +258,6 @@ brew install gh
 
 You'll also want to sign up for a GitHub account at [github.com/signup](https://github.com/signup)
 
-<!-- ### Lecture 12: Recent Unix Tools -->
-
-<!-- We'll be covering an assortment of tools, including `rg`, `fd`, `exa`, `fish`, `magick`, `pandoc`, -->
-<!-- and `ffmpeg`. The slides and lecture notes have links to the installation instructions for each -->
-<!-- piece of software. The ones you need for Assignment 6 are Pandoc (`pandoc`) and ImageMagick -->
-<!-- (`convert`). -->
-
-<!-- <OnlyShowOn mac> -->
-
-<!-- ```shell -->
-<!-- brew install pandoc -->
-<!-- brew install imagemagick -->
-<!-- ``` -->
-
-<!-- </OnlyShowOn> -->
-
-<!-- <OnlyShowOn windows linux> -->
-
-<!-- ```shell -->
-<!-- sudo apt-get install pandoc imagemagick -->
-<!-- ``` -->
-
-<!-- </OnlyShowOn> -->
-
 ### Lecture 15: Virtual Machines & Containers
 
 You'll want to install a virtual machine hypervisor for your platform, and Docker Desktop.
@@ -319,3 +295,25 @@ Sign up or log in to your [Vercel account](https://vercel.com), and sign up or l
 
 (Note that you will need to provide a payment method to AWS in order to complete sign-up.
 You will not be charged. Let us know if this presents you with any issue!)
+
+### Lecture 17: Media Encoding
+
+It might be useful to install `ffmpeg` (which also comes with `ffprobe`) for
+Assignment 8.
+
+<OnlyShowOn mac>
+
+```shell
+brew install ffmpeg
+```
+
+</OnlyShowOn>
+
+<OnlyShowOn windows linux>
+
+```shell
+sudo apt install ffmpeg
+```
+
+</OnlyShowOn>
+
