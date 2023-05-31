@@ -294,9 +294,13 @@ lectures:
   # Week 9
   - topic: 'No Lecture: Memorial Day'
     holiday: yes
-  - topic: 'Lecture 17: Media Processing'
+  - topic: 'Lecture 17: Media Encoding'
     details: |-
-      We will look at how different types of media (images, audio, and video) are represented by computers, including the tradeoffs of different formats and tools to convert between them.
+      We will look at how different types of media (text, images, audio, and video) are represented by computers, including the tradeoffs of different formats.
+    materials:
+      slides: '/lectures/17-encoding.pdf'
+      notes: '/lectures/17-encoding.notes.pdf'
+      # assignment 7: '/assignments/assign7'
     assignments: Assignment 7 Due
 
   # Week 10
