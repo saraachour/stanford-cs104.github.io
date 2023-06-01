@@ -122,10 +122,13 @@ assignments:
 
       1. Create and publish a Docker image on DockerHub
       2. Launch a free tier instance on AWS and run a server on it (the same server you built in part 1!)
-  - name: "Assignment 8: It's like Magick"
+  - name: 'Assignment 8: Codec of Conduct'
     points: 3
     due: 2023/06/07
     materials:
+      handout: '/assignments/assign8'
+      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2919148'
+      files: '/res/assign8/assign8-files.zip'
     details:
   - name: 'Final Project'
     points: 5
@@ -282,6 +285,7 @@ lectures:
     materials:
       slides: '/lectures/15-vms-containers.pdf'
       lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d56ce569-39be-4f2e-8d7f-b00e004a3888'
+      final project: '/assignments/final-project.pdf'
   - topic: 'Lecture 16: Cloud & Serverless'
     materials:
       slides: '/lectures/16-cloud-serverless.pdf'
@@ -300,7 +304,7 @@ lectures:
     materials:
       slides: '/lectures/17-encoding.pdf'
       notes: '/lectures/17-encoding.notes.pdf'
-      # assignment 7: '/assignments/assign7'
+      assignment 8: '/assignments/assign8'
     assignments: Assignment 7 Due
 
   # Week 10
@@ -308,4 +312,4 @@ lectures:
     details: |-
       Whatever topics you find interesting!  Let us know what you want us to cover.
   - topic: 'Lecture 19: Conclusion'
-    assignments: Assignment 8 Due
+    assignments: Assignment 8 and Final Project Due
