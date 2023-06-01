@@ -128,7 +128,7 @@ assignments:
     materials:
       handout: '/assignments/assign8'
       gradescope: 'https://www.gradescope.com/courses/527944/assignments/2919148'
-      files: '/res/assign8/assign8-files.zip'
+      files: 'https://cs45.stanford.edu/res/assign8/assign8-files.zip'
     details:
   - name: 'Final Project'
     points: 5
