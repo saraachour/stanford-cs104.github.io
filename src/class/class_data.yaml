@@ -304,6 +304,7 @@ lectures:
     materials:
       slides: '/lectures/17-encoding.pdf'
       notes: '/lectures/17-encoding.notes.pdf'
+      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0c35a78-dea8-432b-86c3-b017013d1239'
       assignment 8: '/assignments/assign8'
     assignments: Assignment 7 Due
 
