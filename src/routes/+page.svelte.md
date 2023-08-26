@@ -8,9 +8,18 @@ title: 'CS 45'
   import { class_data, fixupLink } from '$lib/classData';
 
   import Instructor from '$lib/Instructor.svelte';
+  import Callout from '$lib/Callout.svelte';
 </script>
 
 # CS 45: Software Tools Every Programmer Should Know
+
+<Callout cardinal>
+We're excited to announce that this class will continue as <strong>CS 104:
+Introduction to Essential Software Systems and Tools</strong> in the 2023-24
+school year.  CS 104 will be an upgraded version of CS 45 taught by Professor
+Achour in Winter Quarter.  If what you see on this website looks interesting,
+you should check it out!
+</Callout>
 
 ## Course Description
 

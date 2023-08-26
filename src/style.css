@@ -118,6 +118,12 @@ pre code {
   background: #eee;
 }
 
+.alert-cardinal {
+  border: 1px solid;
+  border-left: 4px solid;
+  border-color: #B83A4B;
+}
+
 .terminal-line::before {
   content: '$ ';
 }
