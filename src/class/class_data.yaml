@@ -5,36 +5,30 @@ class_days:
 assignment_due_time: 23:59
 
 instructors:
-  - name: Akshay Srivatsan
+  - name: Sara Achour
     role: Instructor
-    email: akshay01@stanford.edu
-    image: /img/akshay.jpg
+    email: sachour@stanford.edu
+    image: /img/sachour.png
     officeHours:
-      - when: 'Thursdays, 10am-12pm'
-        where: 'at/around Gates 478 and on Zoom'
-        url: 'https://stanford.zoom.us/j/99823963312?pwd=ZC96NlZodEg5NldTT0JIcCtCZElWdz09'
-  - name: Ayelet Drazen
-    role: Instructor
-    email: adrazen@stanford.edu
-    image: /img/ayelet.jpg
+      - when: 'On Demand'
+        where: 'Gates 484'
+        #url: ''
+  - name: Jin-Hee Lee
+    role: Course Assistant
+    email: jhclee@stanford.edu
+    image: /img/default.png
     officeHours:
-      - when: Mondays, 3-4pm
-        where: in Huang Basement
+      - when: TBD
+        where: TBD
         # url: 'TBD'
-      - when: Tuesdays, 8-9pm
-        where: on Zoom
-        url: https://stanford.zoom.us/j/2035566567?pwd=VXpjbENSY296Z1c0RDlmbytSSHMvZz09
-  - name: Jonathan Kula
-    role: Instructor
-    email: jdkula@stanford.edu
-    image: /img/jonathan.jpg
+  - name: Aman Kansal
+    role: Course Assistant
+    email: amkansal@stanford.edu
+    image: /img/default.png
     officeHours:
       - when: 'Wednesday 11am to 12pm (just for week 9)'
         where: 'on Zoom'
-        url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
-      - when: 'Tuesdays, 5-6pm'
-        where: 'on Zoom'
-        url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
+        #url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
 
 assignments:
   - name: 'Assignment 0: Getting Set Up!'
@@ -45,117 +39,20 @@ assignments:
       gradescope: 'https://www.gradescope.com/courses/527944/assignments/2790820'
     details: |-
       This short assignment is meant to get a basic Unix-compatible shell environment set up on your computer.  We'll do this together in class during the first lecture.
-  - name: 'Assignment 1: _Shell_ We?'
-    points: 3
-    due: 2023/04/19
-    materials:
-      handout: '/assignments/assign1'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2816069'
-    details: |-
-      This assignment consists of two different components:
-        1. You’ll familiarize yourself with RegEx by completing a few exercises
-        2. You’ll combine your RegEx and shell expertise to wrangle some words
-  - name: 'Assignment 2: Bourne to Be Wild'
-    points: 3
-    due: 2023/04/26
-    materials:
-      handout: '/assignments/assign2'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2836843'
-    details: |-
-      This assignment consists of two different components:
-        1. You'll write a simple shell script that does some data analysis
-        2. You’ll get some practice using vim
-  - name: 'Assignment 3: Off The Beaten `$PATH`'
-    points: 3
-    due: 2023/05/03
-    materials:
-      handout: '/assignments/assign3'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2854819'
-    details: |-
-      This assignment consists of three different components:
-
-        1. You will modify your `$PATH` variable, shell prompt, and add aliases
-        2. You'll get some practice using the networking tools we learned about in Lecture 8
-        3. You'll run a small server that our grading machine will connect to
-  - name: "Assignment 4: It's `git`-ting HOT in here!"
-    points: 3
-    due: 2023/05/10
-    materials:
-      handout: '/assignments/assign4'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2873836'
-    details: |-
-      This assignment consists of three different components:
-
-        1. Do a Git tutorial
-        2. Practice using Git from the command line
-        3. Practice using GitHub
-  - name: 'Assignment 5: It all `make`s sense!'
-    points: 3
-    due: 2023/05/17
-    materials:
-      handout: '/assignments/assign5'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2891087'
-    details: |-
-      This assignment consists of two different components:
-
-      1. Practice using `make` and CI tools
-      2. Practice with profiling tools
-  - name: 'Assignment 6: The (Public) Key to My Heart'
-    points: 3
-    due: 2023/05/24
-    materials:
-      handout: '/assignments/assign6'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2900947'
-    details: |-
-      This assignment consists of two different components:
-
-      1. Spoof an email
-      2. Set up SSH keys to sign a message
-  - name: 'Assignment 7: On Cloud Nine'
-    points: 3
-    materials:
-      handout: '/assignments/assign7'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2906434'
-    due: 2023/05/31
-    details: |-
-      This assignment consists of two interconnected components:
-
-      1. Create and publish a Docker image on DockerHub
-      2. Launch a free tier instance on AWS and run a server on it (the same server you built in part 1!)
-  - name: 'Assignment 8: Codec of Conduct'
-    points: 3
-    due: 2023/06/07
-    materials:
-      handout: '/assignments/assign8'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2919148'
-      files: 'https://cs45.stanford.edu/res/assign8/assign8-files.zip'
-    details:
-  - name: 'Final Project'
-    points: 5
-    due: 2023/06/09
-    materials:
-      handout: '/assignments/final-project.pdf'
-      gradescope - slides: 'https://www.gradescope.com/courses/527944/assignments/2908634'
-      gradescope - written guide: 'https://www.gradescope.com/courses/527944/assignments/2908640'
-    details:
-      For your final project, we want you to explore a tool or concept from the course (or a tool
-      that we didn't discuss in the course but that you are interested in!) in further detail. You
-      will submit both slides and a written guide for the tool or concept you choose.
 
 lectures:
   # Week 1
-  - topic: 'Lecture 1: Course Overview'
+  - topic: 'Lecture 0: Course Overview and Shell/Shell Tools'
     materials:
-      slides: '/lectures/1-introduction.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9d9ca2f2-b5b4-4e3d-a31a-afda00707ffb'
+      slides: 'https://docs.google.com/presentation/d/1L4cHl8a5DPrsj74n7GOEBbnu6NqnP8vP8qOuK8cT7Zo/edit?usp=drive_link'
       assignment 0: '/assignments/assign0'
     details: |-
       We covered basic class logistics (also available on the [course info page](/course_info)), and did [Assignment 0](/assignments/assign0) to get everyone set up.
-  - topic: 'Lecture 2: The Shell and Shell Tools'
+  - topic: 'Lecture 1: Course Overview and Shell and Shell Tools'
     materials:
-      slides: '/lectures/2-shell-tools.pdf'
+      slides: 'https://docs.google.com/presentation/d/14zIfJk39kn-BMPunmG80ZRP5ImXh1vBwr6sXwHgRmrs/edit?usp=drive_link'
       notes: '/lectures/2-shell-tools.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8bdcb40f-3f50-472c-ac69-afdc00252948'
+      assignment 1: 'https://docs.google.com/document/d/1kRiU8RRi69N6hqF2vb5XOZg2M2nkxqoTr7ZJgBKSbc8/edit?usp=drive_link'
     details: |-
       We defined what "the shell" is, went over the history/background of the UNIX operating system and the shell as we know it today, and covered how to use basic shell commands.
 
@@ -165,152 +62,6 @@ lectures:
         * [devhints.io/bash](https://devhints.io/bash)
 
       I used a non-standard command `bat` in my lecture demo; the software installation page contains installation instructions if you want to try it out.
-
-  # Week 2
-  - topic: 'Lecture 3: Data Manipulation'
-    materials:
-      slides: '/lectures/3-data-wrangling.pdf'
-      notes: '/lectures/3-data-wrangling.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e1d128c5-2942-4b01-bfc0-afe3013b4f82'
+  - topic: 'Lab 1: In-Class Lab on Shell Tools'
     details: |-
-      We will learn how to efficiently process large datasets (or any other text-based data) from the shell using tools like regular expressions.
-
-      There's a great regular expression debugger at [regex101](https:/regex101.com).
-  - topic: 'Lecture 4: Shell Scripting'
-    materials:
-      slides: '/lectures/4-shell-scripting.pdf'
-      notes: '/lectures/4-shell-scripting.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c175c09c-496e-40b4-a2f8-afe400017d07'
-      assignment 1: '/assignments/assign1'
-    details: |-
-      We will learn how to write our own "scripts"—mini-programs that combine shell commands.
-    assignments: Assignment 0 Due
-
-  # Week 3
-  - topic: 'Lecture 5: Text Editors'
-    materials:
-      slides: '/lectures/5-text-editors.pdf'
-      notes: '/lectures/5-text-editors.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bc6f1c14-a930-431e-ba0f-afe90087c2d4'
-    details: |-
-      We will compare and contrast different programs commonly used to edit code; namely, the terminal editor vim and the graphical IDE (integrated development environment) Visual Studio Code.
-  - topic: 'Lecture 6: Command Line Environment'
-    materials:
-      slides: '/lectures/6-command-line-environment.pdf'
-      notes: '/lectures/6-command-line-environment.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9d3e6e6a-0f78-453c-b190-afea00193bfb'
-      assignment 2: '/assignments/assign2'
-    details: |-
-      We will delve in more detail into the environment command-line programs run within, including:
-        * how we configure programs
-        * how programs find data (the filesystem)
-        * how we can run multiple programs at the same time
-
-      We will also cover a terminal multiplexer called `tmux`; be sure to install it using [the instructions on the software page](/software)
-    assignments: Assignment 1 Due
-
-  # Week 4
-  - topic: 'Lecture 7: Compilers and Package Management'
-    materials:
-      slides: '/lectures/7-compilers.pdf'
-      notes: '/lectures/7-compilers.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d2a0af32-23e7-4505-b8c3-aff1004c1d2e'
-    details: |-
-      We will see two related concepts:
-        * how source code (in C and Python) is turned into a program
-        * how we can install programs shared by other people
-  - topic: 'Lecture 8: Computer Networking'
-    details: |-
-      We will learn how computers talk to one another across the internet.
-    materials:
-      slides: '/lectures/8-networking.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ef14a39d-590d-42df-9726-aff5018578bb'
-      assignment 3: '/assignments/assign3'
-    assignments: Assignment 2 Due
-
-  # Week 5
-  - topic: 'Lecture 9: Version Control I'
-    details: |-
-      We will learn how to keep track of, switch between, and merge different versions of our code using the popular version control system `git`.
-    materials:
-      slides: '/lectures/9-version-control.pdf'
-      notes: '/lectures/9-version-control.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=579b269d-0f0d-410a-a504-aff60182b250'
-  - topic: 'Lecture 10: Version Control II'
-    materials:
-      slides: '/lectures/10-version-control.pdf'
-      notes: '/lectures/10-version-control.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ef8803a6-3073-47a8-9679-affc01263458'
-      assignment 4: '/assignments/assign4'
-    details: |-
-      We will learn how to collaborate with others using `git` and GitHub.
-    assignments: Assignment 3 Due
-
-  # Week 6
-  - topic: 'Lecture 11: Build Systems & DevOps'
-    materials:
-      slides: '/lectures/11-ci-cd.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d094016c-acf4-41a1-af0d-affd00c90e07'
-    details: |-
-      We will learn how to set up a system that can automatically compile, test, and deploy our code.
-  - topic: 'Lecture 12: Debugging and Profiling'
-    materials:
-      slides: '/lectures/12-debugging-profiling.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=baf14927-eb28-4c81-ac4a-b000004bacbe'
-      assignment 5: '/assignments/assign5'
-    details: |-
-      We will cover common debugging strategies and various static analysis tools that can be used to make programming easier.
-    assignments: Assignment 4 Due
-
-  # Week 7
-  - topic: 'Lecture 13: Security'
-    details: |-
-      We will introduce the concept of computer security, including different types of attacks you might see in the real world (and strategies to protect yourself from them).
-    materials:
-      slides: '/lectures/13-security.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f1e4808a-7930-4ac5-84d1-b0060015f975'
-  - topic: 'Lecture 14: Cryptography'
-    details: |-
-      We will see real-world tools used to verify people's identity and keep data secure even in untrustworthy settings (like the internet).
-    materials:
-      slides: '/lectures/14-cryptography.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9b7a2a49-dc7e-4724-867f-b009012aafd5'
-      assignment 6: '/assignments/assign6'
-    assignments: Assignment 5 Due
-
-  # Week 8
-  - topic: 'Lecture 15: Virtual Machines & Containers'
-    details: |-
-      We will set up and run virtual computers on your real computers, both for security and for ease of software development and deployment.
-    materials:
-      slides: '/lectures/15-vms-containers.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d56ce569-39be-4f2e-8d7f-b00e004a3888'
-      final project: '/assignments/final-project.pdf'
-  - topic: 'Lecture 16: Cloud & Serverless'
-    materials:
-      slides: '/lectures/16-cloud-serverless.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7689a25e-f0aa-47a3-9568-b00e0054e80a'
-      assignment 7: '/assignments/assign7'
-    details: |-
-      We will set up a connection to a computer running on a "cloud" service, such as Amazon AWS, Google GCP, or Microsoft Azure, and run our own code on it.  We will also set up a simpler service using a "serverless" platform, which is a convenient way of deploying code without much work.
-    assignments: Assignment 6 Due
-
-  # Week 9
-  - topic: 'No Lecture: Memorial Day'
-    holiday: yes
-  - topic: 'Lecture 17: Media Encoding'
-    details: |-
-      We will look at how different types of media (text, images, audio, and video) are represented by computers, including the tradeoffs of different formats.
-    materials:
-      slides: '/lectures/17-encoding.pdf'
-      notes: '/lectures/17-encoding.notes.pdf'
-      lecture video: 'https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0c35a78-dea8-432b-86c3-b017013d1239'
-      assignment 8: '/assignments/assign8'
-    assignments: Assignment 7 Due
-
-  # Week 10
-  - topic: 'Lecture 18: Q&A and Conclusion'
-    details: |-
-      Whatever topics you find interesting!  Let us know what you want us to cover.
-  - topic: 'No Lecture'
-    assignments: Assignment 8 and Final Project Due
+      In-class exercises on navigating the shell.

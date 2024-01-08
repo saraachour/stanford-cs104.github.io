@@ -23,7 +23,7 @@ const config = {
   kit: {
     adapter: adapter(),
     paths: {
-      base: process.env.BASE_PATH ?? '/class/cs45'
+      base: process.env.BASE_PATH ?? '/class/cs104'
     },
     version: {
       name: snapshot

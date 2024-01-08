@@ -11,7 +11,7 @@ title: 'CS 45'
   import Callout from '$lib/Callout.svelte';
 </script>
 
-# CS 45: Software Tools Every Programmer Should Know
+# CS 104: Introduction to Essential Software Systems and Tools
 
 <Callout cardinal>
 We're excited to announce that this class will continue as <strong>CS 104:

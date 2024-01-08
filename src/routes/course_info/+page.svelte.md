@@ -1,5 +1,5 @@
 ---
-title: 'CS 45: Course Info'
+title: 'CS 104: Course Info'
 ---
 
 <script>

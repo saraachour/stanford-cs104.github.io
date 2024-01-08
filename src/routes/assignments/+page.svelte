@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>CS 45: Assignments</title>
+  <title>CS 104: Assignments</title>
 </svelte:head>
 
 <h2>Assignments</h2>

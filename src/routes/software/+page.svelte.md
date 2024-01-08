@@ -1,5 +1,5 @@
 ---
-title: "CS 45: Software Installation"
+title: "CS 104: Software Installation"
 ---
 
 <script lang="ts">
