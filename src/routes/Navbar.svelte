@@ -8,7 +8,7 @@
 
 <NavbarBase>
   <NavList>
-    <NavListItem href={base} big>CS 45</NavListItem>
+    <NavListItem href={base} big>CS 104</NavListItem>
   </NavList>
   <NavList>
     <NavListItem href="{base}/lectures">Lectures</NavListItem>
