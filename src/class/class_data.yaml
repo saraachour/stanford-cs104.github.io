@@ -24,9 +24,9 @@ instructors:
   - name: Aman Kansal
     role: Course Assistant
     email: amkansal@stanford.edu
-    image: /img/default.png
+    image: /img/aman.png
     officeHours:
-      - when: 'Wednesday 11am to 12pm (just for week 9)'
+      - when: 'MonWed 1:30pm-2:30pm'
         where: 'on Zoom'
         #url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
 
