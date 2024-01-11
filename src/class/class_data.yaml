@@ -46,6 +46,7 @@ lectures:
     materials:
       slides: 'https://docs.google.com/presentation/d/1L4cHl8a5DPrsj74n7GOEBbnu6NqnP8vP8qOuK8cT7Zo/edit?usp=drive_link'
       assignment 0: '/assignments/assign0'
+      welcome survey: 'https://forms.gle/DGUGSUg1GZjvgn6M9'
     details: |-
       We covered basic class logistics (also available on the [course info page](/course_info)), and did [Assignment 0](/assignments/assign0) to get everyone set up.
   - topic: 'Lecture 1: Course Overview and Shell and Shell Tools'
