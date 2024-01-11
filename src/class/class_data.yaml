@@ -1,4 +1,4 @@
-start_date: 2023/04/03
+start_date: 2024/01/08
 class_days:
   - Monday
   - Wednesday
@@ -11,16 +11,16 @@ instructors:
     image: /img/sachour.png
     officeHours:
       - when: 'On Demand'
-        where: 'Gates 484'
+        where: 'in Gates 484'
         #url: ''
   - name: Jin-Hee Lee
     role: Course Assistant
     email: jhclee@stanford.edu
     image: /img/default.png
     officeHours:
-      - when: TBD
-        where: TBD
-        # url: 'TBD'
+      - when: 'TueThu 10:30am-11:20am'
+        where: 'on Zoom'
+        #url: 'https://stanford.zoom.us/j/3949055732?pwd=QnpKSnFwdEtDSWYyYXBYRWMxdHF2UT09'
   - name: Aman Kansal
     role: Course Assistant
     email: amkansal@stanford.edu
@@ -33,10 +33,10 @@ instructors:
 assignments:
   - name: 'Assignment 0: Getting Set Up!'
     points: 1
-    due: 2023/04/12
+    due: 2024/01/15
     materials:
       handout: '/assignments/assign0'
-      gradescope: 'https://www.gradescope.com/courses/527944/assignments/2790820'
+      gradescope: 'https://www.gradescope.com/courses/696269/assignments/3881867/'
     details: |-
       This short assignment is meant to get a basic Unix-compatible shell environment set up on your computer.  We'll do this together in class during the first lecture.
 
