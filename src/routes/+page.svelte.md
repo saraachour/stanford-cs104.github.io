@@ -49,8 +49,8 @@ help 😄)
 
 ## Course Staff
 
-**Staff Mailing List:**
-[cs45-spr2223-staff@lists.stanford.edu](mailto:cs45-spr2223-staff@lists.stanford.edu)
+<!-- **Staff Mailing List:** -->
+<!-- [cs45-spr2223-staff@lists.stanford.edu](mailto:cs45-spr2223-staff@lists.stanford.edu) -->
 
 <div style="display: flex; flex-wrap: wrap;">
 	{#each class_data.instructors as instructor}
