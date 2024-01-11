@@ -1,6 +1,6 @@
 <!-- NavBar shown at the top of all pages -->
 <script>
-  import { base, edstem, gradescope, canvas } from '$lib/constants';
+  import { base, edstem, gradescope, canvas, drive } from '$lib/constants';
   import NavbarBase from '$lib/Navbar/NavbarBase.svelte';
   import NavList from '$lib/Navbar/NavList.svelte';
   import NavListItem from '$lib/Navbar/NavListItem.svelte';
@@ -11,6 +11,7 @@
     <NavListItem href={base} big>CS 104</NavListItem>
   </NavList>
   <NavList>
+    <NavListItem href="{drive}">Drive</NavListItem>
     <NavListItem href="{base}/lectures">Lectures</NavListItem>
     <NavListItem href="{base}/assignments">Assignments</NavListItem>
     <NavListItem href="{base}/course_info">Course Info</NavListItem>
