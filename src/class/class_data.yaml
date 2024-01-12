@@ -21,7 +21,6 @@ instructors:
     officeHours:
       - when: 'TueThu 10:30am-11:20am'
         where: 'on Zoom'
-        #url: 'https://stanford.zoom.us/j/3949055732?pwd=QnpKSnFwdEtDSWYyYXBYRWMxdHF2UT09'
   - name: Aman Kansal
     role: Course Assistant
     email: amkansal@stanford.edu
@@ -29,7 +28,13 @@ instructors:
     officeHours:
       - when: 'MonWed 1:30pm-2:30pm'
         where: 'on Zoom'
-        #url: 'https://stanford.zoom.us/j/99170211188?pwd=RytTUlNVVGZhMVJVMGFMY093ek9pQT09'
+  - name: Cole Sohn
+    role: Course Assistant
+    email: csohn@stanford.edu
+    image: /img/cole.jpeg
+    officeHours:
+      - when: 'Tue 9am-11am'
+        where: 'on Zoom'
 
 assignments:
   - name: 'Assignment 0: Getting Set Up!'
