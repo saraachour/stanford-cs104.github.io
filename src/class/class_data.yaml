@@ -2,6 +2,7 @@ start_date: 2024/01/08
 class_days:
   - Monday
   - Wednesday
+  - Friday
 assignment_due_time: 23:59
 
 instructors:
@@ -64,5 +65,10 @@ lectures:
 
       I used a non-standard command `bat` in my lecture demo; the software installation page contains installation instructions if you want to try it out.
   - topic: 'Lab 1: In-Class Lab on Shell Tools'
+    materials:
+      slides: 'https://docs.google.com/presentation/d/1oID7-DdcUuXzgx6Y52s7ixI6-lMcTB24gSWcgZzu6Yg/edit?usp=sharing'
+      poll: 'https://pollev.com/saraachour443'
     details: |-
-      In-class exercises on navigating the shell.
+      In-class exercises on navigating the shell, creating+manipulating folders and files.
+    
+
