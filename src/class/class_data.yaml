@@ -20,7 +20,8 @@ instructors:
     image: /img/jinhee.jpg
     officeHours:
       - when: 'TueThu 10:30am-11:20am'
-        where: 'on Zoom'
+        where: 'by Signup:'
+        url: https://calendly.com/jhclee/cs104-office-hours
   - name: Aman Kansal
     role: Course Assistant
     email: amkansal@stanford.edu
@@ -75,5 +76,3 @@ lectures:
       poll: 'https://pollev.com/saraachour443'
     details: |-
       In-class exercises on navigating the shell, creating+manipulating folders and files.
-    
-
