@@ -20,7 +20,7 @@ instructors:
     image: /img/jinhee.jpg
     officeHours:
       - when: 'TueThu 10:30am-11:20am'
-        where: 'by Signup:'
+        where: 'with Signup'
         url: https://calendly.com/jhclee/cs104-office-hours
   - name: Aman Kansal
     role: Course Assistant
