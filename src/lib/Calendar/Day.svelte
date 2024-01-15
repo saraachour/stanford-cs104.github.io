@@ -24,7 +24,7 @@
 		background-color: #f3f5f8;
 	}
   .day.holiday {
-    background-color: #ffcccc;
+    background-color: #ffeaa7;
   }
 	.future.future {
 		background-color: #fff;

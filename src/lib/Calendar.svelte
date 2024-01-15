@@ -14,6 +14,7 @@
 		class_data,
 		fixupLink,
 		getBoxColor,
+		isLive,
 		getLectureMoment,
 		lectures_by_week
 	} from './classData';
@@ -35,7 +36,8 @@
 					{#if lecture.materials}
 						<Materials>
 							{#each Object.keys(lecture.materials) as name}
-								<BoxLink color={getBoxColor(name)} href={fixupLink(lecture.materials[name])}
+								<BoxLink color={getBoxColor(name)} live={isLive(lecture.materials[name])}
+                         href={fixupLink(lecture.materials[name])}
 									>{name}</BoxLink
 								>
 							{/each}
@@ -46,17 +48,19 @@
 					{#if lecture.assignments}
 						<Assignments>
               {#each Object.keys(lecture.assignments) as name}
-								<BoxLink color={getBoxColor(name)} href={fixupLink(lecture.assignments[name])}
+								<BoxLink color={getBoxColor(name)} live={isLive(lecture.assignments[name])}
+                         href={fixupLink(lecture.assignments[name])}
 									>{name}</BoxLink>
 							{/each}
             </Assignments>
           {:else}
-          <Assignments/>
+            <Assignments/>
 					{/if}
           {#if lecture.due}
             <DueAssignments>
               {#each Object.keys(lecture.due) as name}
-								<BoxLink color={getBoxColor(name)} href={fixupLink(lecture.due[name])}
+								<BoxLink color={getBoxColor(name,true)} live={isLive(lecture.due[name])}
+                         href={fixupLink(lecture.due[name])}
 									>{name}</BoxLink>
 							{/each}
             </DueAssignments>
