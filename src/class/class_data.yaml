@@ -138,8 +138,7 @@ lectures:
 
   - topic: 'Lecture 2: Data wrangling'
     materials:
-      slides: 'https://drive.google.com/file/d/1PD-xTh5IjitFs1mYqs5SgBoS5XEv-DxW/view?usp=drive_link'
-      notes: 'https://drive.google.com/file/d/1NRa2YfjaS4__OwY2Kn_b3T4oziBGeK6S/view?usp=drive_link'
+      slides: 'https://docs.google.com/presentation/d/1bTp615iUEdvUYEWteAwiRV8ZuJrRtrtO1a0ZntlL1Cs/edit?usp=drive_link'
 
   - topic: 'Lab 2: Data wrangling'
     details: |-
