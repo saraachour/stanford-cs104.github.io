@@ -5,6 +5,7 @@
 	import BoxLink from './BoxLink.svelte';
 	import Day from './Calendar/Day.svelte';
 	import Assignments from './Calendar/Day/Assignments.svelte';
+	import DueAssignments from './Calendar/Day/DueAssignments.svelte';
 	import Materials from './Calendar/Day/Materials.svelte';
 	import Topic from './Calendar/Day/Topic.svelte';
 	import Week from './Calendar/Week.svelte';
@@ -39,10 +40,29 @@
 								>
 							{/each}
 						</Materials>
+          {:else}
+          <Materials/>
 					{/if}
 					{#if lecture.assignments}
-						<Assignments>{lecture.assignments}</Assignments>
+						<Assignments>
+              {#each Object.keys(lecture.assignments) as name}
+								<BoxLink color={getBoxColor(name)} href={fixupLink(lecture.assignments[name])}
+									>{name}</BoxLink>
+							{/each}
+            </Assignments>
+          {:else}
+          <Assignments/>
 					{/if}
+          {#if lecture.due}
+            <DueAssignments>
+              {#each Object.keys(lecture.due) as name}
+								<BoxLink color={getBoxColor(name)} href={fixupLink(lecture.due[name])}
+									>{name}</BoxLink>
+							{/each}
+            </DueAssignments>
+          {:else}
+          <DueAssignments/>
+          {/if}
 				</Day>
 			{/each}
 		</Week>

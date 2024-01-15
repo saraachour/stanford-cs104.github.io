@@ -2,6 +2,7 @@
 <script lang="ts">
 	import Day from './Day.svelte';
 	import Assignments from './Day/Assignments.svelte';
+	import DueAssignments from './Day/DueAssignments.svelte';
 	import Materials from './Day/Materials.svelte';
 	import Topic from './Day/Topic.svelte';
 
@@ -14,6 +15,7 @@
 		<Topic>Topic</Topic>
 		<Materials>Materials</Materials>
 		<Assignments>Assignments</Assignments>
+		<DueAssignments>Due</DueAssignments>
 	{/if}
 </Day>
 
