@@ -141,6 +141,8 @@ lectures:
       slides: 'https://docs.google.com/presentation/d/1bTp615iUEdvUYEWteAwiRV8ZuJrRtrtO1a0ZntlL1Cs/edit?usp=drive_link'
 
   - topic: 'Lab 2: Data wrangling'
+    materials:
+      slides: 'https://docs.google.com/presentation/d/1wEDJHq2L8s6FC_YkqQvjzrSI6Vjp3oM6nhyta79qtEQ/edit?usp=drive_link'
     details: |-
       In-class data wrangling exercises with TA/instructor supervision.
     assignments:
