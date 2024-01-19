@@ -23,6 +23,9 @@
 	.day.odd {
 		background-color: #f3f5f8;
 	}
+  .day.holiday {
+    background-color: #ffeaa7;
+  }
 	.future.future {
 		background-color: #fff;
 		font-style: italic;
@@ -33,7 +36,7 @@
 		margin-bottom: 0.2em;
 		margin-left: -10px;
 		display: grid;
-		grid-template: 'date topic materials assignments' / 0.5fr 1.2fr 0.9fr 0.9fr;
+		grid-template: 'date topic materials assignments due' / 0.5fr 2.0fr 0.9fr 0.9fr 0.9fr;
     column-gap: 4px;
 		flex-direction: row;
 		flex-wrap: wrap;

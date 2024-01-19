@@ -47,16 +47,34 @@ export function getLectureMoment(lectureNumber: number) {
 }
 
 // Gets the box color for a particular material
-export function getBoxColor(type: string) {
-  switch (type) {
-    case 'slides':
-      return 'blue';
-    case 'notes':
-      return 'black';
-    case 'lecture video':
-      return 'purple';
-    default:
-      return 'red';
+export function getBoxColor(type: string, due: bool = false) {
+    if(due == true){
+        return "red";
+    }
+    if(type == "notes") {
+        return 'darkblue';
+
+    }
+    else if(type == "slides") {
+        return "blue";
+    }
+    else if(type.includes("assign")) {
+        return 'green';
+    }
+    else if(type.includes("survey")) {
+        return 'purple';
+    }
+    else {
+        return "black";
+    }
+}
+
+export function isLive(link: string){
+  if(link == ""){
+    return false;
+  }
+  else {
+    return true;
   }
 }
 
@@ -64,6 +82,9 @@ export function getBoxColor(type: string) {
 export function fixupLink(baseLink: string) {
   if (baseLink.startsWith('/') && !baseLink.startsWith('//')) {
     return `${base}${baseLink}`;
+  }
+  else if(baseLink == ""){
+    return "javascript:void(0);"
   }
   return baseLink;
 }
@@ -82,6 +103,7 @@ export type Weekday =
   | 'Thursday'
   | 'Friday'
   | 'Saturday';
+
 export interface ClassData {
   start_date: string;
   class_days: Weekday[];
@@ -117,6 +139,7 @@ export interface Lecture {
   topic: string;
   materials?: Record<string, string>;
   details?: string;
-  assignments?: string;
+  assignments?: Record<string,string>;
+  due?: Record<string,string>;
   holiday?: boolean;
 }

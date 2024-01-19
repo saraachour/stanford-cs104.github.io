@@ -13,14 +13,6 @@ title: 'CS 45'
 
 # CS 104: Introduction to Essential Software Systems and Tools
 
-<Callout cardinal>
-We're excited to announce that this class will continue as <strong>CS 104:
-Introduction to Essential Software Systems and Tools</strong> in the 2023-24
-school year.  CS 104 will be an upgraded version of CS 45 taught by Professor
-Achour in Winter Quarter.  If what you see on this website looks interesting,
-you should check it out!
-</Callout>
-
 ## Course Description
 
 Classes teach you all about advanced topics within CS, from operating systems to machine learning,
@@ -64,8 +56,8 @@ help 😄)
 	{/each}
 </div>
 
-Unless you're contacting us about OH or something else instructor-specific, please either use the
-staff mailing list or make a post on Ed.
+Unless you're contacting us about OH or something else instructor-specific, please
+ make a post on Ed.
 
 ## Calendar
 
@@ -73,7 +65,7 @@ staff mailing list or make a post on Ed.
 
 ## Attributions
 
-Big thanks to the MIT CSAIL's
+This class is an expanded offering of CS45, a fantastic Stanford course that was originally developed by Akshay Srivatsan, Ayalet Drazen, and Jonathan Kula. Big thanks to the MIT CSAIL's
 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) taught by
 [Anish Athalye](https://www.anishathalye.com/), [Jon Gjengset](https://thesquareplanet.com/), and
 [Jose Javier Gonzalez Ortiz](https://josejg.com/)– The Missing Semester was the original inspiration

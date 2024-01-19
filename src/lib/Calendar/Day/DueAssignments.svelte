@@ -1,4 +1,4 @@
-<!-- Slots into the "Assignments" column -->
+<!-- Slots into the "DueAssignments" column -->
 
 <div>
 	<slot />
@@ -6,7 +6,7 @@
 
 <style>
 	div {
-		grid-area: assignments;
+		grid-area: due;
     display: flex;
     flex-wrap: wrap;
 	}
