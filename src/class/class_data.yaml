@@ -146,8 +146,8 @@ lectures:
     details: |-
       In-class data wrangling exercises with TA/instructor supervision.
     assignments:
-      assign 2: ''
-      survey 2: ''
+      assign 2: '/assignments'
+      survey 2: '/assignments'
     due:
       assign 1: '/assignments'
       survey 1: '/assignments'
