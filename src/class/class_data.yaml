@@ -78,8 +78,8 @@ assignments:
   - name: 'Assignment 2: Bourne to be Wild'
     points: 8
     due: 2024/01/26
-    #materials:
-    #  handout: ''
+    materials:
+     handout: 'https://docs.google.com/document/d/1_iC62lzKcWYlLI_ASIIY6-zgZGE3Kpqeb-yLgp89IJg/edit?usp=drive_link'
     #  gradescope: ''
     details: |-
       This assignment covers shell scripting.
