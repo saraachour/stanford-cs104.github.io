@@ -27,8 +27,9 @@ instructors:
     email: amkansal@stanford.edu
     image: /img/aman.png
     officeHours:
-      - when: 'MonWed 1:30pm-2:30pm'
+      - when: 'Mon 10-11am, Wed 9-10am'
         where: 'on Zoom'
+        url: 'https://stanford.zoom.us/j/5673672112?pwd=R014MjhuVkJZUmVwTlAySlpxaUZXdz09'
   - name: Cole Sohn
     role: Course Assistant
     email: csohn@stanford.edu
