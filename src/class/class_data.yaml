@@ -149,20 +149,21 @@ lectures:
     assignments:
       assign 2: '/assignments'
       survey 2: '/assignments'
-    due:
-      assign 1: '/assignments'
-      survey 1: '/assignments'
-
-  - topic: 'Holiday'
-    holiday: true
-    details: |-
-      No lecture! Holiday.
 
   - topic: 'Lecture 3: Shell Scripting'
     materials:
       slides: 'https://docs.google.com/presentation/d/1PoV2Zajf6nJ9A9RWFbGD8UPVRfMz3Blxol_M7BKQlEU/edit?usp=drive_link'
     details: |-
       Introduction to shell scripting.
+    due:
+      assign 1: '/assignments'
+      survey 1: '/assignments'
+  
+  - topic: 'Lecture 4: Text Editors'
+    materials:
+      slides: 'https://docs.google.com/presentation/d/1GIh596acXkSftsa6NX7t-gsxVZGIQhuH_YICOCqhLms/edit?usp=drive_link'
+    details: |-
+      Text editors and bash scripting continued.
 
   - topic: 'Lab 3: Shell Scripting'
     details: |-
@@ -172,6 +173,13 @@ lectures:
     assignments:
       assign 3: ''
       survey 3: ''
+  
+  - topic: 'Lecture 5: Command Line Environment'
     due:
-      assign 2: ''
-      survey 2: ''
+        assign 2: ''
+        survey 2: ''
+  
+  - topic: 'Lecture 6: Networking'
+
+  - topic: 'Lab 3'
+    
