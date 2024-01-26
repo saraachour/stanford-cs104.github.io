@@ -61,7 +61,7 @@ assignments:
 
   - name: 'Assignment 1: Shell We'
     points: 8
-    due: 2024/01/19
+    due: 2024/01/22
     materials:
       handout: 'https://docs.google.com/document/d/1kRiU8RRi69N6hqF2vb5XOZg2M2nkxqoTr7ZJgBKSbc8/edit?usp=drive_link'
     #  gradescope: ''
@@ -70,7 +70,7 @@ assignments:
 
   - name: 'Feedback Survey 1: Shell and Data Wrangling'
     points: 2
-    due: 2024/01/19
+    due: 2024/01/22
     materials:
       survey: 'https://forms.gle/GBJTTdexeocHVxVE6'
     details: |-
@@ -78,7 +78,7 @@ assignments:
 
   - name: 'Assignment 2: Bourne to be Wild'
     points: 8
-    due: 2024/01/26
+    due: 2024/01/29
     materials:
      handout: 'https://docs.google.com/document/d/1_iC62lzKcWYlLI_ASIIY6-zgZGE3Kpqeb-yLgp89IJg/edit?usp=drive_link'
     #  gradescope: ''
@@ -87,11 +87,28 @@ assignments:
 
   - name: 'Feedback Survey 2: Bourne to be Wild'
     points: 2
-    due: 2024/01/26
+    due: 2024/01/29
     materials:
       survey: 'https://forms.gle/sR3GNyYAoqxjrjtq6'
     details: |-
       This assignment student experience on shell lecture, assignment, and lab segment.
+
+  - name: 'Assignment 3: Off The Beaten Path'
+    points: 8
+    due: 2024/02/05
+    materials:
+     handout: 'https://docs.google.com/document/d/1__diqcO-uod7geqm5Bi9_AP4XssQtvWBBi1j4MukVYY/edit#heading=h.1tcw4t200bfv'
+    #  gradescope: ''
+    details: |-
+      This assignment covers networking and playing with the path variable
+
+  - name: 'Feedback Survey 3: Off The Beaten Path'
+    points: 2
+    due: 2024/02/05
+    materials:
+      survey: 'https://forms.gle/Zi5wH5S4tLzFqSZQ6'
+    details: |-
+      This assignment covers networking and playing with the path variable
 
 
 lectures:
@@ -150,6 +167,7 @@ lectures:
       assign 2: '/assignments'
       survey 2: '/assignments'
 
+  # Week 3
   - topic: 'Lecture 3: Shell Scripting'
     materials:
       slides: 'https://docs.google.com/presentation/d/1PoV2Zajf6nJ9A9RWFbGD8UPVRfMz3Blxol_M7BKQlEU/edit?usp=drive_link'
@@ -165,15 +183,16 @@ lectures:
     details: |-
       Text editors and bash scripting continued.
 
-  - topic: 'Lab 3: Shell Scripting'
+  - topic: 'Lab 3: Off the Beaten Path'
     details: |-
       In-class shell scripting exercises with TA/instructor supervision.
-    #materials:
-    #  slides: ''
+    materials:
+     slides: ''
     assignments:
-      assign 3: ''
-      survey 3: ''
+      assign 3: '/assignments'
+      survey 3: '/assignments'
   
+  # Week 4
   - topic: 'Lecture 5: Command Line Environment'
     due:
         assign 2: ''
