@@ -194,11 +194,28 @@ lectures:
   
   # Week 4
   - topic: 'Lecture 5: Command Line Environment'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1R2gTpOi3cqebYZxjJnEqljmVwIyKDRImh08sLP48TaM/edit?usp=drive_link'
     due:
-        assign 2: ''
-        survey 2: ''
+        assign 2: '/assignments'
+        survey 2: '/assignments'
   
-  - topic: 'Lecture 6: Networking'
+  - topic: 'Lecture 6: Command Line Environment II'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1OOy628nLEfViVOdyxRG-U8GIwqFL1pLiXZDFmp5LnC0/edit?usp=drive_link'
 
-  - topic: 'Lab 3'
+  - topic: 'Lab 4'
+    details: |-
+        In-class shell scripting exercises with TA/instructor supervision.
+    materials:
+      slides: ''
+    assignments:
+      assign 4: '/assignments'
+      survey 4: '/assignments'
+
+  # Week 5
+  - topic: 'Lecture 6: Networking'
+    due:
+        assign 3: ''
+        survey 3: ''
     
