@@ -95,7 +95,7 @@ assignments:
 
   - name: 'Assignment 3: Off The Beaten Path'
     points: 8
-    due: 2024/02/05
+    due: 2024/02/09
     materials:
      handout: 'https://docs.google.com/document/d/1__diqcO-uod7geqm5Bi9_AP4XssQtvWBBi1j4MukVYY/edit#heading=h.1tcw4t200bfv'
     #  gradescope: ''
@@ -104,9 +104,26 @@ assignments:
 
   - name: 'Feedback Survey 3: Off The Beaten Path'
     points: 2
-    due: 2024/02/05
+    due: 2024/02/09
     materials:
       survey: 'https://forms.gle/Zi5wH5S4tLzFqSZQ6'
+    details: |-
+      This assignment covers networking and playing with the path variable
+
+  - name: 'Assignment 4: Permissions and Processes'
+    points: 8
+    due: 2024/02/16
+    materials:
+     handout: 'https://docs.google.com/document/d/1K5zSg1vWTEHcRfA29FWVPJ3mROUfIaQ3yxIKu9_To3M/edit#heading=h.ovxhoexktt4x'
+    #  gradescope: ''
+    details: |-
+      
+
+  - name: 'Feedback Survey 4: Permissions and Processes'
+    points: 2
+    due: 2024/02/16
+    materials:
+      survey: 'https://forms.gle/uugsgu51sMgCnhiT8'
     details: |-
       This assignment covers networking and playing with the path variable
 
@@ -208,14 +225,11 @@ lectures:
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: ''
+      slides: 'https://docs.google.com/presentation/d/1z6YIAB23qhuIk7eEuYX_pTOFeahhW8u1b7Jc1z3j664/edit?usp=drive_link'
     assignments:
       assign 4: '/assignments'
       survey 4: '/assignments'
 
   # Week 5
   - topic: 'Lecture 6: Networking'
-    due:
-        assign 3: ''
-        survey 3: ''
     
