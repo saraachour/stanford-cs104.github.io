@@ -110,22 +110,23 @@ assignments:
     details: |-
       This assignment covers networking and playing with the path variable
 
-  - name: 'Assignment 4: Permissions and Processes'
+  - name: 'Assignment 4: Its Git-ing Hot in Here'
     points: 8
     due: 2024/02/16
     materials:
      handout: 'https://docs.google.com/document/d/1K5zSg1vWTEHcRfA29FWVPJ3mROUfIaQ3yxIKu9_To3M/edit#heading=h.ovxhoexktt4x'
     #  gradescope: ''
     details: |-
+      This assignment covers playing with git and version control.
       
 
-  - name: 'Feedback Survey 4: Permissions and Processes'
+  - name: 'Feedback Survey 4: Its Git-ing Hot in Here'
     points: 2
     due: 2024/02/16
     materials:
       survey: 'https://forms.gle/uugsgu51sMgCnhiT8'
     details: |-
-      This assignment covers networking and playing with the path variable
+      This assignment covers playing with git and version control.
 
 
 lectures:
