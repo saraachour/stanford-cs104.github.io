@@ -232,5 +232,9 @@ lectures:
       survey 4: '/assignments'
 
   # Week 5
-  - topic: 'Lecture 6: Networking'
+  - topic: 'Lecture 7: Networking'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1WTpqVEdAEWl-Y5i3Lo-TzKumR6rOzoU4rgleY3KOuYI/edit?usp=drive_link'
+    details: |-
+        Introduction to networking
     
