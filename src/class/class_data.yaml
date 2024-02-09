@@ -127,6 +127,24 @@ assignments:
       survey: 'https://forms.gle/uugsgu51sMgCnhiT8'
     details: |-
       This assignment covers playing with git and version control.
+  
+  - name: 'Assignment 5: '
+    points: 8
+    due: 2024/02/23
+    materials:
+     handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers playing with git and version control.
+      
+
+  - name: 'Feedback Survey 5: '
+    points: 2
+    due: 2024/02/23
+    materials:
+      survey: ''
+    details: |-
+      This assignment covers playing with git and version control.
 
 
 lectures:
@@ -237,4 +255,21 @@ lectures:
         slides: 'https://docs.google.com/presentation/d/1WTpqVEdAEWl-Y5i3Lo-TzKumR6rOzoU4rgleY3KOuYI/edit?usp=drive_link'
     details: |-
         Introduction to networking
+  
+  - topic: 'Lecture 8: Version Control'
+    materials:
+        slides: 'https://drive.google.com/file/d/1fFJ2iC0d00R1Gv5uqJCeLtfamcmqcOm2/view?usp=drive_link'
+    details: |-
+        Introduction to git and version control
     
+  - topic: 'Lab 5'
+    details: |-
+        In-class shell scripting exercises with TA/instructor supervision.
+    materials:
+      slides: 'https://docs.google.com/presentation/d/1uylvDD0HYSn1pmFPcWtORC6ZnpEWQNRa-I21cW0igMs/edit?usp=drive_link'
+    assignments:
+      assign 5: '/assignments'
+      survey 5: '/assignments'
+    due:
+      assign 3: '/assignments'
+      survey 3: '/assignments'
