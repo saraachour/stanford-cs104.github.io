@@ -127,24 +127,7 @@ assignments:
       survey: 'https://forms.gle/uugsgu51sMgCnhiT8'
     details: |-
       This assignment covers playing with git and version control.
-  
-  - name: 'Assignment 5: '
-    points: 8
-    due: 2024/02/23
-    materials:
-     handout: ''
-    #  gradescope: ''
-    details: |-
-      This assignment covers playing with git and version control.
-      
 
-  - name: 'Feedback Survey 5: '
-    points: 2
-    due: 2024/02/23
-    materials:
-      survey: ''
-    details: |-
-      This assignment covers playing with git and version control.
 
 
 lectures:
