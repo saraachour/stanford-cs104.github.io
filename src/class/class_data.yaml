@@ -256,3 +256,16 @@ lectures:
     due:
       assign 3: '/assignments'
       survey 3: '/assignments'
+
+  # Week 6
+  - topic: 'Lecture 8 (addendum): Version Management'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/13j_FPCZY5JuShpbDiuwg77SE46tlWlu22LwK2Fojn7k/edit?usp=drive_link'
+    details: |-
+        Version management and version control systems
+  
+  - topic: 'Lecture 9: Build Systems & Dev Ops'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1isLw7hikQDg4DnZJsVmjPPTV5g28UfJhN7fsbDL9O9s/edit?usp=drive_link'
+    details: |-
+        Build systems and Dev Ops
