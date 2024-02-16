@@ -128,6 +128,22 @@ assignments:
     details: |-
       This assignment covers playing with git and version control.
 
+  - name: 'Assignment 5: It all makes sense'
+    points: 8
+    due: 2024/02/26
+    materials:
+     handout: 'https://docs.google.com/document/d/1f014R407s1yahPZrQjF1M3JHhLerpYZdeY_nUxEnxP8/edit#heading=h.ovxhoexktt4x'
+    #  gradescope: ''
+    details: |-
+      This assignment covers playing with Make, CI and profiling
+  
+  - name: 'Feedback Survey 4: It all makes sense'
+    points: 2
+    due: 2024/02/26
+    materials:
+      survey: 'https://forms.gle/6b3SmXeqZjoTKvDM8'
+    details: |-
+      This assignment covers playing with Make, CI and profiling
 
 
 lectures:
@@ -275,9 +291,9 @@ lectures:
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
       slides: 'https://docs.google.com/presentation/d/1ftZ2MXRiuvyVI-A4d33uXUnzwmiUmh-crHhV2tPssdI/edit?usp=drive_link'
-    # assignments:
-    #   assign 6: '/assignments'
-    #   survey 6: '/assignments'
+    assignments:
+      assign 5: '/assignments'
+      survey 5: '/assignments'
     due:
       assign 4: '/assignments'
       survey 4: '/assignments'
