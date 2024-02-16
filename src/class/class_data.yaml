@@ -250,9 +250,9 @@ lectures:
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
       slides: 'https://docs.google.com/presentation/d/1uylvDD0HYSn1pmFPcWtORC6ZnpEWQNRa-I21cW0igMs/edit?usp=drive_link'
-    assignments:
-      assign 5: '/assignments'
-      survey 5: '/assignments'
+    # assignments:
+    #   assign 5: '/assignments'
+    #   survey 5: '/assignments'
     due:
       assign 3: '/assignments'
       survey 3: '/assignments'
@@ -269,3 +269,15 @@ lectures:
         slides: 'https://docs.google.com/presentation/d/1isLw7hikQDg4DnZJsVmjPPTV5g28UfJhN7fsbDL9O9s/edit?usp=drive_link'
     details: |-
         Build systems and Dev Ops
+  
+  - topic: 'Lab 6'
+    details: |-
+        In-class shell scripting exercises with TA/instructor supervision.
+    materials:
+      slides: 'https://docs.google.com/presentation/d/1ftZ2MXRiuvyVI-A4d33uXUnzwmiUmh-crHhV2tPssdI/edit?usp=drive_link'
+    # assignments:
+    #   assign 6: '/assignments'
+    #   survey 6: '/assignments'
+    due:
+      assign 4: '/assignments'
+      survey 4: '/assignments'
