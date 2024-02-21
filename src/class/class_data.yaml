@@ -297,3 +297,18 @@ lectures:
     due:
       assign 4: '/assignments'
       survey 4: '/assignments'
+  
+  # Week 7
+  - topic: 'Holiday'
+    materials:
+        slides: ''
+  
+  - topic: 'Lecture 10: Debugging and Profiling'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1D4QoIEYsbggZXOvMc89-QWOjgIJ0qY_JX8_av8Pq30I/edit?usp=drive_link'
+    details: |-
+        debugging and profiling
+  
+  - topic: 'Lab 7'
+    materials:
+      slides: ''
