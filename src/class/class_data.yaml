@@ -310,5 +310,7 @@ lectures:
         debugging and profiling
   
   - topic: 'Lab 7'
+    details: |-
+        In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: ''
+      slides: 'https://docs.google.com/presentation/d/1bdSURVx2dZCv54H3shkAqYr87L3iL4eEZM6PikUitco/edit?usp=drive_link'
