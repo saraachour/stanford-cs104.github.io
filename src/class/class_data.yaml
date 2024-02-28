@@ -295,8 +295,8 @@ lectures:
       assign 5: '/assignments'
       survey 5: '/assignments'
     due:
-      assign 4: '/assignments'
-      survey 4: '/assignments'
+      assign 5: '/assignments'
+      survey 5: '/assignments'
   
   # Week 7
   - topic: 'Holiday'
@@ -314,3 +314,21 @@ lectures:
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
       slides: 'https://docs.google.com/presentation/d/1bdSURVx2dZCv54H3shkAqYr87L3iL4eEZM6PikUitco/edit?usp=drive_link'
+
+# Week 8
+  - topic: 'Lecture 11: Security'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1QCb6Yp6dGNw-GdWiplIvoSXOwrQaXdDZVKRSRLoy8GQ/edit?usp=drive_link'
+    due:
+      assign 5: '/assignments'
+      survey 5: '/assignments'
+  
+  - topic: 'Lecture 12: Cryptography'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1izPqqNWOWD_OYDPPLO95vcG6N_gs8PWZqL8eXv8POYQ/edit?usp=drive_link'
+  
+  - topic: 'Lab 8'
+    details: |-
+        In-class shell scripting exercises with TA/instructor supervision.
+    materials:
+      slides: ''
