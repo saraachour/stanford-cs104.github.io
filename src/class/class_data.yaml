@@ -137,13 +137,29 @@ assignments:
     details: |-
       This assignment covers playing with Make, CI and profiling
   
-  - name: 'Feedback Survey 4: It all makes sense'
+  - name: 'Feedback Survey 5: It all makes sense'
     points: 2
     due: 2024/02/26
     materials:
       survey: 'https://forms.gle/6b3SmXeqZjoTKvDM8'
     details: |-
       This assignment covers playing with Make, CI and profiling
+  
+  - name: 'Assignment 6: The (Public) Key to My Heart'
+    points: 8
+    due: 2024/03/13
+    materials:
+     handout: 'https://docs.google.com/document/d/1XKLtCnXYFmAr6O9mSKu5C0ArrXmZLcnJWH1rYDllsH0/edit?usp=drive_link'
+    details: |-
+      This assignment covers playing with encryption and security
+  
+  - name: 'Feedback Survey 6: The (Public) Key to My Heart'
+    points: 2
+    due: 2024/03/13
+    materials:
+      survey: 'https://forms.gle/mT3PY8PVGsS2GXqg9'
+    details: |-
+      This assignment covers playing with encryption and security
 
 
 lectures:
@@ -331,4 +347,7 @@ lectures:
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: ''
+      slides: 'https://docs.google.com/presentation/d/1iLVVGx8tScPCacxqE6AJ7rJZ7KkrtffN_CNqKhW_DIY/edit?usp=drive_link'
+    assignments:
+      assign 6: '/assignments'
+      survey 6: '/assignments'
