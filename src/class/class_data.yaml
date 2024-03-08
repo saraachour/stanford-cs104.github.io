@@ -160,6 +160,22 @@ assignments:
       survey: 'https://forms.gle/mT3PY8PVGsS2GXqg9'
     details: |-
       This assignment covers playing with encryption and security
+  
+  - name: 'Assignment 7: On Cloud Nine'
+    points: 8
+    due: 2024/03/13
+    materials:
+     handout: 'https://docs.google.com/document/d/16MsNboYptwiUFh2Vnzxesg8tDJnrrS9HTXG9QQJPMIs/edit?usp=drive_link'
+    details: |-
+      This assignment covers cloud computing and serverless computing
+  
+  - name: 'Feedback Survey 7: On Cloud Nine'
+    points: 2
+    due: 2024/03/13
+    materials:
+      survey: 'https://forms.gle/TmXPLjZjqAn7moDo8'
+    details: |-
+      This assignment covers cloud computing and serverless computing
 
 
 lectures:
@@ -310,9 +326,6 @@ lectures:
     assignments:
       assign 5: '/assignments'
       survey 5: '/assignments'
-    due:
-      assign 5: '/assignments'
-      survey 5: '/assignments'
   
   # Week 7
   - topic: 'Holiday'
@@ -351,3 +364,22 @@ lectures:
     assignments:
       assign 6: '/assignments'
       survey 6: '/assignments'
+
+
+# Week 8
+  - topic: 'Lecture 13: VMs and Containers'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1-zb44m6l2yrkyQoB_C7u7OjNbTDxUOLCdZYy7aQeUtM/edit?usp=drive_link'
+  
+  - topic: 'Lecture 14: Cloud & Serverless'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1MDfcuKd6wpAAG3n2t451wmcBa8LCJu9B3iOG7jhevK8/edit?usp=drive_link'
+  
+  - topic: 'Lab 9'
+    details: |-
+        In-class shell scripting exercises with TA/instructor supervision.
+    materials:
+      slides: 'https://docs.google.com/presentation/d/1-TBZEFDA-kD-txdAaVp-RdkJklcSZCFnvDjQCACSYLk/edit?usp=drive_link'
+    assignments:
+      assign 7: '/assignments'
+      survey 7: '/assignments'
