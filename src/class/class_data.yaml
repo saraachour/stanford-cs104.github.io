@@ -417,3 +417,6 @@ lectures:
     assignments:
       assign 8: '/assignments'
       survey 8: '/assignments'
+    due:
+      assign 7: '/assignments'
+      survey 7: '/assignments'
