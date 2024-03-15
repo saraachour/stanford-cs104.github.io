@@ -163,7 +163,7 @@ assignments:
   
   - name: 'Assignment 7: On Cloud Nine'
     points: 8
-    due: 2024/03/13
+    due: 2024/03/15
     materials:
      handout: 'https://docs.google.com/document/d/16MsNboYptwiUFh2Vnzxesg8tDJnrrS9HTXG9QQJPMIs/edit?usp=drive_link'
     details: |-
@@ -171,11 +171,23 @@ assignments:
   
   - name: 'Feedback Survey 7: On Cloud Nine'
     points: 2
-    due: 2024/03/13
+    due: 2024/03/15
     materials:
       survey: 'https://forms.gle/TmXPLjZjqAn7moDo8'
     details: |-
       This assignment covers cloud computing and serverless computing
+
+  - name: 'Assignment 8: Its like Magick'
+    materials:
+      handout: 'https://docs.google.com/document/d/1ClG4Or5n07QLL4K5K3S0JrqpHOx_URBIn73GeUVbXdM/edit?usp=drive_link'
+    details: |-
+      This assignment covers media processing and image manipulation.
+  
+  - name: 'Feedback Survey 8: Its like Magick'
+    materials:
+      survey: 'https://forms.gle/7QpcBCwDR7V99WN1A'
+    details: |-
+      This assignment covers media processing and image manipulation.
 
 
 lectures:
@@ -383,3 +395,25 @@ lectures:
     assignments:
       assign 7: '/assignments'
       survey 7: '/assignments'
+
+
+# Week 9
+  - topic: 'Lecture 15: Recent Tools'
+    materials:
+        slides: 'https://drive.google.com/file/d/1fTjMj9XP0fb-fGKX1TASS17XzXFfssx1/view?usp=drive_link'
+  
+  - topic: 'Lecture 16: Media Processing'
+    materials:
+        slides: 'https://docs.google.com/presentation/d/1MDfcuKd6wpAAG3n2t451wmcBa8LCJu9B3iOG7jhevK8/edit?usp=drive_link'
+    due:
+      assign 6: '/assignments'
+      survey 6: '/assignments'
+  
+  - topic: 'Lab 10'
+    details: |-
+        In-class shell scripting exercises with TA/instructor supervision.
+    materials:
+      slides: ''
+    assignments:
+      assign 8: '/assignments'
+      survey 8: '/assignments'
