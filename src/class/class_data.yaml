@@ -1,4 +1,4 @@
-start_date: 2024/01/08
+start_date: 2024/01/06
 class_days:
   - Monday
   - Wednesday
@@ -11,38 +11,24 @@ instructors:
     email: sachour@stanford.edu
     image: /img/sachour.png
     officeHours:
-      - when: 'On Demand'
-        where: 'in Gates 484'
+      - when: 'Fridays, Lab Section'
+        where: 'in 200-034'
         #url: ''
-  - name: Jin-Hee Lee
-    role: Course Assistant
-    email: jhclee@stanford.edu
-    image: /img/jinhee.jpg
-    officeHours:
-      - when: 'TueThu 10:30am-11:20am'
-        where: 'with Signup'
-        url: https://calendly.com/jhclee/cs104-office-hours
-  - name: Aman Kansal
-    role: Course Assistant
-    email: amkansal@stanford.edu
-    image: /img/aman.png
-    officeHours:
-      - when: 'Mon 10-11am, Wed 9-10am'
-        where: 'on Zoom'
-        url: 'https://stanford.zoom.us/j/5673672112?pwd=R014MjhuVkJZUmVwTlAySlpxaUZXdz09'
-  - name: Cole Sohn
-    role: Course Assistant
-    email: csohn@stanford.edu
-    image: /img/cole.jpeg
-    officeHours:
-      - when: 'Tue 9am-11am'
-        where: 'on Zoom'
+  #name: Jin-Hee Lee
+  #role: Course Assistant
+  #email: jhclee@stanford.edu
+  #image: /img/jinhee.jpg
+  #officeHours:
+  #  - when: 'TueThu 10:30am-11:20am'
+  #    where: 'with Signup'
+  #    url: https://calendly.com/jhclee/cs104-office-hours
 
+  
 assignments:
 
   - name: 'Welcome Survey!'
     points: 2.5
-    due: 2024/01/15
+    due: 2025/01/13
     materials:
       handout: ''
     details: |-
@@ -51,159 +37,117 @@ assignments:
 
   - name: 'Assignment 0: Getting Set Up!'
     points: 2.5
-    due: 2024/01/15
+    due: 2025/01/13
     materials:
       handout: '/assignments/assign0'
-      gradescope: 'https://www.gradescope.com/courses/696269/assignments/3881867/'
+      gradescope: ''
     details: |-
       This short assignment is meant to get a basic Unix-compatible shell
       environment set up on your computer.  We'll do this together in class during the first lecture.
 
   - name: 'Assignment 1: Shell We'
     points: 8
-    due: 2024/01/22
+    due: 2025/01/20
     materials:
-      handout: 'https://docs.google.com/document/d/1kRiU8RRi69N6hqF2vb5XOZg2M2nkxqoTr7ZJgBKSbc8/edit?usp=drive_link'
+      handout: ''
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
 
-  - name: 'Feedback Survey 1: Shell and Data Wrangling'
-    points: 2
-    due: 2024/01/22
-    materials:
-      survey: 'https://forms.gle/GBJTTdexeocHVxVE6'
-    details: |-
-      This survey assess student experience with material on shell basics and regular expressions.
+ 
 
   - name: 'Assignment 2: Bourne to be Wild'
     points: 8
-    due: 2024/01/29
+    due: 2024/01/27
     materials:
-     handout: 'https://docs.google.com/document/d/1_iC62lzKcWYlLI_ASIIY6-zgZGE3Kpqeb-yLgp89IJg/edit?usp=drive_link'
+     handout: ''
     #  gradescope: ''
     details: |-
       This assignment covers shell scripting.
 
-  - name: 'Feedback Survey 2: Bourne to be Wild'
-    points: 2
-    due: 2024/01/29
-    materials:
-      survey: 'https://forms.gle/sR3GNyYAoqxjrjtq6'
-    details: |-
-      This assignment student experience on shell lecture, assignment, and lab segment.
+ 
 
   - name: 'Assignment 3: Off The Beaten Path'
     points: 8
-    due: 2024/02/09
+    due: 2024/02/03
     materials:
-     handout: 'https://docs.google.com/document/d/1__diqcO-uod7geqm5Bi9_AP4XssQtvWBBi1j4MukVYY/edit#heading=h.1tcw4t200bfv'
+     handout: ''
     #  gradescope: ''
     details: |-
       This assignment covers networking and playing with the path variable
 
-  - name: 'Feedback Survey 3: Off The Beaten Path'
-    points: 2
-    due: 2024/02/09
-    materials:
-      survey: 'https://forms.gle/Zi5wH5S4tLzFqSZQ6'
-    details: |-
-      This assignment covers networking and playing with the path variable
+ 
 
   - name: 'Assignment 4: Its Git-ing Hot in Here'
     points: 8
-    due: 2024/02/16
+    due: 2024/02/14
     materials:
-     handout: 'https://docs.google.com/document/d/1K5zSg1vWTEHcRfA29FWVPJ3mROUfIaQ3yxIKu9_To3M/edit#heading=h.ovxhoexktt4x'
+     handout: ''
     #  gradescope: ''
     details: |-
       This assignment covers playing with git and version control.
       
 
-  - name: 'Feedback Survey 4: Its Git-ing Hot in Here'
-    points: 2
-    due: 2024/02/16
-    materials:
-      survey: 'https://forms.gle/uugsgu51sMgCnhiT8'
-    details: |-
-      This assignment covers playing with git and version control.
 
   - name: 'Assignment 5: It all makes sense'
     points: 8
-    due: 2024/02/26
+    due: 2024/02/24
     materials:
-     handout: 'https://docs.google.com/document/d/1f014R407s1yahPZrQjF1M3JHhLerpYZdeY_nUxEnxP8/edit#heading=h.ovxhoexktt4x'
+     handout: ''
     #  gradescope: ''
     details: |-
       This assignment covers playing with Make, CI and profiling
   
-  - name: 'Feedback Survey 5: It all makes sense'
-    points: 2
-    due: 2024/02/26
-    materials:
-      survey: 'https://forms.gle/6b3SmXeqZjoTKvDM8'
-    details: |-
-      This assignment covers playing with Make, CI and profiling
   
   - name: 'Assignment 6: The (Public) Key to My Heart'
     points: 8
-    due: 2024/03/13
+    due: 2024/03/3
     materials:
-     handout: 'https://docs.google.com/document/d/1XKLtCnXYFmAr6O9mSKu5C0ArrXmZLcnJWH1rYDllsH0/edit?usp=drive_link'
+     handout: ''
     details: |-
       This assignment covers playing with encryption and security
   
-  - name: 'Feedback Survey 6: The (Public) Key to My Heart'
-    points: 2
-    due: 2024/03/13
-    materials:
-      survey: 'https://forms.gle/mT3PY8PVGsS2GXqg9'
-    details: |-
-      This assignment covers playing with encryption and security
-  
+ 
   - name: 'Assignment 7: On Cloud Nine'
     points: 8
-    due: 2024/03/15
+    due: 2024/03/10
     materials:
-     handout: 'https://docs.google.com/document/d/16MsNboYptwiUFh2Vnzxesg8tDJnrrS9HTXG9QQJPMIs/edit?usp=drive_link'
+     handout: ''
     details: |-
       This assignment covers cloud computing and serverless computing
   
-  - name: 'Feedback Survey 7: On Cloud Nine'
-    points: 2
-    due: 2024/03/15
-    materials:
-      survey: 'https://forms.gle/TmXPLjZjqAn7moDo8'
-    details: |-
-      This assignment covers cloud computing and serverless computing
-
+ 
   - name: 'Assignment 8: Its like Magick'
+    due: 2024/03/17
     materials:
-      handout: 'https://docs.google.com/document/d/1ClG4Or5n07QLL4K5K3S0JrqpHOx_URBIn73GeUVbXdM/edit?usp=drive_link'
-    details: |-
-      This assignment covers media processing and image manipulation.
-  
-  - name: 'Feedback Survey 8: Its like Magick'
-    materials:
-      survey: 'https://forms.gle/7QpcBCwDR7V99WN1A'
+      handout: ''
     details: |-
       This assignment covers media processing and image manipulation.
 
+  - name: 'Final Project'
+    due: 2024/03/17
+    materials:
+      handout: ''
+    details: |-
+      This assignment covers media processing and image manipulation.
+  
+
+ 
 
 lectures:
   # Week 1
   - topic: 'Lecture 0: In-Class System Setup'
     materials:
-      slides: 'https://docs.google.com/presentation/d/1L4cHl8a5DPrsj74n7GOEBbnu6NqnP8vP8qOuK8cT7Zo/edit?usp=drive_link'
+      slides: ''
     assignments:
       assign 0: '/assignments'
-      welcome survey: 'https://forms.gle/DGUGSUg1GZjvgn6M9'
+      welcome survey: 'https://forms.gle/wuz3nv2RSjh6SQgk7'
 
     details: |-
       We covered basic class logistics (also available on the [course info page](/course_info)), and did [Assignment 0](/assignments/assign0) to get everyone set up.
   - topic: 'Lecture 1: Course Overview and Shell and Shell Tools'
     materials:
-      slides: 'https://docs.google.com/presentation/d/14zIfJk39kn-BMPunmG80ZRP5ImXh1vBwr6sXwHgRmrs/edit?usp=drive_link'
+      slides: ''
       notes: '/lectures/2-shell-tools.notes.pdf'
     assignments:
       assign 1: '/assignments'
@@ -219,7 +163,7 @@ lectures:
       I used a non-standard command `bat` in my lecture demo; the software installation page contains installation instructions if you want to try it out.
   - topic: 'Lab 1: In-Class Lab on Shell Tools'
     materials:
-      slides: 'https://docs.google.com/presentation/d/1oID7-DdcUuXzgx6Y52s7ixI6-lMcTB24gSWcgZzu6Yg/edit?usp=sharing'
+      slides: ''
       poll: 'https://pollev.com/saraachour443'
     details: |-
       In-class exercises on navigating the shell, creating+manipulating folders and files.
@@ -235,11 +179,11 @@ lectures:
 
   - topic: 'Lecture 2: Data wrangling'
     materials:
-      slides: 'https://docs.google.com/presentation/d/1bTp615iUEdvUYEWteAwiRV8ZuJrRtrtO1a0ZntlL1Cs/edit?usp=drive_link'
+      slides: ''
 
   - topic: 'Lab 2: Data wrangling'
     materials:
-      slides: 'https://docs.google.com/presentation/d/1wEDJHq2L8s6FC_YkqQvjzrSI6Vjp3oM6nhyta79qtEQ/edit?usp=drive_link'
+      slides: ''
     details: |-
       In-class data wrangling exercises with TA/instructor supervision.
     assignments:
@@ -249,7 +193,7 @@ lectures:
   # Week 3
   - topic: 'Lecture 3: Shell Scripting'
     materials:
-      slides: 'https://docs.google.com/presentation/d/1PoV2Zajf6nJ9A9RWFbGD8UPVRfMz3Blxol_M7BKQlEU/edit?usp=drive_link'
+      slides: ''
     details: |-
       Introduction to shell scripting.
     due:
@@ -258,7 +202,7 @@ lectures:
   
   - topic: 'Lecture 4: Text Editors'
     materials:
-      slides: 'https://docs.google.com/presentation/d/1GIh596acXkSftsa6NX7t-gsxVZGIQhuH_YICOCqhLms/edit?usp=drive_link'
+      slides: ''
     details: |-
       Text editors and bash scripting continued.
 
@@ -266,7 +210,7 @@ lectures:
     details: |-
       In-class shell scripting exercises with TA/instructor supervision.
     materials:
-     slides: 'https://docs.google.com/presentation/d/1aKxcRyJw08wJSVNROw3PejeoUIISuODBZ25LMjY3dV0/edit?usp=drive_link'
+     slides: ''
     assignments:
       assign 3: '/assignments'
       survey 3: '/assignments'
@@ -274,20 +218,20 @@ lectures:
   # Week 4
   - topic: 'Lecture 5: Command Line Environment'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1R2gTpOi3cqebYZxjJnEqljmVwIyKDRImh08sLP48TaM/edit?usp=drive_link'
+        slides: ''
     due:
         assign 2: '/assignments'
         survey 2: '/assignments'
   
   - topic: 'Lecture 6: Command Line Environment II'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1OOy628nLEfViVOdyxRG-U8GIwqFL1pLiXZDFmp5LnC0/edit?usp=drive_link'
+        slides: ''
 
   - topic: 'Lab 4'
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: 'https://docs.google.com/presentation/d/1z6YIAB23qhuIk7eEuYX_pTOFeahhW8u1b7Jc1z3j664/edit?usp=drive_link'
+      slides: ''
     assignments:
       assign 4: '/assignments'
       survey 4: '/assignments'
@@ -295,13 +239,13 @@ lectures:
   # Week 5
   - topic: 'Lecture 7: Networking'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1WTpqVEdAEWl-Y5i3Lo-TzKumR6rOzoU4rgleY3KOuYI/edit?usp=drive_link'
+        slides: ''
     details: |-
         Introduction to networking
   
   - topic: 'Lecture 8: Version Control'
     materials:
-        slides: 'https://drive.google.com/file/d/1fFJ2iC0d00R1Gv5uqJCeLtfamcmqcOm2/view?usp=drive_link'
+        slides: ''
     details: |-
         Introduction to git and version control
     
@@ -309,7 +253,7 @@ lectures:
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: 'https://docs.google.com/presentation/d/1uylvDD0HYSn1pmFPcWtORC6ZnpEWQNRa-I21cW0igMs/edit?usp=drive_link'
+      slides: ''
     # assignments:
     #   assign 5: '/assignments'
     #   survey 5: '/assignments'
@@ -320,13 +264,13 @@ lectures:
   # Week 6
   - topic: 'Lecture 8 (addendum): Version Management'
     materials:
-        slides: 'https://docs.google.com/presentation/d/13j_FPCZY5JuShpbDiuwg77SE46tlWlu22LwK2Fojn7k/edit?usp=drive_link'
+        slides: ''
     details: |-
         Version management and version control systems
   
   - topic: 'Lecture 9: Build Systems & Dev Ops'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1isLw7hikQDg4DnZJsVmjPPTV5g28UfJhN7fsbDL9O9s/edit?usp=drive_link'
+        slides: ''
     details: |-
         Build systems and Dev Ops
   
@@ -334,7 +278,7 @@ lectures:
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: 'https://docs.google.com/presentation/d/1ftZ2MXRiuvyVI-A4d33uXUnzwmiUmh-crHhV2tPssdI/edit?usp=drive_link'
+      slides: ''
     assignments:
       assign 5: '/assignments'
       survey 5: '/assignments'
@@ -346,7 +290,7 @@ lectures:
   
   - topic: 'Lecture 10: Debugging and Profiling'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1D4QoIEYsbggZXOvMc89-QWOjgIJ0qY_JX8_av8Pq30I/edit?usp=drive_link'
+        slides: ''
     details: |-
         debugging and profiling
   
@@ -354,25 +298,25 @@ lectures:
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: 'https://docs.google.com/presentation/d/1bdSURVx2dZCv54H3shkAqYr87L3iL4eEZM6PikUitco/edit?usp=drive_link'
+      slides: ''
 
 # Week 8
   - topic: 'Lecture 11: Security'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1QCb6Yp6dGNw-GdWiplIvoSXOwrQaXdDZVKRSRLoy8GQ/edit?usp=drive_link'
+        slides: ''
     due:
       assign 5: '/assignments'
       survey 5: '/assignments'
   
   - topic: 'Lecture 12: Cryptography'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1izPqqNWOWD_OYDPPLO95vcG6N_gs8PWZqL8eXv8POYQ/edit?usp=drive_link'
+        slides: ''
   
   - topic: 'Lab 8'
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: 'https://docs.google.com/presentation/d/1iLVVGx8tScPCacxqE6AJ7rJZ7KkrtffN_CNqKhW_DIY/edit?usp=drive_link'
+      slides: ''
     assignments:
       assign 6: '/assignments'
       survey 6: '/assignments'
@@ -381,17 +325,17 @@ lectures:
 # Week 8
   - topic: 'Lecture 13: VMs and Containers'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1-zb44m6l2yrkyQoB_C7u7OjNbTDxUOLCdZYy7aQeUtM/edit?usp=drive_link'
+        slides: ''
   
   - topic: 'Lecture 14: Cloud & Serverless'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1MDfcuKd6wpAAG3n2t451wmcBa8LCJu9B3iOG7jhevK8/edit?usp=drive_link'
+        slides: ''
   
   - topic: 'Lab 9'
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
     materials:
-      slides: 'https://docs.google.com/presentation/d/1-TBZEFDA-kD-txdAaVp-RdkJklcSZCFnvDjQCACSYLk/edit?usp=drive_link'
+      slides: ''
     assignments:
       assign 7: '/assignments'
       survey 7: '/assignments'
@@ -400,11 +344,11 @@ lectures:
 # Week 9
   - topic: 'Lecture 15: Recent Tools'
     materials:
-        slides: 'https://drive.google.com/file/d/1fTjMj9XP0fb-fGKX1TASS17XzXFfssx1/view?usp=drive_link'
+        slides: ''
   
   - topic: 'Lecture 16: Media Processing'
     materials:
-        slides: 'https://docs.google.com/presentation/d/1MDfcuKd6wpAAG3n2t451wmcBa8LCJu9B3iOG7jhevK8/edit?usp=drive_link'
+        slides: ''
     due:
       assign 6: '/assignments'
       survey 6: '/assignments'
