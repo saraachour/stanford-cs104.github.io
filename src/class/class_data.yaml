@@ -1,4 +1,4 @@
-start_date: 2024/01/06
+start_date: 2025/01/06
 class_days:
   - Monday
   - Wednesday
@@ -123,7 +123,7 @@ assignments:
       handout: ''
     details: |-
       This assignment covers media processing and image manipulation.
-
+   
   - name: 'Final Project'
     due: 2024/03/17
     materials:
@@ -142,9 +142,10 @@ lectures:
     assignments:
       assign 0: '/assignments'
       welcome survey: 'https://forms.gle/wuz3nv2RSjh6SQgk7'
-
     details: |-
       We covered basic class logistics (also available on the [course info page](/course_info)), and did [Assignment 0](/assignments/assign0) to get everyone set up.
+  
+  
   - topic: 'Lecture 1: Course Overview and Shell and Shell Tools'
     materials:
       slides: ''
@@ -159,12 +160,12 @@ lectures:
         * `man` pages (the system manual)
         * [cheat.sh](https://cheat.sh)
         * [devhints.io/bash](https://devhints.io/bash)
-
-      I used a non-standard command `bat` in my lecture demo; the software installation page contains installation instructions if you want to try it out.
+  
+  
   - topic: 'Lab 1: In-Class Lab on Shell Tools'
     materials:
       slides: ''
-      poll: 'https://pollev.com/saraachour443'
+      poll: ''
     details: |-
       In-class exercises on navigating the shell, creating+manipulating folders and files.
 
