@@ -30,7 +30,7 @@ assignments:
     points: 2.5
     due: 2025/01/13
     materials:
-      handout: ''
+      handout: 'https://forms.gle/iNK2iRtocUaFqUjQ7'
     details: |-
       This survey will help us gauge everyone's level of experience with the topics we will cover in class.
 
@@ -40,7 +40,7 @@ assignments:
     due: 2025/01/13
     materials:
       handout: '/assignments/assign0'
-      gradescope: ''
+      gradescope: 'https://www.gradescope.com/courses/940340/assignments/5532312'
     details: |-
       This short assignment is meant to get a basic Unix-compatible shell
       environment set up on your computer.  We'll do this together in class during the first lecture.
@@ -48,6 +48,16 @@ assignments:
   - name: 'Assignment 1: Shell We'
     points: 8
     due: 2025/01/20
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+ 
+  - name: 'Lab 1 Questions: Shell Basics'
+    points: 2
+    due: 2025/01/10
     materials:
       handout: ''
     #  gradescope: ''
@@ -65,7 +75,17 @@ assignments:
     details: |-
       This assignment covers shell scripting.
 
- 
+  
+  - name: 'Lab 2 Questions: Data Wrangling and Shell Scripting'
+    points: 2
+    due: 2025/01/17
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+
 
   - name: 'Assignment 3: Off The Beaten Path'
     points: 8
@@ -76,7 +96,17 @@ assignments:
     details: |-
       This assignment covers networking and playing with the path variable
 
- 
+  
+  - name: 'Lab 3 Questions: Text Editors'
+    points: 2
+    due: 2025/01/24
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+
 
   - name: 'Assignment 4: Its Git-ing Hot in Here'
     points: 8
@@ -87,6 +117,16 @@ assignments:
     details: |-
       This assignment covers playing with git and version control.
       
+ 
+  - name: 'Lab 4 Questions: Command Line Environment and Access Control'
+    points: 2
+    due: 2025/01/31
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
 
 
   - name: 'Assignment 5: It all makes sense'
@@ -97,7 +137,18 @@ assignments:
     #  gradescope: ''
     details: |-
       This assignment covers playing with Make, CI and profiling
-  
+   
+
+  - name: 'Lab 5 Questions: Networking'
+    points: 2
+    due: 2025/02/7
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+
   
   - name: 'Assignment 6: The (Public) Key to My Heart'
     points: 8
@@ -108,6 +159,16 @@ assignments:
       This assignment covers playing with encryption and security
   
  
+  - name: 'Lab 6 Questions: Version Management'
+    points: 2
+    due: 2025/02/14
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+
   - name: 'Assignment 7: On Cloud Nine'
     points: 8
     due: 2024/03/10
@@ -115,7 +176,17 @@ assignments:
      handout: ''
     details: |-
       This assignment covers cloud computing and serverless computing
-  
+   
+  - name: 'Lab 7 Questions: Build Systems, Debugging, and Profiling'
+    points: 2
+    due: 2025/02/21
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+
  
   - name: 'Assignment 8: Its like Magick'
     due: 2024/03/17
@@ -123,9 +194,33 @@ assignments:
       handout: ''
     details: |-
       This assignment covers media processing and image manipulation.
-   
+
+
+
+  - name: 'Lab 8 Questions: Public/Private Keys'
+    points: 2
+    due: 2025/02/28
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+  - name: 'Lab 9 Questions: Setting up a Cloud Server'
+    points: 2
+    due: 2025/03/7
+    materials:
+      handout: ''
+    #  gradescope: ''
+    details: |-
+      This assignment covers shell basics and regular expressions.
+
+
+
+
   - name: 'Final Project'
     due: 2024/03/17
+    points: 15
     materials:
       handout: ''
     details: |-
@@ -135,6 +230,7 @@ assignments:
  
 
 lectures:
+
   # Week 1
   - topic: 'Lecture 0: In-Class System Setup'
     materials:
@@ -170,17 +266,21 @@ lectures:
       In-class exercises on navigating the shell, creating+manipulating folders and files.
 
   # Week 2
-  - topic: 'Holiday'
-    holiday: true
+  - topic: 'Lecture 2: Data wrangling'
+    materials:
+      slides: ''
     details: |-
-      No lecture! Holiday.
+      In-class data wrangling exercises with TA/instructor supervision.
     due:
       assign 0: '/assignments'
       welcome survey: '/assignments'
 
-  - topic: 'Lecture 2: Data wrangling'
+  - topic: 'Lecture 3: Shell Scripting'
     materials:
       slides: ''
+    details: |-
+      Introduction to shell scripting.
+    
 
   - topic: 'Lab 2: Data wrangling'
     materials:
@@ -192,14 +292,14 @@ lectures:
       survey 2: '/assignments'
 
   # Week 3
-  - topic: 'Lecture 3: Shell Scripting'
-    materials:
-      slides: ''
+  - topic: 'Holiday'
+    holiday: true
     details: |-
-      Introduction to shell scripting.
+      No lecture! Holiday.
     due:
       assign 1: '/assignments'
       survey 1: '/assignments'
+  
   
   - topic: 'Lecture 4: Text Editors'
     materials:
@@ -207,9 +307,9 @@ lectures:
     details: |-
       Text editors and bash scripting continued.
 
-  - topic: 'Lab 3: Off the Beaten Path'
+  - topic: 'Lab 3: Text Editors and Virtual Machine Setup'
     details: |-
-      In-class shell scripting exercises with TA/instructor supervision.
+      In-class text editor exercises and virtual machine setup with TA/instructor supervision.
     materials:
      slides: ''
     assignments:

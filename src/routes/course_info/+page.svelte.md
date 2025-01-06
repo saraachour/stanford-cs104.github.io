@@ -28,7 +28,14 @@ Shell Tools).
 
 Fridays will be designated for lab sections, and give you an opportunity to practice what you
 learned in the Monday and Wednesday lectures. We will provide semi-guided exercises to help you
-better master the material.
+better master the material and ask that you complete a set of questions in-class.
+
+There will be 8 weekly lab exercises that are to be completed in the lab section. These exercises will
+usually be due at midnight on the same day, unless indicated otherwise. All lab exercises will be submitted 
+on [Gradescope]({gradescope}). We expect these lab exercises be completed during lab time. We also strongly 
+recommend you come to class, especially  for some of the later lab sections which have pair exercises 
+and require access to in-class resources that will be taken down at the end of lab section.
+
 
 ## Assignments
 
@@ -51,7 +58,7 @@ CS104 is graded on a letter grade or CR/NC basis for 3 units. We expect everyone
 course! The grading breakdown out of 100 points is as follows:
 
 - Each weekly assignment (1 thru 8) is worth 8 points.
-- Each weekly survey is worth 2 points.
+- Each weekly lab writeup is worth 2 points.
 - The final project is worth 15 points.
 - The welcome survey and assignment 0 are each worth 2.5 points.
 

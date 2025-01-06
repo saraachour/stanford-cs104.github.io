@@ -1,5 +1,5 @@
 ---
-title: 'CS 45'
+title: 'CS 104'
 ---
 
 <script lang="ts">
@@ -26,8 +26,12 @@ including: security and cryptography, containers and virtual machines, and cloud
 ## General Information
 
 This course meets in-person three times a week, Monday / Wednesday / Friday from 3:00 to 4:20 at
-260-113. The course is offered for 3 units on either a letter grade or a CR/NC basis. For more
+200-034. The course is offered for 3 units on either a letter grade or a CR/NC basis. For more
 information about the course structure, visit the [Course Info]({base}/course_info) page.
+
+The Monday, Wednesday sessions will consist of guided lectures with in class exercises and live demos, and 
+the Friday session will consist of a lab section with more open-ended exercises. Please bring your computers
+to class if you are able so you can follow along.
 
 ## Computer Setup & Software Installation
 
