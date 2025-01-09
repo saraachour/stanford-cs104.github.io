@@ -244,7 +244,7 @@ lectures:
   
   - topic: 'Lecture 1: Course Overview and Shell and Shell Tools'
     materials:
-      slides: ''
+      slides: 'https://docs.google.com/presentation/d/1LsPZ7OF1voylkvBkN9Dh2b-VkLD_Pe9523_j6gfi99Q/edit'
       notes: '/lectures/2-shell-tools.notes.pdf'
     assignments:
       assign 1: '/assignments'
