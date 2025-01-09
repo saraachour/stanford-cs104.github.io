@@ -14,14 +14,14 @@ instructors:
       - when: 'Fridays, Lab Section'
         where: 'in 200-034'
         #url: ''
-  #name: Jin-Hee Lee
-  #role: Course Assistant
-  #email: jhclee@stanford.edu
-  #image: /img/jinhee.jpg
-  #officeHours:
-  #  - when: 'TueThu 10:30am-11:20am'
-  #    where: 'with Signup'
-  #    url: https://calendly.com/jhclee/cs104-office-hours
+  - name: Gavin Li
+    role: Course Assistant
+    email: In Google Drive
+    image: https://ca.slack-edge.com/E7SAV7LAD-U04UZPRS22D-1c4067a15fbb-128
+    officeHours:
+      - when: 'TueThu 2pm-4pm'
+        where: 'please sign up for a slot before 2pm that day'
+        url: https://queue.cs.stanford.edu/queues/2rNJyVzkcPg2rJzx9mHKPbhuCKm
 
   
 assignments:
