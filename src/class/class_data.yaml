@@ -248,7 +248,6 @@ lectures:
       notes: '/lectures/2-shell-tools.notes.pdf'
     assignments:
       assign 1: '/assignments'
-      survey 1: '/assignments'
     details: |-
       We defined what "the shell" is, went over the history/background of the UNIX operating system and the shell as we know it today, and covered how to use basic shell commands.
 
@@ -289,7 +288,6 @@ lectures:
       In-class data wrangling exercises with TA/instructor supervision.
     assignments:
       assign 2: '/assignments'
-      survey 2: '/assignments'
 
   # Week 3
   - topic: 'Holiday'
@@ -298,7 +296,6 @@ lectures:
       No lecture! Holiday.
     due:
       assign 1: '/assignments'
-      survey 1: '/assignments'
   
   
   - topic: 'Lecture 4: Text Editors'
@@ -314,7 +311,6 @@ lectures:
      slides: ''
     assignments:
       assign 3: '/assignments'
-      survey 3: '/assignments'
   
   # Week 4
   - topic: 'Lecture 5: Command Line Environment'
@@ -322,7 +318,6 @@ lectures:
         slides: ''
     due:
         assign 2: '/assignments'
-        survey 2: '/assignments'
   
   - topic: 'Lecture 6: Command Line Environment II'
     materials:
@@ -335,7 +330,6 @@ lectures:
       slides: ''
     assignments:
       assign 4: '/assignments'
-      survey 4: '/assignments'
 
   # Week 5
   - topic: 'Lecture 7: Networking'
@@ -360,7 +354,6 @@ lectures:
     #   survey 5: '/assignments'
     due:
       assign 3: '/assignments'
-      survey 3: '/assignments'
 
   # Week 6
   - topic: 'Lecture 8 (addendum): Version Management'
@@ -382,7 +375,6 @@ lectures:
       slides: ''
     assignments:
       assign 5: '/assignments'
-      survey 5: '/assignments'
   
   # Week 7
   - topic: 'Holiday'
@@ -407,7 +399,6 @@ lectures:
         slides: ''
     due:
       assign 5: '/assignments'
-      survey 5: '/assignments'
   
   - topic: 'Lecture 12: Cryptography'
     materials:
@@ -420,7 +411,6 @@ lectures:
       slides: ''
     assignments:
       assign 6: '/assignments'
-      survey 6: '/assignments'
 
 
 # Week 8
@@ -439,7 +429,6 @@ lectures:
       slides: ''
     assignments:
       assign 7: '/assignments'
-      survey 7: '/assignments'
 
 
 # Week 9
@@ -452,7 +441,6 @@ lectures:
         slides: ''
     due:
       assign 6: '/assignments'
-      survey 6: '/assignments'
   
   - topic: 'Lab 10'
     details: |-
@@ -461,7 +449,6 @@ lectures:
       slides: ''
     assignments:
       assign 8: '/assignments'
-      survey 8: '/assignments'
     due:
       assign 7: '/assignments'
       survey 7: '/assignments'
