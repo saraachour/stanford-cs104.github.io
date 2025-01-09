@@ -49,8 +49,8 @@ assignments:
     points: 8
     due: 2025/01/20
     materials:
-      handout: ''
-    #  gradescope: ''
+      handout: 'https://docs.google.com/document/d/14EOFhHH2Fj02cVXSv5afFhvU78bDTTe3W95sqA_5aco'
+      # gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
 
