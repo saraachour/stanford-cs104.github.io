@@ -91,7 +91,7 @@ assignments:
     points: 8
     due: 2024/02/03
     materials:
-     handout: ''
+     handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
     details: |-
       This assignment covers networking and playing with the path variable
@@ -112,7 +112,7 @@ assignments:
     points: 8
     due: 2024/02/14
     materials:
-     handout: ''
+     handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
     details: |-
       This assignment covers playing with git and version control.
@@ -133,7 +133,7 @@ assignments:
     points: 8
     due: 2024/02/24
     materials:
-     handout: ''
+     handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
     details: |-
       This assignment covers playing with Make, CI and profiling
@@ -154,7 +154,7 @@ assignments:
     points: 8
     due: 2024/03/3
     materials:
-     handout: ''
+     handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     details: |-
       This assignment covers playing with encryption and security
   
@@ -173,7 +173,7 @@ assignments:
     points: 8
     due: 2024/03/10
     materials:
-     handout: ''
+     handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     details: |-
       This assignment covers cloud computing and serverless computing
    
@@ -191,7 +191,7 @@ assignments:
   - name: 'Assignment 8: Its like Magick'
     due: 2024/03/17
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     details: |-
       This assignment covers media processing and image manipulation.
 
