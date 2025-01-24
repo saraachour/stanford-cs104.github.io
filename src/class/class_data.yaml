@@ -59,7 +59,7 @@ assignments:
     points: 2
     due: 2025/01/10
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -80,7 +80,7 @@ assignments:
     points: 2
     due: 2025/01/17
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -101,7 +101,7 @@ assignments:
     points: 2
     due: 2025/01/24
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -122,7 +122,7 @@ assignments:
     points: 2
     due: 2025/01/31
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -143,7 +143,7 @@ assignments:
     points: 2
     due: 2025/02/7
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -163,7 +163,7 @@ assignments:
     points: 2
     due: 2025/02/14
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -181,7 +181,7 @@ assignments:
     points: 2
     due: 2025/02/21
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -201,7 +201,7 @@ assignments:
     points: 2
     due: 2025/02/28
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
@@ -210,7 +210,7 @@ assignments:
     points: 2
     due: 2025/03/7
     materials:
-      handout: ''
+      handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
     details: |-
       This assignment covers shell basics and regular expressions.
