@@ -70,7 +70,7 @@ assignments:
     points: 8
     due: 2024/01/27
     materials:
-     handout: ''
+     handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
     details: |-
       This assignment covers shell scripting.
@@ -451,4 +451,3 @@ lectures:
       assign 8: '/assignments'
     due:
       assign 7: '/assignments'
-      survey 7: '/assignments'
