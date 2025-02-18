@@ -19,8 +19,8 @@ instructors:
     email: In Google Drive
     image: https://ca.slack-edge.com/E7SAV7LAD-U04UZPRS22D-1c4067a15fbb-128
     officeHours:
-      - when: 'TueThu 2pm-4pm'
-        where: 'please sign up for a slot before 2pm that day'
+      - when: 'TueThu 8pm-10pm'
+        where: 'please sign up for a slot before 8pm that day'
         url: https://queue.cs.stanford.edu/queues/2rNJyVzkcPg2rJzx9mHKPbhuCKm
 
   
