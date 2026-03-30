@@ -11,17 +11,18 @@ instructors:
     email: sachour@stanford.edu
     image: /img/sachour.png
     officeHours:
-      - when: 'Fridays, Lab Section'
-        where: 'in 200-034'
+      - when: 'In class on Monday, Wednesday, and Friday'
+        where: 'McCullough 115'
         #url: ''
-  - name: Gavin Li
+  # Course assistant — edit name, image, email, and office hours below.
+  - name: Kelvin Waititu
     role: Course Assistant
-    email: In Google Drive
-    image: https://ca.slack-edge.com/E7SAV7LAD-U04UZPRS22D-1c4067a15fbb-128
+    email: kwaititu@stanford.edu
+    image: /img/kelvin_waititu.JPG
     officeHours:
-      - when: 'TueThu 8pm-10pm'
-        where: 'please sign up for a slot before 8pm that day'
-        url: https://queue.cs.stanford.edu/queues/2rNJyVzkcPg2rJzx9mHKPbhuCKm
+      - when: 'Saturday, 10:00 AM - 12:00 PM'
+        where: 'Zoom - https://stanford.zoom.us/j/95696204338?pwd=ZBE4CqxpoQc3fBILSSFn4nWqGvLiVN.1'
+        # url: https://your-queue-or-calendar-link
 
   
 assignments:
