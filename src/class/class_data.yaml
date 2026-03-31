@@ -12,7 +12,7 @@ instructors:
     image: /img/sachour.png
     officeHours:
       - when: 'In class on Monday, Wednesday, and Friday'
-        where: 'McCullough 115'
+        where: '@ McCullough 115'
         #url: ''
   # Course assistant — edit name, image, email, and office hours below.
   - name: Kelvin Waititu
