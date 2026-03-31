@@ -20,9 +20,9 @@ instructors:
     email: kwaititu@stanford.edu
     image: /img/kelvin_waititu.JPG
     officeHours:
-      - when: 'Saturday, 10:00 AM - 12:00 PM'
-        where: 'Zoom - https://stanford.zoom.us/j/95696204338?pwd=ZBE4CqxpoQc3fBILSSFn4nWqGvLiVN.1'
-        # url: https://your-queue-or-calendar-link
+      - when: 'Saturdays, 10:00 AM - 12:00 PM'
+        where: 'Join on Zoom'
+        url: 'https://stanford.zoom.us/j/95696204338?pwd=ZBE4CqxpoQc3fBILSSFn4nWqGvLiVN.1'
 
   
 assignments:
