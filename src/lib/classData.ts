@@ -47,7 +47,7 @@ export function getLectureMoment(lectureNumber: number) {
 }
 
 // Gets the box color for a particular material
-export function getBoxColor(type: string, due: bool = false) {
+export function getBoxColor(type: string, due: boolean = false) {
     if(due == true){
         return "red";
     }
