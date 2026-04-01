@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"prepare": "svelte-kit sync && node scripts/fix-svelte-tsconfig.cjs",
+		"predev": "svelte-kit sync && node scripts/fix-svelte-tsconfig.cjs",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
