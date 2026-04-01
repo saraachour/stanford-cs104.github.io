@@ -5,13 +5,12 @@
 	export let date: string;
 	export let header: boolean = false;
 	export let holiday: boolean = false;
-	export let future: boolean = false;
 	export let even: boolean = false;
 	
 	$: odd = !even;
 </script>
 
-<div class:day={!header} class:holiday class:header class:even class:odd class:future>
+<div class:day={!header} class:holiday class:header class:even class:odd>
 	<Date>{date}</Date>
 	<slot />
 </div>
@@ -26,13 +25,6 @@
   .day.holiday {
     background-color: #ffeaa7;
   }
-	/* Sessions after “today”: white row, italic, muted (fixes old `.future.future` typo). */
-	.day.future,
-	.header.future {
-		background-color: #fff;
-		font-style: italic;
-		color: #888;
-	}
 	.day, .header {
 		padding: 0.3em 10px;
 		margin-bottom: 0.2em;

@@ -1,7 +1,6 @@
 <!-- Generates a calendar from the lecture data in the yaml -->
 
 <script lang="ts">
-	import moment from 'moment';
 	import BoxLink from './BoxLink.svelte';
 	import Day from './Calendar/Day.svelte';
 	import Assignments from './Calendar/Day/Assignments.svelte';
@@ -24,13 +23,12 @@
 
 <div class="calendar">
 	{#each lectures_by_week as lectures, i}
-		<Week number={i + 1} future={getLectureMoment(i * weekdays).isAfter(moment())}>
+		<Week number={i + 1}>
 			{#each lectures as lecture, j}
 				<Day
 					date={getLectureMoment(i * weekdays + j).format('ddd, MMM D')}
 					holiday={!!lecture.holiday}
 					even={j % 2 == 0}
-					future={getLectureMoment(i * weekdays + j).isAfter(moment())}
 				>
 					<Topic>{lecture.topic}</Topic>
 					{#if lecture.materials}
