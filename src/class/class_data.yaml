@@ -29,7 +29,7 @@ assignments:
 
   - name: 'Welcome Survey!'
     points: 2.5
-    due: 2025/01/13
+    due: 2026/04/03
     materials:
       handout: 'https://forms.gle/iNK2iRtocUaFqUjQ7'
     details: |-
@@ -38,7 +38,7 @@ assignments:
 
   - name: 'Assignment 0: Getting Set Up!'
     points: 2.5
-    due: 2025/01/13
+    due: 2026/04/03
     materials:
       handout: '/assignments/assign0'
       gradescope: 'https://www.gradescope.com/courses/940340/assignments/5532312'
@@ -48,7 +48,7 @@ assignments:
 
   - name: 'Assignment 1: Shell We'
     points: 8
-    due: 2025/01/20
+    due: 2026/04/13
     materials:
       handout: 'https://docs.google.com/document/d/14EOFhHH2Fj02cVXSv5afFhvU78bDTTe3W95sqA_5aco'
       # gradescope: ''
@@ -58,7 +58,7 @@ assignments:
  
   - name: 'Lab 1 Questions: Shell Basics'
     points: 2
-    due: 2025/01/10
+    due: 2026/04/03
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -69,7 +69,7 @@ assignments:
 
   - name: 'Assignment 2: Bourne to be Wild'
     points: 8
-    due: 2024/01/27
+    due: 2026/04/24
     materials:
      handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
@@ -79,7 +79,7 @@ assignments:
   
   - name: 'Lab 2 Questions: Data Wrangling and Shell Scripting'
     points: 2
-    due: 2025/01/17
+    due: 2026/04/10
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -90,7 +90,7 @@ assignments:
 
   - name: 'Assignment 3: Off The Beaten Path'
     points: 8
-    due: 2024/02/03
+    due: 2026/05/04
     materials:
      handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
@@ -100,7 +100,7 @@ assignments:
   
   - name: 'Lab 3 Questions: Text Editors'
     points: 2
-    due: 2025/01/24
+    due: 2026/04/17
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -111,7 +111,7 @@ assignments:
 
   - name: 'Assignment 4: Its Git-ing Hot in Here'
     points: 8
-    due: 2024/02/14
+    due: 2026/05/08
     materials:
      handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
@@ -121,7 +121,7 @@ assignments:
  
   - name: 'Lab 4 Questions: Command Line Environment and Access Control'
     points: 2
-    due: 2025/01/31
+    due: 2026/04/24
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -132,7 +132,7 @@ assignments:
 
   - name: 'Assignment 5: It all makes sense'
     points: 8
-    due: 2024/02/24
+    due: 2026/05/22
     materials:
      handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     #  gradescope: ''
@@ -142,7 +142,7 @@ assignments:
 
   - name: 'Lab 5 Questions: Networking'
     points: 2
-    due: 2025/02/7
+    due: 2026/05/01
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -153,7 +153,7 @@ assignments:
   
   - name: 'Assignment 6: The (Public) Key to My Heart'
     points: 8
-    due: 2024/03/3
+    due: 2026/05/25
     materials:
      handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     details: |-
@@ -162,7 +162,7 @@ assignments:
  
   - name: 'Lab 6 Questions: Version Management'
     points: 2
-    due: 2025/02/14
+    due: 2026/05/08
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -172,7 +172,7 @@ assignments:
 
   - name: 'Assignment 7: On Cloud Nine'
     points: 8
-    due: 2024/03/10
+    due: 2026/06/01
     materials:
      handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     details: |-
@@ -180,7 +180,7 @@ assignments:
    
   - name: 'Lab 7 Questions: Build Systems, Debugging, and Profiling'
     points: 2
-    due: 2025/02/21
+    due: 2026/05/15
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -190,7 +190,7 @@ assignments:
 
  
   - name: 'Assignment 8: Its like Magick'
-    due: 2024/03/17
+    due: 2026/06/05
     materials:
       handout: 'https://drive.google.com/drive/folders/1rps7BDy-qm865mlzINh_6-k8n1t958xZ'
     details: |-
@@ -200,7 +200,7 @@ assignments:
 
   - name: 'Lab 8 Questions: Public/Private Keys'
     points: 2
-    due: 2025/02/28
+    due: 2026/05/22
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -209,7 +209,7 @@ assignments:
 
   - name: 'Lab 9 Questions: Setting up a Cloud Server'
     points: 2
-    due: 2025/03/7
+    due: 2026/05/29
     materials:
       handout: 'https://drive.google.com/drive/folders/1cUcbocj2U-EJKxgpS9r07Zc7vPS6FwcS'
     #  gradescope: ''
@@ -220,7 +220,7 @@ assignments:
 
 
   - name: 'Final Project'
-    due: 2024/03/17
+    due: 2026/06/08
     points: 15
     materials:
       handout: ''
