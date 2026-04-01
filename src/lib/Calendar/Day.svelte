@@ -26,6 +26,13 @@
   .day.holiday {
     background-color: #ffeaa7;
   }
+	/* Sessions after “today”: white row, italic, muted (fixes old `.future.future` typo). */
+	.day.future,
+	.header.future {
+		background-color: #fff;
+		font-style: italic;
+		color: #888;
+	}
 	.day, .header {
 		padding: 0.3em 10px;
 		margin-bottom: 0.2em;
@@ -36,16 +43,12 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
-		font-family: 'Open Sans', Helvetica, sans-serif;
-		font-size: inherit;
-		font-weight: 400;
-		line-height: 1.4;
-		color: inherit;
 	}
 
 	.header {
 		padding-bottom: 0;
 		font-weight: bold;
 		align-items: flex-end;
+		font-family: sans-serif;
 	}
 </style>
