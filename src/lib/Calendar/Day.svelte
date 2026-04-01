@@ -26,28 +26,26 @@
   .day.holiday {
     background-color: #ffeaa7;
   }
-	.future.future {
-		background-color: #fff;
-		font-style: italic;
-		color: #888;
-	}
 	.day, .header {
 		padding: 0.3em 10px;
 		margin-bottom: 0.2em;
 		margin-left: -10px;
 		display: grid;
 		grid-template: 'date topic materials assignments due' / 0.5fr 2.0fr 0.9fr 0.9fr 0.9fr;
-    column-gap: 4px;
+		column-gap: 4px;
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
+		font-family: 'Open Sans', Helvetica, sans-serif;
+		font-size: inherit;
+		font-weight: 400;
+		line-height: 1.4;
+		color: inherit;
 	}
 
 	.header {
-		/* position: relative; */
 		padding-bottom: 0;
 		font-weight: bold;
 		align-items: flex-end;
-		font-family: sans-serif;
 	}
 </style>

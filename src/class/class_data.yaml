@@ -291,7 +291,7 @@ lectures:
       assign 2: '/assignments'
 
   # Week 3
-  - topic: 'Lecture 4: Shell Scripting and Text Editors'
+  - topic: 'Lecture 4: Shell & Text Editors'
     materials:
       slides: ''
     details: |-
@@ -299,13 +299,13 @@ lectures:
     due:
       assign 1: '/assignments'
 
-  - topic: 'Lecture 5: Text Editors and Command Line Environment I'
+  - topic: 'Lecture 5: Text Editors & CLI I'
     materials:
       slides: ''
     details: |-
       Text editors and bash scripting continued.
 
-  - topic: 'Lab 3: Shell Scripting and Text Editors'
+  - topic: 'Lab 3: Shell & Text Editors'
     details: |-
       In-class text editor exercises and virtual machine setup with TA/instructor supervision.
     materials:
@@ -314,13 +314,13 @@ lectures:
       assign 3: '/assignments'
   
   # Week 4
-  - topic: 'Lecture 6: Text Editors and Command Line Environment I'
+  - topic: 'Lecture 6: Text Editors & CLI I'
     materials:
         slides: ''
     due:
         assign 2: '/assignments'
   
-  - topic: 'Lecture 7: Command-Line Environment I/II'
+  - topic: 'Lecture 7: CLI Environment I/II'
     materials:
         slides: ''
 
@@ -378,36 +378,36 @@ lectures:
       assign 5: '/assignments'
   
   # Week 7
-  - topic: 'Lecture 12: Build Systems and DevOps'
+  - topic: 'Lecture 12: Build Systems'
     materials:
         slides: ''
     details: |-
       Build systems and DevOps
 
-  - topic: 'Lecture 13: Debugging and Profiling'
+  - topic: 'Lecture 13: Debugging'
     materials:
         slides: ''
     details: |-
       Debugging and profiling
 
-  - topic: 'Lab 7: Version Management and Build Systems'
+  - topic: 'Lab 7'
     details: |-
       In-class version management and build systems with TA/instructor supervision.
     materials:
       slides: ''
 
   # Week 8
-  - topic: 'Lecture 14: Security and Cryptography'
+  - topic: 'Lecture 14: Security & Cryptography'
     materials:
         slides: ''
     due:
       assign 5: '/assignments'
 
-  - topic: 'Lecture 15: VMs and Containers'
+  - topic: 'Lecture 15: VMs & Containers'
     materials:
         slides: ''
 
-  - topic: 'Lab 8: Cryptography'
+  - topic: 'Lab 8'
     details: |-
       Lab: cryptography with TA/instructor supervision.
     materials:
@@ -416,16 +416,16 @@ lectures:
       assign 6: '/assignments'
 
   # Week 9
-  - topic: 'Memorial Day'
+  - topic: 'Holiday'
     holiday: true
     details: |-
       No class — Memorial Day.
 
-  - topic: 'Lecture 16: Cloud and Serverless'
+  - topic: 'Lecture 16: Cloud & Serverless'
     materials:
         slides: ''
 
-  - topic: 'Lab 9: Setting up a Cloud Server'
+  - topic: 'Lab 9'
     details: |-
       Lab: setting up a cloud server with TA/instructor supervision.
     materials:
@@ -434,17 +434,17 @@ lectures:
       assign 7: '/assignments'
 
   # Week 10
-  - topic: 'Lecture 17: Media Processing & AI Tools'
+  - topic: 'Lecture 17: Media & AI'
     materials:
         slides: ''
 
-  - topic: 'Lecture 18: AI Tools (e.g., OpenClaw)'
+  - topic: 'Lecture 18: AI Tools'
     materials:
         slides: ''
     due:
       assign 6: '/assignments'
 
-  - topic: 'Lab 10: Class Project'
+  - topic: 'Lab 10'
     details: |-
       Lab: class project with TA/instructor supervision.
     materials:
