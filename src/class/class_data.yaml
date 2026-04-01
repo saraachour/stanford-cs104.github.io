@@ -1,4 +1,4 @@
-start_date: 2025/01/06
+start_date: 2026/03/30
 class_days:
   - Monday
   - Wednesday
@@ -291,21 +291,21 @@ lectures:
       assign 2: '/assignments'
 
   # Week 3
-  - topic: 'Holiday'
-    holiday: true
+  - topic: 'Lecture 4: Shell Scripting and Text Editors'
+    materials:
+      slides: ''
     details: |-
-      No lecture! Holiday.
+      Shell scripting and text editors.
     due:
       assign 1: '/assignments'
-  
-  
-  - topic: 'Lecture 4: Text Editors'
+
+  - topic: 'Lecture 5: Text Editors and Command Line Environment I'
     materials:
       slides: ''
     details: |-
       Text editors and bash scripting continued.
 
-  - topic: 'Lab 3: Text Editors and Virtual Machine Setup'
+  - topic: 'Lab 3: Shell Scripting and Text Editors'
     details: |-
       In-class text editor exercises and virtual machine setup with TA/instructor supervision.
     materials:
@@ -314,13 +314,13 @@ lectures:
       assign 3: '/assignments'
   
   # Week 4
-  - topic: 'Lecture 5: Command Line Environment'
+  - topic: 'Lecture 6: Text Editors and Command Line Environment I'
     materials:
         slides: ''
     due:
         assign 2: '/assignments'
   
-  - topic: 'Lecture 6: Command Line Environment II'
+  - topic: 'Lecture 7: Command-Line Environment I/II'
     materials:
         slides: ''
 
@@ -333,18 +333,18 @@ lectures:
       assign 4: '/assignments'
 
   # Week 5
-  - topic: 'Lecture 7: Networking'
+  - topic: 'Lecture 8: Networking'
     materials:
         slides: ''
     details: |-
         Introduction to networking
   
-  - topic: 'Lecture 8: Version Control'
+  - topic: 'Lecture 9: Version Control'
     materials:
         slides: ''
     details: |-
         Introduction to git and version control
-    
+
   - topic: 'Lab 5'
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
@@ -357,18 +357,18 @@ lectures:
       assign 3: '/assignments'
 
   # Week 6
-  - topic: 'Lecture 8 (addendum): Version Management'
+  - topic: 'Lecture 10: Version Management'
     materials:
         slides: ''
     details: |-
         Version management and version control systems
   
-  - topic: 'Lecture 9: Build Systems & Dev Ops'
+  - topic: 'Lecture 11: Build Systems & Dev Ops'
     materials:
         slides: ''
     details: |-
         Build systems and Dev Ops
-  
+
   - topic: 'Lab 6'
     details: |-
         In-class shell scripting exercises with TA/instructor supervision.
@@ -378,74 +378,75 @@ lectures:
       assign 5: '/assignments'
   
   # Week 7
-  - topic: 'Holiday'
-    materials:
-        slides: ''
-  
-  - topic: 'Lecture 10: Debugging and Profiling'
+  - topic: 'Lecture 12: Build Systems and DevOps'
     materials:
         slides: ''
     details: |-
-        debugging and profiling
-  
-  - topic: 'Lab 7'
+      Build systems and DevOps
+
+  - topic: 'Lecture 13: Debugging and Profiling'
+    materials:
+        slides: ''
     details: |-
-        In-class shell scripting exercises with TA/instructor supervision.
+      Debugging and profiling
+
+  - topic: 'Lab 7: Version Management and Build Systems'
+    details: |-
+      In-class version management and build systems with TA/instructor supervision.
     materials:
       slides: ''
 
-# Week 8
-  - topic: 'Lecture 11: Security'
+  # Week 8
+  - topic: 'Lecture 14: Security and Cryptography'
     materials:
         slides: ''
     due:
       assign 5: '/assignments'
-  
-  - topic: 'Lecture 12: Cryptography'
+
+  - topic: 'Lecture 15: VMs and Containers'
     materials:
         slides: ''
-  
-  - topic: 'Lab 8'
+
+  - topic: 'Lab 8: Cryptography'
     details: |-
-        In-class shell scripting exercises with TA/instructor supervision.
+      Lab: cryptography with TA/instructor supervision.
     materials:
       slides: ''
     assignments:
       assign 6: '/assignments'
 
-
-# Week 8
-  - topic: 'Lecture 13: VMs and Containers'
-    materials:
-        slides: ''
-  
-  - topic: 'Lecture 14: Cloud & Serverless'
-    materials:
-        slides: ''
-  
-  - topic: 'Lab 9'
+  # Week 9
+  - topic: 'Memorial Day'
+    holiday: true
     details: |-
-        In-class shell scripting exercises with TA/instructor supervision.
+      No class — Memorial Day.
+
+  - topic: 'Lecture 16: Cloud and Serverless'
+    materials:
+        slides: ''
+
+  - topic: 'Lab 9: Setting up a Cloud Server'
+    details: |-
+      Lab: setting up a cloud server with TA/instructor supervision.
     materials:
       slides: ''
     assignments:
       assign 7: '/assignments'
 
-
-# Week 9
-  - topic: 'Lecture 15: Recent Tools'
+  # Week 10
+  - topic: 'Lecture 17: Media Processing & AI Tools'
     materials:
         slides: ''
-  
-  - topic: 'Lecture 16: Media Processing'
+
+  - topic: 'Lecture 18: AI Tools (e.g., OpenClaw)'
     materials:
         slides: ''
     due:
       assign 6: '/assignments'
-  
-  - topic: 'Lab 10'
+
+  - topic: 'Lab 10: Class Project'
     details: |-
-        In-class shell scripting exercises with TA/instructor supervision.
+      Lab: class project with TA/instructor supervision.
     materials:
       slides: ''
     assignments:
